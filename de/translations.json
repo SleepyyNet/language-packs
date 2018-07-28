@@ -22,17 +22,17 @@
         "userRegexMismatch": "Das sieht nicht wie ein gültiger Twitch Benutzer aus. Du kannst Unterstriche, Buchstaben und Zahlen verwenden."
     },
     "perspective": {
-        "deletedToxicMessage": "{author}, your message was deleted because it triggered toxicity filters. ({score}/{max})"
+        "deletedToxicMessage": "{author}, deine Nachricht wurde gelöscht, da sie den Schimpfwortfilter ausgelöst hat. ({score}/{max})"
     },
     "streamerNotifs": {
         "notificationStreamDetails": "Spielt {game} für {viewers} Zuschauer",
-        "invalidSubcommand": "View the **`Streamer Notifications`** section under the help command to view usage.",
-        "twitchUserDoesNotExist": "That Twitch user doesn't exist. Make sure that you're not putting <> around the name, and that you're not @mentioning a Discord user.",
+        "invalidSubcommand": "Schaue unter dem Abschnitt **`Streamer Notifications`** des Hilfe Befehls nach, um die Benutzung anzusehen.",
+        "twitchUserDoesNotExist": "Dieser Twitch Benutzer existiert nicht. Stelle sicher, dass du nicht <> um den Namen setzt und, dass du nicht @mentioning benutzt.",
         "defaultNotifMsg": "<https://twitch.tv/{user}> ist jetzt live auf Twitch!",
         "notifCount": "Es sind {} Streamer Benachrichtigungen(en) für diesen Kanal eingestellt",
-        "embedContentTooLongFallback": "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live.",
+        "embedContentTooLongFallback": "Benutzerdefinierte Nachrichten wurden nicht eingebettet, da ein Limit von 1024 Zeichen in einer Sektion besteht. Sie werden immer noch angezeigt, wenn der Benutzer live geht.",
         "noNotifsSetUp": "Es wurden keine Streamer Benachrichtigungen für diesen Kanal eingestellt.",
-        "footerAppendedContent": " • Join the support server at discord.me/konomi if the embed did not display correctly",
+        "footerAppendedContent": " • Trete dem Support Server unter discord.me/konomi bei, falls die Einbettung nicht korrekt angezeigt wurde",
         "notifFieldTitle": "Benachrichtigungen",
         "noTwitchUserFound": "Der Benutzer existiert nicht.",
         "userNotSetUpForChannel": "Entweder der Benutzer existiert nicht oder er wurde nicht für diesen Kanal eingerichtet.",
@@ -68,7 +68,7 @@
             },
             {
                 "name": "Upvote",
-                "value": "[Upvote me on DBL](https://discordbots.org/bot/twitch/vote) to get access to audio."
+                "value": "[Stimme für mich auf DBL ab](https://discordbots.org/bot/twitch/vote) um Audio Zugang zu bekommen."
             },
             {
                 "name": "Donate",
@@ -76,7 +76,7 @@
             },
             {
                 "name": "About",
-                "value": "To see statistics and more, type `twitch info`. I was made by Akira#4587 with discord.py rewrite."
+                "value": "Um Statistiken und mehr anzusehen, tippe `twitch info`. Ich wurde von Akira#4587 mithilfe discord.py rewrite entwickelt."
             },
             {
                 "name": "Partners",
@@ -94,19 +94,19 @@
         "fields": [
             {
                 "name": "General",
-                "value": "`twitch help` - Zeigt die Hilfe an\n`twitch info` - Shows bot info\n`twitch invite` - Displays a link to add TwitchBot to your server\n`twitch status` - Shows bot status\n`twitch ping` - Pong!"
+                "value": "`twitch help` - Zeigt die Hilfe an\n`twitch info` - Zeigt die Bot Info an\n`twitch invite` - Zeigt einen Link an, um TwitchBot zu deinem Server hinzuzufügen\n`twitch status` - Zeigt den Bot Status an\n`twitch ping` - Pong!"
             },
             {
                 "name": "Twitch",
-                "value": "`twitch user <user>` - Gets info on a Twitch channel\n`twitch stream user <user>` - Gets info on a user's stream\n`twitch stream watch <user>` - Watch a Twitch stream from Discord\n`twitch stream game <name>` - Watch someone stream the specified game\n`twitch stream top` - Fetches info on a top stream\n`twitch game <name>` - Gets info on a Twitch game\n`twitch top` - Gets the most popular Twitch games"
+                "value": "`twitch user <user>` - Zeigt Informationen über einen Twitch Kanal an\n`twitch stream user <user>` - Zeigt Informationen über den Stream eines Benutzers an\n`twitch stream watch <user>` - Schaue einen Twitch Stream von Discord aus an\n`twitch stream game <name>` - Schaue jemandem zu, wie er ein bestimmtes Spielt streamt\n`twitch stream top` - Zeigt dir einen Top Stream an\n`twitch game <name>` - Zeigt Informationen über ein Spiel auf Twitch an\n`twitch top` - Zeigt die beliebtesten Spiele auf Twitch an"
             },
             {
                 "name": "Clips",
-                "value": "`twitch clips from <user>` - Gets a clip from the specified Twitch user\n`twitch clips trending` - Gets a trending clip\n`twitch clips game <game>` - Gets a clip from the specified game"
+                "value": "`twitch clips from <user>` - Zeigt einen Clip des angegebenen Benutzers an\n`twitch clips trending` - Zeigt einen beliebten Clip an\n`twitch clips game <game>` - Zeigt einen Clip des angegebenen Spiels an"
             }
             {
                 "name": "Streamer Notifications & Live Users",
-                "value": "`twitch notif add <#discord_channel> <twitch_username> [message]` - Adds a streamer notification for a streamer to the specified channel\n`twitch notif remove <#discord_channel> <twitch_username> [message]` - Remove a streamer notification for a streamer to the specified channel\n`twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel\n`twitch live_check <role_name>` - Adds the specified role to users when they go live on Twitch, and then removes the role when they stop streaming"
+                "value": "`twitch notif add <#discord_channel> <twitch_username> [message]` - Fügt eine Stream Benachrichtigung eines Streamers zu dem angegebenem Kanal\n`twitch notif remove <#discord_channel> <twitch_username> [message]` - Entferne eine Streamer Benachrichtigung eines Streamer im angegebenem Kanal\n`twitch notif list [#discord_channel]` - Zeigt alle Streamer Benachrichtigungen für den angegebenen Kanal an\n`twitch live_check <role_name>` - Adds the specified role to users when they go live on Twitch, and then removes the role when they stop streaming"
             },
             {
                 "name": "Audio",
@@ -217,7 +217,7 @@
         "twitchUserNotFound": "That user doesn't exist. If you entered the user's full profile url, try redoing the command with just their user name.",
         "currentlyLive": "Momentan Live",
         "currentlyOffline": "Momentan Offline",
-        "onlineUserMsg": "Playing {game} for {viewers} viewers\n\n**[Watch on Twitch](https://twitch.tv/{user})**",
+        "onlineUserMsg": "Spielt {game} für {viewers} Zuschauer\n\n**[Watch on Twitch](https://twitch.tv/{user})**",
         "offlineUserMsg": "[View Twitch Profile](https://twitch.tv/{})"
     }
 }
