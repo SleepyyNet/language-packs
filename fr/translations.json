@@ -29,7 +29,7 @@
         "invalidSubcommand": "Regardez la section **`Streamer Notifications`** sous la commande d'aide pour voir l'utilisation.",
         "twitchUserDoesNotExist": "Cet utilisateur Twitch n'existe pas. Assurez-vous que vous ne mettez pas <> autour du nom, et que vous ne @mentionez pas un utilisateur Discord.",
         "defaultNotifMsg": "<https://twitch.tv/{user}> et en direct sur Twitch!",
-        "notifCount": "Il y a {} notification(s) de streamers configurées pour ce channel,
+        "notifCount": "Il y a {} notification(s) de streamers configurées pour ce channel",
         "embedContentTooLongFallback": "Les messages personnalisés n'ont pas été inclus dans l'intégration car il existe une limite Discord-set de 1024 caractères dans une section. Ils apparaîtront quand l'utilisateur sera en ligne.",
         "noNotifsSetUp": "Aucune notifications de streamer n'est configurer pour ce salon texutel.",
         "footerAppendedContent": " • Rejoignez-nous sur discord.me/konomi si l'intégration ne s'affiche pas correctement.",
