@@ -72,7 +72,7 @@
             },
             {
                 "name": "Donate",
-                "value": "Want to help keep me running on Discord, and get a couple rewards for doing so? Visit my Patreon at https://patreon.com/devakira."
+                "value": "Willst du dabei helfen, mich auf Discord zu erhalten und dabei Belohnungen erhalten? Besuch mein Patreon auf https://patreon.com/devakira."
             },
             {
                 "name": "About",
@@ -106,19 +106,19 @@
             }
             {
                 "name": "Streamer Notifications & Live Users",
-                "value": "`twitch notif add <#discord_channel> <twitch_username> [message]` - Fügt eine Stream Benachrichtigung eines Streamers zu dem angegebenem Kanal\n`twitch notif remove <#discord_channel> <twitch_username> [message]` - Entferne eine Streamer Benachrichtigung eines Streamer im angegebenem Kanal\n`twitch notif list [#discord_channel]` - Zeigt alle Streamer Benachrichtigungen für den angegebenen Kanal an\n`twitch live_check <role_name>` - Adds the specified role to users when they go live on Twitch, and then removes the role when they stop streaming"
+                "value": "`twitch notif add <#discord_channel> <twitch_username> [message]` - Fügt eine Stream Benachrichtigung eines Streamers zu dem angegebenem Kanal\n`twitch notif remove <#discord_channel> <twitch_username> [message]` - Entferne eine Streamer Benachrichtigung eines Streamer im angegebenem Kanal\n`twitch notif list [#discord_channel]` - Zeigt alle Streamer Benachrichtigungen für den angegebenen Kanal an\n`twitch live_check <role_name>` - Gibt eine definierte Rolle an einen Benutzer, wenn er live geht und entfernt sie wieder, wenn sie aufhören zu streamen."
             },
             {
                 "name": "Audio",
-                "value": "`twitch listen <user>` - Listen to a Twitch stream in the current voice channel\n`twitch nowplaying` - Shows the stream currently playing, if any\n`twitch leave` - Leaves a voice channel"
+                "value": "`twitch listen <user>` - Höre dir einen Twitch Stream im jetzigen Voice Kanal an\n`twitch nowplaying` - Falls momentan ein Stream läuft, wird dieser angezeigt\n`twitch leave` - Verlässt den Voice Kanal"
             },
             {
                 "name": "Moderation",
-                "value": "`twitch ban <@user> [reason]` - Bannt einen Benutezr\n`twitch kick <@user> [reason]` - Kickt einen Benutzer\n`twitch purge <amt>` - Löscht <amt> Nachrichten des Kanals\n`twitch filter set <sensitivity>` - Sets the server-wide toxicity filter\n`twitch filter remove` - Removes the server-wide toxicity filter"
+                "value": "`twitch ban <@user> [reason]` - Bannt einen Benutezr\n`twitch kick <@user> [reason]` - Kickt einen Benutzer\n`twitch purge <amt>` - Löscht <amt> Nachrichten des Kanals\n`twitch filter set <sensitivity>` - Legt den Serverweiten Schimpfwortfilter fest\n`twitch filter remove` - Löscht den Serverweiten Schimpfwortfilter"
             },
             {
                 "name": "Spiel Stats",
-                "value": "`twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats\n`twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats\n`twitch rl <pc/psn/xbl> <player>` - Shows Rocket League player stats"
+                "value": "`twitch overwatch <pc/psn/xbl> <player>` - Zeigt die Overwatch Spieler Statistik an\n`twitch fortnite <pc/psn/xbl> <player>` - Zeigt die Fortnite Spieler Statistik an\n`twitch rl <pc/psn/xbl> <player>` - Zeigt die Rocket League Spieler Statistik an"
             }
         ]
     },
