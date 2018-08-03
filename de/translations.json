@@ -123,35 +123,35 @@
         ]
     },
     "audio": {
-        "authorNotInVoiceChannel": "You need to be in a voice channel!",
-        "notUpvoted": "<:twitch:404633403603025921> You need to upvote TwitchBot to listen to streams! Upvote here -> <https://discordbots.org/bot/375805687529209857/vote>. If you just upvoted, please allow up to 5 minutes for the upvote to process.\n**Want to skip upvoting?** You can become a patron at <https://patreon.com/devakira> to listen without upvoting.",
-        "loadingStream": "Please wait... <a:loading:414007832849940482>",
-        "userNotOnline": "<:twitch:404633403603025921> This user doesn't exist or is not currently streaming. If you entered the channel's url, try again with just the name.",
-        "nowPlaying": "Now playing in {channel}",
-        "downloadError": "<:twitch:404633403603025921> This user doesn't exist or is not currently streaming.",
-        "fatalException": "A fatal exception occurred:"
+        "authorNotInVoiceChannel": "Du musst im Voice Kanal sein!",
+        "notUpvoted": "<:twitch:404633403603025921> Du musst TwitchBot positiv bewerten, um in Streams zuhören zu können! Bewerte mich hier -> <https://discordbots.org/bot/375805687529209857/vote>. Falls du mich gerade bewertet hast, warte bitte bis zu 5 Minuten, damit es verarbeitet werden kann.\n**Willst du die Bewertung überspringen?** Du kannst hier Patron werden <https://patreon.com/devakira> um ohne positive Bewertung zuhören zu können.",
+        "loadingStream": "Bitte warte... <a:loading:414007832849940482>",
+        "userNotOnline": "<:twitch:404633403603025921> Dieser Benutzer existiert nicht oder streamt zur Zeit nicht. Versuche es erneut nur mit dem Namen, falls du die URL des Kanals eingegeben hast.",
+        "nowPlaying": "Läuft jetzt in {channel}",
+        "downloadError": "<:twitch:404633403603025921> Dieser Benutzer existiert nicht oder streamt zur Zeit nicht.",
+        "fatalException": "Eine Ausnahme ist aufgetreten:"
     },
     "clips": {
-        "invalidSubcommand": "Type `twitch help clips` to view command usage.",
-        "noClipsFound": "No clips found.",
+        "invalidSubcommand": "Tippe `twitch help clips` um die Benutzung anzusehen.",
+        "noClipsFound": "Es wurden keine Clips gefunden.",
         "noClipsFoundForGame": "Es konnten keine Clips für dieses Spiel gefunden werden.",
         "noClipsFoundForUser": "Es konnten keine Clips für diesen Benutzer gefunden werden.",
-        "clipMessage": "Check out {user} playing {game}:"
+        "clipMessage": "Sieh dir {user} an, wie er {game} spielt:"
     },
     "games": {
         "viewStreamsForGame": "[Streams anschauen](https://twitch.tv/directory/game/{game})",
         "topGames": "<:twitch:404633403603025921> Top Spiele"
     },
     "general": {
-        "infoCommandTitle": "<:twitch:404633403603025921> TwitchBot Stats",
-        "uptimeTitle": "Uptime",
+        "infoCommandTitle": "<:twitch:404633403603025921> TwitchBot Status",
+        "uptimeTitle": "Laufzeit",
         "versionTitle": "Version",
         "usageTitle": "Nutzung",
         "shardInfoTitle": "Shard Info",
         "systemTitle": "System",
         "websiteTitle": "Webseite",
         "discordTitle": "Discord",
-        "upvoteTitle": "Upvote",
+        "upvoteTitle": "positiv bewerten",
         "donateTitle": "Spende",
         "devTitle": "Entwickler",
         "devDescription": "Akira#4587 • [Website](https://disgd.pw)",
