@@ -18,7 +18,7 @@
         "noBotKickMembers": "Ich brauche die **Kick Members** Berechtigung, um das zu tun",
         "noManageMessages": "Du brauchst die **Manage Messages** Berechtigung, um das zu tun!",
         "noBotManageMessages": "Ich brauche die **Manage Messages** Berechtigung, um das zu tun!",
-        "noManageServer": "Du brauchst die **Manage Server** Berechtigung, um das zu tun",
+        "noManageServer": "Du brauchst die **Manage Server** Berechtigung, um das zu tun!",
         "userRegexMismatch": "Das sieht nicht wie ein gültiger Twitch Benutzer aus. Du kannst Unterstriche, Buchstaben und Zahlen verwenden."
     },
     "perspective": {
@@ -47,7 +47,7 @@
         "helpIntroMsg": "Hallo! <:twitch:404633403603025921> Ich bin ein Bot der dabei hilft, Discord Server in Twitch zu integrieren.",
         "fields": [
             {
-                "name": "Commands",
+                "name": "Befehle",
                 "value": "Um alle Befehle anzuzeigen, tippe `twitch commands`.\n\n**Stelle sicher, weder `<>` noch `[]` bei Befehlen zu verwenden, sie dienen nur der Hilfe.**"
             },
             {
@@ -55,11 +55,11 @@
                 "value": "Hast du einen Fehler gefunden oder Probleme mit dem Bot? Trete dem Discord Server bei [here](https://discordapp.com/invite/UNYzJqV) und der Support wird dir helfen."
             },
             {
-                "name": "Invite",
+                "name": "Einladung",
                 "value": "[Klicke hier](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitch.disgd.pw/thanks.html) um mich auf deinen Discord Server einzuladen."
             },
             {
-                "name": "Website",
+                "name": "Webseite",
                 "value": "Meine Webseite findest du auf https://twitch.disgd.pw."
             },
             {
@@ -71,16 +71,16 @@
                 "value": "[Stimme für mich auf DBL ab](https://discordbots.org/bot/twitch/vote) um Audio Zugang zu bekommen."
             },
             {
-                "name": "Donate",
+                "name": "Spende",
                 "value": "Willst du dabei helfen, mich auf Discord zu erhalten und dabei Belohnungen erhalten? Besuch mein Patreon auf https://patreon.com/devakira."
             },
             {
-                "name": "About",
+                "name": "Über",
                 "value": "Um Statistiken und mehr anzusehen, tippe `twitch info`. Ich wurde von Akira#4587 mithilfe discord.py rewrite entwickelt."
             },
             {
-                "name": "Partners",
-                "value": "Wir suchen leidenschaftiliche Twitch Streamer die TwitchBot benutzen. Bewirb dich und erhalte exclusive Belohnungen: https://twitch.disgd.pw/partners"
+                "name": "Partner",
+                "value": "Wir suchen leidenschaftliche Twitch Streamer die TwitchBot benutzen. Bewirb dich und erhalte exclusive Belohnungen: https://twitch.disgd.pw/partners"
             },
             {
                 "name": ":flag_us: :flag_gb: :flag_es: :flag_br: :flag_fr: :flag_jp:",
@@ -89,7 +89,7 @@
         ]
     },
     "commands": {
-        "commandsTitle": "<:twitch:404633403603025921> TwitchBot Commands",
+        "commandsTitle": "<:twitch:404633403603025921> TwitchBot Kommandos",
         "commandsIntroMsg": "**Setze weder `<>` noch `[]` um Befehlsparameter.**",
         "fields": [
             {
@@ -114,7 +114,7 @@
             },
             {
                 "name": "Moderation",
-                "value": "`twitch ban <@user> [reason]` - Bannt einen Benutezr\n`twitch kick <@user> [reason]` - Kickt einen Benutzer\n`twitch purge <amt>` - Löscht <amt> Nachrichten des Kanals\n`twitch filter set <sensitivity>` - Legt den Serverweiten Schimpfwortfilter fest\n`twitch filter remove` - Löscht den Serverweiten Schimpfwortfilter"
+                "value": "`twitch ban <@user> [reason]` - Bannt einen Benutzer\n`twitch kick <@user> [reason]` - Kickt einen Benutzer\n`twitch purge <amt>` - Löscht <amt> Nachrichten des Kanals\n`twitch filter set <sensitivity>` - Sets the server-wide toxicity filter\n`twitch filter remove` - Removes the server-wide toxicity filter"
             },
             {
                 "name": "Spiel Stats",
@@ -151,7 +151,7 @@
         "systemTitle": "System",
         "websiteTitle": "Webseite",
         "discordTitle": "Discord",
-        "upvoteTitle": "positiv bewerten",
+        "upvoteTitle": "Positiv bewerten",
         "donateTitle": "Spende",
         "devTitle": "Entwickler",
         "devDescription": "Akira#4587 • [Website](https://disgd.pw)",
