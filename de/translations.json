@@ -129,7 +129,7 @@
         "userNotOnline": "<:twitch:404633403603025921> Dieser Benutzer existiert nicht oder streamt zur Zeit nicht. Versuche es erneut nur mit dem Namen, falls du die URL des Kanals eingegeben hast.",
         "nowPlaying": "Läuft jetzt in {channel}",
         "downloadError": "<:twitch:404633403603025921> Dieser Benutzer existiert nicht oder streamt zur Zeit nicht.",
-        "fatalException": "Eine Ausnahme ist aufgetreten:"
+        "fatalException": "Eine schwerer Ausnahmefehler ist aufgetreten:"
     },
     "clips": {
         "invalidSubcommand": "Tippe `twitch help clips` um die Benutzung anzusehen.",
@@ -166,13 +166,13 @@
     "liveCheck": {
         "noManageServer": "Du brauchst die **Manage Server** Berechtigung, um das zu tun.",
         "noLiveCheckSetUp": "No live check has been set up for this server. To add live checking, type `twitch live_check role`.",
-        "liveCheckRemoved": "Successfully removed live checking from this server.",
+        "liveCheckRemoved": "Live checking erfolgreich von diesem Server entfernt.",
         "currentLiveCheck": "Live checking is currently set up to give the `{role}` role to streamers who go live. If you want to delete live checking, type `twitch live_check --delete`.",
         "noRoleFound": "Could not find a role with the name `{}`. Make sure to only enter the role's name, and not the @mention.",
-        "liveCheckSetUpSuccess": "Users in this server who go live on Twitch will receive the `{}` role.",
-        "userLiveAuditLog": "User went live on Twitch",
-        "userNotLiveAuditLog": "User no longer live on Twitch",
-        "noBotManageRoles": "I need the **`Manage Roles`** permission to do this. If I have the permission, then make sure to drag the role named `TwitchBot` above the role you want to live check with."
+        "liveCheckSetUpSuccess": "Benutzer auf diesem Server, die live gehen auf Twitch, werden die `{}` Rolle erhalten.",
+        "userLiveAuditLog": "Benutzer ging live auf Twitch",
+        "userNotLiveAuditLog": "Benutzer ist nicht mehr live auf Twitch",
+        "noBotManageRoles": "Ich benötige die **`Manage Roles`** Berechtigung um dies zu tun. Wenn ich die Berechtigung besitze, versichere Dich, dass die Rolle `TwitchBot` über die Rolle geschoben ist, die Du per Live check überwachen willst."
     },
     "moderation": {
         "defaultModActionReason": "Kein Grund angegeben.",
