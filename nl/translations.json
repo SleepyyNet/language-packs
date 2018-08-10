@@ -1,6 +1,6 @@
 {
     "_meta": {
-        "translators": ["Jordy#0002"]
+        "translators": ["Jordy#5242"]
     },
     "errors": {
         "notFound": "That Discord channel was not found. Make sure that you're not putting `<>` around the name. For example: `twitch notif add #channel twitch_user`.",
@@ -9,35 +9,35 @@
         "missingRequiredArgument": "You're missing the `{text}` argument.",
         "commandOnCooldown": "Je kunt dit commando opnieuw uitvoeren binnen {amount} seconden.",
         "keyOrIndexError": "Geen resultaten gevonden.",
-        "badArgument": "You entered an invalid argument. Type `twitch help {command}` to view command usage.",
+        "badArgument": "You entered an invalid argument. Typ `twitch help {command}` voor de command gebruik.",
         "genericError": "Er is een fout opgetreden.",
         "reportGenericError": "Meld deze fout aan de ontwikkelaars op https://l.disgd.pw/support.",
-        "noBanMembers": "You need the **Ban Members** permission to do this!",
-        "noBotBanMembers": "I need the **Ban Members** permission to do this!",
-        "noKickMembers": "You need the **Kick Members** permission to do this!",
-        "noBotKickMembers": "I need the **Kick Members** permission to do this!",
-        "noManageMessages": "You need the **Manage Messages** permission to do this!",
-        "noBotManageMessages": "I need the **Manage Messages** permission to do this!",
-        "noManageServer": "You need the **Manage Server** permission to do this.",
+        "noBanMembers": "Je hebt de functie **Ban gebruikers** nodig om dit te doen!",
+        "noBotBanMembers": "Ik heb de functie **Ban gebruikers** nodig om dit te doen!",
+        "noKickMembers": "Je hebt de functie **Kick gebruikers** nodig om dit te doen!",
+        "noBotKickMembers": "Ik heb de functie **Kick gebruikers** nodig om dit te doen!",
+        "noManageMessages": "Je hebt de functie **Beheren berichten** permission to do this!",
+        "noBotManageMessages": "Ik heb de functie **Beheren berichten** permission to do this!",
+        "noManageServer": "Je hebt de functie **Beheren server** permission to do this.",
         "userRegexMismatch": "Dat lijkt niet op een geldige Twitch gebruiker. Je kunt alleen, onderstrepen, letters en cijfers gebruiken."
     }
     "perspective": {
         "deletedToxicMessage": "{author}, je bericht is verwijderd omdat het de toxicfilter heeft geactiveerd. ({score}/{max})"
     },
     "streamerNotifs": {
-        "notificationStreamDetails": "Playing {game} for {viewers} viewers",
-        "invalidSubcommand": "View the **`Streamer Notifications`** section under the help command to view usage.",
-        "twitchUserDoesNotExist": "That Twitch user doesn't exist. Make sure that you're not putting <> around the name, and that you're not @mentioning a Discord user.",
-        "defaultNotifMsg": "<https://twitch.tv/{user}> is now live on Twitch!",
-        "notifCount": "There are {} streamer notification(s) set up for this channel",
-        "embedContentTooLongFallback": "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live.",
-        "noNotifsSetUp": "No streamer notifications are set up for this channel.",
-        "footerAppendedContent": " • Join the support server at discord.me/konomi if the embed did not display correctly",
-        "notifFieldTitle": "Notifications",
+        "notificationStreamDetails": "Speelt {game} voor {viewers} kijkers",
+        "invalidSubcommand": "Bekijk de **`Streamer notificaties`** sectie onder de help command.",
+        "twitchUserDoesNotExist": "Die Twitch gebruiker bestaat niet. Zorg ervoor dat je het niet doet met <> om de naam, en niet dat je iemand vermeld op @Discord.",
+        "defaultNotifMsg": "<https://twitch.tv/{user}> is nu live op twitch!",
+        "notifCount": "Er zijn {} streamer notificatie(s) ingesteld voor dit kanaal.",
+        "embedContentTooLongFallback": "Aangepaste berichten zijn niet opgenomen in de insluiting omdat er een limiet van Discord is ingesteld van 1024 tekens in een sectie. Ze worden nog steeds weergegeven wanneer de gebruiker live gaat.",
+        "noNotifsSetUp": "Er zijn geen streamer notificatie ingesteld voor dit kanaal.",
+        "footerAppendedContent": " • Word lid van de support server op discord.me/konomi als de embed niet correct wordt weergegeven",
+        "notifFieldTitle": "Notificaties",
         "noTwitchUserFound": "Deze gebruiker bestaat niet.",
-        "userNotSetUpForChannel": "Either that user doesn't exist or is not set up for that channel.",
-        "notifRemovedSuccess": "You won't get any notifications in {channel} when `{user}` goes live.",
-        "notifAddedSuccess": "You should now receive a message in {channel} when `{user}` goes live."
+        "userNotSetUpForChannel": "Of die gebruiker bestaat niet of is niet ingesteld voor dat kanaal.",
+        "notifRemovedSuccess": "Je ontvangt geen meldingen binnen {channel} wanneer `{user}` live gaat.",
+        "notifAddedSuccess": "Je zou nu weer berichten moeten ontvangen in {channel} wanner `{user}` live gaat."
     },
     "utilities": {
         "uptime": "{days} dagen, {hours} uren, en {minutes} minuten"
@@ -68,11 +68,11 @@
             },
             {
                 "name": "Upvote",
-                "value": "[Upvote me on DBL](https://discordbots.org/bot/twitch/vote) to get access to audio."
+                "value": "[Upvote me on DBL](https://discordbots.org/bot/twitch/vote) om toegang te krijgen tot de audio."
             },
             {
                 "name": "Donate",
-                "value": "Want to help keep me running on Discord, and get a couple rewards for doing so? Visit my Patreon at https://patreon.com/devakira."
+                "value": "Wil je helpen om mij op Discord te laten werken, en ontvang een paar beloningen om dit te doen. Bezoek mijn Patreon op https://patreon.com/devakira."
             },
             {
                 "name": "About",
@@ -80,11 +80,11 @@
             },
             {
                 "name": "Partners",
-                "value": "We're looking for passionate Twitch streamers who use TwitchBot. Apply and get exclusive rewards: https://twitch.disgd.pw/partners"
+                "value": "We zijn op zoek naar gepassioneerde Twitch streamers die TwitchBot gebruiken. Meld je aan en ontvang exclusieve beloningen: https://twitch.disgd.pw/partners"
             },
             {
                 "name": ":flag_us: :flag_gb: :flag_es: :flag_br: :flag_fr: :flag_jp:",
-                "value": "Wil je TwitchBot vertalen naar jouw taal?  We're hiring volunteer translators to make TwitchBot available in multiple languages!\n\n**Apply here if you're interested: https://twitch.disgd.pw/translators**"
+                "value": "Wil je TwitchBot vertalen naar jouw taal? We huren vrijwillige vertalers in om TwitchBot beschikbaar te stellen in meerdere talen!\n\n**Meld je hier aan als je geïnteresseerd bent: https://twitch.disgd.pw/translators**"
             }
         ]
     },
@@ -123,20 +123,20 @@
         ]
     },
     "audio": {
-        "authorNotInVoiceChannel": "You need to be in a voice channel!",
-        "notUpvoted": "<:twitch:404633403603025921> You need to upvote TwitchBot to listen to streams! Upvote here -> <https://discordbots.org/bot/375805687529209857/vote>. If you just upvoted, please allow up to 5 minutes for the upvote to process.\n**Want to skip upvoting?** You can become a patron at <https://patreon.com/devakira> to listen without upvoting.",
-        "loadingStream": "Please wait... <a:loading:414007832849940482>",
-        "userNotOnline": "<:twitch:404633403603025921> This user doesn't exist or is not currently streaming. If you entered the channel's url, try again with just the name.",
-        "nowPlaying": "Now playing in {channel}",
-        "downloadError": "<:twitch:404633403603025921> This user doesn't exist or is not currently streaming.",
-        "fatalException": "A fatal exception occurred:"
+        "authorNotInVoiceChannel": "Je moet in een spraakkanaal zijn!",
+        "notUpvoted": "<:twitch:404633403603025921> U moet TwitchBot upgraden om naar streams te luisteren! Upvote hier -> <https://discordbots.org/bot/375805687529209857/vote>.Als u net en upvote hebt gegeven, moet u maximaal 5 minuten toestemming geven om het upvote te verwerken.\n**Wilt u het upvote overslaan?** You can become a patron at <https://patreon.com/devakira> to listen without upvoting.",
+        "loadingStream": "Even geduld... <a:loading:414007832849940482>",
+        "userNotOnline": "<:twitch:404633403603025921> Deze gebruiker bestaat niet of streamt momenteel niet. Als je de url van het kanaal hebt ingevoerd, probeer het opnieuw met alleen de naam.",
+        "nowPlaying": "Nu aan het spelen in {channel}",
+        "downloadError": "<:twitch:404633403603025921> Deze gebruiker bestaat niet of streamt momenteel niet.",
+        "fatalException": "Er deed zich een fatale error voor:"
     },
     "clips": {
         "invalidSubcommand": "Typ `twitch help clips` to view command usage.",
         "noClipsFound": "Geen clips gevonden.",
         "noClipsFoundForGame": "Kan geen clips vinden voor dit spel.",
         "noClipsFoundForUser": "Kan geen clips vinden van deze gebruiker.",
-        "clipMessage": "Check out {user} playing {game}:"
+        "clipMessage": "Check {user} op twitch die speelt {game}:"
     },
     "games": {
         "viewStreamsForGame": "[Show streams](https://twitch.tv/directory/game/{game})",
@@ -164,15 +164,15 @@
         "statusValue": "Current status: `{}`"
     },
     "liveCheck": {
-        "noManageServer": "You need the **Manage Server** permission to do this.",
-        "noLiveCheckSetUp": "No live check has been set up for this server. To add live checking, type `twitch live_check role`.",
-        "liveCheckRemoved": "Successfully removed live checking from this server.",
-        "currentLiveCheck": "Live checking is currently set up to give the `{role}` role to streamers who go live. If you want to delete live checking, type `twitch live_check --delete`.",
+        "noManageServer": "Je hebt de functie **Beheren server** nodig om dit te doen.",
+        "noLiveCheckSetUp": "Er is geen live controle ingesteld voor deze server. Live controleren toevoegen, typ dan `twitch live_check role`.",
+        "liveCheckRemoved": "De live controle van deze server is verwijderd.",
+        "currentLiveCheck": "Live controleren is momenteel ingesteld om de `{role}` rol voor streamers die live gaan. Als u live checken wilt verwijderen, typ dan `twitch live_check --delete`.",
         "noRoleFound": "Could not find a role with the name `{}`. Make sure to only enter the role's name, and not the @mention.",
         "liveCheckSetUpSuccess": "Users in this server who go live on Twitch will receive the `{}` role.",
-        "userLiveAuditLog": "User went live on Twitch",
-        "userNotLiveAuditLog": "User no longer live on Twitch",
-        "noBotManageRoles": "I need the **`Manage Roles`** permission to do this. If I have the permission, then make sure to drag the role named `TwitchBot` above the role you want to live check with."
+        "userLiveAuditLog": "Gebruiker is live op Twitch",
+        "userNotLiveAuditLog": "Gebruiker is niet meer live Twitch",
+        "noBotManageRoles": "Ik heb de **`Beheren roles`** nodig om dit te kunnen doen!. Als ik de toestemming heb, then make sure to drag the role named `TwitchBot` above the role you want to live check with."
     },
     "moderation": {
         "defaultModActionReason": "Geen reden opgegeven.",
