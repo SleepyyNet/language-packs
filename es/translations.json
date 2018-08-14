@@ -3,29 +3,29 @@
         "translators": ["Akira#4587"]
     },
     "errors": {
-        "notFound": "That Discord channel was not found. Make sure that you're not putting `<>` around the name. For example: `twitch notif add #channel twitch_user`.",
-        "noPrivateMessage": "That command can't be used in private messages.",
-        "vheckFailure": "You don't have permission to run this command.",
-        "missingRequiredArgument": "You're missing the `{text}` argument.",
-        "commandOnCooldown": "You can run this command again in {amount} seconds.",
-        "keyOrIndexError": "No results found.",
-        "badArgument": "You entered an invalid argument. Type `twitch help {command}` to view command usage.",
-        "genericError": "An Error Occurred",
-        "reportGenericError": "Please report this error to the developers at https://l.disgd.pw/support.",
-        "noBanMembers": "You need the **Ban Members** permission to do this!",
-        "noBotBanMembers": "I need the **Ban Members** permission to do this!",
-        "noKickMembers": "You need the **Kick Members** permission to do this!",
-        "noBotKickMembers": "I need the **Kick Members** permission to do this!",
-        "noManageMessages": "You need the **Manage Messages** permission to do this!",
-        "noBotManageMessages": "I need the **Manage Messages** permission to do this!",
-        "noManageServer": "You need the **Manage Server** permission to do this.",
-        "userRegexMismatch": "That doesn't look like a valid Twitch user. You can only include underscores, letters, and numbers."
+        "notFound": "Ese canal de Discord no ha sido encontrado. Asegúrate de que no estés poniendo `<>` alrededor del nombre. Por ejemplo: `twitch notif add #channel twitch_user`.",
+        "noPrivateMessage": "Este comando no se puede usar en mensajes privados.",
+        "vheckFailure": "No tienes permiso para ejecutar este comando.",
+        "missingRequiredArgument": "Falta el argumento `{text}`.",
+        "commandOnCooldown": "Podrás ejecutar este comando de nuevo en {amount} segundos.",
+        "keyOrIndexError": "No se han encontrado resultados.",
+        "badArgument": "Has ingresado un argumento inválido. Escribe `twitch help {command}` para ver el uso del comando.",
+        "genericError": "Ha ocurrido un error",
+        "reportGenericError": "Por favor informe de este error a los desarrolladores en https://l.disgd.pw/support.",
+        "noBanMembers": "Necesitas el permiso **Banear Miembros** para poder hacer esto!",
+        "noBotBanMembers": "Necesito el permiso **Banear Miembros** para poder hacer esto!",
+        "noKickMembers": "Necesitas el permiso **Expulsar Miembros** para poder hacer esto!",
+        "noBotKickMembers": "Necesito el permiso **Expulsar Miembros** para poder hacer esto!",
+        "noManageMessages": "Necesitas el permiso **Administrar Mensajes ** para poder hacer esto!",
+        "noBotManageMessages": "Necesito el permiso **Administrar Mensajes** para poder hacer esto!",
+        "noManageServer": "Necesitas el permiso **Administrar Servidor** para poder hacer esto.",
+        "userRegexMismatch": "Has introducido un usuario de Twitch no válido. Solo puede incluir guiones bajos, letras, y números."
     },
     "perspective": {
-        "deletedToxicMessage": "{author}, your message was deleted because it triggered toxicity filters. ({score}/{max})"
+        "deletedToxicMessage": "{author}, su mensaje fue eliminado porque viola los filtros de toxicidad. ({score}/{max})"
     },
     "streamerNotifs": {
-        "notificationStreamDetails": "Playing {game} for {viewers} viewers",
+        "notificationStreamDetails": "Jugando {game} para {viewers} espectadores",
         "invalidSubcommand": "View the **`Streamer Notifications`** section under the help command to view usage.",
         "twitchUserDoesNotExist": "That Twitch user doesn't exist. Make sure that you're not putting <> around the name, and that you're not @mentioning a Discord user.",
         "defaultNotifMsg": "<https://twitch.tv/{user}> is now live on Twitch!",
