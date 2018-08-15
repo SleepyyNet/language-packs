@@ -26,33 +26,33 @@
     },
     "streamerNotifs": {
         "notificationStreamDetails": "Jugando {game} para {viewers} espectadores",
-        "invalidSubcommand": "View the **`Streamer Notifications`** section under the help command to view usage.",
-        "twitchUserDoesNotExist": "That Twitch user doesn't exist. Make sure that you're not putting <> around the name, and that you're not @mentioning a Discord user.",
-        "defaultNotifMsg": "<https://twitch.tv/{user}> is now live on Twitch!",
-        "notifCount": "There are {} streamer notification(s) set up for this channel",
-        "embedContentTooLongFallback": "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live.",
-        "noNotifsSetUp": "No streamer notifications are set up for this channel.",
-        "footerAppendedContent": " • Join the support server at discord.me/konomi if the embed did not display correctly",
-        "notifFieldTitle": "Notifications",
-        "noTwitchUserFound": "That user does not exist.",
-        "userNotSetUpForChannel": "Either that user doesn't exist or is not set up for that channel.",
-        "notifRemovedSuccess": "You won't get any notifications in {channel} when `{user}` goes live.",
+        "invalidSubcommand": "Mira la sección **`Notificaciones de Streamer`** en el comando help para ver su uso.",
+        "twitchUserDoesNotExist": "Ese usuario de Twitch no existe. Asegúrate de que no estés introduciendo <> alrededor del nombre, y de que no estés @mencionando a un usuario de Discord.",
+        "defaultNotifMsg": "<https://twitch.tv/{user}> esta ahora en directo en Twitch!",
+        "notifCount": "Hay {} notificaciones de streamer(s) configuradas para este canal",
+        "embedContentTooLongFallback": "Los mensajes customizados no se incluyeron en el embed porque hay un límite en Discord de 1024 carácteres en una sección. Todavía se mostrarán cuando el usuario esté en directo.",
+        "noNotifsSetUp": "No hay notificaciones de streamer activas para este canal.",
+        "footerAppendedContent": " • Entra en el servidor de soporte en discord.me/konomi si el embed no se muestra correctamente",
+        "notifFieldTitle": "Notificaciones",
+        "noTwitchUserFound": "Ese usuario no existe.",
+        "userNotSetUpForChannel": "Ese usuario no existe o no esta configurado para ese canal",
+        "notifRemovedSuccess": "No recibirás ninguna notificacion en {channel} cuando `{user}` esté en directo.",
         "notifAddedSuccess": "You should now receive a message in {channel} when `{user}` goes live."
     },
     "utilities": {
-        "uptime": "{days} days, {hours} hours, and {minutes} minutes"
+        "uptime": "{days} dias, {hours} horas, and {minutes} minutos"
     },
     "help": {
-        "helpTitle": "<:twitch:404633403603025921> TwitchBot Help",
-        "helpIntroMsg": "Hello! <:twitch:404633403603025921> I'm a bot that helps integrate Discord servers with Twitch.",
+        "helpTitle": "<:twitch:404633403603025921> Ayuda TwitchBot",
+        "helpIntroMsg": "Hola! <:twitch:404633403603025921> Soy un bot que ayuda a integrar servidores de Discord con Twitch.",
         "fields": [
             {
                 "name": "Commands",
-                "value": "To view a list of all commands, type `twitch commands`.\n\n**Make sure to leave out `<>` and `[]` when using commands, they're only for the help page.**"
+                "value": "Para ver la lista de todos los comandos, escribe `twitch commands`.\n\n**Asegúrate de no usar `<>` y `[]` al usar comandos, sólo son para la página de ayuda.**"
             },
             {
                 "name": "Support",
-                "value": "Found an error, or having trouble with the bot? Join the Discord [here](https://discordapp.com/invite/UNYzJqV) and the support team will assist you."
+                "value": "Has encontrado un error, o tienes algún problema con el bot? Entra en el discord [aquí](https://discordapp.com/invite/UNYzJqV) and the support team will assist you."
             },
             {
                 "name": "Invite",
