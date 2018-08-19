@@ -56,35 +56,35 @@
             },
             {
                 "name": "Invite",
-                "value": "[Click here](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitch.disgd.pw/thanks.html) to invite me to your Discord server."
+                "value": "[Click aquí](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitch.disgd.pw/thanks.html) para invitarme a tu servidor de Discord."
             },
             {
                 "name": "Website",
-                "value": "You can view my website at https://twitch.disgd.pw."
+                "value": "Puedes ver mi página web en https://twitch.disgd.pw."
             },
             {
                 "name": "FAQ",
-                "value": "Some of the most frequently asked questions and answers are listed [here](https://twitch.disgd.pw/how-to.html)."
+                "value": "Algunas de las preguntas más frecuentes y sus respuestas están listadas [here](https://twitch.disgd.pw/how-to.html)."
             },
             {
                 "name": "Upvote",
-                "value": "[Upvote me on DBL](https://discordbots.org/bot/twitch/vote) to get access to audio."
+                "value": "[Votame en DBL](https://discordbots.org/bot/twitch/vote) para tener acceso al audio."
             },
             {
                 "name": "Donate",
-                "value": "Want to help keep me running on Discord, and get a couple rewards for doing so? Visit my Patreon at https://patreon.com/devakira."
+                "value": "Quieres ayudarme a mantenerme funcionando en Discord, y obtener recompensas por hacerlo? Visita mi Patreon en https://patreon.com/devakira."
             },
             {
                 "name": "About",
-                "value": "To see statistics and more, type `twitch info`. I was made by Akira#4587 with discord.py rewrite."
+                "value": "Para ver estadísticas y más, escribe `twitch info`. Fui creado por Akira#4587 con la nueva versión de discord.py."
             },
             {
                 "name": "Partners",
-                "value": "We're looking for passionate Twitch streamers who use TwitchBot. Apply and get exclusive rewards: https://twitch.disgd.pw/partners"
+                "value": "Estamos buscando streamers de Twitch apasionados que usen TwitchBot. Solicita y obtén recompensas exclusivas: https://twitch.disgd.pw/partners"
             },
             {
                 "name": ":flag_us: :flag_gb: :flag_es: :flag_br: :flag_fr: :flag_jp:",
-                "value": "Want to help translate TwitchBot to your language? We're hiring volunteer translators to make TwitchBot available in multiple languages!\n\n**Apply here if you're interested: https://twitch.disgd.pw/translators**"
+                "value": "Quieres ayudar a traducir TwitchBot a tu idioma? Estamos buscando traductores voluntarios para que TwitchBot este disponible en muchos idiomas!\n\n**Solicita aquí si estás interesado: https://twitch.disgd.pw/translators**"
             }
         ]
     },
