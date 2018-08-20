@@ -202,7 +202,7 @@
         "fortnitePoweredBy": "Powered by fortnitetracker.com",
         "rlInvalidAccountName": "Jugador no encontrado. Por favor introduce el nombre de usuario o el enlace del perfil de Steam del jugador, y selecciona la plataforma correcta.",
         "rlEmbedTitle": "Estadísticas de Rocket League",
-        "rlPoweredBy": "Powered by rocketleaguestats.com
+        "rlPoweredBy": "Powered by rocketleaguestats.com"
     },
     "streams": {
         "invalidSubcommand": "Escribe `twitch commands` para ver los usos de los comandos.",
@@ -211,7 +211,7 @@
         "streamWatchMsg": "**<:twitch:404633403603025921> En directo en Twitch**\nhttps://twitch.tv/{user}",
         "gameNotFound": "No se ha podido encontrar ese juego.",
         "noStreamsForGame": "Nadie está transmitiendo ese juego.",
-        "streamGameOrTopMsg": "Echa un vistazo a {0} jugando {1} para {2} espectadores:\nhttps://twitch.tv/{0}"
+        "streamGameOrTopMsg": "Echa un vistazo a {0} jugando {1} para {2} espectadores:\nhttps://twitch.tv/{0}."
     },
     "users": {
         "twitchUserNotFound": "Ese usuario no existe. Si has introducido el URL del perfil completo del usuario, intente volver a escribir el comando solo con su nombre de usuario.",
