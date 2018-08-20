@@ -196,28 +196,28 @@
         "overwatchInvalidBattletag": "Porfavor introduce tu battletag en el formato `name#id`.",
         "overwatchNoResultsFound": "No se encontraron las estadísticas de este jugador. Si tu perfil es privado, no puedes ver tus estadísticas a menos que lo hagas público. Please follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make your profile public.",
         "overwatchEmbedTitle": "Estadísticas de Overwatch (Competitivo)",
-        "overwatchPoweredBy": "Impulsado por owapi.net",
+        "overwatchPoweredBy": "Powered by owapi.net",
         "fortniteInvalidAccountName": "Jugador no encontrado. Comprueba la ortografía del nombre de usuario o pruebe otra plataforma diferente.",
         "fortniteEmbedTitle": "Estadísticas de Fortnite",
-        "fortnitePoweredBy": "Impulsado por fortnitetracker.com",
-        "rlInvalidAccountName": "Player not found. Please enter the username or Steam profile link of the player, and choose the correct platform.",
-        "rlEmbedTitle": "Rocket League Stats",
-        "rlPoweredBy": "Powered by rocketleaguestats.com"
+        "fortnitePoweredBy": "Powered by fortnitetracker.com",
+        "rlInvalidAccountName": "Jugador no encontrado. Por favor introduce el nombre de usuario o el enlace del perfil de Steam del jugador, y selecciona la plataforma correcta.",
+        "rlEmbedTitle": "Estadísticas de Rocket League",
+        "rlPoweredBy": "Powered by rocketleaguestats.com
     },
     "streams": {
-        "invalidSubcommand": "Type `twitch commands` to view command usage.",
-        "twitchUserDoesNotExist": "That user doesn't exist or is not online. Make sure you're only entering the user's name and not anything extra, like `()` or `<>`.",
-        "streamUserMsg": "Playing {2} for {0} viewers\n**[Watch on Twitch](https://twitch.tv/{1})** or type `twitch watch {1}`\n\nStream Preview:",
-        "streamWatchMsg": "**<:twitch:404633403603025921> Live on Twitch**\nhttps://twitch.tv/{user}",
-        "gameNotFound": "That game could not be found.",
-        "noStreamsForGame": "Nobody is streaming that game.",
-        "streamGameOrTopMsg": "Check out {0} playing {1} for {2} viewers:\nhttps://twitch.tv/{0}"
+        "invalidSubcommand": "Escribe `twitch commands` para ver los usos de los comandos.",
+        "twitchUserDoesNotExist": "Ese usuario no existe o no esta conectado. Asegúrate de que solo estes escribiendo el nombre del usuario y nada extra, como `()` o `<>`.",
+        "streamUserMsg": "Jugando {2} para {0} espectadores\n**[Miralo en Twitch](https://twitch.tv/{1})** o escribe `twitch watch {1}`\n\nVista previa de transmisión:",
+        "streamWatchMsg": "**<:twitch:404633403603025921> En directo en Twitch**\nhttps://twitch.tv/{user}",
+        "gameNotFound": "No se ha podido encontrar ese juego.",
+        "noStreamsForGame": "Nadie está transmitiendo ese juego.",
+        "streamGameOrTopMsg": "Echa un vistazo a {0} jugando {1} para {2} espectadores:\nhttps://twitch.tv/{0}"
     },
     "users": {
-        "twitchUserNotFound": "That user doesn't exist. If you entered the user's full profile url, try redoing the command with just their user name.",
-        "currentlyLive": "Currently Live",
-        "currentlyOffline": "Currently Offline",
-        "onlineUserMsg": "Playing {game} for {viewers} viewers\n\n**[Watch on Twitch](https://twitch.tv/{user})**",
-        "offlineUserMsg": "[View Twitch Profile](https://twitch.tv/{})"
+        "twitchUserNotFound": "Ese usuario no existe. Si has introducido el URL del perfil completo del usuario, intente volver a escribir el comando solo con su nombre de usuario.",
+        "currentlyLive": "En directo",
+        "currentlyOffline": "Actualmente Offline",
+        "onlineUserMsg": "Jugando {game} para {viewers} espectadores\n\n**[Miralo en Twitch](https://twitch.tv/{user})**",
+        "offlineUserMsg": "[Ver perfil de Twitch](https://twitch.tv/{})"
     }
 }
