@@ -37,7 +37,7 @@
         "noTwitchUserFound": "Ese usuario no existe.",
         "userNotSetUpForChannel": "Ese usuario no existe o no esta configurado para ese canal",
         "notifRemovedSuccess": "No recibirás ninguna notificacion en {channel} cuando `{user}` esté en directo.",
-        "notifAddedSuccess": "You should now receive a message in {channel} when `{user}` goes live."
+        "notifAddedSuccess": "Ahora recibirás un mensaje en {channel} cuando `{user}` esté en directo."
     },
     "utilities": {
         "uptime": "{days} dias, {hours} horas, and {minutes} minutos"
@@ -47,19 +47,19 @@
         "helpIntroMsg": "Hola! <:twitch:404633403603025921> Soy un bot que ayuda a integrar servidores de Discord con Twitch.",
         "fields": [
             {
-                "name": "Commands",
+                "name": "Comandos",
                 "value": "Para ver la lista de todos los comandos, escribe `twitch commands`.\n\n**Asegúrate de no usar `<>` y `[]` al usar comandos, sólo son para la página de ayuda.**"
             },
             {
-                "name": "Support",
+                "name": "Soporte",
                 "value": "Has encontrado un error, o tienes algún problema con el bot? Entra en el discord [aquí](https://discordapp.com/invite/UNYzJqV) and the support team will assist you."
             },
             {
-                "name": "Invite",
+                "name": "Invitación",
                 "value": "[Click aquí](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitch.disgd.pw/thanks.html) para invitarme a tu servidor de Discord."
             },
             {
-                "name": "Website",
+                "name": "Página Web",
                 "value": "Puedes ver mi página web en https://twitch.disgd.pw."
             },
             {
@@ -67,15 +67,15 @@
                 "value": "Algunas de las preguntas más frecuentes y sus respuestas están listadas [here](https://twitch.disgd.pw/how-to.html)."
             },
             {
-                "name": "Upvote",
+                "name": "Votación",
                 "value": "[Votame en DBL](https://discordbots.org/bot/twitch/vote) para tener acceso al audio."
             },
             {
-                "name": "Donate",
+                "name": "Donar",
                 "value": "Quieres ayudarme a mantenerme funcionando en Discord, y obtener recompensas por hacerlo? Visita mi Patreon en https://patreon.com/devakira."
             },
             {
-                "name": "About",
+                "name": "Info",
                 "value": "Para ver estadísticas y más, escribe `twitch info`. Fui creado por Akira#4587 con la nueva versión de discord.py."
             },
             {
@@ -89,79 +89,79 @@
         ]
     },
     "commands": {
-        "commandsTitle": "<:twitch:404633403603025921> TwitchBot Commands",
-        "commandsIntroMsg": "**Do not put `<>` or `[]` around command arguments.**",
+        "commandsTitle": "<:twitch:404633403603025921> Comandos de TwitchBot",
+        "commandsIntroMsg": "**No escribas `<>` o `[]` alrededor de los argumentos del comando.**",
         "fields": [
             {
                 "name": "General",
-                "value": "`twitch help` - Shows bot help\n`twitch info` - Shows bot info\n`twitch invite` - Displays a link to add TwitchBot to your server\n`twitch status` - Shows bot status\n`twitch ping` - Pong!"
+                "value": "`twitch help` - Muestra la ayuda del bot\n`twitch info` - Muestra la información del bot\n`twitch invite` - Manda un link para añadir TwitchBot a tu servidor\n`twitch status` - Muestra el estado del bot\n`twitch ping` - Pong!"
             },
             {
                 "name": "Twitch",
-                "value": "`twitch user <user>` - Gets info on a Twitch channel\n`twitch stream user <user>` - Gets info on a user's stream\n`twitch stream watch <user>` - Watch a Twitch stream from Discord\n`twitch stream game <name>` - Watch someone stream the specified game\n`twitch stream top` - Fetches info on a top stream\n`twitch game <name>` - Gets info on a Twitch game\n`twitch top` - Gets the most popular Twitch games"
+                "value": "`twitch user <user>` - Obtiene información sobre un canal de Twitch\n`twitch stream user <user>` - Obtiene información sobre el directo de un usuario\n`twitch stream watch <user>` - Mira una transmisión de Twitch desde Discord\n`twitch stream game <name>` - Ve a alguien transmitir el juego especificado\n`twitch stream top` - Obtiene información sobre una transmisión top\n`twitch game <name>` - Obtiene información sobre un juego de Twitch\n`twitch top` - Obtiene los juegos más populares en Twitch"
             },
             {
                 "name": "Clips",
-                "value": "`twitch clips from <user>` - Gets a clip from the specified Twitch user\n`twitch clips trending` - Gets a trending clip\n`twitch clips game <game>` - Gets a clip from the specified game"
+                "value": "`twitch clips from <user>` - Obtiene un clip del usuario de Twitch especificado\n`twitch clips trending` - Obtiene un clip en tendencia\n`twitch clips game <game>` - Obtiene un clip del juego especificado"
             }
             {
-                "name": "Streamer Notifications & Live Users",
-                "value": "`twitch notif add <#discord_channel> <twitch_username> [message]` - Adds a streamer notification for a streamer to the specified channel\n`twitch notif remove <#discord_channel> <twitch_username> [message]` - Remove a streamer notification for a streamer to the specified channel\n`twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel\n`twitch live_check <role_name>` - Adds the specified role to users when they go live on Twitch, and then removes the role when they stop streaming"
+                "name": "Notificaciones de Streamer & Usuarios en Directo",
+                "value": "`twitch notif add <#discord_channel> <twitch_username> [message]` - Agrega notificaciones para un streamer en el canal especificado\n`twitch notif remove <#discord_channel> <twitch_username> [message]` - Elimina las notificaciones para un streamer en el canal especificado\n`twitch notif list [#discord_channel]` - Muestra las notificaciones de streamer activas en el canal especificado\n`twitch live_check <role_name>` - Agrega el rol especificado a usuarios cuando estén en directo en Twitch, y luego elimina el rol cuando terminan el directo"
             },
             {
                 "name": "Audio",
-                "value": "`twitch listen <user>` - Listen to a Twitch stream in the current voice channel\n`twitch nowplaying` - Shows the stream currently playing, if any\n`twitch leave` - Leaves a voice channel"
+                "value": "`twitch listen <user>` - Escucha una transmisión de Twitch en el canal de voz actual\n`twitch nowplaying` - Muestra la transmisión que se está reproduciendo actualmente, si se esta reproduciendo\n`twitch leave` - Deja un canal de voz"
             },
             {
-                "name": "Moderation",
-                "value": "`twitch ban <@user> [reason]` - Bans a user\n`twitch kick <@user> [reason]` - Kicks a user\n`twitch purge <amt>` - Deletes <amt> messages from the channel\n`twitch filter set <sensitivity>` - Sets the server-wide toxicity filter\n`twitch filter remove` - Removes the server-wide toxicity filter"
+                "name": "Moderación",
+                "value": "`twitch ban <@user> [reason]` - Banea a un usuario\n`twitch kick <@user> [reason]` - Expulsa a un usuario\n`twitch purge <amt>` - Borra <amt> mensajes del canal\n`twitch filter set <sensitivity>` - Establece el filtro de toxicidad del servidor\n`twitch filter remove` - Elimina el filtro de toxicidad del servidor"
             },
             {
-                "name": "Game Stats",
-                "value": "`twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats\n`twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats\n`twitch rl <pc/psn/xbl> <player>` - Shows Rocket League player stats"
+                "name": "Estadísticas de juegos",
+                "value": "`twitch overwatch <pc/psn/xbl> <player>` - Muestra las estadísticas de un jugador de Overwatch\n`twitch fortnite <pc/psn/xbl> <player>` - Muestra las estadísticas de un jugador de Fortnite\n`twitch rl <pc/psn/xbl> <player>` - Muestra las estadísticas de un jugador de Rocket League"
             }
         ]
     },
     "audio": {
-        "authorNotInVoiceChannel": "You need to be in a voice channel!",
-        "notUpvoted": "<:twitch:404633403603025921> You need to upvote TwitchBot to listen to streams! Upvote here -> <https://discordbots.org/bot/375805687529209857/vote>. If you just upvoted, please allow up to 5 minutes for the upvote to process.\n**Want to skip upvoting?** You can become a patron at <https://patreon.com/devakira> to listen without upvoting.",
-        "loadingStream": "Please wait... <a:loading:414007832849940482>",
-        "userNotOnline": "<:twitch:404633403603025921> This user doesn't exist or is not currently streaming. If you entered the channel's url, try again with just the name.",
-        "nowPlaying": "Now playing in {channel}",
-        "downloadError": "<:twitch:404633403603025921> This user doesn't exist or is not currently streaming.",
-        "fatalException": "A fatal exception occurred:"
+        "authorNotInVoiceChannel": "Necesitas estar en un canal de voz!",
+        "notUpvoted": "<:twitch:404633403603025921> Tienes que votar a TwitchBot para poder escuchar transmisiones! Vota aquí -> <https://discordbots.org/bot/375805687529209857/vote>. Si ya has votado, por favor espere hasta 5 minutos para que el voto sea procesado.\n**Quieres omitir la votación?** Puedes hacerte patron en <https://patreon.com/devakira> para escuchar transmisiones sin votar.",
+        "loadingStream": "Por favor espere... <a:loading:414007832849940482>",
+        "userNotOnline": "<:twitch:404633403603025921> Este usuario no existe o no esta actualmente en directo. Si has introducido el URL del canal, prueba otra vez con solo el nombre.",
+        "nowPlaying": "Ahora sonando en {channel}",
+        "downloadError": "<:twitch:404633403603025921> Este usuario no existe o no esta actualmente en directo.",
+        "fatalException": "Se produjo una excepción fatal:"
     },
     "clips": {
-        "invalidSubcommand": "Type `twitch help clips` to view command usage.",
-        "noClipsFound": "No clips found.",
-        "noClipsFoundForGame": "Couldn't find any clips for that game.",
-        "noClipsFoundForUser": "Couldn't find any clips for that user.",
-        "clipMessage": "Check out {user} playing {game}:"
+        "invalidSubcommand": "Escribe `twitch help clips` para ver el uso de los comandos.",
+        "noClipsFound": "No se han encontrado clips.",
+        "noClipsFoundForGame": "No se ha podido encontrar ningún clip de ese juego.",
+        "noClipsFoundForUser": "No se ha podido encontrar ningún clip de ese usuario.",
+        "clipMessage": "Echa un vistazo a {user} jugando a {game}:"
     },
     "games": {
-        "viewStreamsForGame": "[View Streams](https://twitch.tv/directory/game/{game})",
-        "topGames": "<:twitch:404633403603025921> Top Games"
+        "viewStreamsForGame": "[Ver transmisiones](https://twitch.tv/directory/game/{game})",
+        "topGames": "<:twitch:404633403603025921> Top Juegos"
     },
     "general": {
-        "infoCommandTitle": "<:twitch:404633403603025921> TwitchBot Stats",
-        "uptimeTitle": "Uptime",
-        "versionTitle": "Version",
-        "usageTitle": "Usage",
-        "shardInfoTitle": "Shard Info",
-        "systemTitle": "System",
-        "websiteTitle": "Website",
+        "infoCommandTitle": "<:twitch:404633403603025921> Estadísticas de TwitchBot",
+        "uptimeTitle": "Tiempo de actividad",
+        "versionTitle": "Versión",
+        "usageTitle": "Uso",
+        "shardInfoTitle": "Información de Fragmento",
+        "systemTitle": "Sistema",
+        "websiteTitle": "Web",
         "discordTitle": "Discord",
-        "upvoteTitle": "Upvote",
-        "donateTitle": "Donate",
-        "devTitle": "Developer",
-        "devDescription": "Akira#4587 • [Website](https://disgd.pw)",
+        "upvoteTitle": "Votación",
+        "donateTitle": "Dona",
+        "devTitle": "Desarrollador",
+        "devDescription": "Akira#4587 • [Web](https://disgd.pw)",
         "usageValue": "**•** {} servers\n**•** {} users\n**•** {} commands run\n**•** {} live checks\n**•** {} streamer notifications",
         "systemValue": "**•** {}% CPU\n**•** {}/{}MB memory used",
-        "shardInfoValue": "**•** Current shard: {} (real: {})\n**•** Shard latency: {}ms\n**•** Total shards: {}",
-        "infoMsg1": "**{author}**, you can invite me to a server with this link:\n**<https://discordapp.com/api/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot>**",
-        "infoMsg2": "You can also join the support server here:\n**<https://discord.me/konomi>**",
-        "statusTitle": "<:twitch:404633403603025921> Twitch Status",
-        "statusValue": "Current status: `{}`"
+        "shardInfoValue": "**•** Fragmento actual: {} (real: {})\n**•** Latencia del fragmento: {}ms\n**•** Fragmentos totales: {}",
+        "infoMsg1": "**{author}**, puedes invitarme a un servidor con este enlace:\n**<https://discordapp.com/api/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot>**",
+        "infoMsg2": "Támbien puedes unirte al servidor de soporte aquí:\n**<https://discord.me/konomi>**",
+        "statusTitle": "<:twitch:404633403603025921> Estado de Twitch",
+        "statusValue": "Estado actual: `{}`"
     },
     "liveCheck": {
         "noManageServer": "You need the **Manage Server** permission to do this.",
