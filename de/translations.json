@@ -27,12 +27,12 @@
     "streamerNotifs": {
         "notificationStreamDetails": "Spielt {game} für {viewers} Zuschauer",
         "invalidSubcommand": "Schaue unter dem Abschnitt **`Streamer Notifications`** des Hilfe Befehls nach, um die Benutzung anzusehen.",
-        "twitchUserDoesNotExist": "Dieser Twitch Benutzer existiert nicht. Stelle sicher, dass du nicht <> um den Namen setzt und, dass du nicht @mentioning benutzt.",
+        "twitchUserDoesNotExist": "Dieser Twitch Benutzer existiert nicht. Du darfst weder <> um den Namen setzen, noch @mentioning benutzen.",
         "defaultNotifMsg": "<https://twitch.tv/{user}> ist jetzt live auf Twitch!",
         "notifCount": "Es sind {} Streamer Benachrichtigungen(en) für diesen Kanal eingestellt",
         "embedContentTooLongFallback": "Benutzerdefinierte Nachrichten wurden nicht eingebettet, da ein Limit von 1024 Zeichen in einer Sektion besteht. Sie werden immer noch angezeigt, wenn der Benutzer live geht.",
         "noNotifsSetUp": "Es wurden keine Streamer Benachrichtigungen für diesen Kanal eingestellt.",
-        "footerAppendedContent": " • Trete dem Support Server unter discord.me/konomi bei, falls die Einbettung nicht korrekt angezeigt wurde",
+        "footerAppendedContent": " • Trete dem Support Server unter discord.me/konomi bei, falls die Einbettung nicht korrekt angezeigt wurde.",
         "notifFieldTitle": "Benachrichtigungen",
         "noTwitchUserFound": "Der Benutzer existiert nicht.",
         "userNotSetUpForChannel": "Entweder der Benutzer existiert nicht oder er wurde nicht für diesen Kanal eingerichtet.",
@@ -80,7 +80,7 @@
             },
             {
                 "name": "Partner",
-                "value": "Wir suchen leidenschaftliche Twitch Streamer die TwitchBot benutzen. Bewirb dich und erhalte exclusive Belohnungen: https://twitch.disgd.pw/partners"
+                "value": "Wir suchen leidenschaftliche Twitch Streamer die TwitchBot benutzen. Bewirb dich und erhalte exclusive Belohnungen: https://twitch.disgd.pw/partners ."
             },
             {
                 "name": ":flag_us: :flag_gb: :flag_es: :flag_br: :flag_fr: :flag_jp:",
@@ -105,20 +105,20 @@
                 "value": "`twitch clips from <user>` - Zeigt einen Clip des angegebenen Benutzers an\n`twitch clips trending` - Zeigt einen beliebten Clip an\n`twitch clips game <game>` - Zeigt einen Clip des angegebenen Spiels an"
             }
             {
-                "name": "Streamer Notifications & Live Users",
+                "name": "Streamer Benachrichtigungen & Live User",
                 "value": "`twitch notif add <#discord_channel> <twitch_username> [message]` - Fügt eine Stream Benachrichtigung eines Streamers zu dem angegebenem Kanal\n`twitch notif remove <#discord_channel> <twitch_username> [message]` - Entferne eine Streamer Benachrichtigung eines Streamer im angegebenem Kanal\n`twitch notif list [#discord_channel]` - Zeigt alle Streamer Benachrichtigungen für den angegebenen Kanal an\n`twitch live_check <role_name>` - Gibt eine definierte Rolle an einen Benutzer, wenn er live geht und entfernt sie wieder, wenn sie aufhören zu streamen."
             },
             {
                 "name": "Audio",
-                "value": "`twitch listen <user>` - Höre dir einen Twitch Stream im jetzigen Voice Kanal an\n`twitch nowplaying` - Falls momentan ein Stream läuft, wird dieser angezeigt\n`twitch leave` - Verlässt den Voice Kanal"
+                "value": "`twitch listen <user>` - Höre dir einen Twitch Stream im jetzigen Voice Kanal an\n`twitch nowplaying` - Falls momentan ein Stream läuft, wird dieser angezeigt\n`twitch leave` - Verlässt den Audio Kanal"
             },
             {
                 "name": "Moderation",
-                "value": "`twitch ban <@user> [reason]` - Bannt einen Benutzer\n`twitch kick <@user> [reason]` - Kickt einen Benutzer\n`twitch purge <amt>` - Löscht <amt> Nachrichten des Kanals\n`twitch filter set <sensitivity>` - Sets the server-wide toxicity filter\n`twitch filter remove` - Removes the server-wide toxicity filter"
+                "value": "`twitch ban <@user> [reason]` - Bannt einen Benutzer\n`twitch kick <@user> [reason]` - Kickt einen Benutzer\n`twitch purge <amt>` - Löscht <amt> Nachrichten des Kanals\n`twitch filter set <sensitivity>` - Setzt den serverweiten Toxicity Filter\n`twitch filter remove` - Entfernt den serverweiten Toxicity Filter"
             },
             {
                 "name": "Spiel Stats",
-                "value": "`twitch overwatch <pc/psn/xbl> <player>` - Zeigt die Overwatch Spieler Statistik an\n`twitch fortnite <pc/psn/xbl> <player>` - Zeigt die Fortnite Spieler Statistik an\n`twitch rl <pc/psn/xbl> <player>` - Zeigt die Rocket League Spieler Statistik an"
+                "value": "`twitch overwatch <pc/psn/xbl> <player>` - Zeigt die Overwatch Spieler Statistik an\n`twitch fortnite <pc/psn/xbl> <player>` - Zeigt die Fortnite Spieler Statistik an\n`twitch rl <pc/psn/xbl> <player>` - Zeigt die Rocket League Spieler Statistik an."
             }
         ]
     },
@@ -159,16 +159,16 @@
         "systemValue": "**•** {}% CPU\n**•** {}/{}MB Memory genutzt",
         "shardInfoValue": "**•** Aktueller Shard: {} (real: {})\n**•** Shard Latenz: {}ms\n**•** Shards insgesamt: {}",
         "infoMsg1": "**{author}**, du kannst mich mit diesem Link auf einen Server einladen:\n**<https://discordapp.com/api/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot>**",
-        "infoMsg2": "You can also join the support server here:\n**<https://discord.me/konomi>**",
+        "infoMsg2": "Du kannst hier den Support Server betreten:\n**<https://discord.me/konomi>**",
         "statusTitle": "<:twitch:404633403603025921> Twitch Status",
         "statusValue": "Aktueller Status: `{}`"
     },
     "liveCheck": {
         "noManageServer": "Du brauchst die **Manage Server** Berechtigung, um das zu tun.",
         "noLiveCheckSetUp": "No live check has been set up for this server. To add live checking, type `twitch live_check role`.",
-        "liveCheckRemoved": "Live checking erfolgreich von diesem Server entfernt.",
-        "currentLiveCheck": "Live checking is currently set up to give the `{role}` role to streamers who go live. If you want to delete live checking, type `twitch live_check --delete`.",
-        "noRoleFound": "Could not find a role with the name `{}`. Make sure to only enter the role's name, and not the @mention.",
+        "liveCheckRemoved": "Live Checking erfolgreich von diesem Server entfernt.",
+        "currentLiveCheck": "Live Checking ist aktuell so einstellt, dass es die `{role}` Rolle an Streamer vergibt, die online gehen. Falls du Live Checking entfernen möchtest, gebe `twitch live_check --delete` ein.",
+        "noRoleFound": "Konnte keine Rolle mit dem Namen `{}` finden. Vergewissere Dich, dass Du nur den Rollennamen und nicht @mention eingibst.",
         "liveCheckSetUpSuccess": "Benutzer auf diesem Server, die live gehen auf Twitch, werden die `{}` Rolle erhalten.",
         "userLiveAuditLog": "Benutzer ging live auf Twitch",
         "userNotLiveAuditLog": "Benutzer ist nicht mehr live auf Twitch",
@@ -177,17 +177,17 @@
     "moderation": {
         "defaultModActionReason": "Kein Grund angegeben.",
         "auditLogTemplate": "Verantwortlicher Moderator: {moderator}\nGrund: {reason}",
-        "banFailed": "Dieses Mitglied konnte nicht gebannt werden. Do they have a higher role than me?",
-        "kickFailed": "Dieses Mitglied konnte nicht gekickt werden. Do they have a higher role than me?",
-        "invalidMsgAmt": "You can't delete more than 99 or less than 2 messages.",
-        "banSuccess": "**{user}** wurde erfolgreich wegen **{reason}** gebannt",
-        "kickSuccess": "**{user}** wurde erfolgreich wegen **{reason}** gekickt",
+        "banFailed": "Dieses Mitglied konnte nicht gebannt werden. Hat das Mitglied eine höhere Rolle als ich?",
+        "kickFailed": "Dieses Mitglied konnte nicht gekickt werden. Hat das Mitglied eine höhere Rolle als ich?",
+        "invalidMsgAmt": "Du kannst nicht mehr als 99 oder weniger als 2 Nachrichten löschen.",
+        "banSuccess": "**{user}** wurde erfolgreich wegen **{reason}** gebannt.",
+        "kickSuccess": "**{user}** wurde erfolgreich wegen **{reason}** gekickt.",
         "pruneSuccess": "{amount} Nachrichten wurden gelöscht.",
         "pruneGenericError": "Etwas ist schief gelaufen. `{errorType}: {errorMsg}`",
-        "invalidFilterSubcommand": "Type `twitch help filter` to view command usage.",
+        "invalidFilterSubcommand": "Gib `twitch help filter` ein, um zu sehen, wie der Befehl benutzt wird.",
         "filterDonateMsg": "Du musst spenden, um diesen Befehl auszuführen! <https://paypal.me/akireee>",
         "invalidSensitivity": "Sensitivität kann nicht über 85 oder unter 60 liegen.",
-        "filterUpdateSuccess": "Successfully set this server's toxicity filter to **{amount}%**",
+        "filterUpdateSuccess": "Toxicity Filter des Servers erfolgreich auf **{amount}%** gesetzt.",
         "noFilter": "No toxicity filter was applied in this server.",
         "removedFilterSuccess": "Successfully removed this server's toxicity filter."
     },
