@@ -85,42 +85,42 @@ class English:
                 `!twitch notif add [#discord_channel] [streamer_name] [message]` - Agrega una notificación de transmisión de un streamer al canal especificado
                 `!twitch notif remove <#discord_channel> <streamer_name>` - Elimina una notificación de transmisión de un streamer al canal especificado
                 `!twitch notif list [#discord_channel]` - Manda una lista de las notificaciones de streamer del canal especificado
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif formatting` - Muestra las variables que puedes insertar en los mensajes de notificación de transmisión.
                 """),
                 inline=False
             )
             e.add_field(
-                name="Live Role",
+                name="Rol En Vivo",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - Establece el rol en vivo para el servidor actual
+                `!twitch live_role filter` - Restringe el rol en vivo a usuarios con un rol específico
+                `!twitch live_role delete` - Elimina la configuración de rol en vivo
+                `!twitch live_role view` - Te dice qué rol está configurado actualmente
                 """),
                 inline=False
             )
             e.add_field(
                 name="Audio",
                 value=textwrap.dedent("""\
-                `!twitch listen <user>` - Listen to a Twitch stream in the current voice channel
-                `!twitch nowplaying` - Shows the stream currently playing, if any
-                `!twitch leave` - Leaves a voice channel
+                `!twitch listen <user>` - Escucha una transmisión de Twitch en el canal de voz actual
+                `!twitch nowplaying` - Muestra la transmisión actual, si la hay
+                `!twitch leave` - Deja un canal de voz
                 """),
                 inline=False
             )
             e.add_field(
-                name="Game Stats",
+                name="Estadísticas de juego",
                 value=textwrap.dedent("""\
-                `!twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats
-                `!twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats
+                `!twitch overwatch <pc/psn/xbl> <player>` - Muestra las estadísticas de un jugador de Overwatch
+                `!twitch fortnite <pc/psn/xbl> <player>` - Muestra las estadísticas de un jugador de Fortnite
                 """),
                 inline=False
             )
             e.add_field(
-                name="Message Filter",
+                name="Filtro de mensajes",
                 value=textwrap.dedent("""\
-                `!twitch filter set <sensitivity>` - Sets the server-wide toxicity filter
-                `!twitch filter remove` - Removes the server-wide toxicity filter
+                `!twitch filter set <sensitivity>` - Establece el filtro de toxicidad en todo el servidor
+                `!twitch filter remove` - Elimina el filtro de toxicidad del servidor
                 """),
                 inline=False
             )
@@ -278,68 +278,68 @@ class English:
             add_success = emoji.cmd_success + "Added a notification for {user} in {channel}"
             list_title = "Streamer notifications for **#{channel}**"
             list_embed_limit = "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live."
-            no_notifs = "No streamer notifications are set up for this channel."
-            notifications = "No streamer notifications are set up for this channel."
-            bulk_delete_confirm = "**You are about to delete {count} notifications in {channel}.** Are you sure that you want to do this? Reply with `yes` if you want to continue."
-            bulk_delete_success = emoji.cmd_success + "Successfully deleted {count} notifications from {channel}."
-            command_cancelled = "Command cancelled."
+            no_notifs = "No se han configurado notificaciones de transmisión para este canal."
+            notifications = "No se han configurado notificaciones de transmisión para este canal."
+            bulk_delete_confirm = "**Estás a punto de borrar {count} notificaciones en {channel}.** ¿Estás seguro de que quieres hacer esto? Responde con `yes` si quieres continuar."
+            bulk_delete_success = emoji.cmd_success + "{count} notificaciones eliminadas exitosamente de {channel}."
+            command_cancelled = "Comando cancelado."
             notif_variables = discord.Embed(color=discord.Color(0x6441A4))
-            notif_variables.title = "Notification message variables"
-            notif_variables.description = "Use one of the variables below to insert data into a stream notification message."
+            notif_variables.title = "Variables del mensaje de notificación"
+            notif_variables.description = "Usa una de las variables a continuación para insertar datos en un mensaje de notificación de transmisión."
             notif_variables.add_field(
-                name = "Available formatting",
+                name = "Formato disponible",
                 value = textwrap.dedent("""\
-                *`$title$`* - The stream's title
-                *`$viewers$`* - The number of people currently watching the stream
-                *`$game$`* - The game that the streamer is currently playing
-                *`$url$`* - The channel's URL
-                *`$name$`* - The channel's name
-                *`$everyone$`* - Inserts an @everyone mention
-                *`$here$`* - Inserts an @here mention
+                *`$title$`* - El título de la transmision
+                *`$viewers$`* - La cantidad de personas que actualmente están viendo la transmisión
+                *`$game$`* - El juego que el streamer está jugando actualmente
+                *`$url$`* - URL del canal
+                *`$name$`* - El nombre del canal
+                *`$everyone$`* - Inserta una mención @everyone
+                *`$here$`* - Inserta una mención @here
                 """)
             )
         class Permissions:
-            user_need_perm = emoji.cmd_fail + "You need the **{permission}** permission to do this."
-            bot_need_perm = emoji.cmd_fail + "I need the **{permission}** permission to do this."
-            no_pm = emoji.cmd_fail + "You can only use this command in a server."
+            user_need_perm = emoji.cmd_fail + "Necesitas el permiso **{permission}** para hacer esto."
+            bot_need_perm = emoji.cmd_fail + "Necesito el permiso **{permission}** para hacer esto."
+            no_pm = emoji.cmd_fail + "Solo puedes usar este comando en un servidor."
         class Streams:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Stream Commands - Help"
+            command_usage.title = "Comandos de Transmisión - Ayuda"
             command_usage.add_field(
-                name = "Commands",
+                name = "Comandos",
                 value = textwrap.dedent("""\
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
+                `!twitch stream user <user>` - Obtiene información de una tranmisión de un usuario
+                `!twitch stream watch <user>` - Mira una transmisión de Twitch desde Discord
+                `!twitch stream game <name>` - Ve a alguien transmitir el juego especificado
+                `!twitch stream top` - Obtiene información de una transmisión superior
                 """)
             )
-            game_desc = "Check out {user} playing {game} for {view_count} viewers:\nhttps://twitch.tv/{user}"
-            game_not_found = emoji.cmd_fail + "That game could not be found."
-            game_no_streams = emoji.cmd_fail + "Nobody is streaming that game."
-            live = "Live on Twitch"
-            stream_not_found = emoji.cmd_fail + "That user doesn't exist or is not online. Make sure you're only entering the user's name and not anything extra, like `()` or `<>`."
+            game_desc = "Mira a {user} jugando {game} para {view_count} viewers:\nhttps://twitch.tv/{user}"
+            game_not_found = emoji.cmd_fail + "Ese juego no pudo ser encontrado."
+            game_no_streams = emoji.cmd_fail + "Nadie está transmitiendo ese juego."
+            live = "En directo en Twitch"
+            stream_not_found = emoji.cmd_fail + "Ese usuario no existe o no está conectado. Asegúrate de que solo estés escribiendo el nombre del usuario y no nada extra, como `()` o `<>`."
             stream_desc = textwrap.dedent("""\
-            Playing {game} for {view_count} viewers
-            **[Watch on Twitch](https://twitch.tv/{channel})** or type `twitch stream watch {channel}`
+            Jugando {game} para {view_count} espectadores
+            **[Ver en Twitch](https://twitch.tv/{channel})** o escribe `twitch stream watch {channel}`
 
-            Stream Preview:
+            Vista previa de la transmisión:
             """)
         class Users:
-            connections = "Connections for {user}"
-            connected = "Connected to {account}"
-            followers = "Followers"
-            following = "Following"
-            live = "Currently Live"
-            playing = "Playing {game} for {view_count} viewers"
-            not_connected = "Not Connected"
-            not_live = "Currently Offline"
-            no_login_dash = "This user hasn't visited the [TwitchBot dashboard](http://dash.twitchbot.io)."
-            streamer_id = "Streamer ID:"
-            views = "Views"
-            view_profile = "View Twitch Profile"
-            unknown = "Unknown"
-            watch_on_twitch = "Watch on Twitch"
+            connections = "Conexiones para {user}"
+            connected = "Conectado a {account}"
+            followers = "Seguidores"
+            following = "Siguiendo"
+            live = "Actualmente en vivo"
+            playing = "Jugando {game} para {view_count} espectadores"
+            not_connected = "No conectado"
+            not_live = "Actualmente fuera de linea"
+            no_login_dash = "Este usuario no ha visitado el [Dashboard de TwitchBot](http://dash.twitchbot.io)."
+            streamer_id = "ID de Streamer:"
+            views = "Vistas"
+            view_profile = "Ver el perfil de Twitch"
+            unknown = "Desconocido"
+            watch_on_twitch = "Ver en Twitch"
         self.Audio = Audio
         self.Clips = Clips
         self.CommandsList = CommandsList
