@@ -1,19 +1,19 @@
-### Translate Flag
 from . import _emoji as emoji
 import textwrap
 import discord
 
 class English:
     def __init__(self):
-        self._lang_name = "English"
-        self._lang_emoji = ":flag_us: :flag_gb:"
-        self._translator = "Akira#0007"
+        self._lang_name = "Persian"
+        self._lang_emoji = ":flag_ir:
+        self._translator = "MATIN#4861"
         class Audio:
-            no_channel = emoji.cmd_fail + "You need to be in a voice channel."
+            no_channel = emoji.cmd_fail + "شما باید در یک کانال صوتی باشید."
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Please upvote to continue"
-            need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.title = "برای ادامه دادن لطفا رأی موافق دهید." 
+            need_upvote.description = "برای گوش دادن به استریم ها باید به تویچ بات رای موافق دهید! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
+                ###___________________________________ Translate Flag
                 name = "Want to skip upvoting?",
                 value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
             )
