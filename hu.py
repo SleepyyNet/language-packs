@@ -231,36 +231,36 @@ class English:
             http_err_dash = emoji.cmd_fail + "Twitchbot irányítópultból való információ lekérés során hiba lépett fel: {error}"
         class LiveRole:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Live Role - Help"
-            command_usage.description = "With Live Role, you can set up a role to add to users when they go live. TwitchBot will automatically remove the role when the user stops streaming."
+            command_usage.title = "Élő rang - Súgó"
+            command_usage.description = "Az Élő rang segítségével megadhatsz egy rangot amit ideiglenesen megkapnak a felhasználók amikor élő adásban vannak. Amikor a közvetítés véget ért, akkor TwitchBot automatikusan eltávolítja a rangot a felhasználókról."
             command_usage.add_field(
-                name = "Commands",
+                name = "Parancsok",
                 value = textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - Beállítja az Élő rangot a jelenlegi szerveren
+                `!twitch live_role filter` - Korlátozza az Élő rangot adott ranggal rendelkező felhasználókra
+                `!twitch live_role delete` - Eltávolítja az Élő rang konfigurációját
+                `!twitch live_role view` - Megmutatja jelenleg melyik rang van beállítva Élő rangnak.
                 """)
             )
-            no_role_mentioned = emoji.cmd_fail + "No role was specified. Please re-run the command and @mention a role."
-            not_set_up = emoji.cmd_fail + "No Live Role has been set up for this server. Type `!twitch live_role set` to set one."
-            role_not_found = emoji.cmd_fail + "No role name matched that query. Do not put any extra characters in your query, such as `<`, `>`, or `@`."
-            add_success = emoji.cmd_success + "Users in this server who go live on Twitch will receive the **{role}** role. If you want to set a filter for Live Role, type `!twitch live_role filter`."
-            del_success = emoji.cmd_success + "Successfully removed the Live Role configuration from this server."
-            filter_success = emoji.cmd_success + "Successfully set this server's Live Role filter. It may take a while to update all members' roles."
-            missing_perms_ext = emoji.cmd_fail + "I need the **`Manage Roles`** permission to do this. If I have the permission, then make sure to drag the role named `TwitchBot` above the role you want to set up."
-            view_response = "Live Role is currently set up to give members the **{role}** role when they stream."
+            no_role_mentioned = emoji.cmd_fail + "Nem adtál meg rangot. Kérlek futtasd újra a parancsot és @említs meg egy rangot."
+            not_set_up = emoji.cmd_fail + "Nincs Élő rang beállítva ezen a szerveren. Használd a `!twitch live_role set` parancsot a beállításhoz."
+            role_not_found = emoji.cmd_fail + "Nem található ilyen rang. Ne használj extra szimbólumokat, mint pl. `<`, `>`, vagy `@`."
+            add_success = emoji.cmd_success + "A felhasználók akik élő adást indítanak **{role}** rangot kapnak. Ha szeretnél szűrést beállítani az Élő rangra, használd a `!twitch live_role filter` parancsot."
+            del_success = emoji.cmd_success + "Élő rang konfigurációja eltávolítva a szerverről."
+            filter_success = emoji.cmd_success + "Szűrő az Élő ranghoz beállítva. Beletelhet egy kis időbe amíg az összes felhasználó rangja frissül."
+            missing_perms_ext = emoji.cmd_fail + "Ehhez szükségem van **`Rangok kezelése`** jogra. Amennyiben rendelkezem ezzel a joggal, helyezd a `TwitchBot` rangot a beállítandó rang fölé."
+            view_response = "Az Élő rang jelenleg a(z) **{role}** rangra van beállítva, ezt kapják meg azok akik közvetítést indítanak."
         class Notifs:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Streamer Notifications - Help"
-            command_usage.description = "Streamer notifications allow you to set up a customizable message that sends when a Twitch user goes live."
+            command_usage.title = "Közvetítési értesítések - Súgó"
+            command_usage.description = "Közvetítési értesítésekkel egyedi üzenet küldhető amikor egy Twitch felhasználó közvetítésbe kezd."
             command_usage.add_field(
-                name = "Commands",
+                name = "Parancsok",
                 value = textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Új kiértesítés egy felhasználó közvetítéseiről adott csatornába
+                `!twitch notif remove <#discord_channel> <streamer_name>` - Kiértesítés eltávolítása egy felhasználó közvetítéseiről adott csatornából
+                `!twitch notif list [#discord_channel]` - Adott csatornában működő kiértesítők listázása
+                `!twitch notif formatting` - Változók megjelenítése, amelyeket beilleszthetsz a kiértesítések szövegébe
                 """)
             )
             limit_reached = emoji.twitch_icon + "Halihó! Sajnos elérted a maximum mennyiségű kiértesítőt ezen a szerveren. Továbbiak hozzáadásához fizess elő TwitchBot Prémiumra itt: <https://twitchbot.io/premium>."
