@@ -8,22 +8,22 @@ class Dutch:
         self._lang_emoji = ":flag_nl:"
         self._translator = "Leon#6252"
         class Audio:
-            no_channel = emoji.cmd_fail + "You need to be in a voice channel."
+            no_channel = emoji.cmd_fail + "Je moet in een spraak kanaal zijn."
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Please upvote to continue"
-            need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.title = "Stemmen om voort te gaan."
+            need_upvote.description = "Je moet TwitchBot upvoten om naar streams te luisteren! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "Want to skip upvoting?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
+                name = "Wil je upvoten overslaan?",
+                value = "[TwitchBot Premium](https://twitchbot.io/premium) laat je naar streams luisteren zonder te upvoten."
             )
-            please_wait = "Please wait... " + emoji.loading
+            please_wait = "Wachten alsjeblieft... " + emoji.loading
             user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
-            np_title = "Now playing in {channel}"
-            np_desc = "{title}\n{viewer_count} currently watching"
-            np_leave = "Type '!twitch leave' to stop the stream"
-            connection_timeout = emoji.cmd_fail + "Voice connection timed out."
-            not_streaming = "I'm not streaming anything on this server right now."
-            disconnected = "Left the voice channel."
+            np_title = "Nu aan het spelen in {channel}"
+            np_desc = "{title}\n{viewer_count} aan het kijken"
+            np_leave = "Typ '!twitch leave' om de stream te stoppen"
+            connection_timeout = emoji.cmd_fail + "Verbinding duurde te lang."
+            not_streaming = "Ik ben niets in deze server nu aan het streamen."
+            disconnected = "Spraak kanaal verlaten."
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Clips - Help"
@@ -37,8 +37,8 @@ class Dutch:
                 """)
             )
             clip_desc = "Check out {user} playing {game}:\n{url}"
-            no_clips = emoji.cmd_fail + "No clips were found."
-            no_votes = emoji.cmd_fail + "Nobody has voted on any clips yet. Come back later."
+            no_clips = emoji.cmd_fail + "Geen clips gevonden."
+            no_votes = emoji.cmd_fail + "Nobody has voted on any clips yet. Kom binnenkort terug."
             uservote_clip_desc = "{vote_count} votes on this clip by {user}:\n{url}"
             upvote_fail = emoji.cmd_fail + "**{user}**, your upvote couldn't be be processed."
         class CommandsList:
