@@ -5,7 +5,7 @@ import discord
 class Russian:
     def __init__(self):
         self._lang_name = "Русский"
-        self._lang_emoji = ":flag_:"
+        self._lang_emoji = ":flag_ru:"
         self._translator = "D3bi#6969"
         class Audio:
             no_channel = emoji.cmd_fail + "Вам надо находится в голосовом канале"
