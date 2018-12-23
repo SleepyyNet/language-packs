@@ -24,73 +24,73 @@ class English:
             connection_timeout = emoji.cmd_fail + "خطا: زمان اتصال صوتی به پایان رسید."
             not_streaming = "در حال حاضر هیچ استریمی را در این سرور پخش نمی کنم."
             disconnected = "کانال صوتی را ترک کردم."
-            ###___________________________________ Translate Flag
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "کلیپ ها - راهنما"
             command_usage.add_field(
                 name = "دستورات",
                 value = textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <user>` - یک کلیپ از کاربر ذکر شده را دریافت میکند
+                `!twitch clips trending` - یک کلیپ پر بازدید را دریافت میکند
+                `!twitch clips game <game>` - یک کلیپ از بازی مورد نظر را دریافت میکند
+                `!twitch clips uservoted` - یکی از معروف ترین کلیپ هایی که کاربران تویچ به آن رأی داده اند را دریافت میکند
                 """)
             )
-            clip_desc = "Check out {user} playing {game}:\n{url}"
-            no_clips = emoji.cmd_fail + "No clips were found."
-            no_votes = emoji.cmd_fail + "Nobody has voted on any clips yet. Come back later."
-            uservote_clip_desc = "{vote_count} votes on this clip by {user}:\n{url}"
-            upvote_fail = emoji.cmd_fail + "**{user}**, your upvote couldn't be be processed."
+            clip_desc = "{user} را ببینید که {game} بازی می کند.:\n{url}"
+            no_clips = emoji.cmd_fail + "کلیپ یافت نشد."
+            no_votes = emoji.cmd_fail + "تا کنون هیچکس به کلیپی رأی نداده. بعدا امتحان کنید."
+            uservote_clip_desc = "{vote_count} رأی برای این کلیپ توسط {user}:\n{url}"
+            upvote_fail = emoji.cmd_fail + "**{user}**، رأی موافق شما با خطا مواجه شده است."
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "TwitchBot Commands"
-            e.description = ":warning: __**Do not put `<>` or `[]` around command arguments.**__"
+            e.title = emoji.twitch_icon + "دستورات تویچ بات"
+            e.description = ":warning: __**دستورات را بدون `<>` یا `[]` وارد کنید.**__"
             e.add_field(
-                name="General",
+                name="عمومی",
                 value=textwrap.dedent("""\
-                `!twitch help` - Shows bot help
-                `!twitch info` - Shows bot info
-                `!twitch lang` - Sets bot language
-                `!twitch invite` - Displays a link to add TwitchBot to your server
-                `!twitch status` - Shows Twitch API status
-                `!twitch ping` - Pong!
+                `!twitch help` - راهنمای بات را نمایش می دهد
+                `!twitch info` - اطلاعات بات را نمایش می دهد
+                `!twitch lang` - زبان بات را تنظیم می کند
+                `!twitch invite` - لینکی را نمایش میدهد تا تویچ بات را به سرورتان دعوت کنید
+                `!twitch status` - وضعیت API تویچ را نمایش می دهد
+                `!twitch ping` - مدت زمان تأخیر بات را نشان می دهد
                 """),
                 inline=False
             )
             e.add_field(
-                name="Twitch",
+                name="تویچ",
                 value=textwrap.dedent("""\
-                `!twitch user <user>` - Gets info on a Twitch channel
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
-                `!twitch game <name>` - Gets info on a Twitch game
-                `!twitch top` - Gets the most popular Twitch games
+                `!twitch user <user>` - اطلاعات یک کانال تویچ را دریافت می کند
+                `!twitch stream user <user>` - اطلاعات استریم یک کاربر تویچ را دریافت می کند
+                `!twitch stream watch <user>` - استریم تویچ را از دیسکورد تماشا کنید
+                `!twitch stream game <name>` - استریمی از بازی ذکر شده را تماشا کنید
+                `!twitch stream top` - اطلاعات مربوط به یک استریم برتر را دریافت می کند
+                `!twitch game <name>` - اطلاعاتی از یک بازی روی تویچ را دریافت میکند
+                `!twitch top` - معروفترین بازی های تویچ را دریافت می کند
                 """),
                 inline=False
             )
             e.add_field(
-                name="Clips",
+                name="کلیپ ها",
                 value=textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <user>` - کلیپی از کاربر مورد نظر را دریافت می کند
+                `!twitch clips trending` - یک کلیپ برتر را دریافت میکند
+                `!twitch clips game <game>` - یک کلیپ از بازی مورد نظر را دریافت می کند
+                `!twitch clips uservoted` - یکی از معروف ترین کلیپ هایی که کاربران تویچ به آن رأی داده اند را دریافت میکند
                 """),
                 inline=False
             )
             e.add_field(
-                name="Streamer Notifications",
+                name="اعلانات استریمرها",
                 value=textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - اعلانی را برای استریمر مورد نظر در کانال دیسکورد ذکر شده اضافه می کند
+                `!twitch notif remove <#discord_channel> <streamer_name>` - اعلانی را برای استریمر مورد نظر در کانال دیسکورد ذکر شده حذف می کند
+                `!twitch notif list [#discord_channel]` - تمامی اعلانات را لیست می کند
+                `!twitch notif formatting` - متغیرهایی که می توانید در پیغام اعلان استریمر وارد کنید را نمایش می دهد
                 """),
                 inline=False
             )
+            ###___________________________________ Translate Flag
             e.add_field(
                 name="Live Role",
                 value=textwrap.dedent("""\
