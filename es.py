@@ -50,6 +50,7 @@ class English:
                 value=textwrap.dedent("""\
                 `!twitch help` - Muestra la ayuda del bot
                 `!twitch info` - Muestra la info del bot
+                `!twitch lang` - Establece el idioma del bot
                 `!twitch invite` - Muestra un enlace para añadir a TwitchBot a tu servidor
                 `!twitch status` - Muestra el estado de la API de Twitch
                 `!twitch ping` - Pong!
@@ -278,7 +279,7 @@ class English:
             add_success = emoji.cmd_success + "Added a notification for {user} in {channel}"
             list_title = "Streamer notifications for **#{channel}**"
             list_embed_limit = "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live."
-            no_notifs = "No se han configurado notificaciones de transmisión para este canal."
+            no_notifs = "Notificaciones"
             notifications = "No se han configurado notificaciones de transmisión para este canal."
             bulk_delete_confirm = "**Estás a punto de borrar {count} notificaciones en {channel}.** ¿Estás seguro de que quieres hacer esto? Responde con `yes` si quieres continuar."
             bulk_delete_success = emoji.cmd_success + "{count} notificaciones eliminadas exitosamente de {channel}."

@@ -50,6 +50,7 @@ class English:
                 value=textwrap.dedent("""\
                 `!twitch help` - Shows bot help
                 `!twitch info` - Shows bot info
+                `!twitch lang` - Sets bot language
                 `!twitch invite` - Displays a link to add TwitchBot to your server
                 `!twitch status` - Shows Twitch API status
                 `!twitch ping` - Pong!
@@ -279,7 +280,7 @@ class English:
             list_title = "Streamer notifications for **#{channel}**"
             list_embed_limit = "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live."
             no_notifs = "No streamer notifications are set up for this channel."
-            notifications = "No streamer notifications are set up for this channel."
+            notifications = "Notifications"
             bulk_delete_confirm = "**You are about to delete {count} notifications in {channel}.** Are you sure that you want to do this? Reply with `yes` if you want to continue."
             bulk_delete_success = emoji.cmd_success + "Successfully deleted {count} notifications from {channel}."
             command_cancelled = "Command cancelled."
