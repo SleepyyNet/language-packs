@@ -160,75 +160,75 @@ class English:
             e = discord.Embed(color=discord.Color(0x6441A4))
             e.title = emoji.twitch_icon + "**TwitchBot súgó**"
             e.add_field(
-                name="Commands",
-                value="TwitchBot responds to commands starting with `twitch` or `!twitch`. Type `!twitch commands` to view all runnable commands.",
+                name="Parancsok",
+                value="TwitchBot a `twitch` vagy `!twitch` előtaggal rendelkező üzenetekre reagál. Használd a `!twitch commands` parancsot az összes futtatható parancs megjelenítéséhez.",
                 inline=False
             )
             e.add_field(
-                name="Support",
-                value="If you need help with TwitchBot, you can visit the [support center](https://support.twitchbot.io) or join the [support server](https://discord.gg/UNYzJqV).",
+                name="Támogatás",
+                value="Ha segítségre van szükséged a TwitchBot használatával kapcsolatban, látogass el a [támogatási központunkba](https://support.twitchbot.io) vagy csatlakozz a [támogatási szerverre](https://discord.gg/UNYzJqV).",
                 inline=False
             )
             e.add_field(
-                name="Website",
-                value="You can view information about TwitchBot at https://twitchbot.io",
+                name="Weboldal",
+                value="Információkat találsz a TwitchBotról a https://twitchbot.io weboldalon.",
                 inline=False
             )
             e.add_field(
-                name="TwitchBot Premium",
-                value="Support TwitchBot's development and get a handful of cool features and benefits for just $5.00 USD a month. https://twitchbot.io/premium",
+                name="TwitchBot Prémium",
+                value="Támogasd a TwitchBot fejlesztését, havi 5 US dollárért rengeteg hasznos funkcióhoz kapsz hozzáférést. https://twitchbot.io/premium",
                 inline=False
             )
             e.add_field(
-                name="Upvote Competition",
-                value="We're giving away TwitchBot Premium for FREE to the top three voters at the end of every month! [Upvote here](https://discordbots.org/bot/twitch/vote) and [view the leaderboard](https://dash.twitchbot.io/leaderboard)",
+                name="Szavazási verseny",
+                value="TwitchBot Prémiumot adunk minden hónap végén INGYEN azoknak, akik a legtöbbet szavaztak. [Itt tudsz szavazni](https://discordbots.org/bot/twitch/vote) és [itt tekintheted meg a ranglistát](https://dash.twitchbot.io/leaderboard).",
                 inline=False
             )
             e.add_field(
-                name="About",
-                value="TwitchBot was made by [Akira#4587](https://disgd.pw) using discord.py. To view other contributors, type `twitch info`.",
+                name="Rólunk",
+                value="A TwitchBotot [Akira#4587](https://disgd.pw) fejleszti discord.py segítségével. Egyéb közreműködők megtekintéséhez használd a `twitch info` parancsot.",
                 inline=False
             )
             e.add_field(
-                name="Other links",
-                value="[FAQ](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Upvote](https://discordbots.org/bot/twitch/vote) · [Invite](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
+                name="Egyéb linkek",
+                value="[GYIK](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Szavazás](https://discordbots.org/bot/twitch/vote) · [Meghívó](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
                 inline=False
             )
         class General:
-            avail_lang_title = "Available Translations"
-            avail_lang_setmsg = "To set TwitchBot's language, type !twitch lang <language>."
-            stats_embed_title = emoji.twitch_icon + "TwitchBot Stats"
-            stats_uptime = "Uptime"
-            stats_usage = "Usage"
-            stats_version = "Version"
-            stats_shardinfo = "Shard Info"
-            stats_system = "System"
-            stats_developer = "Developer"
-            stats_patrons = "Patrons"
-            stats_links = "Links"
+            avail_lang_title = "Elérhető lokalizációk"
+            avail_lang_setmsg = "Használd a !twitch lang <language> parancsot a TwitchBot nyelvének beállításához."
+            stats_embed_title = emoji.twitch_icon + "TwitchBot statisztikák"
+            stats_uptime = "Futási idő"
+            stats_usage = "Használat"
+            stats_version = "Verzió"
+            stats_shardinfo = "Shard információ"
+            stats_system = "Rendszer"
+            stats_developer = "Fejlesztő"
+            stats_patrons = "Patronok"
+            stats_links = "Linkek"
             stats_links_desc = textwrap.dedent("""\
-            **·** Website: https://twitchbot.io
+            **·** Weboldal: https://twitchbot.io
             **·** Discord: https://discord.gg/UNYzJqV
-            **·** Upvote: https://discordbots.org/bot/twitch/vote
-            **·** Donate: https://patreon.com/devakira
+            **·** Szavazás: https://discordbots.org/bot/twitch/vote
+            **·** Anyagi támogatás: https://patreon.com/devakira
             """)
-            invite_msg1 = "**{user}**, you can invite me to a server with this link: <https://link.twitchbot.io/invite>"
-            invite_msg2 = "Need help? Join the support server: <https://link.twitchbot.io/support>"
-            status_title = emoji.twitch_icon + "Twitch Status"
-            status_cs = "Current status: `{status}`"
-            lang_current = "Your current language for TwitchBot is **{lang}**. To change it, type `!twitch lang <lang>` or `!twitch lang help`."
-            lang_unavail = emoji.cmd_fail + "That translation isn't available. Type `!twitch lang help` to view available languages."
-            lang_set = emoji.cmd_success + "Successfully set your TwitchBot language to **{lang}**."
+            invite_msg1 = "**{user}**, meghívhatsz a szerveredre a következő link segítségével: <https://link.twitchbot.io/invite>"
+            invite_msg2 = "Segítségre van szükséged? Csatlakozz a támogatási szerverhez: <https://link.twitchbot.io/support>"
+            status_title = emoji.twitch_icon + "Twitch státusz"
+            status_cs = "Jelenlegi státusz: `{status}`"
+            lang_current = "TwitchBot jelenleg beállított nyelve **{lang}**. Ennek módosításához használd a `!twitch lang <lang>` vagy `!twitch lang help` parancsot."
+            lang_unavail = emoji.cmd_fail + "Ez a lokalizáció nem elérhető. Használd a `!twitch lang help` parancsot az elérhető lokalizációk megtekintéséhez."
+            lang_set = emoji.cmd_success + "TwitchBot nyelve beállítva erre: **{lang}**."
         class Guild:
-            submode_command_usage = "Type `!twitch help sub_only` to view command usage."
-            submode_success = emoji.cmd_success + "Subscribers-only mode has been enabled for this server. New users will have to be a subscriber to {channel} to join. TwitchBot will attempt to DM non-subscribers that join and kick them. Note: existing members won't be kicked."
-            submode_kick = "This server is in subscribers-only mode. To join, you need to be a subscriber of {}.\nTo link your Twitch account to TwitchBot, go to <https://dash.twitchbot.io> and press 'Link Account' under Twitch."
-            submode_kick_audit_log = "Subscribers-only mode is enabled for this server. To turn it off, type '!twitch sub_only off'."
-            submode_del_success = emoji.cmd_success + "Subscribers-only mode has been disabled for this server."
-            user_not_in_guild = emoji.cmd_fail + "That user isn't in this server."
-            no_login_dash = emoji.cmd_fail + "{user} hasn't logged in to the TwitchBot dashboard yet. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            no_link_dash = emoji.cmd_fail + "{user} hasn't linked their Twitch channel on the TwitchBot dashboard. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            http_err_dash = emoji.cmd_fail + "An error occurred while trying to get information from the TwitchBot dashboard: {error}"
+            submode_command_usage = "Használd a `!twitch help sub_only` parancsot a használati utasítás megtekintéséhez."
+            submode_success = emoji.cmd_success + "Csak feliratkozók mód bekapcsolva a szerveren. Az újonnan csatlakozóknak feliratkozóknak kell lenniük itt: {channel} ahhoz, hogy csatlakozhassanak. TwitchBot megpróbál közvetlen üzenetet küldeni az újonnan érkezők számára, és kirúgja őket a szerverről. Megjegyzés: a jelenlegi tagok nem lesznek kirúgva."
+            submode_kick = "Ez a szerver csak feliratkozók módban van. A belépéshez fel kell legyél iratkozva ide: {}.\nAmennyiben szeretnéd Twitch fiókod össze kapcsolni TwitchBottal, látogass el a <https://dash.twitchbot.io> weboldalra és kattints a 'Link Account' gombra a Twitch részleg alatt."
+            submode_kick_audit_log = "Csak feliratkozók mód bekapcsolva a szerveren. Kikapcsoláshoz használd a '!twitch sub_only off' parancsot."
+            submode_del_success = emoji.cmd_success + "Csak feliratkozók mód kikapcsolva a szerveren."
+            user_not_in_guild = emoji.cmd_fail + "Ez a felhasználó nincs a szerveren."
+            no_login_dash = emoji.cmd_fail + "{user} felhasználó még nem jelentkezett be az irányítópultba. Egy másik felhasználó Twitch fiókjának lekéréséhez használd a `!twitch sub_only on --user-id=(felhasználó ID-je)` parancsot."
+            no_link_dash = emoji.cmd_fail + "{user} felhasználó még nem kapcsolta össze a Twitch fiókját TwitchBot irányítópultban. Egy másik felhasználó Twitch fiókjának lekéréséhez használd a `!twitch sub_only on --user-id=(felhasználó ID-je)` parancsot."
+            http_err_dash = emoji.cmd_fail + "Twitchbot irányítópultból való információ lekérés során hiba lépett fel: {error}"
         class LiveRole:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Live Role - Help"
@@ -263,84 +263,84 @@ class English:
                 `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
                 """)
             )
-            limit_reached = emoji.twitch_icon + "Hey there! Unfortunately you've reached the maximum amount of notifications that you can add to this server. To add more, you need to donate at <https://twitchbot.io/premium>."
-            prompt1 = "Which channel do you want to receive the notification in? Mention or type the name of one below. *(respond in 60 seconds)*"
-            prompt2 = "Type the name of the Twitch channel that you want to set up the notification for. *(respond in 60 seconds)*"
-            prompt3 = "Enter a custom message that you want to be shown when the user goes live, or type `default` for the default message. *(respond in 180 seconds)*"
-            text_channel_not_found = emoji.cmd_fail + "Couldn't find that text channel. Exiting command..."
-            twitch_user_not_found = emoji.cmd_fail + "That Twitch user could not be found. Exiting command..."
-            twitch_user_not_found_alt = emoji.cmd_fail + "That Twitch user doesn't exist. Make sure that you're not putting anything extra around the name (such as `<>`), and that you're not @mentioning a Discord user."
-            response_timeout = "*Response timed out.*"
-            invalid_data = emoji.cmd_fail + "Invalid data was sent from Twitch:"
-            malformed_user = emoji.cmd_fail + "That doesn't look like a valid Twitch user. You can only include underscores, letters, and numbers."
-            default_msg = "<https://twitch.tv/{channel}> is now live on Twitch!"
-            del_fail = emoji.cmd_fail + "No notification has been set up for this user."
-            del_success = emoji.cmd_success + "You won't get any notifications in {channel} when {user} goes live."
-            add_success = emoji.cmd_success + "Added a notification for {user} in {channel}"
-            list_title = "Streamer notifications for **#{channel}**"
-            list_embed_limit = "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live."
-            no_notifs = "Notifications"
-            notifications = "No streamer notifications are set up for this channel."
-            bulk_delete_confirm = "**You are about to delete {count} notifications in {channel}.** Are you sure that you want to do this? Reply with `yes` if you want to continue."
-            bulk_delete_success = emoji.cmd_success + "Successfully deleted {count} notifications from {channel}."
-            command_cancelled = "Command cancelled."
+            limit_reached = emoji.twitch_icon + "Halihó! Sajnos elérted a maximum mennyiségű kiértesítőt ezen a szerveren. Továbbiak hozzáadásához fizess elő TwitchBot Prémiumra itt: <https://twitchbot.io/premium>."
+            prompt1 = "Melyik csatornába szeretnéd kapni a kiértesítéseket? Említsd meg a csatornát az üzenetedben. *(válaszolj 60 másodpercen belül)*"
+            prompt2 = "Írd le a Twitch csatorna nevét, amelyről kiértesítést szeretnél kapni. *(válaszolj 60 másodpercen belül)*"
+            prompt3 = "Írj be egy egyedi üzenetet amit szeretnél megjeleníteni amikor a felhasználó elkezd közvetíteni, vagy használd a `default` parancsot amennyiben az alapértelmezett üzenetet szeretnéd használni. *(válaszolj 180 másodpercen belül)*"
+            text_channel_not_found = emoji.cmd_fail + "Nem találom ezt a csatornát. Parancs befejezése..."
+            twitch_user_not_found = emoji.cmd_fail + "Nem találom ezt a Twitch csatornát. Parancs befejezése..."
+            twitch_user_not_found_alt = emoji.cmd_fail + "Ez a Twitch felhasználó nem létezik. Győződj meg arról, hogy csak a felhasználó nevét írod be, és nem használsz extra szimbólumokat, (mint pl. `<>`) és nem @említesz meg egy Discord felhasználót sem."
+            response_timeout = "*Válasz időtúllépés.*"
+            invalid_data = emoji.cmd_fail + "Érvénytelen adat érkezett a Twitchtől:"
+            malformed_user = emoji.cmd_fail + "Ez nem érvényes felhasználó név. Csak alsó vonal, betűk, és számok használhatóak."
+            default_msg = "<https://twitch.tv/{channel}> élő adásban van Twitchen"
+            del_fail = emoji.cmd_fail + "Nincs beállítva kiértesítő erre a felhasználóra."
+            del_success = emoji.cmd_success + "Nem fogsz kiértesítést kapni a(z) {channel} csatornában amikor {user} közvetít."
+            add_success = emoji.cmd_success + "Kiértesítés létrehozva {user} számára a(z) {channel} csatornában"
+            list_title = "Közvetítési kiértesítések a(z) **#{channel}** csatornában"
+            list_embed_limit = "Egyedi üzenet nem kerül megjelenítésre a beágyazásban a Discord 1024 karakteres limitációja miatt. Ettől függetlenül meg fog jelenni amikor a felhasználó élő adásba kezd."
+            no_notifs = "Kiértesítések"
+            notifications = "Nincs beállítva kiértesítő ebbe a csatornában."
+            bulk_delete_confirm = "**Törölni fogsz {count} kiértesítőt a(z) {channel} csatornából.** Biztosan szeretnéd törölni ezeket? Válaszolj `yes` paranccsal a folytatáshoz."
+            bulk_delete_success = emoji.cmd_success + "{count} kiértesítő eltávolítva a(z) {channel} csatornából."
+            command_cancelled = "Parancs vissszavonva."
             notif_variables = discord.Embed(color=discord.Color(0x6441A4))
-            notif_variables.title = "Notification message variables"
-            notif_variables.description = "Use one of the variables below to insert data into a stream notification message."
+            notif_variables.title = "Kiértesítési szöveg változók"
+            notif_variables.description = "Használd az alább listázott változókat plusz információ megjelenítéséhez a kiértesítési szövegben."
             notif_variables.add_field(
-                name = "Available formatting",
+                name = "Elérhető formátumok",
                 value = textwrap.dedent("""\
-                *`$title$`* - The stream's title
-                *`$viewers$`* - The number of people currently watching the stream
-                *`$game$`* - The game that the streamer is currently playing
-                *`$url$`* - The channel's URL
-                *`$name$`* - The channel's name
-                *`$everyone$`* - Inserts an @everyone mention
-                *`$here$`* - Inserts an @here mention
+                *`$title$`* - Közvetítés címe
+                *`$viewers$`* - Jelenlegi nézők száma
+                *`$game$`* - Játék amivel a közvetítő jelenleg játszik
+                *`$url$`* - Csatorna linkje
+                *`$name$`* - Csatorna neve
+                *`$everyone$`* - Megemlít mindenkit az @everyone segítségével
+                *`$here$`* - Megemlíti a jelenleg online felhasználókat a @here segítségével
                 """)
             )
         class Permissions:
-            user_need_perm = emoji.cmd_fail + "You need the **{permission}** permission to do this."
-            bot_need_perm = emoji.cmd_fail + "I need the **{permission}** permission to do this."
-            no_pm = emoji.cmd_fail + "You can only use this command in a server."
+            user_need_perm = emoji.cmd_fail + "A(z) **{permission}** jogra van szükséged, hogy ezt tehesd."
+            bot_need_perm = emoji.cmd_fail + "Ehhez szükségem van a(z) **{permission}** jogra."
+            no_pm = emoji.cmd_fail + "Ezt a parancsot csak szervereken használhatod."
         class Streams:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Stream Commands - Help"
+            command_usage.title = "Közvetítés parancsok - Súgó"
             command_usage.add_field(
-                name = "Commands",
+                name = "Parancsok",
                 value = textwrap.dedent("""\
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
+                `!twitch stream user <user>` - Információ egy felhasználó közvetítéséről
+                `!twitch stream watch <user>` - Twitch közvetítés megtekintése Discordról
+                `!twitch stream game <name>` - Valaki közvetítésének megtekintése adott játék kategóriában
+                `!twitch stream top` - Információ egy népszerű közvetítésről
                 """)
             )
-            game_desc = "Check out {user} playing {game} for {view_count} viewers:\nhttps://twitch.tv/{user}"
-            game_not_found = emoji.cmd_fail + "That game could not be found."
-            game_no_streams = emoji.cmd_fail + "Nobody is streaming that game."
-            live = "Live on Twitch"
-            stream_not_found = emoji.cmd_fail + "That user doesn't exist or is not online. Make sure you're only entering the user's name and not anything extra, like `()` or `<>`."
+            game_desc = "Tekintsd meg őt: {user} - {game} {view_count} néző számára:\nhttps://twitch.tv/{user}"
+            game_not_found = emoji.cmd_fail + "Nem található ilyen játék."
+            game_no_streams = emoji.cmd_fail + "Senki sem játszik ezzel a játékkal."
+            live = "Élő adásban Twitchen"
+            stream_not_found = emoji.cmd_fail + "Ez a felhasználó nem létezik, vagy offline. Győződj meg arról, hogy csak a felhasználó nevét írod be, és nem használsz extra szimbólumokat, mint `()` vagy `<>`."
             stream_desc = textwrap.dedent("""\
-            Playing {game} for {view_count} viewers
-            **[Watch on Twitch](https://twitch.tv/{channel})** or type `twitch stream watch {channel}`
+            {game} {view_count} néző számára
+            **[Megtekintés Twitchen](https://twitch.tv/{channel})** vagy használd a `twitch stream watch {channel}` parancsot
 
-            Stream Preview:
+            Közvetítés előnézete:
             """)
         class Users:
-            connections = "Connections for {user}"
-            connected = "Connected to {account}"
-            followers = "Followers"
-            following = "Following"
-            live = "Currently Live"
-            playing = "Playing {game} for {view_count} viewers"
+            connections = "{user} kapcsolatai"
+            connected = "Kapcsolódva ehhez: {account}"
+            followers = "Követők"
+            following = "Követés"
+            live = "Jelenleg élő"
+            playing = "{game} {view_count} néző számára"
             not_connected = "Not Connected"
-            not_live = "Currently Offline"
-            no_login_dash = "This user hasn't visited the [TwitchBot dashboard](http://dash.twitchbot.io)."
+            not_live = "Jelenleg offline"
+            no_login_dash = "Ez a felhasználó még nem használta a [TwitchBot irányítópultot](http://dash.twitchbot.io)."
             streamer_id = "Streamer ID:"
-            views = "Views"
-            view_profile = "View Twitch Profile"
-            unknown = "Unknown"
-            watch_on_twitch = "Watch on Twitch"
+            views = "Megtekintések"
+            view_profile = "Twitch profil megtekintése"
+            unknown = "Ismeretlen"
+            watch_on_twitch = "Megtekintés Twitchen"
         self.Audio = Audio
         self.Clips = Clips
         self.CommandsList = CommandsList
