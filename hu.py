@@ -8,50 +8,50 @@ class English:
         self._lang_emoji = ":flag_hu:"
         self._translator = "Lireoy#4444"
         class Audio:
-            no_channel = emoji.cmd_fail + "You need to be in a voice channel."
+            no_channel = emoji.cmd_fail + "Hang csatornában kell lenned."
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Please upvote to continue"
-            need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.title = "Szavazz a folytatáshoz"
+            need_upvote.description = "Szavaznod kell a TwitchBotra, hogy streameket hallgathass! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "Want to skip upvoting?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
+                name = "Szeretnéd átugrani a szavazást?",
+                value = "A [TwitchBot Prémium](https://twitchbot.io/premium) segítségével szavazás nélkül hallgathatsz közvetítéseket."
             )
-            please_wait = "Please wait... " + emoji.loading
-            user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
-            np_title = "Now playing in {channel}"
-            np_desc = "{title}\n{viewer_count} currently watching"
-            np_leave = "Type '!twitch leave' to stop the stream"
-            connection_timeout = emoji.cmd_fail + "Voice connection timed out."
-            not_streaming = "I'm not streaming anything on this server right now."
-            disconnected = "Left the voice channel."
+            please_wait = "Kérlek várj... " + emoji.loading
+            user_noexist = emoji.cmd_fail + "Ez a felhasználó nem létezik vagy jelenleg nem közvetít. Próbálj meg a csatornára mutató hivatkozást beilleszteni."
+            np_title = "Jelenleg a {channel} csatornában játszom"
+            np_desc = "{title}\n{viewer_count} néző"
+            np_leave = "Írd be a '!twitch leave' parancsot a közvetítés befejezéséhez."
+            connection_timeout = emoji.cmd_fail + "Hang kapcsolati időtúllépés."
+            not_streaming = "Nem közvetítek semmit sem jelenleg ezen a szerveren."
+            disconnected = "Elhagytam a hang csatornát"
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Clips - Help"
+            command_usage.title = "Klipek - Súgó"
             command_usage.add_field(
-                name = "Commands",
+                name = "Parancsok",
                 value = textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <user>` - Link egy kliphez a megadott Twitch felhasználótól
+                `!twitch clips trending` - Link egy népszerű kliphez
+                `!twitch clips game <game>` - Link egy kliphez a megadott játékról
+                `!twitch clips uservoted` - Link az egyik TwitchBot felhasználók által megszavazott legnépszerűbb kliphez
                 """)
             )
-            clip_desc = "Check out {user} playing {game}:\n{url}"
-            no_clips = emoji.cmd_fail + "No clips were found."
-            no_votes = emoji.cmd_fail + "Nobody has voted on any clips yet. Come back later."
-            uservote_clip_desc = "{vote_count} votes on this clip by {user}:\n{url}"
-            upvote_fail = emoji.cmd_fail + "**{user}**, your upvote couldn't be be processed."
+            clip_desc = "Tekintsd meg {user} felhasználót amint a(z) {game} játékkal játszik:\n{url}"
+            no_clips = emoji.cmd_fail + "Nem található egy klip sem."
+            no_votes = emoji.cmd_fail + "Senki sem szavazott még egyik klipre sem. Gyere vissza később."
+            uservote_clip_desc = "{vote_count} szavazat {user} klipjén:\n{url}"
+            upvote_fail = emoji.cmd_fail + "**{user}**, a szavazatodat nem tudtuk feldolgozni."
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "TwitchBot Commands"
-            e.description = ":warning: __**Do not put `<>` or `[]` around command arguments.**__"
+            e.title = emoji.twitch_icon + "TwitchBot parancsok"
+            e.description = ":warning: __**Ne használj `<>` vagy `[]` szimbólumokat a parancs argumentumok körül.**__"
             e.add_field(
-                name="General",
+                name="Általános",
                 value=textwrap.dedent("""\
-                `!twitch help` - Shows bot help
-                `!twitch info` - Shows bot info
-                `!twitch invite` - Displays a link to add TwitchBot to your server
-                `!twitch status` - Shows Twitch API status
+                `!twitch help` - Bot súgó
+                `!twitch info` - Bot információ
+                `!twitch invite` - TwitchBot meghívó linkje, hogy hozzáadhasd a szerveredhez
+                `!twitch status` - Twitch API jelenlegi státusza
                 `!twitch ping` - Pong!
                 """),
                 inline=False
@@ -59,105 +59,105 @@ class English:
             e.add_field(
                 name="Twitch",
                 value=textwrap.dedent("""\
-                `!twitch user <user>` - Gets info on a Twitch channel
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
-                `!twitch game <name>` - Gets info on a Twitch game
-                `!twitch top` - Gets the most popular Twitch games
+                `!twitch user <user>` - Információ egy Twitch csatornáról
+                `!twitch stream user <user>` - Információ egy felhasználó közvetítéséről
+                `!twitch stream watch <user>` - Twitch közvetítés megtekintése Discordról
+                `!twitch stream game <name>` - Valaki közvetítésének megtekintése adott játék kategóriában
+                `!twitch stream top` - Információ egy népszerű közvetítésről
+                `!twitch game <name>` - Információ egy játékról Twitchen
+                `!twitch top` - Legnépszerűbb játékok a Twitchen
                 """),
                 inline=False
             )
             e.add_field(
-                name="Clips",
+                name="Klipek",
                 value=textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <user>` - Link egy kliphez a megadott Twitch felhasználótól
+                `!twitch clips trending` - Link egy népszerű kliphez
+                `!twitch clips game <game>` - Link egy kliphez a megadott játékról
+                `!twitch clips uservoted` - Link az egyik TwitchBot felhasználók által megszavazott legnépszerűbb kliphez
                 """),
                 inline=False
             )
             e.add_field(
-                name="Streamer Notifications",
+                name="Közvetítési értesítések",
                 value=textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Új kiértesítés egy felhasználó közvetítéseiről adott csatornába
+                `!twitch notif remove <#discord_channel> <streamer_name>` - Kiértesítés eltávolítása egy felhasználó közvetítéseiről adott csatornából
+                `!twitch notif list [#discord_channel]` - Adott csatornában működő kiértesítők listázása
+                `!twitch notif formatting` - Változók megjelenítése, amelyeket beilleszthetsz a kiértesítések szövegébe
                 """),
                 inline=False
             )
             e.add_field(
-                name="Live Role",
+                name="Élő rang",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - Beállítja az Élő rangot a jelenlegi szerveren
+                `!twitch live_role filter` - Korlátozza az Élő rangot adott ranggal rendelkező felhasználókra
+                `!twitch live_role delete` - Eltávolítja az Élő rang konfigurációját
+                `!twitch live_role view` - Megmutatja jelenleg melyik rang van beállítva Élő rangnak.
                 """),
                 inline=False
             )
             e.add_field(
-                name="Audio",
+                name="Hang",
                 value=textwrap.dedent("""\
-                `!twitch listen <user>` - Listen to a Twitch stream in the current voice channel
-                `!twitch nowplaying` - Shows the stream currently playing, if any
-                `!twitch leave` - Leaves a voice channel
+                `!twitch listen <user>` - Twitch közvetítés hallgatása a jelenlegi hang csatornában
+                `!twitch nowplaying` - Információ a jelenleg lejátszott közvetítésről, ha van ilyen
+                `!twitch leave` - Hang csatorna elhagyása
                 """),
                 inline=False
             )
             e.add_field(
-                name="Game Stats",
+                name="Játék statisztikák",
                 value=textwrap.dedent("""\
-                `!twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats
-                `!twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats
+                `!twitch overwatch <pc/psn/xbl> <player>` - Overwatch játékos statisztikák
+                `!twitch fortnite <pc/psn/xbl> <player>` - Fortnite játékos statisztikák
                 """),
                 inline=False
             )
             e.add_field(
-                name="Message Filter",
+                name="Üzenet szűrő",
                 value=textwrap.dedent("""\
-                `!twitch filter set <sensitivity>` - Sets the server-wide toxicity filter
-                `!twitch filter remove` - Removes the server-wide toxicity filter
+                `!twitch filter set <sensitivity>` - Káros tartalom szűrésének bekapcsolása
+                `!twitch filter remove` - Káros tartalom szűrésének kikapcsolása
                 """),
                 inline=False
             )
         class Errors:
-            err_report = "Please report this error to the developers at <https://link.twitchbot.io/support>."
-            forbidden = emoji.cmd_fail + "I don't have the correct permissions to do that."
-            not_found = emoji.cmd_fail + "That Discord channel was not found. Make sure you're not putting <> around it and that you're `#mention`ing it."
-            not_started = "TwitchBot is still starting up! Please wait a few minutes before trying again."
-            check_fail = emoji.cmd_fail + "You don't have permission to run this command."
-            cooldown = emoji.cmd_fail + "You can run this command in {time} seconds."
-            conn_closed = emoji.cmd_fail + "The voice connection was closed. Reason: `{reason}`"
-            missing_arg = emoji.cmd_fail + "You're missing the `{param}` paramater."
-            too_many_requests = emoji.cmd_fail + "Third-party servers are having trouble keeping up with our requests. Please try again later."
+            err_report = "Kérlek jelentsd ezt a hibát a fejlesztőknek itt: <https://link.twitchbot.io/support>."
+            forbidden = emoji.cmd_fail + "Nem rendelkezem a megfelelő jogokkal, hogy ezt megtehessem."
+            not_found = emoji.cmd_fail + "Nem található ez a csatorna. Győződj meg arról, hogy nem teszel <> szimbólumokat köré, és `#megemlíted` azt."
+            not_started = "TwitchBot jelenleg elindítás alatt van! Kérlek várj néhány percet mielőtt újra próbálkozol."
+            check_fail = emoji.cmd_fail + "Nincs jogod a parancs futtatásához."
+            cooldown = emoji.cmd_fail + "Legközelebb {time} másodperc múlva használhatod ezt a parancsot."
+            conn_closed = emoji.cmd_fail + "A hang kapcsolat megszakadt. Esemény: `{reason}`"
+            missing_arg = emoji.cmd_fail + "Hiányzik a `{param}` paraméter."
+            too_many_requests = emoji.cmd_fail + "Harmadik fél által használt szerverek jelenleg nem válaszolnak a kérésekre. Próbáld meg később."
         class Filter:
-            cmd_usage = "Type `!twitch help filter` to view command usage."
-            need_donate = "Only TwitchBot Premium members can use this command. Learn more: <https://twitchbot.io/premium>"
-            invalid_sensitivity = "Sensitivity must be between 85 and 60."
-            add_success = emoji.cmd_success + "Successfully set this server's toxicity filter."
-            no_filter = emoji.cmd_fail + "No toxicity filter exists for this server."
-            del_success = emoji.cmd_success + "Successfully removed this server's toxicity filter."
+            cmd_usage = "Használd a `!twitch help filter` parancsot a használati utasítás megtekintéséhez."
+            need_donate = "Csak TwitchBot Prémium tagok használhatják ezt a parancsot. További információk: <https://twitchbot.io/premium>"
+            invalid_sensitivity = "A szenzitivitási érték 85 és 60 között kell legyen."
+            add_success = emoji.cmd_success + "Szerver káros tartalom szűrője beállítva."
+            no_filter = emoji.cmd_fail + "Nincs beállítva káros tartalom szűrő."
+            del_success = emoji.cmd_success + "Káros tartalom szűrő kikapcsolva."
         class Games:
-            no_results = emoji.cmd_fail + "No results found."
-            no_stats_overwatch = emoji.cmd_fail + "No stats could be found for this player. If your profile is private, you can't see stats for it unless you make it public. Please follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make your profile public."
-            no_stats_fortnite = emoji.cmd_fail + "Player not found. Check the spelling of the username or try a different platform."
-            view_streams = "View Streams"
-            top_games = emoji.twitch_icon + "Top Games"
-            top_games_desc = "{view_count} viewers • {channel_count} channels streaming"
-            invalid_battletag = "Please enter your Battletag in a format of `name#id`."
-            invalid_platform = "Platform must be one of `pc`, `psn`, or `xbl`."
-            incomplete_data = "Your profile data is incomplete. If your profile is private, follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make it public so you can view your stats."
-            incomplete_data_short = "Some data may be missing or incomplete"
-            generic_error = emoji.cmd_fail + "An error occurred:"
-            powered_by_overwatch = "Powered by owapi.net"
-            powered_by_fortnite = "Powered by fortnitetracker.com"
+            no_results = emoji.cmd_fail + "Nincs találat."
+            no_stats_overwatch = emoji.cmd_fail + "Nem található statisztika erről a játékosról. Ha privát a profilod, nem láthatóak a statisztikák, csakis akkor ha publikusra állítod. Kövesd az itt leírtakat, hogy publikussá tedd a profilod. <https://dotesports.com/overwatch/news/ow-public-private-profile-25347>"
+            no_stats_fortnite = emoji.cmd_fail + "Játékos nem található. Ellenőrízd a név helyességét, vagy próbálj meg egy másik platformot."
+            view_streams = "Közvetítések megtekintése"
+            top_games = emoji.twitch_icon + "Népszerű játékok"
+            top_games_desc = "{view_count} néző • {channel_count} követítő csatorna"
+            invalid_battletag = "Kérlek írd be a Battletaged ebben a formában: `name#id`."
+            invalid_platform = "A következők egyikének kell lennie a platformnak: `pc`, `psn`, or `xbl`."
+            incomplete_data = "Hiányosak a profil adataid. Ha privát a profilod, kövesd az itt leírtakat, hogy publikussá tedd a profilod, és megtekinthesd a statisztikákat. <https://dotesports.com/overwatch/news/ow-public-private-profile-25347>"
+            incomplete_data_short = "Némi adat hiányzik"
+            generic_error = emoji.cmd_fail + "Hiba lépett fel:"
+            powered_by_overwatch = "owapi.net által hajtva"
+            powered_by_fortnite = "fortnitetracker.com által hajtva"
         class HelpCommand:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "**TwitchBot Help**"
+            e.title = emoji.twitch_icon + "**TwitchBot súgó**"
             e.add_field(
                 name="Commands",
                 value="TwitchBot responds to commands starting with `twitch` or `!twitch`. Type `!twitch commands` to view all runnable commands.",
