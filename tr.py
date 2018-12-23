@@ -9,31 +9,51 @@ class Turkish:
         self._translator = "Alexei#1991"
         class Audio:
             no_channel = emoji.cmd_fail + "You need to be in a voice channel."
+            no_channel = emoji.cmd_fail + "Bir ses kanalında olmanız gerekli."
             need_upvote = discord.Embed(color=0x6441A4)
             need_upvote.title = "Please upvote to continue"
+            need_upvote.title = "Lütfen devam etmek için oy verin"
             need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
+            need_upvote.description = "Yayınları dinleyebilmek için TwitchBot'a oy vermeniz gerekli! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.add_field(
                 name = "Want to skip upvoting?",
+                name = "Oylamayı atlamak ister misiniz?",
                 value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
             )
+                value = "[TwitchBot Premium](https://twitchbot.io/premium) oylamadan yayınları dinlemenizi sağlar."
+            )
             please_wait = "Please wait... " + emoji.loading
+            please_wait = "Lütfen bekleyin..." + emoji.loading
             user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
+            user_noexist = emoji.cmd_fail + "Bu kullanıcı mevcut değil veya şuan yayın yapmıyor. Kanala bir bağlantı girmeyi deneyin."
             np_title = "Now playing in {channel}"
+            np_title = "Şuan {channel}'da oynatılıyor"
             np_desc = "{title}\n{viewer_count} currently watching"
+            np_desc = "{title}\n{viewer_count} şuanda izliyor"
             np_leave = "Type '!twitch leave' to stop the stream"
+            np_leave = "Yayını durdurmak için '!twitch leave' komutunu kullanın"
             connection_timeout = emoji.cmd_fail + "Voice connection timed out."
+            connection_timeout = emoji.cmd_fail + "Ses bağlantısı zaman aşımına uğradı."
             not_streaming = "I'm not streaming anything on this server right now."
+            not_streaming = "Şu anda bu sunucuda hiçbir şey yayınlamıyorum."
             disconnected = "Left the voice channel."
+            disconnected = "Ses kanalından ayrıldı."
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Clips - Help"
             command_usage.add_field(
                 name = "Commands",
+                name = "Komutlar",
                 value = textwrap.dedent("""\
                 `!twitch clips from <user>` - Gets a clip from the specified Twitch user
+                `!twitch clips from <user>` - Belirtilen Twitch kullanıcısından bir klip alır
                 `!twitch clips trending` - Gets a trending clip
+                `!twitch clips trending` - Trend bir klip alır
                 `!twitch clips game <game>` - Gets a clip from the specified game
+                `!twitch clips game <game>` - Belirtilen oyundan bir klip alır
                 `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips uservoted` - TwitchBot kullanıcılarının oyladığı en popüler kliplerden birini alır
                 """)
             )
             clip_desc = "Check out {user} playing {game}:\n{url}"
