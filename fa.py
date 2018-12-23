@@ -13,23 +13,23 @@ class English:
             need_upvote.title = "برای ادامه دادن لطفا رأی موافق دهید." 
             need_upvote.description = "برای گوش دادن به استریم ها باید به تویچ بات رای موافق دهید! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                ###___________________________________ Translate Flag
-                name = "Want to skip upvoting?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
+                name = "می خواهید از رای موافق گذر کنید؟",
+                value = "[تویچ بات پیشرفته](https://twitchbot.io/premium) به شما این اجازه را میدهد تا بدون رأی موافق دادن به استریم گوش کنید."
             )
-            please_wait = "Please wait... " + emoji.loading
-            user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
-            np_title = "Now playing in {channel}"
-            np_desc = "{title}\n{viewer_count} currently watching"
-            np_leave = "Type '!twitch leave' to stop the stream"
-            connection_timeout = emoji.cmd_fail + "Voice connection timed out."
-            not_streaming = "I'm not streaming anything on this server right now."
-            disconnected = "Left the voice channel."
+            please_wait = "لطفا صبر کنید... " + emoji.loading
+            user_noexist = emoji.cmd_fail + "کاربر یافت نشد یا در حال استریم نیست. سعی کنید لینک کانال را وارد کنید."
+            np_title = "در حال پخش در {channel}"
+            np_desc = "{title}\n{viewer_count} بیننده"
+            np_leave = "برای توقف استریم '!twitch leave' را بنویسید"
+            connection_timeout = emoji.cmd_fail + "خطا: زمان اتصال صوتی به پایان رسید."
+            not_streaming = "در حال حاضر هیچ استریمی را در این سرور پخش نمی کنم."
+            disconnected = "کانال صوتی را ترک کردم."
+            ###___________________________________ Translate Flag
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Clips - Help"
+            command_usage.title = "کلیپ ها - راهنما"
             command_usage.add_field(
-                name = "Commands",
+                name = "دستورات",
                 value = textwrap.dedent("""\
                 `!twitch clips from <user>` - Gets a clip from the specified Twitch user
                 `!twitch clips trending` - Gets a trending clip
