@@ -6,7 +6,7 @@ class Dutch:
     def __init__(self):
         self._lang_name = "Nederlands"
         self._lang_emoji = ":flag_nl:"
-        self._translator = "Leon#6252"
+        self._translator = "Leon#6252, SenpaiTurtleYT#4991"
         class Audio:
             no_channel = emoji.cmd_fail + "Je moet in een spraak kanaal zijn."
             need_upvote = discord.Embed(color=0x6441A4)
