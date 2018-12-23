@@ -1,4 +1,4 @@
-DoSriantafrom . import _emoji as emoji
+from . import _emoji as emoji
 import textwrap
 import discord
 
@@ -50,6 +50,7 @@ class Irish:
                 value=textwrap.dedent("""\
                 `!twitch help` - Taispeáin bot cabhrú
                 `!twitch info` - Taispeáin bot eolas
+                `!twitch lang` - Taispeáin cad teanga TwitchBot tá ar taispeáint i
                 `!twitch invite` - Taispeántais a nasc chun cuir TwitchBot chun do freastalaí
                 `!twitch status` - Taispeáin Twitch API stádas
                 `!twitch ping` - Pong!
