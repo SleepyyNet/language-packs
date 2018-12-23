@@ -133,7 +133,7 @@ class English:
             check_fail = emoji.cmd_fail + "You don't have permission to run this command."
             cooldown = emoji.cmd_fail + "You can run this command in {time} seconds."
             conn_closed = emoji.cmd_fail + "The voice connection was closed. Reason: `{reason}`"
-            missing_arg = emoji.cmd_fail + "You're missing the `{param}` paramater."
+            missing_arg = emoji.cmd_fail + "You're missing the `{param}` parameter."
             too_many_requests = emoji.cmd_fail + "Third-party servers are having trouble keeping up with our requests. Please try again later."
         class Filter:
             cmd_usage = "Type `!twitch help filter` to view command usage."
