@@ -26,12 +26,12 @@ class Russian:
             disconnected = "Покинул голосовой канал."
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Clips - Help"
+            command_usage.title = "Клипы - Помошь"
             command_usage.add_field(
                 name = "Команды",
                 value = textwrap.dedent("""\
-                `!twitch clips from <user>` - Получить клип от указанного пользователя Twitch
-                `!twitch clips trending` - Получить популярный клип
+                `!twitch clips from <user>` - Получить клип указанного пользователя Twitch
+                `!twitch clips trending` - Получить набирающий популярность клип
                 `!twitch clips game <game>` - Получить клип указанной игры
                 `!twitch clips uservoted` - Получить один из самых популярных клипов, за который проголосовали пользователи TwitchBot.
                 """)
@@ -64,7 +64,7 @@ class Russian:
                 `!twitch stream user <user>` - Получить информацию о стриме пользователя
                 `!twitch stream watch <user>` - Смотреть трансляцию Twitch через Discord
                 `!twitch stream game <name>` - Посмотреть, как кто-то стримит указанную игру
-                `!twitch stream top` - Получить информацию в популярных стримах
+                `!twitch stream top` - Получить информацию о популярных стримах
                 `!twitch game <name>` - Получить информацию об игре Twitch
                 `!twitch top` - Получить самые популярные игры Twitch
                 """),
@@ -74,7 +74,7 @@ class Russian:
                 name="Клипы",
                 value=textwrap.dedent("""\
                 `!twitch clips from <user>` - Получить клип указанного пользователя Twitch
-                `!twitch clips trending` - Получить набирающий популярный клип
+                `!twitch clips trending` - Получить набирающий популярности клип
                 `!twitch clips game <game>` - Получить клип указанной игры
                 `!twitch clips uservoted` - Получить один из самых популярных клипов, за которые проголосовали пользователи TwitchBot.
                 """),
@@ -93,10 +93,10 @@ class Russian:
             e.add_field(
                 name="Live Role",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - Устанавить Live Role на текущего сервера
+                `!twitch live_role set` - Устанавить Live Role для текущего сервера
                 `!twitch live_role filter` - Ограничить Live Role для пользователей с определенной ролью
                 `!twitch live_role delete` - Удалить конфигурацию Live Role
-                `!twitch live_role view` - Сообщить Вам, какая роль установлена в данный момент
+                `!twitch live_role view` - Показать, какая роль установлена в данный момент
                 """),
                 inline=False
             )
@@ -104,7 +104,7 @@ class Russian:
                 name="Аудио",
                 value=textwrap.dedent("""\
                 `!twitch listen <user>` - Прослушивание стрима Twitch в текущем голосовом канале
-                `!twitch nowplaying` - Если есть, показывать какой стрим идёт в данны момент
+                `!twitch nowplaying` - Если есть, показывать какой стрим воспроизводится в данный момент
                 `!twitch leave` - Выйти из голосового канала
                 """),
                 inline=False
@@ -120,53 +120,53 @@ class Russian:
             e.add_field(
                 name="Фильтр сообщений",
                 value=textwrap.dedent("""\
-                `!twitch filter set <sensitivity>` - Устанавить фильтр токсичности на всём сервера
-                `!twitch filter remove` - Убрать общесерверный фильтр токсичности на всём сервера
+                `!twitch filter set <sensitivity>` - Устанавить фильтр токсичности для всего сервера
+                `!twitch filter remove` - Убрать фильтр токсичности для всего сервера
                 """),
                 inline=False
             )
         class Errors:
             err_report = "Пожалуйста, сообщите об этой ошибке разработчикам на <https://link.twitchbot.io/support>."
             forbidden = emoji.cmd_fail + "У меня нет необходимых разрешений для этого."
-            not_found = emoji.cmd_fail + "Канал Discord не найден. Убедитесь, что вы не ставите <> вокруг названия и не пишите `#mention`."
+            not_found = emoji.cmd_fail + "Данный канал Discord не найден. Убедитесь, что вы не ставите <> вокруг названия и не используете `#mention`."
             not_started = "TwitchBot все еще запускается! Пожалуйста, подождите несколько минут, прежде чем пытаться снова."
             check_fail = emoji.cmd_fail + "У вас нет разрешения на запуск этой команды."
             cooldown = emoji.cmd_fail + "Вы сможете выполнить эту команду через {time} секунд."
-            conn_closed = emoji.cmd_fail + "Голосовая соединение была закрыта. Причина: `{reason}`"
+            conn_closed = emoji.cmd_fail + "Голосовое соединение было закрыто. Причина: `{reason}`"
             missing_arg = emoji.cmd_fail + "Вы пропустили параметр: `{param}`."
             too_many_requests = emoji.cmd_fail + "Сторонние серверы испытывают трудности с выполнением наших запросов. Пожалуйста, попробуйте позже."
         class Filter:
-            cmd_usage = "Введите `!twitch help filter` для просмотра использования команды."
-            need_donate = "Только члены TwitchBot Premium могут использовать эту команду. Учить больше: <https://twitchbot.io/premium>"
+            cmd_usage = "Введите `!twitch help filter` для просмотра помощи по использованию команды."
+            need_donate = "Только члены TwitchBot Premium могут использовать эту команду. Узнать больше: <https://twitchbot.io/premium>"
             invalid_sensitivity = "Чувствительность должна быть между 85 и 60."
-            add_success = emoji.cmd_success + "Фильтр токсичности успешно установлен на этом сервере."
-            no_filter = emoji.cmd_fail + "Для этого сервера ещё не установлен фильтр токсичности."
-            del_success = emoji.cmd_success + "Фильтр токсичности успешно удалён на этом сервере."
+            add_success = emoji.cmd_success + "Фильтр токсичности был успешно установлен на этом сервере."
+            no_filter = emoji.cmd_fail + "Для этого сервера ещё не был установлен фильтр токсичности."
+            del_success = emoji.cmd_success + "Фильтр токсичности успешно удалён с этого сервера."
         class Games:
             no_results = emoji.cmd_fail + "Результаты не найдены."
             no_stats_overwatch = emoji.cmd_fail + "Статистика для этого игрока не найдена. Если ваш профиль закрыт, вы не сможете просмотреть его статистику, если не сделаете его общедоступным. Пожалуйста, следуйте инструкциям на <https://dotesports.com/overwatch/news/ow-public-private-profile-25347>, чтобы сделать ваш профиль общедоступным."
             no_stats_fortnite = emoji.cmd_fail + "Игрок не найден. Проверьте правильность написания имени пользователя или попробуйте другую платформу."
             view_streams = "Просмотр стрима"
             top_games = emoji.twitch_icon + "Топ игр"
-            top_games_desc = "{view_count} зрителей • {channel_count} каналов сейчас стримит"
+            top_games_desc = "{view_count} зрителей • {channel_count} каналов сейчас стримят"
             invalid_battletag = "Пожалуйста, введите ваш Battletag в формате `name#id`."
             invalid_platform = "Платформа должна быть одной из `pc`, `psn` или `xbl`."
             incomplete_data = "Данные вашего профиля неполные. Если ваш профиль закрыт, следуйте инструкциям на <https://dotesports.com/overwatch/news/ow-public-private-profile-25347>, чтобы сделать его общедоступным, чтобы вы могли просматривать свою статистику."
             incomplete_data_short = "Некоторые данные отсутствуют или неполные"
             generic_error = emoji.cmd_fail + "Произошла ошибка:"
-            powered_by_overwatch = "Powered by owapi.net"
-            powered_by_fortnite = "Powered by fortnitetracker.com"
+            powered_by_overwatch = "Предоставлено owapi.net"
+            powered_by_fortnite = "Предоставлено fortnitetracker.com"
         class HelpCommand:
             e = discord.Embed(color=discord.Color(0x6441A4))
             e.title = emoji.twitch_icon + "**Помощь TwitchBot**"
             e.add_field(
                 name="Команды",
-                value="TwitchBot отвечает на команды, начинающиеся с `twitch` или `!twitch`. Введите `!twitch commands`, чтобы просмотреть все выполняемые команды.",
+                value="TwitchBot отвечает на команды, начинающиеся с `twitch` или `!twitch`. Введите `!twitch commands`, чтобы просмотреть все доступные команды.",
                 inline=False
             )
             e.add_field(
                 name="Служба поддержки",
-                value="Если вам нужна помощь с TwitchBot, вы можете посетить [центр поддержки   ](https://support.twitchbot.io) или присоединиться к [серверу поддержки](https://discord.gg/UNYzJqV).",
+                value="Если вам нужна помощь с TwitchBot, вы можете посетить [центр поддержки](https://support.twitchbot.io) или присоединиться к [серверу поддержки](https://discord.gg/UNYzJqV).",
                 inline=False
             )
             e.add_field(
@@ -181,12 +181,12 @@ class Russian:
             )
             e.add_field(
                 name="Конкурс голосов",
-                value="Мы раздаем TwitchBot Premium БЕСПЛАТНО трем участникам голосования в конце каждого месяца! [Голосовать здесь](https://discordbots.org/bot/twitch/vote) и [просмотреть таблицу лидеров](https://dash.twitchbot.io/leaderboard)",
+                value="Мы раздаем TwitchBot Premium БЕСПЛАТНО трем лучшим участникам голосования в конце каждого месяца! [Голосовать здесь](https://discordbots.org/bot/twitch/vote) и [просмотреть таблицу лидеров](https://dash.twitchbot.io/leaderboard)",
                 inline=False
             )
             e.add_field(
                 name="About",
-                value="TwitchBot был сделан [Akira#4587](https://disgd.pw) с помощью discord.py. Чтобы просмотреть других участников, введите `twitch info`.",
+                value="TwitchBot был сделан [Akira#4587](https://disgd.pw) с помощью discord.py. Чтобы просмотреть других помощников, введите `twitch info`.",
                 inline=False
             )
             e.add_field(
@@ -220,15 +220,15 @@ class Russian:
             lang_unavail = emoji.cmd_fail + "Этот перевод недоступен. Введите `!twitch lang help` для просмотра доступных языков."
             lang_set = emoji.cmd_success + "Вы успешно установили язык TwitchBot на **{lang}**."
         class Guild:
-            submode_command_usage = "Введите `!twitch help sub_only` для просмотра использования команды."
-            submode_success = emoji.cmd_success + "Для этого сервера был включен режим только для подписчиков. Новые пользователи должны будут подписаться на {channel} , чтобы присоединиться. TwitchBot будет пытаться написать личное сообщение тем, кто не подписан. Примечание: существующие участники не будут выгнаны."
-            submode_kick = "Этот сервер находится в режиме только подписчиков. Чтобы присоединиться, вы должны быть подписчиком {}.\nЧтобы связать свою учетную запись Twitch с TwitchBot, перейдите на <https://dash.twitchbot.io> и нажмите 'Link Account' рядом с Twitch."
+            submode_command_usage = "Введите `!twitch help sub_only` для просмотра помощи по использованию команды."
+            submode_success = emoji.cmd_success + "Для этого сервера был включен режим только для подписчиков. Новые пользователи должны будут подписаться на {channel}, чтобы присоединиться. TwitchBot будет пытаться написать личное сообщение тем, кто не подписан, и выгнать их. Примечание: существующие участники не будут выгнаны."
+            submode_kick = "Этот сервер находится в режиме только для подписчиков. Чтобы присоединиться, вы должны быть подписчиком {}.\nЧтобы связать свою учетную запись Twitch с TwitchBot, перейдите на <https://dash.twitchbot.io> и нажмите 'Link Account' рядом с Twitch."
             submode_kick_audit_log = "Для этого сервера включен режим только для подписчиков. Чтобы выключить его, наберите '!twitch sub_only off'."
             submode_del_success = emoji.cmd_success + "Режим только для подписчиков был отключен для этого сервера."
             user_not_in_guild = emoji.cmd_fail + "Этого пользователя нет на этом сервере."
             no_login_dash = emoji.cmd_fail + "{user} еще не вошел в панель управления TwitchBot. Чтобы получить канал от другого пользователя, введите `!twitch sub_only on --user-id=(user id here)`."
-            no_link_dash = emoji.cmd_fail + "{user} Пользователь не связал свой канал Twitch на панели инструментов TwitchBot. Чтобы получить канал от другого пользователя, введите `!twitch sub_only on --user-id=(user id here)`."
-            http_err_dash = emoji.cmd_fail + "Произошла ошибка при попытке получить информацию с панели инструментов TwitchBot: {error}"
+            no_link_dash = emoji.cmd_fail + "{user} Пользователь не связал свой канал Twitch на панели управления TwitchBot. Чтобы получить канал от другого пользователя, введите `!twitch sub_only on --user-id=(user id here)`."
+            http_err_dash = emoji.cmd_fail + "Произошла ошибка при попытке получить информацию с панели управления TwitchBot: {error}"
         class LiveRole:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Live Role - Помощь"
