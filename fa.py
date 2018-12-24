@@ -2,7 +2,7 @@ from . import _emoji as emoji
 import textwrap
 import discord
 
-class English:
+class Persian:
     def __init__(self):
         self._lang_name = "Persian"
         self._lang_emoji = ":flag_ir:
