@@ -4,55 +4,55 @@ import discord
 
 class German:
     def __init__(self):
-        self._lang_name = "Deutsche"
+        self._lang_name = "Deutsch"
         self._lang_emoji = ":flag_de:"
         self._translator = "x5c0d3#1085, Xay_DE#2459"
         class Audio:
-            no_channel = emoji.cmd_fail + "You need to be in a voice channel."
+            no_channel = emoji.cmd_fail + "Hierfür musst du in einem Sprach-Kanal sein.."
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Please upvote to continue"
-            need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.title = "Bitte stimme dafür um fortzufahren"
+            need_upvote.description = "Du musst für TwitchBot stimmen um Streams anzuhören! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "Want to skip upvoting?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
+                name = "Abstimmung überspringen?",
+                value = "[TwitchBot Premium](https://twitchbot.io/premium) lässt dich ohne abstimmung hören."
             )
-            please_wait = "Please wait... " + emoji.loading
-            user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
-            np_title = "Now playing in {channel}"
-            np_desc = "{title}\n{viewer_count} currently watching"
-            np_leave = "Type '!twitch leave' to stop the stream"
-            connection_timeout = emoji.cmd_fail + "Voice connection timed out."
-            not_streaming = "I'm not streaming anything on this server right now."
-            disconnected = "Left the voice channel."
+            please_wait = "Bitte warten... " + emoji.loading
+            user_noexist = emoji.cmd_fail + "Dieser Nutzer existiert nicht oder ist gerade nicht am streamen. Versuch einen Link zum Kanal einzugeben."
+            np_title = "Zurzeit in {channel} am spielen"
+            np_desc = "{title}\n{viewer_count} am zuschauen"
+            np_leave = "Nutze '!twitch leave' um den Stream zu stoppen"
+            connection_timeout = emoji.cmd_fail + "Sprach verbindung time-out."
+            not_streaming = "Ich streame momentan nichts auf diesem Server."
+            disconnected = "hatt den Sprach-Kanal verlassen."
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Clips - Help"
             command_usage.add_field(
-                name = "Commands",
+                name = "Befehle",
                 value = textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <Nutzer>` - erhalte einen Clip des angegebenen Nutzers
+                `!twitch clips trending` - erhalte einen angesagten Clip
+                `!twitch clips game <Spiel>` - erhalte einen Clip des angegebenen Spiels
+                `!twitch clips uservoted` - erhalte einen der beliebtesten Clips gewählt von TwitchBot Nutzern
                 """)
             )
-            clip_desc = "Check out {user} playing {game}:\n{url}"
-            no_clips = emoji.cmd_fail + "No clips were found."
-            no_votes = emoji.cmd_fail + "Nobody has voted on any clips yet. Come back later."
-            uservote_clip_desc = "{vote_count} votes on this clip by {user}:\n{url}"
-            upvote_fail = emoji.cmd_fail + "**{user}**, your upvote couldn't be be processed."
+            clip_desc = "Sieh dir {user} spielt {game}:\n{url}"
+            no_clips = emoji.cmd_fail + "Keine Clips gefunden."
+            no_votes = emoji.cmd_fail + "Keine hatt bisher für Clips abgestimmt, komm später wieder."
+            uservote_clip_desc = "{vote_count} Stimme über den Clip von {user} ab:\n{url}"
+            upvote_fail = emoji.cmd_fail + "**{user}**, deine abstimmung konnte nicht bearbeitet werden."
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "TwitchBot Commands"
-            e.description = ":warning: __**Do not put `<>` or `[]` around command arguments.**__"
+            e.title = emoji.twitch_icon + "TwitchBot befehle"
+            e.description = ":warning: __**Schreibe kein `<>` oder `[]` um Befehlseingaben.**__"
             e.add_field(
                 name="General",
                 value=textwrap.dedent("""\
-                `!twitch help` - Shows bot help
-                `!twitch info` - Shows bot info
-                `!twitch lang` - Sets bot language
-                `!twitch invite` - Displays a link to add TwitchBot to your server
-                `!twitch status` - Shows Twitch API status
+                `!twitch help` - Zeigt Bot Hilfe
+                `!twitch info` - Zeigt Bot Infos
+                `!twitch lang` - Ändert die Sprache des Bots
+                `!twitch invite` - Zeigt einen link um TwitchBot zu einem Server hinzuzufügen
+                `!twitch status` - Zeigt den Status der Twitch API an
                 `!twitch ping` - Pong!
                 """),
                 inline=False
@@ -60,8 +60,8 @@ class German:
             e.add_field(
                 name="Twitch",
                 value=textwrap.dedent("""\
-                `!twitch user <user>` - Gets info on a Twitch channel
-                `!twitch stream user <user>` - Gets info on a user's stream
+                `!twitch user <Nutzer
+                `!twitch stream user  user>` - Gets info on a user's stream
                 `!twitch stream watch <user>` - Watch a Twitch stream from Discord
                 `!twitch stream game <name>` - Watch someone stream the specified game
                 `!twitch stream top` - Fetches info on a top stream
