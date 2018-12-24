@@ -186,7 +186,7 @@ class Turkish:
             )
             e.add_field(
                 name="Hakkında",
-                value="TwitchBot, [Akira # 4587] tarafından discord.py kullanılarak oluşturuldu. (https://disgd.pw). Diğer katılımcıları görüntülemek için `twitch info` yazın.",
+                value="TwitchBot, [Akira#4587](https://disgd.pw) tarafından discord.py kullanılarak oluşturuldu. Diğer katılımcıları görüntülemek için `twitch info` yazın.",
                 inline=False
             )
             e.add_field(
