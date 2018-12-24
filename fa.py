@@ -90,111 +90,111 @@ class English:
                 """),
                 inline=False
             )
-            ###___________________________________ Translate Flag
             e.add_field(
-                name="Live Role",
+                name="رُل (نقش) پخش زنده",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - رُل پخش زنده را برای سرور کنونی تنظیم میکند
+                `!twitch live_role filter` - رُل پخش زنده را به افراد مورد نظر محدود می کند
+                `!twitch live_role delete` - رُل کنونی پخش زنده را حذف می کند
+                `!twitch live_role view` - نشان میدهد اکنون چه رُلی برای پخش زنده تنظیم شده است
                 """),
                 inline=False
             )
             e.add_field(
-                name="Audio",
+                name="شنیداری",
                 value=textwrap.dedent("""\
-                `!twitch listen <user>` - Listen to a Twitch stream in the current voice channel
-                `!twitch nowplaying` - Shows the stream currently playing, if any
-                `!twitch leave` - Leaves a voice channel
+                `!twitch listen <user>` - گوش دادن به تویچ استریم مورد نظر در کانال صوتی که در آن حضور دارید
+                `!twitch nowplaying` - استریم در حال پخش را نشان می دهد، اگر چیزی در حال پخش باشد.
+                `!twitch leave` - کانال صوتی را ترک می کند
                 """),
                 inline=False
             )
             e.add_field(
-                name="Game Stats",
+                name="وضعیت بازی",
                 value=textwrap.dedent("""\
-                `!twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats
-                `!twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats
+                `!twitch overwatch <pc/psn/xbl> <player>` - وضعیت بازیکن مورد نظر را در بازی Overwatch نشان می دهد.
+                `!twitch fortnite <pc/psn/xbl> <player>` - وضعیت بازیکن مورد نظر را در بازی Fortnite نشان می دهد.
                 """),
                 inline=False
             )
             e.add_field(
-                name="Message Filter",
+                name="فیلتر پیام",
                 value=textwrap.dedent("""\
-                `!twitch filter set <sensitivity>` - Sets the server-wide toxicity filter
-                `!twitch filter remove` - Removes the server-wide toxicity filter
+                `!twitch filter set <sensitivity>` - فیلتر محتوای نامناسب را در سطح سرور تنظیم می کند
+                `!twitch filter remove` - فیلتر محتوای نامناسب را در سطح سرور حذف می کند
                 """),
                 inline=False
             )
         class Errors:
-            err_report = "Please report this error to the developers at <https://link.twitchbot.io/support>."
-            forbidden = emoji.cmd_fail + "I don't have the correct permissions to do that."
-            not_found = emoji.cmd_fail + "That Discord channel was not found. Make sure you're not putting <> around it and that you're `#mention`ing it."
-            not_started = "TwitchBot is still starting up! Please wait a few minutes before trying again."
-            check_fail = emoji.cmd_fail + "You don't have permission to run this command."
-            cooldown = emoji.cmd_fail + "You can run this command in {time} seconds."
-            conn_closed = emoji.cmd_fail + "The voice connection was closed. Reason: `{reason}`"
-            missing_arg = emoji.cmd_fail + "You're missing the `{param}` parameter."
-            too_many_requests = emoji.cmd_fail + "Third-party servers are having trouble keeping up with our requests. Please try again later."
+            err_report = "لطفا این خطا را به توسعه دهندگان تویچ بات در <https://link.twitchbot.io/support> گزارش دهید. "
+            forbidden = emoji.cmd_fail + "مجوز لازم برای انجام این کار را ندارم. "
+            not_found = emoji.cmd_fail + "کانال دیسکورد مورد نظر پیدا نشد. مطمئن شوید <> را دور نام کانال قرار ندهید."
+            not_started = "تویچ بات در حال شروع به کار است. لطفا چند لحظه صبر کنید."
+            check_fail = emoji.cmd_fail + "مجوز لازم را برای اجرای این دستور ندارید"
+            cooldown = emoji.cmd_fail + "شما می توانید این دستور را در {time} ثانیه دیگر اجرا کنید."
+            conn_closed = emoji.cmd_fail + "اتصال صوتی بسته شد. دلیل: `{reason}`"
+            missing_arg = emoji.cmd_fail + "پارامتر `{param}` را فراموش کردید."
+            too_many_requests = emoji.cmd_fail + "سرورهای شخص ثالث مشکلی در ارتباط دارند. لطفا بعدا امتحان کنید."
         class Filter:
-            cmd_usage = "Type `!twitch help filter` to view command usage."
-            need_donate = "Only TwitchBot Premium members can use this command. Learn more: <https://twitchbot.io/premium>"
-            invalid_sensitivity = "Sensitivity must be between 85 and 60."
-            add_success = emoji.cmd_success + "Successfully set this server's toxicity filter."
-            no_filter = emoji.cmd_fail + "No toxicity filter exists for this server."
-            del_success = emoji.cmd_success + "Successfully removed this server's toxicity filter."
+            cmd_usage = "`!twitch help filter` را وارد کنید تا استفاده این دستور را ببینید."
+            need_donate = "تنها کاربران تویچ بات پیشرفته می توانند از این دستور استفاده کنند. اطلاعات بیشتر در: <https://twitchbot.io/premium>"
+            invalid_sensitivity = "حساسیت باید بین 60 و 85 باشد."
+            add_success = emoji.cmd_success + "فیلتر محتوای نامناسب برای این سرور با موفقیت اعمال شد."
+            no_filter = emoji.cmd_fail + "هیچ فیلتر محتوای نامناسبی برای این سرور وجود ندارد."
+            del_success = emoji.cmd_success + "فیلتر محتوای نامناسب با موفقیت حذف شد."
         class Games:
-            no_results = emoji.cmd_fail + "No results found."
-            no_stats_overwatch = emoji.cmd_fail + "No stats could be found for this player. If your profile is private, you can't see stats for it unless you make it public. Please follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make your profile public."
-            no_stats_fortnite = emoji.cmd_fail + "Player not found. Check the spelling of the username or try a different platform."
-            view_streams = "View Streams"
-            top_games = emoji.twitch_icon + "Top Games"
-            top_games_desc = "{view_count} viewers • {channel_count} channels streaming"
-            invalid_battletag = "Please enter your Battletag in a format of `name#id`."
-            invalid_platform = "Platform must be one of `pc`, `psn`, or `xbl`."
-            incomplete_data = "Your profile data is incomplete. If your profile is private, follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make it public so you can view your stats."
-            incomplete_data_short = "Some data may be missing or incomplete"
-            generic_error = emoji.cmd_fail + "An error occurred:"
-            powered_by_overwatch = "Powered by owapi.net"
-            powered_by_fortnite = "Powered by fortnitetracker.com"
+            no_results = emoji.cmd_fail + "نتیجه ای یافت نشد."
+            no_stats_overwatch = emoji.cmd_fail + "اطلاعاتی مربوط به این بازیکن یافت نشد. اگر پروفایل شما خصوصی است، نمیتوانید اطلاعاتی را مشاهده کنید تا زمانی که پروفایلتان عمومی ی شود. لطفا این مراحل را دنبال کنید <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> تا پروفیلتان عمومی شود."
+            no_stats_fortnite = emoji.cmd_fail + "بازیکن پیدا نشد. املا نام کاربری را چک کنید."
+            view_streams = "نمایش استریم ها"
+            top_games = emoji.twitch_icon + "بازی های برتر"
+            top_games_desc = "{view_count} بیننده • {channel_count} کانال در حال استریم"
+            invalid_battletag = "لطفا بتل تگ خودر را به این فرم وارد کنید: `name#id`."
+            invalid_platform = "پلتفرم را از بین `pc`، `psn`، یا `xbl` انتخاب کنید."
+            incomplete_data = "اطلاعات پروفیل شما ناقص است. اگر پروفابل شما خصوصی است, این مراحل را دنبال کنید <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> تا آن را عمومی کنید و اطلاعات پروفیلتان را ببینید."
+            incomplete_data_short = "برخی اطلاعات ناقص است."
+            generic_error = emoji.cmd_fail + "خطا رخ داد:"
+            powered_by_overwatch = "طراحی شده توسط owapi.net"
+            powered_by_fortnite = "طراحی شده توسط fortnitetracker.com"
         class HelpCommand:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "**TwitchBot Help**"
+            e.title = emoji.twitch_icon + "**راهنمای تویچ بات**"
             e.add_field(
-                name="Commands",
-                value="TwitchBot responds to commands starting with `twitch` or `!twitch`. Type `!twitch commands` to view all runnable commands.",
+                name="دستورات",
+                value="تویچ بات به دستوراتی که با `twitch` یا `!twitch` شروع شوند پاسخ میدهد.`!twitch commands` را بنویسید تا تمام دستورات قابل اجرا را ببینید.",
                 inline=False
             )
             e.add_field(
-                name="Support",
-                value="If you need help with TwitchBot, you can visit the [support center](https://support.twitchbot.io) or join the [support server](https://discord.gg/UNYzJqV).",
+                name="پشتیبانی",
+                value="اگر در خصوص تویچ بات نیاز به کمک دارید، به [support center](https://support.twitchbot.io) سر بزنید یا به [support server](https://discord.gg/UNYzJqV) ملحق شوید.",
                 inline=False
             )
             e.add_field(
-                name="Website",
-                value="You can view information about TwitchBot at https://twitchbot.io",
+                name="وب سایت",
+                value="می توانید اطلاعات بیشتری در مورد تویچ بات را در https://twitchbot.io ببینید",
                 inline=False
             )
             e.add_field(
-                name="TwitchBot Premium",
-                value="Support TwitchBot's development and get a handful of cool features and benefits for just $5.00 USD a month. https://twitchbot.io/premium",
+                name="تویچ بات پیشرفته",
+                value="از توسعه تویچ بات حمایت کنید و به قابلیت های کاربردی بیشتری دسترسی پیدا کنید فقط با ماهی 5 دلار. https://twitchbot.io/premium",
                 inline=False
             )
             e.add_field(
-                name="Upvote Competition",
-                value="We're giving away TwitchBot Premium for FREE to the top three voters at the end of every month! [Upvote here](https://discordbots.org/bot/twitch/vote) and [view the leaderboard](https://dash.twitchbot.io/leaderboard)",
+                name="رقابت رأی موافق",
+                value="هر ماهه به سه نفر اول کسانی که بیشترین رأی موفق را می دهند تویچ بات پیشرفته اهدا می شود. [این جا رأی موافق دهید](https://discordbots.org/bot/twitch/vote) و [جدول امتیازات را از اینجا ببینید](https://dash.twitchbot.io/leaderboard)",
                 inline=False
             )
             e.add_field(
-                name="About",
-                value="TwitchBot was made by [Akira#4587](https://disgd.pw) using discord.py. To view other contributors, type `twitch info`.",
+                name="درباره",
+                value="تویچ بات توسط [Akira#4587](https://disgd.pw) ساخته شده و از discord.py استفاده میکند. برای دیدن دیگر همکاران دستور `twitch info` را وارد کنید.",
                 inline=False
             )
             e.add_field(
-                name="Other links",
-                value="[FAQ](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Upvote](https://discordbots.org/bot/twitch/vote) · [Invite](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
+                name="لینک های دیگر",
+                value="[پرسش های متداول](https://twitchbot.io/faq) · [داشبورد](http://dash.twitchbot.io) · [رأی موافق](https://discordbots.org/bot/twitch/vote) · [دعوت بات به سرور](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [وبلاگ](https://medium.com/twitchbot)",
                 inline=False
             )
+            ###___________________________________ Translate Flag
         class General:
             avail_lang_title = "Available Translations"
             avail_lang_setmsg = "To set TwitchBot's language, type !twitch lang <language>."
