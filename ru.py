@@ -6,7 +6,7 @@ class Russian:
     def __init__(self):
         self._lang_name = "Русский"
         self._lang_emoji = ":flag_ru:"
-        self._translator = "D3bi#6969"
+        self._translator = "D3bi#6969, xinitrc#0001"
         class Audio:
             no_channel = emoji.cmd_fail + "Вам надо находится в голосовом канале"
             need_upvote = discord.Embed(color=0x6441A4)
