@@ -8,71 +8,51 @@ class Turkish:
         self._lang_emoji = ":flag_tr:"
         self._translator = "Alexei#1991"
         class Audio:
-            no_channel = emoji.cmd_fail + "You need to be in a voice channel."
             no_channel = emoji.cmd_fail + "Bir ses kanalında olmanız gerekli."
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Please upvote to continue"
             need_upvote.title = "Lütfen devam etmek için oy verin"
-            need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
-            need_upvote.add_field(
             need_upvote.description = "Yayınları dinleyebilmek için TwitchBot'a oy vermeniz gerekli! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "Want to skip upvoting?",
                 name = "Oylamayı atlamak ister misiniz?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
-            )
                 value = "[TwitchBot Premium](https://twitchbot.io/premium) oylamadan yayınları dinlemenizi sağlar."
             )
-            please_wait = "Please wait... " + emoji.loading
             please_wait = "Lütfen bekleyin..." + emoji.loading
-            user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
             user_noexist = emoji.cmd_fail + "Bu kullanıcı mevcut değil veya şuan yayın yapmıyor. Kanala bir bağlantı girmeyi deneyin."
-            np_title = "Now playing in {channel}"
             np_title = "Şuan {channel}'da oynatılıyor"
-            np_desc = "{title}\n{viewer_count} currently watching"
             np_desc = "{title}\n{viewer_count} şuanda izliyor"
-            np_leave = "Type '!twitch leave' to stop the stream"
             np_leave = "Yayını durdurmak için '!twitch leave' komutunu kullanın"
-            connection_timeout = emoji.cmd_fail + "Voice connection timed out."
             connection_timeout = emoji.cmd_fail + "Ses bağlantısı zaman aşımına uğradı."
-            not_streaming = "I'm not streaming anything on this server right now."
             not_streaming = "Şu anda bu sunucuda hiçbir şey yayınlamıyorum."
-            disconnected = "Left the voice channel."
             disconnected = "Ses kanalından ayrıldı."
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Clips - Help"
+            command_usage.title = "Klipler - Yardım"
             command_usage.add_field(
-                name = "Commands",
                 name = "Komutlar",
                 value = textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
                 `!twitch clips from <user>` - Belirtilen Twitch kullanıcısından bir klip alır
-                `!twitch clips trending` - Gets a trending clip
                 `!twitch clips trending` - Trend bir klip alır
-                `!twitch clips game <game>` - Gets a clip from the specified game
                 `!twitch clips game <game>` - Belirtilen oyundan bir klip alır
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
                 `!twitch clips uservoted` - TwitchBot kullanıcılarının oyladığı en popüler kliplerden birini alır
                 """)
             )
-            clip_desc = "Check out {user} playing {game}:\n{url}"
-            no_clips = emoji.cmd_fail + "No clips were found."
-            no_votes = emoji.cmd_fail + "Nobody has voted on any clips yet. Come back later."
-            uservote_clip_desc = "{vote_count} votes on this clip by {user}:\n{url}"
-            upvote_fail = emoji.cmd_fail + "**{user}**, your upvote couldn't be be processed."
+            clip_desc = "{user} kullanıcısına {game}:\n{url} oynarken göz atın"
+            no_clips = emoji.cmd_fail + "Hiçbir klip bulunamadı."
+            no_votes = emoji.cmd_fail + "Henüz kimse klibe oy vermedi. Daha sonra tekrar deneyin."
+            uservote_clip_desc = "{user}:\n{url} tarafından bu klibe {vote_count} oy verildi"
+            upvote_fail = emoji.cmd_fail + "**{user}**, oylamanız işleme alınamadı."
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "TwitchBot Commands"
-            e.description = ":warning: __**Do not put `<>` or `[]` around command arguments.**__"
+            e.title = emoji.twitch_icon + "TwitchBot Komutları"
+            e.description = ":warning: __**Komut argümanlarının etrafında `<>` veya `[]` kullanmayın.**__"
             e.add_field(
-                name="General",
+                name="Genel",
                 value=textwrap.dedent("""\
-                `!twitch help` - Shows bot help
-                `!twitch info` - Shows bot info
-                `!twitch lang` - Sets bot language
-                `!twitch invite` - Displays a link to add TwitchBot to your server
-                `!twitch status` - Shows Twitch API status
+                `!twitch help` - Bot yardımını gösterir
+                `!twitch info` - Bot bilgisini gösterir
+                `!twitch lang` - Bot dilini belirler
+                `!twitch invite` - Sunucunuza TwitchBot eklemek için bir bağlantı görüntüler
+                `!twitch status` - Twitch API durumunu gösterir
                 `!twitch ping` - Pong!
                 """),
                 inline=False
@@ -80,287 +60,289 @@ class Turkish:
             e.add_field(
                 name="Twitch",
                 value=textwrap.dedent("""\
-                `!twitch user <user>` - Gets info on a Twitch channel
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
-                `!twitch game <name>` - Gets info on a Twitch game
-                `!twitch top` - Gets the most popular Twitch games
+                `!twitch user <user>` - Twitch kanalı hakkında bilgi alır
+                `!twitch stream user <user>` - Bir kullanıcının yayını hakkında bilgi alır
+                `!twitch stream watch <user>` - Discord'dan bir Twitch yayını izleyin
+                `!twitch stream game <name>` - Birinin belirtilen bir oyununun yayınını izle
+                `!twitch stream top` - En iyi yayın hakkında bilgi verir
+                `!twitch game <name>` - Bir Twitch oyunu hakkında bilgi alır
+                `!twitch top` - En popüler Twitch oyunlarını gösterir
                 """),
                 inline=False
             )
             e.add_field(
-                name="Clips",
+                name="Klipler",
                 value=textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <user>` - Belirtilen Twitch kullanıcısından bir klip alır
+                `!twitch clips trending` - Trend bir klip alır
+                `!twitch clips game <game>` - Belirtilen oyundan bir klip alır
+                `!twitch clips uservoted` - TwitchBot kullanıcılarının oy verdiği en popüler kliplerden birini alır
                 """),
                 inline=False
             )
             e.add_field(
-                name="Streamer Notifications",
+                name="Yayıncı Bildirimleri",
                 value=textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Belirtilen kanala bir yayıncı için Yayıncı Bildirimi ekler
+                `!twitch notif remove <#discord_channel> <streamer_name>` - Belirtilen kanaldaki bir yayıncının Yayıncı Bildirimini kaldırır
+                `!twitch notif list [#discord_channel]` - Belirtilen kanaldaki Yayıncı Bildirimlerini listeler
+                `!twitch notif formatting` - Yayıncı Bildirimlerine ekleyebileceğiniz değişkenleri gösterir
                 """),
                 inline=False
             )
             e.add_field(
-                name="Live Role",
+                name="Canlı Rol",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - Geçerli sunucu için Canlı Rol ayarlar
+                `!twitch live_role filter` - Canlı Rolü belirli bir rolü olan kullanıcılarla sınırlandırır
+                `!twitch live_role delete` - Canlı Rol yapılandırmasını kaldırır
+                `!twitch live_role view` - Hangi rolün kurulduğunu gösterir
                 """),
                 inline=False
             )
             e.add_field(
-                name="Audio",
+                name="Ses",
                 value=textwrap.dedent("""\
-                `!twitch listen <user>` - Listen to a Twitch stream in the current voice channel
-                `!twitch nowplaying` - Shows the stream currently playing, if any
-                `!twitch leave` - Leaves a voice channel
+                `!twitch listen <user>` - Geçerli ses kanalında bir Twitch yayını dinleyin
+                `!twitch nowplaying` - Eğer varsa, oynatılmakta olan yayını gösterir
+                `!twitch leave` - Ses kanalından çıkış yapar
                 """),
                 inline=False
             )
             e.add_field(
-                name="Game Stats",
+                name="Oyun İstatistikleri",
                 value=textwrap.dedent("""\
-                `!twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats
-                `!twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats
+                `!twitch overwatch <pc/psn/xbl> <player>` - Overwatch oyuncu istatistiklerini gösterir
+                `!twitch fortnite <pc/psn/xbl> <player>` - Fortnite oyuncu istatistiklerini gösterir
                 """),
                 inline=False
             )
             e.add_field(
                 name="Message Filter",
                 value=textwrap.dedent("""\
-                `!twitch filter set <sensitivity>` - Sets the server-wide toxicity filter
-                `!twitch filter remove` - Removes the server-wide toxicity filter
+                `!twitch filter set <sensitivity>` - Sunucu genelinde küfür filtresi ayarlar
+                `!twitch filter remove` - Sunucu genelinde küfür filtresini kaldırır
                 """),
                 inline=False
             )
         class Errors:
-            err_report = "Please report this error to the developers at <https://link.twitchbot.io/support>."
-            forbidden = emoji.cmd_fail + "I don't have the correct permissions to do that."
-            not_found = emoji.cmd_fail + "That Discord channel was not found. Make sure you're not putting <> around it and that you're `#mention`ing it."
-            not_started = "TwitchBot is still starting up! Please wait a few minutes before trying again."
-            check_fail = emoji.cmd_fail + "You don't have permission to run this command."
-            cooldown = emoji.cmd_fail + "You can run this command in {time} seconds."
-            conn_closed = emoji.cmd_fail + "The voice connection was closed. Reason: `{reason}`"
-            missing_arg = emoji.cmd_fail + "You're missing the `{param}` parameter."
-            too_many_requests = emoji.cmd_fail + "Third-party servers are having trouble keeping up with our requests. Please try again later."
+            err_report = "Lütfen bu hatayı şu adresteki geliştiricilere bildirin: <https://link.twitchbot.io/support>."
+            forbidden = emoji.cmd_fail + "Bunu yapmak için doğru iznim yok."
+            not_found = emoji.cmd_fail + "Bu Discord kanalı bulunamadı. Etrafına <> koymadığından ve #bahset'tiğinden emin ol."
+            not_started = "Twitch Bot halen başlatılıyor! Lütfen tekrar denemeden önce birkaç dakika bekleyin."
+            check_fail = emoji.cmd_fail + "Bu komutu çalıştırma izniniz yok."
+            cooldown = emoji.cmd_fail + "Bu komutu {time} saniye içinde çalıştırabilirsiniz."
+            conn_closed = emoji.cmd_fail + "Ses bağlantısı kapatıldı. Sebep: `{reason}`"
+            missing_arg = emoji.cmd_fail + " `{param}`parametresini unutuyorsunuz."
+            too_many_requests = emoji.cmd_fail + "Üçüncü parti sunucular isteklerimizi yerine getirmekte zorlanıyorlar. Lütfen daha sonra tekrar deneyiniz."
         class Filter:
-            cmd_usage = "Type `!twitch help filter` to view command usage."
-            need_donate = "Only TwitchBot Premium members can use this command. Learn more: <https://twitchbot.io/premium>"
-            invalid_sensitivity = "Sensitivity must be between 85 and 60."
-            add_success = emoji.cmd_success + "Successfully set this server's toxicity filter."
-            no_filter = emoji.cmd_fail + "No toxicity filter exists for this server."
-            del_success = emoji.cmd_success + "Successfully removed this server's toxicity filter."
+            cmd_usage = "Komut kullanımını görüntülemek için `! Twitch help filter` yazın."
+            need_donate = "Bu komutu yalnızca TwitchBot Premium üyeleri kullanabilir. Daha fazla bilgi edin: <https://twitchbot.io/premium>"
+            invalid_sensitivity = "Hassaslık 85 ile 60 arasında olmalıdır."
+            add_success = emoji.cmd_success + "Bu sunucunun küfür filtresi başarıyla ayarlandı."
+            no_filter = emoji.cmd_fail + "Bu sunucu için küfür filtresi mevcut değil."
+            del_success = emoji.cmd_success + "Bu sunucunun küfür filtresi başarıyla kaldırıldı."
         class Games:
-            no_results = emoji.cmd_fail + "No results found."
-            no_stats_overwatch = emoji.cmd_fail + "No stats could be found for this player. If your profile is private, you can't see stats for it unless you make it public. Please follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make your profile public."
-            no_stats_fortnite = emoji.cmd_fail + "Player not found. Check the spelling of the username or try a different platform."
-            view_streams = "View Streams"
-            top_games = emoji.twitch_icon + "Top Games"
-            top_games_desc = "{view_count} viewers • {channel_count} channels streaming"
-            invalid_battletag = "Please enter your Battletag in a format of `name#id`."
-            invalid_platform = "Platform must be one of `pc`, `psn`, or `xbl`."
-            incomplete_data = "Your profile data is incomplete. If your profile is private, follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make it public so you can view your stats."
-            incomplete_data_short = "Some data may be missing or incomplete"
-            generic_error = emoji.cmd_fail + "An error occurred:"
+            no_results = emoji.cmd_fail + "Hiçbir sonuç bulunamadı."
+            no_stats_overwatch = emoji.cmd_fail + "Bu oyuncu için istatistik bulunamadı. Profiliniz özelse, herkese açık yapmadığınız sürece istatistiklerini göremezsiniz. Profilinizi herkese açık hale getirmek için lütfen <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> adresindeki adımları izleyin."
+            no_stats_fortnite = emoji.cmd_fail + "Oyuncu bulunamadı. Kullanıcı adının yazılışını kontrol edin veya farklı bir platform deneyin."
+            view_streams = "Yayınları görüntüleyin"
+            top_games = emoji.twitch_icon + "En iyi oyunlar"
+            top_games_desc = "{view_count} izleyiciler • {channel_count} kanal yayında"
+            invalid_battletag = "Lütfen Battletag'inizi `name#id` biçiminde girin."
+            invalid_platform = "Platform, `pc`, `psn`, veya `xbl`'den biri olmalıdır."
+            incomplete_data = "Profil verileriniz eksik. Profiliniz özelse, herkese açık hale getirmek için <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> adresindeki adımları izleyin, böylece istatistiklerinizi görüntüleyebilirsiniz."
+            incomplete_data_short = "Bazı veriler eksik veya tamamlanmamış olabilir"
+            generic_error = emoji.cmd_fail + "Bir hata oluştu:"
             powered_by_overwatch = "Powered by owapi.net"
             powered_by_fortnite = "Powered by fortnitetracker.com"
         class HelpCommand:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "**TwitchBot Help**"
+            e.title = emoji.twitch_icon + "**TwitchBot Yardım**"
             e.add_field(
-                name="Commands",
-                value="TwitchBot responds to commands starting with `twitch` or `!twitch`. Type `!twitch commands` to view all runnable commands.",
+                name="Komutlar",
+                value="TwitchBot, `twitch` veya `! Twitch` ile başlayan komutlara cevap verir. Çalıştırılabilir tüm komutları görüntülemek için `! Twitch commands` yazın.",
                 inline=False
             )
             e.add_field(
-                name="Support",
-                value="If you need help with TwitchBot, you can visit the [support center](https://support.twitchbot.io) or join the [support server](https://discord.gg/UNYzJqV).",
+                name="Destek",
+                value="TwitchBot konusunda yardıma ihtiyacınız olursa, [destek merkezini] ziyaret edebilir (https://support.twitchbot.io) veya [destek sunucusuna] (https://discord.gg/UNYzJqV) katılabilirsiniz.",
                 inline=False
             )
             e.add_field(
-                name="Website",
-                value="You can view information about TwitchBot at https://twitchbot.io",
+                name="Web sitesi",
+                value="TwitchBot ile ilgili bilgileri https://twitchbot.io adresinde görebilirsiniz.",
                 inline=False
             )
             e.add_field(
                 name="TwitchBot Premium",
-                value="Support TwitchBot's development and get a handful of cool features and benefits for just $5.00 USD a month. https://twitchbot.io/premium",
+                value="TwitchBot'un gelişimini destekleyin ve ayda yalnızca 5,00 ABD doları karşılığında bir dizi harika özellik ve avantaj elde edin. https://twitchbot.io/premium",
                 inline=False
             )
             e.add_field(
-                name="Upvote Competition",
-                value="We're giving away TwitchBot Premium for FREE to the top three voters at the end of every month! [Upvote here](https://discordbots.org/bot/twitch/vote) and [view the leaderboard](https://dash.twitchbot.io/leaderboard)",
+                name="Oylama Yarışması",
+                value="Her ayın sonunda ilk üç seçmene TwitchBot Premium'u BEDAVA veriyoruz! [Buraya oy verin] (https://discordbots.org/bot/twitch/vote) ve [lider sıralamasını görüntüleyin] (https://dash.twitchbot.io/leaderboard)",
                 inline=False
             )
             e.add_field(
-                name="About",
-                value="TwitchBot was made by [Akira#4587](https://disgd.pw) using discord.py. To view other contributors, type `twitch info`.",
+                name="Hakkında",
+                value="TwitchBot, discord.py kullanılarak [Akira # 4587] (https://disgd.pw) tarafından yapıldı. Diğer katılımcıları görüntülemek için `twitch info` yazın.",
+                value="TwitchBot, [Akira # 4587] tarafından discord.py kullanılarak oluşturuldu. (https://disgd.pw). Diğer katılımcıları görüntülemek için `twitch info` yazın.",
+
                 inline=False
             )
             e.add_field(
-                name="Other links",
-                value="[FAQ](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Upvote](https://discordbots.org/bot/twitch/vote) · [Invite](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
+                name="Diğer linkler",
+                value="[SSS](https://twitchbot.io/faq) · [Gösterge Paneli](http://dash.twitchbot.io) · [Oyla](https://discordbots.org/bot/twitch/vote) · [Davet](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
                 inline=False
             )
         class General:
-            avail_lang_title = "Available Translations"
-            avail_lang_setmsg = "To set TwitchBot's language, type !twitch lang <language>."
-            stats_embed_title = emoji.twitch_icon + "TwitchBot Stats"
-            stats_uptime = "Uptime"
-            stats_usage = "Usage"
-            stats_version = "Version"
-            stats_shardinfo = "Shard Info"
-            stats_system = "System"
-            stats_developer = "Developer"
-            stats_patrons = "Patrons"
-            stats_links = "Links"
+            avail_lang_title = "Mevcut Çeviriler"
+            avail_lang_setmsg = "TwitchBot'un dilini ayarlamak için !twitch lang <language> yazın."
+            stats_embed_title = emoji.twitch_icon + "TwitchBot İstatistikleri"
+            stats_uptime = "Çalışma Süresi"
+            stats_usage = "Kullanım"
+            stats_version = "Versiyon"
+            stats_shardinfo = "Shard Bilgisi"
+            stats_system = "Sistem"
+            stats_developer = "Geliştirici"
+            stats_patrons = "Patronlar"
+            stats_links = "Linkler"
             stats_links_desc = textwrap.dedent("""\
             **·** Website: https://twitchbot.io
             **·** Discord: https://discord.gg/UNYzJqV
             **·** Upvote: https://discordbots.org/bot/twitch/vote
             **·** Donate: https://patreon.com/devakira
             """)
-            invite_msg1 = "**{user}**, you can invite me to a server with this link: <https://link.twitchbot.io/invite>"
-            invite_msg2 = "Need help? Join the support server: <https://link.twitchbot.io/support>"
-            status_title = emoji.twitch_icon + "Twitch Status"
-            status_cs = "Current status: `{status}`"
-            lang_current = "Your current language for TwitchBot is **{lang}**. To change it, type `!twitch lang <lang>` or `!twitch lang help`."
-            lang_unavail = emoji.cmd_fail + "That translation isn't available. Type `!twitch lang help` to view available languages."
-            lang_set = emoji.cmd_success + "Successfully set your TwitchBot language to **{lang}**."
+            invite_msg1 = "**{user}**, beni bu bağlantıyla bir sunucuya davet edebilirsiniz: <https://link.twitchbot.io/invite>"
+            invite_msg2 = "Yardıma mı ihtiyacınız var? Destek sunucusuna katılın: <https://link.twitchbot.io/support>"
+            status_title = emoji.twitch_icon + "Twitch Durumu"
+            status_cs = "Şu anki durum: `{status}`"
+            lang_current = "TwitchBot için geçerli diliniz **{lang}**. Değiştirmek için, `!twitch lang <lang>` veya `!twitch lang help`yazın."
+            lang_unavail = emoji.cmd_fail + "Bu çeviri mevcut değil. Mevcut dilleri görüntülemek için `!twitch lang help` yazın."
+            lang_set = emoji.cmd_success + "TwitchBot diliniz başarıyla **{lang}** olarak ayarlandı."
         class Guild:
-            submode_command_usage = "Type `!twitch help sub_only` to view command usage."
-            submode_success = emoji.cmd_success + "Subscribers-only mode has been enabled for this server. New users will have to be a subscriber to {channel} to join. TwitchBot will attempt to DM non-subscribers that join and kick them. Note: existing members won't be kicked."
-            submode_kick = "This server is in subscribers-only mode. To join, you need to be a subscriber of {}.\nTo link your Twitch account to TwitchBot, go to <https://dash.twitchbot.io> and press 'Link Account' under Twitch."
-            submode_kick_audit_log = "Subscribers-only mode is enabled for this server. To turn it off, type '!twitch sub_only off'."
-            submode_del_success = emoji.cmd_success + "Subscribers-only mode has been disabled for this server."
-            user_not_in_guild = emoji.cmd_fail + "That user isn't in this server."
-            no_login_dash = emoji.cmd_fail + "{user} hasn't logged in to the TwitchBot dashboard yet. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            no_link_dash = emoji.cmd_fail + "{user} hasn't linked their Twitch channel on the TwitchBot dashboard. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            http_err_dash = emoji.cmd_fail + "An error occurred while trying to get information from the TwitchBot dashboard: {error}"
+            submode_command_usage = "Komut kullanımını görüntülemek için `!twitch help sub_only` yazın."
+            submode_success = emoji.cmd_success + "Yalnızca-abone modu bu sunucu için etkinleştirildi. Yeni kullanıcıların katılmak için {channel} 'a abone olması gerekecek. TwitchBot katılıp abone olmayan kullanıcılara DM gönderip, onları atmaya çalışacak. Not: mevcut üyeler atılmayacak."
+            submode_kick = "Bu sunucu yalnızca-abone modunda. Katılmak için, {} abonesi olmanız gerekli. Twitch hesabınızı TwitchBot'a bağlamak için <https://dash.twitchbot.io> adresine gidin ve Twitch'in altındaki 'Hesap Bağla'ya basın."
+            submode_kick_audit_log = "Yalnızca-abone modu bu sunucu için etkinleştirildi. Kapatmak için, '!twitch sub_only off' yazın."
+            submode_del_success = emoji.cmd_success + "Yalnızca-abone modu bu sunucu için devre dışı bırakıldı."
+            user_not_in_guild = emoji.cmd_fail + "Bu kullanıcı bu sunucuda değil."
+            no_login_dash = emoji.cmd_fail + "{user} kullanıcısı henüz TwitchBot panosuna giriş yapmadı. Farklı bir kullanıcıdan kanal almak için, `!twitch sub_only on --user-id=(user id here)` yazın."
+            no_link_dash = emoji.cmd_fail + "{user} Twitch kanalını TwitchBot panosuna bağlamadı. Farklı bir kullanıcıdan kanal almak için, `!twitch sub_only on --user-id = (user id here)` yazın."
+            http_err_dash = emoji.cmd_fail + "TwitchBot gösterge panelinden bilgi almaya çalışırken bir hata oluştu: {error}"
         class LiveRole:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Live Role - Help"
-            command_usage.description = "With Live Role, you can set up a role to add to users when they go live. TwitchBot will automatically remove the role when the user stops streaming."
+            command_usage.title = "Canlı Rol - Yardım"
+            command_usage.description = "Canlı Rol ile, canlı yayında kullanıcıları eklemek için bir rol belirleyebilirsiniz. Twitch Bot, kullanıcı akışı durdurduğunda rolü otomatik olarak kaldırır."
             command_usage.add_field(
-                name = "Commands",
+                name = "Komutlar",
                 value = textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - Geçerli sunucuya Canlı Rol ayarlar
+                `!twitch live_role filter` - Canlı Rolü, belirli bir rolü olan kullanıcılarla sınırlandırır
+                `!twitch live_role delete` - Canlı Rol yapılandırmasını kaldırır
+                `!twitch live_role view` - Hangi rolün kurulduğunu gösterir
                 """)
             )
-            no_role_mentioned = emoji.cmd_fail + "No role was specified. Please re-run the command and @mention a role."
-            not_set_up = emoji.cmd_fail + "No Live Role has been set up for this server. Type `!twitch live_role set` to set one."
-            role_not_found = emoji.cmd_fail + "No role name matched that query. Do not put any extra characters in your query, such as `<`, `>`, or `@`."
-            add_success = emoji.cmd_success + "Users in this server who go live on Twitch will receive the **{role}** role. If you want to set a filter for Live Role, type `!twitch live_role filter`."
-            del_success = emoji.cmd_success + "Successfully removed the Live Role configuration from this server."
-            filter_success = emoji.cmd_success + "Successfully set this server's Live Role filter. It may take a while to update all members' roles."
-            missing_perms_ext = emoji.cmd_fail + "I need the **`Manage Roles`** permission to do this. If I have the permission, then make sure to drag the role named `TwitchBot` above the role you want to set up."
-            view_response = "Live Role is currently set up to give members the **{role}** role when they stream."
+            no_role_mentioned = emoji.cmd_fail + "Herhangi bir rol belirtilmedi. Lütfen komutu yeniden çalıştırın ve bir rolden @bahsedin."
+            not_set_up = emoji.cmd_fail + "Bu sunucu için hiçbir Canlı Rol ayarlanmadı. Bir tane ayarlamak için,`!twitch live_role set` yazın."
+            role_not_found = emoji.cmd_fail + "Bu sorgu ile eşleşen bir rol adı yok. Sorgunuza `<`, `>` veya `@` gibi fazladan karakter koymayın."
+            add_success = emoji.cmd_success + "Bu sunucuda Twitch’e yayına giren kullanıcılar ** {role} ** rolünü alır. Canlı Rol için bir filtre ayarlamak istiyorsanız, `!twitch live_role filter` yazın."
+            del_success = emoji.cmd_success + "Canlı Rol yapılandırması bu sunucudan başarıyla kaldırıldı."
+            filter_success = emoji.cmd_success + "Bu sunucunun Canlı Rol filtresi başarıyla ayarlandı. Tüm üyelerin rollerini güncellemek biraz zaman alabilir."
+            missing_perms_ext = emoji.cmd_fail + "Bunu yapmak için **`Manage Roles`** iznine ihtiyacım var. İznim varsa, 'TwitchBot' adlı rolü, kurmak istediğiniz rolün üzerine getirdiğinizden emin olun."
+            view_response = "Canlı Rol şu anda üyelere yayınlandıklarında ** {role} ** rolü verecek şekilde ayarlandı."
         class Notifs:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Streamer Notifications - Help"
-            command_usage.description = "Streamer notifications allow you to set up a customizable message that sends when a Twitch user goes live."
+            command_usage.title = "Yayıncı Bildirimleri - Yardım"
+            command_usage.description = "Yayıncı Bildirimleri, bir Twitch kullanıcısı yayınlandığında gönderilen bir özelleştirilebilir mesaj ayarlamanıza izin verir."
             command_usage.add_field(
-                name = "Commands",
+                name = "Komutlar
                 value = textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Belirtilen kanala bir yayıncı için Yayıncı Bildirimi ekler
+                `!twitch notif remove <#discord_channel> <streamer_name>` - Belirtilen kanal için bir yayıncının Yayıncı Bildirimini kapatır
+                `!twitch notif list [#discord_channel]` - Belirtilen kanal için Yayıncı Bildirimlerini listeler
+                `!twitch notif formatting` - Yayıncı Bildirimi iletilerine ekleyebileceğiniz değişkenleri gösterir
                 """)
             )
-            limit_reached = emoji.twitch_icon + "Hey there! Unfortunately you've reached the maximum amount of notifications that you can add to this server. To add more, you need to donate at <https://twitchbot.io/premium>."
-            prompt1 = "Which channel do you want to receive the notification in? Mention or type the name of one below. *(respond in 60 seconds)*"
-            prompt2 = "Type the name of the Twitch channel that you want to set up the notification for. *(respond in 60 seconds)*"
-            prompt3 = "Enter a custom message that you want to be shown when the user goes live, or type `default` for the default message. *(respond in 180 seconds)*"
-            text_channel_not_found = emoji.cmd_fail + "Couldn't find that text channel. Exiting command..."
-            twitch_user_not_found = emoji.cmd_fail + "That Twitch user could not be found. Exiting command..."
-            twitch_user_not_found_alt = emoji.cmd_fail + "That Twitch user doesn't exist. Make sure that you're not putting anything extra around the name (such as `<>`), and that you're not @mentioning a Discord user."
-            response_timeout = "*Response timed out.*"
-            invalid_data = emoji.cmd_fail + "Invalid data was sent from Twitch:"
-            malformed_user = emoji.cmd_fail + "That doesn't look like a valid Twitch user. You can only include underscores, letters, and numbers."
-            default_msg = "<https://twitch.tv/{channel}> is now live on Twitch!"
-            del_fail = emoji.cmd_fail + "No notification has been set up for this user."
-            del_success = emoji.cmd_success + "You won't get any notifications in {channel} when {user} goes live."
-            add_success = emoji.cmd_success + "Added a notification for {user} in {channel}"
-            list_title = "Streamer notifications for **#{channel}**"
-            list_embed_limit = "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live."
-            no_notifs = "No streamer notifications are set up for this channel."
-            notifications = "Notifications"
-            bulk_delete_confirm = "**You are about to delete {count} notifications in {channel}.** Are you sure that you want to do this? Reply with `yes` if you want to continue."
-            bulk_delete_success = emoji.cmd_success + "Successfully deleted {count} notifications from {channel}."
-            command_cancelled = "Command cancelled."
+            limit_reached = emoji.twitch_icon + "Selam! Maalesef bu sunucuya ekleyebileceğiniz maksimum bildirim miktarına ulaştınız. Daha fazla eklemek için <https://twitchbot.io/premium> adresinden bağış yapmanız gerekli."
+            prompt1 = "Bildirimi hangi kanalda almak istiyorsunuz? Aşağıdakilerden birinin adını yazın veya @bahsedin. *(60 saniye içerisinde yanıtlayın)*"
+            prompt2 = "Bildirimini ayarlamak istediğiniz Twitch kanalının adını yazın. *(60 saniye içerisinde yanıtlayın)*"
+            prompt3 = "Kullanıcı canlı olduğunda görünmesini istediğiniz özel bir mesaj girin veya varsayılan mesaj için `default` yazın. *(180 saniye içerisinde yanıtlayın)*"
+            text_channel_not_found = emoji.cmd_fail + "Bu metin kanalı bulunamadı. Komuttan çıkılıyor..."
+            twitch_user_not_found = emoji.cmd_fail + "Bu Twitch kullanıcısı bulunamadı. Komuttan çıkılıyor ... "
+            twitch_user_not_found_alt = emoji.cmd_fail + "Bu Twitch kullanıcısı yok. Adın etrafına fazladan hiçbir şey koymamaya dikkat edin (örneğin, `<>`gibi) ve bir Discord kullanıcısından @bahset'mediğinzden emin olun."
+            response_timeout = "*Yanıt zaman aşımına uğradı.*"
+            invalid_data = emoji.cmd_fail + "Twitch'ten geçersiz veri gönderildi:"
+            malformed_user = emoji.cmd_fail + "Bu geçerli bir Twitch kullanıcısı gibi görünmüyor. Yalnızca alt çizgi, harf ve rakam ekleyebilirsin."
+            default_msg = "<https://twitch.tv/{channel}> şimdi Twitch'te yayında!"
+            del_fail = emoji.cmd_fail + "Bu kullanıcı için herhangi bir bildirim ayarlanmadı."
+            del_success = emoji.cmd_success + "{User} yayına girdiğinde {channel} içerisinde herhangi bir bildirim almayacaksınız."
+            add_success = emoji.cmd_success + "{Channel} içindeki {user} için bir bildirim eklendi."
+            list_title = "**#{channel}** için yayıncı bildirimleri"
+            list_embed_limit = "Özel iletiler mesaja dahil edilmedi, çünkü bir bölümde Discord tarafından ayarlanmış 1024 karakterlik bir sınır var. Kullanıcının yayına girdiğini göstermeye devam edecekler."
+            no_notifs = "Bu kanal için herhangi bir Yayıncı Bildirimi ayarlanmadı."
+            notifications = "Bildirimler"
+            bulk_delete_confirm = "**{channel} kanalından {count} bildirimi silmek üzeresin.** Bunu yapmak istediğinden emin misin? Devam etmek istiyorsan `yes` yazarak yanıtlayın."
+            bulk_delete_success = emoji.cmd_success + "{channel} kanalından başarıyla {count} bildirim silindi."
+            command_cancelled = "Komut iptal edildi."
             notif_variables = discord.Embed(color=discord.Color(0x6441A4))
-            notif_variables.title = "Notification message variables"
-            notif_variables.description = "Use one of the variables below to insert data into a stream notification message."
+            notif_variables.title = "Bildirim mesajı değişkenleri"
+            notif_variables.description = "Bir akış bildirim mesajına veri eklemek için aşağıdaki değişkenlerden birini kullanın."
             notif_variables.add_field(
-                name = "Available formatting",
+                name = "Mevcut biçimlendirme",
                 value = textwrap.dedent("""\
-                *`$title$`* - The stream's title
-                *`$viewers$`* - The number of people currently watching the stream
-                *`$game$`* - The game that the streamer is currently playing
-                *`$url$`* - The channel's URL
-                *`$name$`* - The channel's name
-                *`$everyone$`* - Inserts an @everyone mention
-                *`$here$`* - Inserts an @here mention
+                *`$title$`* - Yayın başlığı
+                *`$viewers$`* - Şu anda yayını izleyen kişi sayısı
+                *`$game$`* - Yayıncının şu anda oynadığı oyun
+                *`$url$`* - Kanalın URL'si
+                *`$name$`* - Kanal adı
+                *`$everyone$`* - Bir @everyone bahsetme komutu ekler
+                *`$here$`* - Bir @here bahsetme komutu ekler
                 """)
             )
         class Permissions:
-            user_need_perm = emoji.cmd_fail + "You need the **{permission}** permission to do this."
-            bot_need_perm = emoji.cmd_fail + "I need the **{permission}** permission to do this."
-            no_pm = emoji.cmd_fail + "You can only use this command in a server."
+            user_need_perm = emoji.cmd_fail + "Bunu yapmak için **{permission}** iznine ihtiyacınız var."
+            bot_need_perm = emoji.cmd_fail + "Bunu yapmak için **{permission}** iznine ihtiyacım var."
+            no_pm = emoji.cmd_fail + "Bu komutu yalnızca bir sunucuda kullanabilirsiniz."
         class Streams:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Stream Commands - Help"
+            command_usage.title = "Yayın Komutları - Yardım"
             command_usage.add_field(
-                name = "Commands",
+                name = "Komutlar",
                 value = textwrap.dedent("""\
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
+                `!twitch stream user <user>` - Bir kullanıcının yayın bilgisini alır
+                `!twitch stream watch <user>` - Discord'dan bir Twitch yayını izleyin
+                `!twitch stream game <name>` - Birinin belirtilen oyuna ait yayınını izleyin
+                `!twitch stream top` - En iyi yayınların bilgisini verir
                 """)
             )
             game_desc = "Check out {user} playing {game} for {view_count} viewers:\nhttps://twitch.tv/{user}"
-            game_not_found = emoji.cmd_fail + "That game could not be found."
-            game_no_streams = emoji.cmd_fail + "Nobody is streaming that game."
-            live = "Live on Twitch"
-            stream_not_found = emoji.cmd_fail + "That user doesn't exist or is not online. Make sure you're only entering the user's name and not anything extra, like `()` or `<>`."
+            game_desc = "{user}, {view_count} izleyici için {game} oynuyor. \nhttps://twitch.tv/{user}"
+            game_not_found = emoji.cmd_fail + "Bu oyun bulunamadı."
+            game_no_streams = emoji.cmd_fail + "Kimse bu oyunu yayınlamıyor."
+            live = "Twitch'te yayında"
+            stream_not_found = emoji.cmd_fail + "Bu kullanıcı mevcut değil veya çevrimiçi değil. Yalnızca kullanıcının adını girdiğinizden ve `()` veya `<>`. gibi fazladan bir şey girmediğinizden emin olun."
             stream_desc = textwrap.dedent("""\
-            Playing {game} for {view_count} viewers
-            **[Watch on Twitch](https://twitch.tv/{channel})** or type `twitch stream watch {channel}`
+            {view_count} izleyici için {game} oynuyor
+            **[Twitch'de izleyin](https://twitch.tv/{channel})** veya `twitch stream watch {channel}` yazın
 
-            Stream Preview:
+            Yayın Önizlemesi:
             """)
         class Users:
-            connections = "Connections for {user}"
-            connected = "Connected to {account}"
-            followers = "Followers"
-            following = "Following"
-            live = "Currently Live"
-            playing = "Playing {game} for {view_count} viewers"
-            not_connected = "Not Connected"
-            not_live = "Currently Offline"
-            no_login_dash = "This user hasn't visited the [TwitchBot dashboard](http://dash.twitchbot.io)."
-            streamer_id = "Streamer ID:"
-            views = "Views"
-            view_profile = "View Twitch Profile"
-            unknown = "Unknown"
-            watch_on_twitch = "Watch on Twitch"
+            connections = "{User} için bağlantılar"
+            connected = "{Account} ile bağlanıldı"
+            following = "Takipçiler"
+            live = "Şu anda canlı"
+            playing = "{view_count} izleyici için {game} oynuyor"
+            not_connected = "Bağlı değil"
+            not_live = "Şu anda Çevrimdışı"
+            no_login_dash = "Bu kullanıcı [TwitchBot panosu] ziyaret etmedi.(http://dash.twitchbot.io)"
+            streamer_id = "Yayıncı Kimliği"
+            views = "Görüntülemeler"
+            view_profile = "Twitch Profilini Görüntüle"
+            unknown = "Bilinmeyen"
+            watch_on_twitch = "Twitch'de izle"
         self.Audio = Audio
         self.Clips = Clips
         self.CommandsList = CommandsList
