@@ -8,7 +8,7 @@ class Persian:
         self._lang_emoji = ":flag_ir:
         self._translator = "MATIN#4861"
         class Audio:
-            no_channel = emoji.cmd_fail + "شما باید در یک کانال صوتی باشید."
+            no_channel = emoji.cmd_fail + "شما باید به یک کانال صوتی متصل باشید."
             need_upvote = discord.Embed(color=0x6441A4)
             need_upvote.title = "برای ادامه دادن لطفا رأی موافق دهید." 
             need_upvote.description = "برای گوش دادن به استریم ها باید به تویچ بات رای موافق دهید! **<https://link.twitchbot.io/upvote>**"
@@ -20,7 +20,7 @@ class Persian:
             user_noexist = emoji.cmd_fail + "کاربر یافت نشد یا در حال استریم نیست. سعی کنید لینک کانال را وارد کنید."
             np_title = "در حال پخش در {channel}"
             np_desc = "{title}\n{viewer_count} بیننده"
-            np_leave = "برای توقف استریم '!twitch leave' را بنویسید"
+            np_leave = "برای توقف استریم بنویسید: '!twitch leave'"
             connection_timeout = emoji.cmd_fail + "خطا: زمان اتصال صوتی به پایان رسید."
             not_streaming = "در حال حاضر هیچ استریمی را در این سرور پخش نمی کنم."
             disconnected = "کانال صوتی را ترک کردم."
@@ -33,7 +33,7 @@ class Persian:
                 `!twitch clips from <user>` - یک کلیپ از کاربر ذکر شده را دریافت میکند
                 `!twitch clips trending` - یک کلیپ پر بازدید را دریافت میکند
                 `!twitch clips game <game>` - یک کلیپ از بازی مورد نظر را دریافت میکند
-                `!twitch clips uservoted` - یکی از معروف ترین کلیپ هایی که کاربران تویچ به آن رأی داده اند را دریافت میکند
+                `!twitch clips uservoted` - یکی از کلیپ های معروف که کاربران تویچ به آن رأی داده اند را دریافت میکند
                 """)
             )
             clip_desc = "{user} را ببینید که {game} بازی می کند.:\n{url}"
@@ -53,7 +53,7 @@ class Persian:
                 `!twitch lang` - زبان بات را تنظیم می کند
                 `!twitch invite` - لینکی را نمایش میدهد تا تویچ بات را به سرورتان دعوت کنید
                 `!twitch status` - وضعیت API تویچ را نمایش می دهد
-                `!twitch ping` - مدت زمان تأخیر بات را نشان می دهد
+                `!twitch ping` - مدت زمان تأخیر (پینگ) بات را نشان می دهد
                 """),
                 inline=False
             )
@@ -61,11 +61,11 @@ class Persian:
                 name="تویچ",
                 value=textwrap.dedent("""\
                 `!twitch user <user>` - اطلاعات یک کانال تویچ را دریافت می کند
-                `!twitch stream user <user>` - اطلاعات استریم یک کاربر تویچ را دریافت می کند
+                `!twitch stream user <user>` - اطلاعات استریم کاربر مورد نظر تویچ را دریافت می کند
                 `!twitch stream watch <user>` - استریم تویچ را از دیسکورد تماشا کنید
                 `!twitch stream game <name>` - استریمی از بازی ذکر شده را تماشا کنید
                 `!twitch stream top` - اطلاعات مربوط به یک استریم برتر را دریافت می کند
-                `!twitch game <name>` - اطلاعاتی از یک بازی روی تویچ را دریافت میکند
+                `!twitch game <name>` - اطلاعاتی از بازی مورد نظر روی تویچ را دریافت میکند
                 `!twitch top` - معروفترین بازی های تویچ را دریافت می کند
                 """),
                 inline=False
@@ -76,15 +76,15 @@ class Persian:
                 `!twitch clips from <user>` - کلیپی از کاربر مورد نظر را دریافت می کند
                 `!twitch clips trending` - یک کلیپ برتر را دریافت میکند
                 `!twitch clips game <game>` - یک کلیپ از بازی مورد نظر را دریافت می کند
-                `!twitch clips uservoted` - یکی از معروف ترین کلیپ هایی که کاربران تویچ به آن رأی داده اند را دریافت میکند
+                `!twitch clips uservoted` - یکی از کلیپ های معروف که کاربران تویچ به آن رأی داده اند را دریافت میکند
                 """),
                 inline=False
             )
             e.add_field(
                 name="اعلانات استریمرها",
                 value=textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - اعلانی را برای استریمر مورد نظر در کانال دیسکورد ذکر شده اضافه می کند
-                `!twitch notif remove <#discord_channel> <streamer_name>` - اعلانی را برای استریمر مورد نظر در کانال دیسکورد ذکر شده حذف می کند
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - اعلانی را برای استریمر مورد نظر در کانال متنی دیسکورد ذکر شده اضافه می کند
+                `!twitch notif remove <#discord_channel> <streamer_name>` - اعلانی را برای استریمر مورد نظر در کانال متنی دیسکورد ذکر شده حذف می کند
                 `!twitch notif list [#discord_channel]` - تمامی اعلانات را لیست می کند
                 `!twitch notif formatting` - متغیرهایی که می توانید در پیغام اعلان استریمر وارد کنید را نمایش می دهد
                 """),
@@ -103,14 +103,14 @@ class Persian:
             e.add_field(
                 name="شنیداری",
                 value=textwrap.dedent("""\
-                `!twitch listen <user>` - گوش دادن به تویچ استریم مورد نظر در کانال صوتی که در آن حضور دارید
-                `!twitch nowplaying` - استریم در حال پخش را نشان می دهد، اگر چیزی در حال پخش باشد.
+                `!twitch listen <user>` - گوش دادن به استریم تویچ مورد نظر در کانال صوتی که در آن حضور دارید
+                `!twitch nowplaying` - استریم در حال پخش را نشان می دهد، اگر چیزی در حال پخش باشد
                 `!twitch leave` - کانال صوتی را ترک می کند
                 """),
                 inline=False
             )
             e.add_field(
-                name="وضعیت بازی",
+                name="وضعیت بازیکن ها",
                 value=textwrap.dedent("""\
                 `!twitch overwatch <pc/psn/xbl> <player>` - وضعیت بازیکن مورد نظر را در بازی Overwatch نشان می دهد.
                 `!twitch fortnite <pc/psn/xbl> <player>` - وضعیت بازیکن مورد نظر را در بازی Fortnite نشان می دهد.
@@ -118,7 +118,7 @@ class Persian:
                 inline=False
             )
             e.add_field(
-                name="فیلتر پیام",
+                name="فیلتر پیام ها",
                 value=textwrap.dedent("""\
                 `!twitch filter set <sensitivity>` - فیلتر محتوای نامناسب را در سطح سرور تنظیم می کند
                 `!twitch filter remove` - فیلتر محتوای نامناسب را در سطح سرور حذف می کند
@@ -151,7 +151,7 @@ class Persian:
             top_games_desc = "{view_count} بیننده • {channel_count} کانال در حال استریم"
             invalid_battletag = "لطفا بتل تگ خودر را به این فرم وارد کنید: `name#id`."
             invalid_platform = "پلتفرم را از بین `pc`، `psn`، یا `xbl` انتخاب کنید."
-            incomplete_data = "اطلاعات پروفیل شما ناقص است. اگر پروفابل شما خصوصی است, این مراحل را دنبال کنید <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> تا آن را عمومی کنید و اطلاعات پروفیلتان را ببینید."
+            incomplete_data = "اطلاعات پروفیل شما ناقص است. اگر پروفابل شما خصوصی است، این مراحل را دنبال کنید <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> تا آن را عمومی کنید و اطلاعات پروفیلتان را ببینید."
             incomplete_data_short = "برخی اطلاعات ناقص است."
             generic_error = emoji.cmd_fail + "خطا رخ داد:"
             powered_by_overwatch = "طراحی شده توسط owapi.net"
@@ -196,9 +196,9 @@ class Persian:
             )
         class General:
             avail_lang_title = "ترجمه های موجود"
-            avail_lang_setmsg = "برای تنظیم زبان تویچ با، دستور !twitch lang <language> را وارد کنید."
+            avail_lang_setmsg = "برای تنظیم زبان تویچ، دستور !twitch lang <language> را وارد کنید."
             stats_embed_title = emoji.twitch_icon + "وضعیت تویچ بات"
-            stats_uptime = "مدت بیداری (آپتایم)"
+            stats_uptime = "مدت بیداری (آپ تایم)"
             stats_usage = "استفاده"
             stats_version = "نسخه"
             stats_shardinfo = "Shard اطلاعات"
@@ -221,8 +221,8 @@ class Persian:
             lang_set = emoji.cmd_success + "زبان **{lang}** با موفقیت برای سرور شما تنظیم شد."
         class Guild:
             submode_command_usage = "بنویسید `!twitch help sub_only` تا استفاده دستور را ببینبد."
-            submode_success = emoji.cmd_success + "حالت فقط-مشترکین برای این سرور فعال شد. کاربران جدید باید مشترک کانال {channel}  باشند تا بتوانند ملحق شوند. تویچ بات سعی خواهد کرد غیر مشترکانی که سعی میکنند ملحق شوند را خارج کند و به آنها پیام دهد. نکته: کاربران فعلی خارج نخواهند شد."
-            submode_kick = "این سرور در حالت فقط-مشترکین می باشد. برای ملحق شدن شما باید مشترک کانال {} باشید.\nبرای اتصال حساب تویچ به تویچ بات، مراجعه کنید به <https://dash.twitchbot.io> و دکمه 'Link Account' را بزنید."
+            submode_success = emoji.cmd_success + "حالت فقط-مشترکین برای این سرور فعال شد. کاربران جدید باید مشترک کانال {channel} باشند تا بتوانند ملحق شوند. تویچ بات سعی خواهد کرد غیر-مشترکانی که سعی میکنند ملحق شوند را خارج کند و به آنها پیام دهد. نکته: کاربران فعلی خارج نخواهند شد."
+            submode_kick = "این سرور در حالت فقط-مشترکین می باشد. برای ملحق شدن، شما باید مشترک کانال {} باشید.\nبرای اتصال حساب تویچ به تویچ بات، مراجعه کنید به <https://dash.twitchbot.io> و دکمه 'Link Account' را بزنید."
             submode_kick_audit_log = "این سرور در حالت فقط-مشترکین می باشد. برای خاموش کردن این حالت دستور '!twitch sub_only off' را وارد کنید."
             submode_del_success = emoji.cmd_success + "حالت فقط-مشترکین غیر فعال شد."
             user_not_in_guild = emoji.cmd_fail + "کاربر مورد نظر در این سرور وجود ندارد."
