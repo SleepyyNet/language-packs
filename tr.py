@@ -136,7 +136,7 @@ class Turkish:
             missing_arg = emoji.cmd_fail + " `{param}`parametresini unutuyorsunuz."
             too_many_requests = emoji.cmd_fail + "Üçüncü parti sunucular isteklerimizi yerine getirmekte zorlanıyorlar. Lütfen daha sonra tekrar deneyiniz."
         class Filter:
-            cmd_usage = "Komut kullanımını görüntülemek için `! Twitch help filter` yazın."
+            cmd_usage = "Komut kullanımını görüntülemek için `!twitch help filter` yazın."
             need_donate = "Bu komutu yalnızca TwitchBot Premium üyeleri kullanabilir. Daha fazla bilgi edin: <https://twitchbot.io/premium>"
             invalid_sensitivity = "Hassaslık 85 ile 60 arasında olmalıdır."
             add_success = emoji.cmd_success + "Bu sunucunun küfür filtresi başarıyla ayarlandı."
@@ -161,12 +161,12 @@ class Turkish:
             e.title = emoji.twitch_icon + "**TwitchBot Yardım**"
             e.add_field(
                 name="Komutlar",
-                value="TwitchBot, `twitch` veya `! Twitch` ile başlayan komutlara cevap verir. Çalıştırılabilir tüm komutları görüntülemek için `! Twitch commands` yazın.",
+                value="TwitchBot, `twitch` veya `!twitch` ile başlayan komutlara cevap verir. Çalıştırılabilir tüm komutları görüntülemek için `!twitch commands` yazın.",
                 inline=False
             )
             e.add_field(
                 name="Destek",
-                value="TwitchBot konusunda yardıma ihtiyacınız olursa, [destek merkezini] ziyaret edebilir (https://support.twitchbot.io) veya [destek sunucusuna] (https://discord.gg/UNYzJqV) katılabilirsiniz.",
+                value="TwitchBot konusunda yardıma ihtiyacınız olursa, [destek merkezini](https://support.twitchbot.io) ziyaret edebilir veya [destek sunucusuna](https://discord.gg/UNYzJqV) katılabilirsiniz.",
                 inline=False
             )
             e.add_field(
@@ -181,7 +181,7 @@ class Turkish:
             )
             e.add_field(
                 name="Oylama Yarışması",
-                value="Her ayın sonunda ilk üç seçmene TwitchBot Premium'u BEDAVA veriyoruz! [Buraya oy verin] (https://discordbots.org/bot/twitch/vote) ve [lider sıralamasını görüntüleyin] (https://dash.twitchbot.io/leaderboard)",
+                value="Her ayın sonunda ilk üç seçmene TwitchBot Premium'u BEDAVA veriyoruz! [Buraya oy verin](https://discordbots.org/bot/twitch/vote) ve [lider sıralamasını görüntüleyin](https://dash.twitchbot.io/leaderboard)",
                 inline=False
             )
             e.add_field(
