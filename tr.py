@@ -255,7 +255,7 @@ class Turkish:
             command_usage.title = "Yayıncı Bildirimleri - Yardım"
             command_usage.description = "Yayıncı Bildirimleri, bir Twitch kullanıcısı yayınlandığında gönderilen bir özelleştirilebilir mesaj ayarlamanıza izin verir."
             command_usage.add_field(
-                name = "Komutlar
+                name = "Komutlar",
                 value = textwrap.dedent("""\
                 `!twitch notif add [#discord_channel] [streamer_name] [message]` - Belirtilen kanala bir yayıncı için Yayıncı Bildirimi ekler
                 `!twitch notif remove <#discord_channel> <streamer_name>` - Belirtilen kanal için bir yayıncının Yayıncı Bildirimini kapatır
