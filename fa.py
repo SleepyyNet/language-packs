@@ -194,42 +194,42 @@ class Persian:
                 value="[پرسش های متداول](https://twitchbot.io/faq) · [داشبورد](http://dash.twitchbot.io) · [رأی موافق](https://discordbots.org/bot/twitch/vote) · [دعوت بات به سرور](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [وبلاگ](https://medium.com/twitchbot)",
                 inline=False
             )
-            ###___________________________________ Translate Flag
         class General:
-            avail_lang_title = "Available Translations"
-            avail_lang_setmsg = "To set TwitchBot's language, type !twitch lang <language>."
-            stats_embed_title = emoji.twitch_icon + "TwitchBot Stats"
-            stats_uptime = "Uptime"
-            stats_usage = "Usage"
-            stats_version = "Version"
-            stats_shardinfo = "Shard Info"
-            stats_system = "System"
-            stats_developer = "Developer"
-            stats_patrons = "Patrons"
-            stats_links = "Links"
+            avail_lang_title = "ترجمه های موجود"
+            avail_lang_setmsg = "برای تنظیم زبان تویچ با، دستور !twitch lang <language> را وارد کنید."
+            stats_embed_title = emoji.twitch_icon + "وضعیت تویچ بات"
+            stats_uptime = "مدت بیداری (آپتایم)"
+            stats_usage = "استفاده"
+            stats_version = "نسخه"
+            stats_shardinfo = "Shard اطلاعات"
+            stats_system = "سیستم"
+            stats_developer = "توسعه دهنده"
+            stats_patrons = "مشتری ها"
+            stats_links = "لینک ها"
             stats_links_desc = textwrap.dedent("""\
-            **·** Website: https://twitchbot.io
-            **·** Discord: https://discord.gg/UNYzJqV
-            **·** Upvote: https://discordbots.org/bot/twitch/vote
-            **·** Donate: https://patreon.com/devakira
+            **·** وب سایت: https://twitchbot.io
+            **·** دیسکورد: https://discord.gg/UNYzJqV
+            **·** رأی موافق: https://discordbots.org/bot/twitch/vote
+            **·** کمک مالی: https://patreon.com/devakira
             """)
-            invite_msg1 = "**{user}**, you can invite me to a server with this link: <https://link.twitchbot.io/invite>"
-            invite_msg2 = "Need help? Join the support server: <https://link.twitchbot.io/support>"
-            status_title = emoji.twitch_icon + "Twitch Status"
-            status_cs = "Current status: `{status}`"
-            lang_current = "Your current language for TwitchBot is **{lang}**. To change it, type `!twitch lang <lang>` or `!twitch lang help`."
-            lang_unavail = emoji.cmd_fail + "That translation isn't available. Type `!twitch lang help` to view available languages."
-            lang_set = emoji.cmd_success + "Successfully set your TwitchBot language to **{lang}**."
+            invite_msg1 = "**{user}**،می توانید مرا با این لینک به سرور خود دعوت کنید: <https://link.twitchbot.io/invite>"
+            invite_msg2 = "کمک می خواهید؟ به سرور پشتیبانی ملحق شوید:  <https://link.twitchbot.io/support>"
+            status_title = emoji.twitch_icon + "وضعیت تویچ"
+            status_cs = "وضعیت کنونی: `{status}`"
+            lang_current = "زبان کنونی تویچ بات برای شما **{lang}** است. برای تغییر آن دستور `!twitch lang <lang>` یا `!twitch lang help` را وارد کنید."
+            lang_unavail = emoji.cmd_fail + "ترجمه مورد نظر موجود نیست. برای نمایش ترجمه های موجود بنویسید: `!twitch lang help`."
+            lang_set = emoji.cmd_success + "زبان **{lang}** با موفقیت برای سرور شما تنظیم شد."
         class Guild:
-            submode_command_usage = "Type `!twitch help sub_only` to view command usage."
-            submode_success = emoji.cmd_success + "Subscribers-only mode has been enabled for this server. New users will have to be a subscriber to {channel} to join. TwitchBot will attempt to DM non-subscribers that join and kick them. Note: existing members won't be kicked."
-            submode_kick = "This server is in subscribers-only mode. To join, you need to be a subscriber of {}.\nTo link your Twitch account to TwitchBot, go to <https://dash.twitchbot.io> and press 'Link Account' under Twitch."
-            submode_kick_audit_log = "Subscribers-only mode is enabled for this server. To turn it off, type '!twitch sub_only off'."
-            submode_del_success = emoji.cmd_success + "Subscribers-only mode has been disabled for this server."
-            user_not_in_guild = emoji.cmd_fail + "That user isn't in this server."
-            no_login_dash = emoji.cmd_fail + "{user} hasn't logged in to the TwitchBot dashboard yet. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            no_link_dash = emoji.cmd_fail + "{user} hasn't linked their Twitch channel on the TwitchBot dashboard. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            http_err_dash = emoji.cmd_fail + "An error occurred while trying to get information from the TwitchBot dashboard: {error}"
+            submode_command_usage = "بنویسید `!twitch help sub_only` تا استفاده دستور را ببینبد."
+            submode_success = emoji.cmd_success + "حالت فقط-مشترکین برای این سرور فعال شد. کاربران جدید باید مشترک کانال {channel}  باشند تا بتوانند ملحق شوند. تویچ بات سعی خواهد کرد غیر مشترکانی که سعی میکنند ملحق شوند را خارج کند و به آنها پیام دهد. نکته: کاربران فعلی خارج نخواهند شد."
+            submode_kick = "این سرور در حالت فقط-مشترکین می باشد. برای ملحق شدن شما باید مشترک کانال {} باشید.\nبرای اتصال حساب تویچ به تویچ بات، مراجعه کنید به <https://dash.twitchbot.io> و دکمه 'Link Account' را بزنید."
+            submode_kick_audit_log = "این سرور در حالت فقط-مشترکین می باشد. برای خاموش کردن این حالت دستور '!twitch sub_only off' را وارد کنید."
+            submode_del_success = emoji.cmd_success + "حالت فقط-مشترکین غیر فعال شد."
+            user_not_in_guild = emoji.cmd_fail + "کاربر مورد نظر در این سرور وجود ندارد."
+            no_login_dash = emoji.cmd_fail + "{user} هنوز وارد داشبورد تویچ بات خود نشده است. برای دریافت کانال از کاربری دیگر بنویسید `!twitch sub_only on --user-id=(user id here)`."
+            no_link_dash = emoji.cmd_fail + "{user} هنوز اکانت تویچ خود را به داشبورد تویچ بات متصل نکرده است. برای دریافت کانال از کاربری دیگر بنویسید `!twitch sub_only on --user-id=(user id here)`."
+            http_err_dash = emoji.cmd_fail + "هنگام گرفتن اطلاعات از داشبورد تویچ بات خطایی رخ داد: {error}"
+            ###_________________________________________ Translate Flag
         class LiveRole:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Live Role - Help"
