@@ -91,12 +91,12 @@ class Persian:
                 inline=False
             )
             e.add_field(
-                name="رُل (نقش) پخش زنده",
+                name="رُل (نقش) لایو (پخش زنده)",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - رُل پخش زنده را برای سرور کنونی تنظیم میکند
-                `!twitch live_role filter` - رُل پخش زنده را به افراد مورد نظر محدود می کند
-                `!twitch live_role delete` - رُل کنونی پخش زنده را حذف می کند
-                `!twitch live_role view` - نشان میدهد اکنون چه رُلی برای پخش زنده تنظیم شده است
+                `!twitch live_role set` - رُل لایو را برای سرور کنونی تنظیم میکند
+                `!twitch live_role filter` - رُل لایو را به افراد مورد نظر محدود می کند
+                `!twitch live_role delete` - رُل کنونی لایو را حذف می کند
+                `!twitch live_role view` - نشان میدهد اکنون چه رُلی برای لایو تنظیم شده است
                 """),
                 inline=False
             )
@@ -166,7 +166,7 @@ class Persian:
             )
             e.add_field(
                 name="پشتیبانی",
-                value="اگر در خصوص تویچ بات نیاز به کمک دارید، به [support center](https://support.twitchbot.io) سر بزنید یا به [support server](https://discord.gg/UNYzJqV) ملحق شوید.",
+                value="اگر در خصوص تویچ بات نیاز به کمک دارید، به [مرکز پشتیبانی](https://support.twitchbot.io) سر بزنید یا به [سرور پشتیبانی](https://discord.gg/UNYzJqV) ملحق شوید.",
                 inline=False
             )
             e.add_field(
@@ -229,42 +229,42 @@ class Persian:
             no_login_dash = emoji.cmd_fail + "{user} هنوز وارد داشبورد تویچ بات خود نشده است. برای دریافت کانال از کاربری دیگر بنویسید `!twitch sub_only on --user-id=(user id here)`."
             no_link_dash = emoji.cmd_fail + "{user} هنوز اکانت تویچ خود را به داشبورد تویچ بات متصل نکرده است. برای دریافت کانال از کاربری دیگر بنویسید `!twitch sub_only on --user-id=(user id here)`."
             http_err_dash = emoji.cmd_fail + "هنگام گرفتن اطلاعات از داشبورد تویچ بات خطایی رخ داد: {error}"
-            ###_________________________________________ Translate Flag
         class LiveRole:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Live Role - Help"
-            command_usage.description = "With Live Role, you can set up a role to add to users when they go live. TwitchBot will automatically remove the role when the user stops streaming."
+            command_usage.title = "رُل (نقش) لایو (پخش زنده) - راهنما"
+            command_usage.description = "به کمک رُل لایو، میتوانید رُلی را تنظیم کنید تا زمانی که یکی از اعضای سرور شما در تویچ لایو شد، این رُل به او تعلق گیرد. زمانی که شخص به استریم پایان دهد، رُل از او بر داشته می شود."
             command_usage.add_field(
-                name = "Commands",
+                name = "دستورات",
                 value = textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - رُل لایو را برای این سرور تنظیم می کند
+                `!twitch live_role filter` - رُل لایو را به افرادی با رُل خواص دیگری محدود می کند
+                `!twitch live_role delete` - تنظیمات رُل لایو را حذف می کند
+                `!twitch live_role view` - رُل لایو کنونی را نمایش می دهد
                 """)
             )
-            no_role_mentioned = emoji.cmd_fail + "No role was specified. Please re-run the command and @mention a role."
-            not_set_up = emoji.cmd_fail + "No Live Role has been set up for this server. Type `!twitch live_role set` to set one."
-            role_not_found = emoji.cmd_fail + "No role name matched that query. Do not put any extra characters in your query, such as `<`, `>`, or `@`."
-            add_success = emoji.cmd_success + "Users in this server who go live on Twitch will receive the **{role}** role. If you want to set a filter for Live Role, type `!twitch live_role filter`."
-            del_success = emoji.cmd_success + "Successfully removed the Live Role configuration from this server."
-            filter_success = emoji.cmd_success + "Successfully set this server's Live Role filter. It may take a while to update all members' roles."
-            missing_perms_ext = emoji.cmd_fail + "I need the **`Manage Roles`** permission to do this. If I have the permission, then make sure to drag the role named `TwitchBot` above the role you want to set up."
+            no_role_mentioned = emoji.cmd_fail + "رُلی مشخص نشده. لطفا دستور مورد نظر را دوباره اجرا کنید و رُل @mention را ذکر کنید."
+            not_set_up = emoji.cmd_fail + "هیچ رُل لایوی در این سرور تنظیم نشده است. بنویسید `!twitch live_role set` تا آن را تنظیم کنید."
+            role_not_found = emoji.cmd_fail + "هیچ رُلی با این جست و جو پیدا نشد. از کاراکتر اضافه ای همچون `<`، `>`، یا `@` استفاده نکنید."
+            add_success = emoji.cmd_success + "از این پس زمانی که اعضای این سرور استریم کنند رُل **{role}** به آنها داده می شود. اگر می خواهید این تغییر صرفا روی رُل خواصی اعمال شود دستور `!twitch live_role filter` را اجرا کنید."
+            del_success = emoji.cmd_success + "تنظیمات رُل لایو با موفقیت از این سرور حذف شد."
+            filter_success = emoji.cmd_success + "فیلتر رُل لایو با موفقیت تنظیم شد. ممکن است چند لحظه تا بروز شدن رُل همه افراد طول بکشد."
+            missing_perms_ext = emoji.cmd_fail + "من به مجوز **`Manage Roles`** برای انجام این کار نیاز دارم. اگر مطمئن هستید که این اجازه را دارم، مطمئن شوید رُلی که به من اختصاص داده اید (TwitchBot( بالا تر از رُل لایو است."
             view_response = "Live Role is currently set up to give members the **{role}** role when they stream."
         class Notifs:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Streamer Notifications - Help"
-            command_usage.description = "Streamer notifications allow you to set up a customizable message that sends when a Twitch user goes live."
+            command_usage.title = "اعلانات استریمرها - راهنما"
+            command_usage.description = "اعلانات استرمرها به شما این امکان را می دهد زمانی که یک کاربر (تعیین شده) تویچ لایو شود، اعلانی در قالب پیامی قابل شخصی سازی در کانال متنی تعیین شده ارسال شود."
             command_usage.add_field(
-                name = "Commands",
+                name = "دستورات",
                 value = textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - اعلانی را برای استریمر مورد نظر در کانال متنی دیسکورد ذکر شده اضافه می کند
+                `!twitch notif remove <#discord_channel> <streamer_name>` - اعلانی را برای استریمر مورد نظر در کانال متنی دیسکورد ذکر شده حذف می کند
+                `!twitch notif list [#discord_channel]` - تمامی اعلانات را لیست می کند
+                `!twitch notif formatting` - متغیرهایی که می توانید در پیغام اعلان استریمر وارد کنید را نمایش می دهد
                 """)
             )
-            limit_reached = emoji.twitch_icon + "Hey there! Unfortunately you've reached the maximum amount of notifications that you can add to this server. To add more, you need to donate at <https://twitchbot.io/premium>."
+            limit_reached = emoji.twitch_icon + "درود! متاسفانه به سقف تعداد اعلاناتی که می توانید اضافه کنید رسیده اید. برای اضافه کردن بی نهایت اعلان میتوانید نسخه پیشرفته تویچ بات را خریداری کنید."
+            ###_________________________________________ Translate Flag
             prompt1 = "Which channel do you want to receive the notification in? Mention or type the name of one below. *(respond in 60 seconds)*"
             prompt2 = "Type the name of the Twitch channel that you want to set up the notification for. *(respond in 60 seconds)*"
             prompt3 = "Enter a custom message that you want to be shown when the user goes live, or type `default` for the default message. *(respond in 180 seconds)*"
