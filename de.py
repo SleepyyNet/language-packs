@@ -30,10 +30,10 @@ class German:
             command_usage.add_field(
                 name = "Befehle",
                 value = textwrap.dedent("""\
-                `!twitch clips from <Nutzer>` - erhalte einen Clip des angegebenen Nutzers
-                `!twitch clips trending` - erhalte einen angesagten Clip
-                `!twitch clips game <Spiel>` - erhalte einen Clip des angegebenen Spiels
-                `!twitch clips uservoted` - erhalte einen der beliebtesten Clips gewählt von TwitchBot Nutzern
+                `!twitch clips from <Nutzer>` - Erhalte einen Clip des angegebenen Nutzers
+                `!twitch clips trending` - Erhalte einen angesagten Clip
+                `!twitch clips game <Spiel>` - Erhalte einen Clip des angegebenen Spiels
+                `!twitch clips uservoted` - Erhalte einen der beliebtesten Clips gewählt von TwitchBot Nutzern
                 """)
             )
             clip_desc = "Sieh dir {user} spielt {game}:\n{url}"
@@ -60,68 +60,68 @@ class German:
             e.add_field(
                 name="Twitch",
                 value=textwrap.dedent("""\
-                `!twitch user <Nutzer
-                `!twitch stream user  user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
-                `!twitch game <name>` - Gets info on a Twitch game
-                `!twitch top` - Gets the most popular Twitch games
+                `!twitch user <Nutzer>` - Erhalte infos über einen Twitch Nutzer
+                `!twitch stream user <Nutzer>` - Erhalte infos über den Stream eines Nutzers
+                `!twitch stream watch <Nutzer>` - Schaue einen stream über Discord
+                `!twitch stream game <Name>` - Schau jemandem beim spielen eines bestimmten Spiels zu
+                `!twitch stream top` - Erhalte infos über einen Top-Stream
+                `!twitch game <name>` - Erhalte infos über ein Twitch Spiel
+                `!twitch top` - Erhalte die beliebtesten Twitch Spiele
                 """),
                 inline=False
             )
             e.add_field(
                 name="Clips",
                 value=textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <Nutzer>` - Erhalte einen Clip des angegebenen bestimmten Twitch Nutzers
+                `!twitch clips trending` - Erhalte einen angesagten Clip
+                `!twitch clips game <Spiel>` - Erhalte einen Clip des angegebenen Spiels
+                `!twitch clips uservoted` - Erhalte einen der beliebtesten Clips gewählt von TwitchBot Nutzern
                 """),
                 inline=False
             )
             e.add_field(
-                name="Streamer Notifications",
+                name="Streamer Benachrichtigungen",
                 value=textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#Text_Kanal] [Streamer_Name] [Nachricht]` - Fügt Benachrichtigungen des genannten Streamers zum genannten Kanal hinzu
+                `!twitch notif remove <#Text_Kanal> <Streamer_Name>` - Entfernt Benachrichtigungen des genannten Streamers vom genannten Kanal
+                `!twitch notif list [#Text_Kanal]` - Listet alle Streamer Benachrichtigungen für den genannten Kanal auf
+                `!twitch notif formatting` - Zeigt Variablen an welche in Benachrichtigungen genutzt werden können
                 """),
                 inline=False
             )
             e.add_field(
-                name="Live Role",
+                name="Live Rolle",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - Schaltet die Live Rolle des Nutzers um
+                `!twitch live_role filter` - Schränkt die nutzung der Live Rolle für die genannte Rolle ein
+                `!twitch live_role delete` - Entfernt die Konfiguration der Live Rolle
+                `!twitch live_role view` - Zeigt an welche Rolle momentan Konfiguriert ist
                 """),
                 inline=False
             )
             e.add_field(
                 name="Audio",
                 value=textwrap.dedent("""\
-                `!twitch listen <user>` - Listen to a Twitch stream in the current voice channel
-                `!twitch nowplaying` - Shows the stream currently playing, if any
-                `!twitch leave` - Leaves a voice channel
+                `!twitch listen <Nutzer>` - Hör dir einen Twitch Stream im aktuellen Sprach-Kanal an
+                `!twitch nowplaying` - Zeigt den aktuell spielenden Kanal an
+                `!twitch leave` - Verlässt den Sprach-Kanal
                 """),
                 inline=False
             )
             e.add_field(
-                name="Game Stats",
+                name="Spiele Statistiken",
                 value=textwrap.dedent("""\
-                `!twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats
-                `!twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats
+                `!twitch overwatch <pc/psn/xbl> <Spieler>` - Zeigt Statistiken über den Overwatch Spieler an
+                `!twitch fortnite <pc/psn/xbl> <Spieler>` - Zeigt Statistiken über den Fortnite Spieler an
                 """),
                 inline=False
             )
             e.add_field(
-                name="Message Filter",
+                name="Nachrichten Filter",
                 value=textwrap.dedent("""\
-                `!twitch filter set <sensitivity>` - Sets the server-wide toxicity filter
-                `!twitch filter remove` - Removes the server-wide toxicity filter
+                `!twitch filter set <Empfindlichkeit>` - Ändert den Server weiten Nettigkeits-Filter
+                `!twitch filter remove` - Entfernt den Server weiten Nettigkeits-Filter
                 """),
                 inline=False
             )
