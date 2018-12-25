@@ -2,11 +2,11 @@ from . import _emoji as emoji
 import textwrap
 import discord
 
-class English:
+class Czech:
     def __init__(self):
         self._lang_name = "čeština"
         self._lang_emoji = ":flag_cz:"
-        self._translator = "Jhprague#7318"
+        self._translator = "Jhprague#7318, Kiznoh#3896"
         class Audio:
             no_channel = emoji.cmd_fail + "You need to be in a voice channel."
             need_upvote = discord.Embed(color=0x6441A4)
