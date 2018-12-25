@@ -14,7 +14,7 @@ class Chinese:
             need_upvote.description = "您需要投TwitchBot一票，才能繼續收聽直播 **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
                 name = "想要跳過投票？",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) 讓你在聽直播時不需要再一直投票。"
+                value = "[TwitchBot Premium](https://twitchbot.io/premium)讓你在聽直播時不需要再一直投票。"
             )
             please_wait = "請稍後... " + emoji.loading
             user_noexist = emoji.cmd_fail + "這位使用者不存在或目前沒在直播。請在頻道入鏈結。"
@@ -126,86 +126,86 @@ class Chinese:
                 inline=False
             )
         class Errors:
-            err_report = "請至<https://link.twitchbot.io/support> 回報此錯誤給開發者。"
+            err_report = "請至<https://link.twitchbot.io/support>回報此錯誤給開發者。"
             forbidden = emoji.cmd_fail + "我沒有正確的權限這麼做。"
-            not_found = emoji.cmd_fail + "That Discord channel was not found. Make sure you're not putting <> around it and that you're `#mention`ing it."
-            not_started = "TwitchBot is still starting up! Please wait a few minutes before trying again."
-            check_fail = emoji.cmd_fail + "You don't have permission to run this command."
-            cooldown = emoji.cmd_fail + "You can run this command in {time} seconds."
-            conn_closed = emoji.cmd_fail + "The voice connection was closed. Reason: `{reason}`"
-            missing_arg = emoji.cmd_fail + "You're missing the `{param}` parameter."
-            too_many_requests = emoji.cmd_fail + "Third-party servers are having trouble keeping up with our requests. Please try again later."
+            not_found = emoji.cmd_fail + "找不到那個Discord頻道。請確認當你輸入`#mention`時你沒有包含<>。"
+            not_started = "TwitchBot還正在啟動！請等個幾分鐘後再試。"
+            check_fail = emoji.cmd_fail + "你沒有權限使用此指令。"
+            cooldown = emoji.cmd_fail + "你可以在{time}秒後再次使用此指令。"
+            conn_closed = emoji.cmd_fail + "語音連線已結束。原因： `{reason}`"
+            missing_arg = emoji.cmd_fail + "你失去了 `{param}`參數。"
+            too_many_requests = emoji.cmd_fail + "第三方伺服器在處理我們的要求時出了問題。請稍後在試。"
         class Filter:
-            cmd_usage = "Type `!twitch help filter` to view command usage."
-            need_donate = "Only TwitchBot Premium members can use this command. Learn more: <https://twitchbot.io/premium>"
-            invalid_sensitivity = "Sensitivity must be between 85 and 60."
-            add_success = emoji.cmd_success + "Successfully set this server's toxicity filter."
-            no_filter = emoji.cmd_fail + "No toxicity filter exists for this server."
-            del_success = emoji.cmd_success + "Successfully removed this server's toxicity filter."
+            cmd_usage = "輸入`!twitch help filter`來查看如可使用指令。"
+            need_donate = "只有TwitchBot Premium成員能使用此指令。了解更多： <https://twitchbot.io/premium>"
+            invalid_sensitivity = "靈敏度必須在85至60之間。"
+            add_success = emoji.cmd_success + "成功在此伺服器設置病毒過濾器。"
+            no_filter = emoji.cmd_fail + "此伺服器沒有任何病毒過濾器。"
+            del_success = emoji.cmd_success + "成功移除此伺服器的病毒過濾器。"
         class Games:
-            no_results = emoji.cmd_fail + "No results found."
-            no_stats_overwatch = emoji.cmd_fail + "No stats could be found for this player. If your profile is private, you can't see stats for it unless you make it public. Please follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make your profile public."
-            no_stats_fortnite = emoji.cmd_fail + "Player not found. Check the spelling of the username or try a different platform."
-            view_streams = "View Streams"
-            top_games = emoji.twitch_icon + "Top Games"
-            top_games_desc = "{view_count} viewers • {channel_count} channels streaming"
-            invalid_battletag = "Please enter your Battletag in a format of `name#id`."
-            invalid_platform = "Platform must be one of `pc`, `psn`, or `xbl`."
-            incomplete_data = "Your profile data is incomplete. If your profile is private, follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make it public so you can view your stats."
-            incomplete_data_short = "Some data may be missing or incomplete"
-            generic_error = emoji.cmd_fail + "An error occurred:"
-            powered_by_overwatch = "Powered by owapi.net"
-            powered_by_fortnite = "Powered by fortnitetracker.com"
+            no_results = emoji.cmd_fail + "沒有找到任何結果。"
+            no_stats_overwatch = emoji.cmd_fail + "找不到任何此玩家的狀態。如果您的個人檔案為私人，您將無法看到玩家狀態除非您設為公開。請至<https://dotesports.com/overwatch/news/ow-public-private-profile-25347>按照步驟設定您的個人檔案至公開。"
+            no_stats_fortnite = emoji.cmd_fail + "找不到此玩家。請檢察您的拼字或嘗試不同平台。"
+            view_streams = "觀看直播"
+            top_games = emoji.twitch_icon + "遊戲列表"
+            top_games_desc = "{view_count}人觀看 • {channel_count}個頻道正在直播"
+            invalid_battletag = "請依`name#id`格式輸入您的 Battletag。"
+            invalid_platform = "平台必須是`pc`、`psn`或`xbl`。"
+            incomplete_data = "您的個人檔案資訊並不完整。您的個人檔案僅限私人，請至<https://dotesports.com/overwatch/news/ow-public-private-profile-25347>按照步驟設定您的個人檔案至公開。"
+            incomplete_data_short = "某些資訊可能遺失或不完整"
+            generic_error = emoji.cmd_fail + "錯誤發生："
+            powered_by_overwatch = "由owapi.net所有"
+            powered_by_fortnite = "由fortnitetracker.com所有"
         class HelpCommand:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "**TwitchBot Help**"
+            e.title = emoji.twitch_icon + "**TwitchBot支援**"
             e.add_field(
-                name="Commands",
-                value="TwitchBot responds to commands starting with `twitch` or `!twitch`. Type `!twitch commands` to view all runnable commands.",
+                name="指令",
+                value="TwitchBot支援的指令前綴為`twitch`或`!twitch`。輸入`!twitch commands`來查所有能使用指令。",
                 inline=False
             )
             e.add_field(
-                name="Support",
-                value="If you need help with TwitchBot, you can visit the [support center](https://support.twitchbot.io) or join the [support server](https://discord.gg/UNYzJqV).",
+                name="支援",
+                value="如果您需要TwitchBot的幫忙，您可以拜訪[支援中心](https://support.twitchbot.io)或加入[支援伺服器](https://discord.gg/UNYzJqV)。",
                 inline=False
             )
             e.add_field(
-                name="Website",
-                value="You can view information about TwitchBot at https://twitchbot.io",
+                name="網站",
+                value="您可至https://twitchbot.io查看TwitchBot資訊。",
                 inline=False
             )
             e.add_field(
                 name="TwitchBot Premium",
-                value="Support TwitchBot's development and get a handful of cool features and benefits for just $5.00 USD a month. https://twitchbot.io/premium",
+                value="用每月$5.00 USD支持TwitchBot開發者並取得好用又有趣的功能。https://twitchbot.io/premium",
                 inline=False
             )
             e.add_field(
-                name="Upvote Competition",
-                value="We're giving away TwitchBot Premium for FREE to the top three voters at the end of every month! [Upvote here](https://discordbots.org/bot/twitch/vote) and [view the leaderboard](https://dash.twitchbot.io/leaderboard)",
+                name="投票競賽",
+                name="我們正在免費送TwitchBot Premium給每月投最多票前三位使用者。[這裡投票](https://discordbots.org/bot/twitch/vote)以及[查看排行榜](https://dash.twitchbot.io/leaderboard)",
                 inline=False
             )
             e.add_field(
-                name="About",
-                value="TwitchBot was made by [Akira#4587](https://disgd.pw) using discord.py. To view other contributors, type `twitch info`.",
+                name="關於",
+                value="TwitchBot是由[Akira#4587](https://disgd.pw)使用discord.py製作。查看其他貢獻者，輸入`twitch info`。",
                 inline=False
             )
             e.add_field(
-                name="Other links",
-                value="[FAQ](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Upvote](https://discordbots.org/bot/twitch/vote) · [Invite](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
+                name="其他連結",
+                value="[問與答](https://twitchbot.io/faq) · [儀表版](http://dash.twitchbot.io) · [投票](https://discordbots.org/bot/twitch/vote) · [邀請](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [部落格](https://medium.com/twitchbot)",
                 inline=False
             )
         class General:
-            avail_lang_title = "Available Translations"
-            avail_lang_setmsg = "To set TwitchBot's language, type !twitch lang <language>."
-            stats_embed_title = emoji.twitch_icon + "TwitchBot Stats"
-            stats_uptime = "Uptime"
-            stats_usage = "Usage"
-            stats_version = "Version"
-            stats_shardinfo = "Shard Info"
-            stats_system = "System"
-            stats_developer = "Developer"
-            stats_patrons = "Patrons"
-            stats_links = "Links"
+            avail_lang_title = "可使用語言"
+            avail_lang_setmsg = "設置TwitchBot使用語言，請輸入!twitch lang <language>。"
+            stats_embed_title = emoji.twitch_icon + "TwitchBot狀態"
+            stats_uptime = "運行時間"
+            stats_usage = "使用量"
+            stats_version = "版本"
+            stats_shardinfo = "破碎資訊"
+            stats_system = "系統"
+            stats_developer = "開發者"
+            stats_patrons = "贊助人"
+            stats_links = "鏈結"
             stats_links_desc = textwrap.dedent("""\
             **·** Website: https://twitchbot.io
             **·** Discord: https://discord.gg/UNYzJqV
