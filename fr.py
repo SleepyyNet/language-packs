@@ -6,7 +6,7 @@ class French:
     def __init__(self):
         self._lang_name = "Français"
         self._lang_emoji = ":flag_fr:"
-        self._translator = "Nicendredi#1888"
+        self._translator = "Nicendredi#1888, Thxbault#1000"
         class Audio:
             no_channel = emoji.cmd_fail + "You need to be in a voice channel."
             need_upvote = discord.Embed(color=0x6441A4)
