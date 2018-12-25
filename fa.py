@@ -11,9 +11,9 @@ class Persian:
             no_channel = emoji.cmd_fail + "شما باید به یک کانال صوتی متصل باشید."
             need_upvote = discord.Embed(color=0x6441A4)
             need_upvote.title = "برای ادامه دادن لطفا رأی موافق دهید." 
-            need_upvote.description = "برای گوش دادن به استریم ها باید به تویچ بات رای موافق دهید! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.description = "برای گوش دادن به استریم ها باید به تویچ بات رأی موافق دهید! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "می خواهید از رای موافق گذر کنید؟",
+                name = "می خواهید از رأی موافق گذر کنید؟",
                 value = "[تویچ بات پیشرفته](https://twitchbot.io/premium) به شما این اجازه را میدهد تا بدون رأی موافق دادن به استریم گوش کنید."
             )
             please_wait = "لطفا صبر کنید... " + emoji.loading
