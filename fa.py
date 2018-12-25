@@ -296,7 +296,7 @@ class Persian:
                 *`$url$`* - آدرس اینترنتی کانال استریم
                 *`$name$`* - نام کانال استریم
                 *`$everyone$`* - @everyone را مخاطب قرار می دهد.
-                *`$here$`* -  @here را مخاطب قرار می دهد.
+                *`$here$`* - @here را مخاطب قرار می دهد.
                 """)
             )
         class Permissions:
