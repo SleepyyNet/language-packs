@@ -8,51 +8,51 @@ class English:
         self._lang_emoji = ":flag_it:"
         self._translator = "Manfre#9262"
         class Audio:
-            no_channel = emoji.cmd_fail + "You need to be in a voice channel."
+            no_channel = emoji.cmd_fail + "Devi essere in un canale vocale."
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Please upvote to continue"
-            need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.title = "Per favore, per poter continuare, vota positivamente il bot."
+            need_upvote.description = "Devi votare positivamente TwitchBot per poter ascoltare le dirette! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "Want to skip upvoting?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
+                name = "Non vuoi votare il bot?",
+                value = "[TwitchBot Premium](https://twitchbot.io/premium) ti permette di ascoltare le dirette senza dover votare."
             )
-            please_wait = "Please wait... " + emoji.loading
-            user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
-            np_title = "Now playing in {channel}"
-            np_desc = "{title}\n{viewer_count} currently watching"
-            np_leave = "Type '!twitch leave' to stop the stream"
-            connection_timeout = emoji.cmd_fail + "Voice connection timed out."
-            not_streaming = "I'm not streaming anything on this server right now."
-            disconnected = "Left the voice channel."
+            please_wait = "Attendi per favore... " + emoji.loading
+            user_noexist = emoji.cmd_fail + "Questo utente non esiste oppure non è attualmente in diretta. Prova a inserire un link al canale."
+            np_title = "Ora in riproduzione in: {channel}"
+            np_desc = "{title}\n{viewer_count} spettatori"
+            np_leave = "Digita «!twitch leave» per fermare la diretta."
+            connection_timeout = emoji.cmd_fail + "Connessione al canale vocale persa."
+            not_streaming = "In questo momento, non sto trasmettendo niente in questo server."
+            disconnected = "Sono uscito dal canale vocale."
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Clips - Help"
+            command_usage.title = "Clip - Aiuto"
             command_usage.add_field(
-                name = "Commands",
+                name = "Comandi",
                 value = textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <utente>` - Serve a ottenere una clip da un utente specifico di Twitch;
+                `!twitch clips trending` - Serve a ottenere una clip nelle tendenze;
+                `!twitch clips game <gioco>` - Serve a ottenere una clip del gioco specificato;
+                `!twitch clips uservoted` - Serve a ottenere una delle clip più popolari votata dagli utenti di TwitchBot.
                 """)
             )
-            clip_desc = "Check out {user} playing {game}:\n{url}"
-            no_clips = emoji.cmd_fail + "No clips were found."
-            no_votes = emoji.cmd_fail + "Nobody has voted on any clips yet. Come back later."
-            uservote_clip_desc = "{vote_count} votes on this clip by {user}:\n{url}"
-            upvote_fail = emoji.cmd_fail + "**{user}**, your upvote couldn't be be processed."
+            clip_desc = "{user} sta giocando a {game}:\n{url}"
+            no_clips = emoji.cmd_fail + "Nessuna clip trovata."
+            no_votes = emoji.cmd_fail + "Ancora nessuno ha votato le clip. Riprova più tardi."
+            uservote_clip_desc = "{vote_count} voti su questa clip di {user}:\n{url}"
+            upvote_fail = emoji.cmd_fail + "**{user}**, non è stato possibile elaborare il tuo voto."
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "TwitchBot Commands"
-            e.description = ":warning: __**Do not put `<>` or `[]` around command arguments.**__"
+            e.title = emoji.twitch_icon + "Comandi di TwitchBot"
+            e.description = ":warning: __**Non devi aggiungere `<>` o `[]` nei parametri dei comandi.**__"
             e.add_field(
-                name="General",
+                name="Generale",
                 value=textwrap.dedent("""\
-                `!twitch help` - Shows bot help
-                `!twitch info` - Shows bot info
-                `!twitch lang` - Sets bot language
-                `!twitch invite` - Displays a link to add TwitchBot to your server
-                `!twitch status` - Shows Twitch API status
+                `!twitch help` - Serve a mostrare i comandi di aiuto;
+                `!twitch info` - Serve a mostrare le informazioni sul bot;
+                `!twitch lang` - Serve a impostare la lingua del bot;
+                `!twitch invite` - Serve a mostrare un link di invito per aggiungere TwitchBot nel tuo server;
+                `!twitch status` - Serve a mostrare lo stato dell'API di Twitch;
                 `!twitch ping` - Pong!
                 """),
                 inline=False
@@ -60,175 +60,175 @@ class English:
             e.add_field(
                 name="Twitch",
                 value=textwrap.dedent("""\
-                `!twitch user <user>` - Gets info on a Twitch channel
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
-                `!twitch game <name>` - Gets info on a Twitch game
-                `!twitch top` - Gets the most popular Twitch games
+                `!twitch user <utente>` - Serve a ottenere informazioni su un canale di Twitch;
+                `!twitch stream user <utente>` - Serve a ottenere informazioni sulla diretta di un utente;
+                `!twitch stream watch <utente>` - Serve a guardare una diretta di Twitch tramite Discord;
+                `!twitch stream game <nome>` - Serve a guardare una diretta di un gioco specifico;
+                `!twitch stream top` - Serve a recuperare le informazioni su una delle dirette più famose;
+                `!twitch game <nome>` - Serve a ottenere informazioni su un gioco su Twitch;
+                `!twitch top` - Serve a ottenere i giochi più popolari su Twitch.
                 """),
                 inline=False
             )
             e.add_field(
-                name="Clips",
+                name="Clip",
                 value=textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <utente>` - Serve a ottenere una clip da un utente specifico di Twitch;
+                `!twitch clips trending` - Serve a ottenere una clip nelle tendenze;
+                `!twitch clips game <gioco>` - Serve a ottenere una clip del gioco specificato;
+                `!twitch clips uservoted` - Serve a ottenere una delle clip più popolari votata dagli utenti di TwitchBot.
                 """),
                 inline=False
             )
             e.add_field(
-                name="Streamer Notifications",
+                name="Notifiche degli streamer",
                 value=textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#canale_di_discord] [nome_dello_streamer] [messaggio]` - Serve ad aggiungere le notifiche per uno streamer in un canale specifico;
+                `!twitch notif remove <#canale_di_discord> <nome_dello_streamer>` - Serve a rimuovere le notifiche per uno streamer in un canale specifico;
+                `!twitch notif list [#canale_di_discord]` - Serve a mostrare la lista delle notifiche degli streamer in un canale specifico;
+                `!twitch notif formatting` - Serve a mostrare le variabili che puoi inserire nei messaggi di notifica degli streamer;
                 """),
                 inline=False
             )
             e.add_field(
-                name="Live Role",
+                name="Ruolo delle dirette",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - Serve a impostare il ruolo delle dirette per questo server;
+                `!twitch live_role filter` - Serve a limitare il ruolo delle dirette a utenti che hanno un ruolo specifico;
+                `!twitch live_role delete` - Serve a rimuovere la configurazione del ruolo delle dirette;
+                `!twitch live_role view` - Serve a visualizzare quale ruolo è attualmente configurato.
                 """),
                 inline=False
             )
             e.add_field(
                 name="Audio",
                 value=textwrap.dedent("""\
-                `!twitch listen <user>` - Listen to a Twitch stream in the current voice channel
-                `!twitch nowplaying` - Shows the stream currently playing, if any
-                `!twitch leave` - Leaves a voice channel
+                `!twitch listen <utente>` - Serve ad ascoltare una diretta su Twitch nel canale vocale attuale;
+                `!twitch nowplaying` - Serve a mostrare - se in corso - la diretta in riproduzione;
+                `!twitch leave` - Serve a disconnettere il bot dal canale vocale.
                 """),
                 inline=False
             )
             e.add_field(
-                name="Game Stats",
+                name="Statistiche di gioco",
                 value=textwrap.dedent("""\
-                `!twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats
-                `!twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats
+                `!twitch overwatch <pc/psn/xbl> <giocatore>` - Serve a mostrare le statistiche di un giocatore di Overwatch;
+                `!twitch fortnite <pc/psn/xbl> <giocatore>` - Serve a mostrare le statistiche di un giocatore di Fortnite.
                 """),
                 inline=False
             )
             e.add_field(
-                name="Message Filter",
+                name="Fitro dei messaggi",
                 value=textwrap.dedent("""\
-                `!twitch filter set <sensitivity>` - Sets the server-wide toxicity filter
-                `!twitch filter remove` - Removes the server-wide toxicity filter
+                `!twitch filter set <sensitivity>` - Serve a impostare un filtro esteso in tutto il server contro la tossicità;
+                `!twitch filter remove` - Serve a rimuovere il filtro esteso in tutto il server contro la tossicità.
                 """),
                 inline=False
             )
         class Errors:
-            err_report = "Please report this error to the developers at <https://link.twitchbot.io/support>."
-            forbidden = emoji.cmd_fail + "I don't have the correct permissions to do that."
-            not_found = emoji.cmd_fail + "That Discord channel was not found. Make sure you're not putting <> around it and that you're `#mention`ing it."
-            not_started = "TwitchBot is still starting up! Please wait a few minutes before trying again."
-            check_fail = emoji.cmd_fail + "You don't have permission to run this command."
-            cooldown = emoji.cmd_fail + "You can run this command in {time} seconds."
-            conn_closed = emoji.cmd_fail + "The voice connection was closed. Reason: `{reason}`"
-            missing_arg = emoji.cmd_fail + "You're missing the `{param}` parameter."
-            too_many_requests = emoji.cmd_fail + "Third-party servers are having trouble keeping up with our requests. Please try again later."
+            err_report = "Per favore, segnala questo errore agli sviluppatori su <https://link.twitchbot.io/support>."
+            forbidden = emoji.cmd_fail + "Non ho i permessi necessari per effettuare quell'azione."
+            not_found = emoji.cmd_fail + "Quel canale di Discord non è stato trovato. Assicurati di non aggiungere <> attorno al parametro e assicurati anche di `#menzionarlo`."
+            not_started = "TwitchBot si sta ancora avviando! Aspetta ancora qualche minuto prima di riprovare il comando."
+            check_fail = emoji.cmd_fail + "Non hai il permesso di eseguire questo comando."
+            cooldown = emoji.cmd_fail + "Potrai eseguire questo comando tra {time} secondi."
+            conn_closed = emoji.cmd_fail + "La connessione al canale vocale è disattivata. Motivo: `{reason}`"
+            missing_arg = emoji.cmd_fail + "Hai dimenticato il parametro `{param}`."
+            too_many_requests = emoji.cmd_fail + "I server di terze parti stanno avendo problemi a tenere il passo con le nostre richieste. Per favore, riprova più tardi."
         class Filter:
-            cmd_usage = "Type `!twitch help filter` to view command usage."
-            need_donate = "Only TwitchBot Premium members can use this command. Learn more: <https://twitchbot.io/premium>"
-            invalid_sensitivity = "Sensitivity must be between 85 and 60."
-            add_success = emoji.cmd_success + "Successfully set this server's toxicity filter."
-            no_filter = emoji.cmd_fail + "No toxicity filter exists for this server."
-            del_success = emoji.cmd_success + "Successfully removed this server's toxicity filter."
+            cmd_usage = "Digita `!twitch help filter` per visualizzare come utilizzare del comando."
+            need_donate = "Solo i membri di TwitchBot Premium possono usare questo comando. Scopri di più: <https://twitchbot.io/premium>"
+            invalid_sensitivity = "Sensitivity deve essere impostata tra 85 e 60."
+            add_success = emoji.cmd_success + "Il filtro esteso in tutto il server contro la tossicità è stato impostato con successo."
+            no_filter = emoji.cmd_fail + "In questo server non è attivo nessun filtro esteso contro la tossicità."
+            del_success = emoji.cmd_success + "Il filtro esteso in tutto il server contro la tossicità è stato rimosso con successo."
         class Games:
-            no_results = emoji.cmd_fail + "No results found."
-            no_stats_overwatch = emoji.cmd_fail + "No stats could be found for this player. If your profile is private, you can't see stats for it unless you make it public. Please follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make your profile public."
-            no_stats_fortnite = emoji.cmd_fail + "Player not found. Check the spelling of the username or try a different platform."
-            view_streams = "View Streams"
-            top_games = emoji.twitch_icon + "Top Games"
-            top_games_desc = "{view_count} viewers • {channel_count} channels streaming"
-            invalid_battletag = "Please enter your Battletag in a format of `name#id`."
-            invalid_platform = "Platform must be one of `pc`, `psn`, or `xbl`."
-            incomplete_data = "Your profile data is incomplete. If your profile is private, follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make it public so you can view your stats."
-            incomplete_data_short = "Some data may be missing or incomplete"
-            generic_error = emoji.cmd_fail + "An error occurred:"
-            powered_by_overwatch = "Powered by owapi.net"
-            powered_by_fortnite = "Powered by fortnitetracker.com"
+            no_results = emoji.cmd_fail + "Nessun risultato trovato."
+            no_stats_overwatch = emoji.cmd_fail + "Nessuna statistica è stata trovata per questo giocatore. Se il profilo è privato, non puoi visualizzare le statistiche a meno che non rendi il tuo profilo pubblico. Scopri come rendere il profilo pubblico: <https://dotesports.com/overwatch/news/ow-public-private-profile-25347>"
+            no_stats_fortnite = emoji.cmd_fail + "Il giocatore non è stato trovato. Controlla di aver scritto correttamente il nome utente o prova con una piattaforma diversa."
+            view_streams = "Guarda la diretta"
+            top_games = emoji.twitch_icon + "Giochi più popolari"
+            top_games_desc = "{view_count} spettatori • {channel_count} canali in diretta"
+            invalid_battletag = "Per favore, inserisci il tuo Battletag in questo formato: `name#id`."
+            invalid_platform = "Le piattaforme sono solo `pc`, `psn`, o `xbl`."
+            incomplete_data = "I dati del tuo profilo sono incompleti. Se il tuo profilo è privato, segui questi passaggi <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> per renderlo pubblico, così potrai vedere le tue statistiche."
+            incomplete_data_short = "Alcuni dati potrebbero essre incompleti o mancanti"
+            generic_error = emoji.cmd_fail + "Si è verificato un errore:"
+            powered_by_overwatch = "Dati forniti da owapi.net"
+            powered_by_fortnite = "Dati forniti da fortnitetracker.com"
         class HelpCommand:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "**TwitchBot Help**"
+            e.title = emoji.twitch_icon + "**Aiuto per TwitchBot**"
             e.add_field(
-                name="Commands",
-                value="TwitchBot responds to commands starting with `twitch` or `!twitch`. Type `!twitch commands` to view all runnable commands.",
+                name="Comandi",
+                value="TwitchBot risponde solo ai comandi che iniziano con `twitch` o `!twitch`. Digita `!twitch commands` per visualizzare tutti i possibili comandi.",
                 inline=False
             )
             e.add_field(
-                name="Support",
-                value="If you need help with TwitchBot, you can visit the [support center](https://support.twitchbot.io) or join the [support server](https://discord.gg/UNYzJqV).",
+                name="Assistenza",
+                value="Se hai bisogno di assistenza/aiuto con TwitchBot, visita il [centro assistenza](https://support.twitchbot.io) oppure entra nel [server ufficiale di assistenza](https://discord.gg/UNYzJqV).",
                 inline=False
             )
             e.add_field(
-                name="Website",
-                value="You can view information about TwitchBot at https://twitchbot.io",
+                name="Sito web",
+                value="Puoi visualizzare le informazioni di TwitchBot su https://twitchbot.io",
                 inline=False
             )
             e.add_field(
                 name="TwitchBot Premium",
-                value="Support TwitchBot's development and get a handful of cool features and benefits for just $5.00 USD a month. https://twitchbot.io/premium",
+                value="Sostieni lo sviluppo di TwitchBot e ottieni una bella manciata di fantastiche funzionalità e vantaggi per soli 5,00$ USD (dollari statunitensi) al mese. https://twitchbot.io/premium",
                 inline=False
             )
             e.add_field(
-                name="Upvote Competition",
-                value="We're giving away TwitchBot Premium for FREE to the top three voters at the end of every month! [Upvote here](https://discordbots.org/bot/twitch/vote) and [view the leaderboard](https://dash.twitchbot.io/leaderboard)",
+                name="Gara dei voti",
+                value="TwitchBot Premium sarà fornito GRATUITAMENTE ai primi tre classificati alla fine di ogni mese! [Vota il bot qui](https://discordbots.org/bot/twitch/vote) e [visualizza la classifica qui](https://dash.twitchbot.io/leaderboard)",
                 inline=False
             )
             e.add_field(
-                name="About",
-                value="TwitchBot was made by [Akira#4587](https://disgd.pw) using discord.py. To view other contributors, type `twitch info`.",
+                name="Riconoscimenti",
+                value="TwitchBot è stato creato da [Akira#4587](https://disgd.pw) con l'utilizzo di discord.py. Per visualizzare gli altri collaboratori, digita `twitch info`.",
                 inline=False
             )
             e.add_field(
-                name="Other links",
-                value="[FAQ](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Upvote](https://discordbots.org/bot/twitch/vote) · [Invite](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
+                name="Altri link",
+                value="[Domande frequenti](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Vota](https://discordbots.org/bot/twitch/vote) · [Link di invito](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
                 inline=False
             )
         class General:
-            avail_lang_title = "Available Translations"
-            avail_lang_setmsg = "To set TwitchBot's language, type !twitch lang <language>."
-            stats_embed_title = emoji.twitch_icon + "TwitchBot Stats"
-            stats_uptime = "Uptime"
-            stats_usage = "Usage"
-            stats_version = "Version"
-            stats_shardinfo = "Shard Info"
-            stats_system = "System"
-            stats_developer = "Developer"
-            stats_patrons = "Patrons"
-            stats_links = "Links"
+            avail_lang_title = "Traduzioni disponibili"
+            avail_lang_setmsg = "Per poter impostare la lingua di TwitchBot, digita !twitch lang <lingua>."
+            stats_embed_title = emoji.twitch_icon + "Statistiche di TwitchBot"
+            stats_uptime = "Tempo di funzionamento"
+            stats_usage = "Utilizzo"
+            stats_version = "Versione"
+            stats_shardinfo = "Informazioni su Shard"
+            stats_system = "Sistema"
+            stats_developer = "Sviluppatore"
+            stats_patrons = "Sostenitori su Patreon"
+            stats_links = "Link"
             stats_links_desc = textwrap.dedent("""\
-            **·** Website: https://twitchbot.io
-            **·** Discord: https://discord.gg/UNYzJqV
-            **·** Upvote: https://discordbots.org/bot/twitch/vote
-            **·** Donate: https://patreon.com/devakira
+            **·** Sito web: https://twitchbot.io
+            **·** Server di Discord: https://discord.gg/UNYzJqV
+            **·** Vota il bot: https://discordbots.org/bot/twitch/vote
+            **·** Sostienici: https://patreon.com/devakira
             """)
-            invite_msg1 = "**{user}**, you can invite me to a server with this link: <https://link.twitchbot.io/invite>"
-            invite_msg2 = "Need help? Join the support server: <https://link.twitchbot.io/support>"
-            status_title = emoji.twitch_icon + "Twitch Status"
-            status_cs = "Current status: `{status}`"
-            lang_current = "Your current language for TwitchBot is **{lang}**. To change it, type `!twitch lang <lang>` or `!twitch lang help`."
-            lang_unavail = emoji.cmd_fail + "That translation isn't available. Type `!twitch lang help` to view available languages."
-            lang_set = emoji.cmd_success + "Successfully set your TwitchBot language to **{lang}**."
+            invite_msg1 = "**{user}**, puoi invitarmi in un server con questo link: <https://link.twitchbot.io/invite>"
+            invite_msg2 = "Ti serve aiuto? Unisciti al server di assistenza: <https://link.twitchbot.io/support>"
+            status_title = emoji.twitch_icon + "Stato di Twitch"
+            status_cs = "Stato attuale: `{status}`"
+            lang_current = "La tua lingua attuale per TwitchBot è impostata in: **{lang}**. Per cambiarla, digita `!twitch lang <lingua>` oppure `!twitch lang help`."
+            lang_unavail = emoji.cmd_fail + "Quella lingua non è disponibile. Digita `!twitch lang help` per visualizzare le lingue disponibili."
+            lang_set = emoji.cmd_success + "La lingua di TwitchBot è stata impostata con successo in: **{lang}**."
         class Guild:
-            submode_command_usage = "Type `!twitch help sub_only` to view command usage."
-            submode_success = emoji.cmd_success + "Subscribers-only mode has been enabled for this server. New users will have to be a subscriber to {channel} to join. TwitchBot will attempt to DM non-subscribers that join and kick them. Note: existing members won't be kicked."
-            submode_kick = "This server is in subscribers-only mode. To join, you need to be a subscriber of {}.\nTo link your Twitch account to TwitchBot, go to <https://dash.twitchbot.io> and press 'Link Account' under Twitch."
-            submode_kick_audit_log = "Subscribers-only mode is enabled for this server. To turn it off, type '!twitch sub_only off'."
-            submode_del_success = emoji.cmd_success + "Subscribers-only mode has been disabled for this server."
-            user_not_in_guild = emoji.cmd_fail + "That user isn't in this server."
-            no_login_dash = emoji.cmd_fail + "{user} hasn't logged in to the TwitchBot dashboard yet. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            no_link_dash = emoji.cmd_fail + "{user} hasn't linked their Twitch channel on the TwitchBot dashboard. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            http_err_dash = emoji.cmd_fail + "An error occurred while trying to get information from the TwitchBot dashboard: {error}"
+            submode_command_usage = "Digita `!twitch help sub_only` per visualizzare l'utilizzo del comando."
+            submode_success = emoji.cmd_success + "La modalità per soli abbonati è stata attivata in questo server. I nuovi utenti dovranno essere abbonati a {channel} per potersi unire. TwitchBot cercherà di scrivere un messaggio diretto ai non abbonati che si uniscono per poi dopo espellerli. Nota: i membri che si sono già uniti non verranno espulsi."
+            submode_kick = "Questo server ha la modalità per soli abbonati attiva. Vuol dire che per unirti, dovrai essere un abbonato di {}.\nPer collegare il tuo account di Twitch a TwitchBot, vai su <https://dash.twitchbot.io>, accedi con Discord e poi clicca su «Link Account» (Collega account) sotto Twitch."
+            submode_kick_audit_log = "La modalità per soli abbonati è attiva in questo server. Per disattivarla, digita «!twitch sub_only off»."
+            submode_del_success = emoji.cmd_success + "La modalità per soli abbonati è stata disattivata in questo server."
+            user_not_in_guild = emoji.cmd_fail + "Quell'utente non è in questo server."
+            no_login_dash = emoji.cmd_fail + "{user} non ha ancora effettuato l'accesso alla dashboard di TwitchBot. Per ottenere un canale da un utente diverso, digita `!twitch sub_only on --user-id=(id utente qui)`."
+            no_link_dash = emoji.cmd_fail + "{user} non ha ancora collegato il suo canale di Twitch sulla dashboard di TwitchBot. Per ottenere un canale da un utente diverso, digita `!twitch sub_only on --user-id=(id utente qui)`."
+            http_err_dash = emoji.cmd_fail + "Si è verificato un errore durante il recupero delle informazioni dalla dashboard di TwitchBot: {error}"
         class LiveRole:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Live Role - Help"
