@@ -2,57 +2,57 @@ from . import _emoji as emoji
 import textwrap
 import discord
 
-class English:
+class Lithuanian:
     def __init__(self):
-        self._lang_name = "English"
-        self._lang_emoji = ":flag_us: :flag_gb:"
-        self._translator = "Akira#0007"
+        self._lang_name = "Lietuvių"
+        self._lang_emoji = ":flag_lt:"
+        self._translator = "Ghostwolf#0001"
         class Audio:
-            no_channel = emoji.cmd_fail + "You need to be in a voice channel."
+            no_channel = emoji.cmd_fail + "Tau reikia būti prisijungus prie balso kanalo."
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Please upvote to continue"
-            need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.title = "Prašome pabalsuoti, kad tęstum"
+            need_upvote.description = "Tau reikia pabalsuoti už TwitchBot, kad galėtum klausytis transliacijų! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "Want to skip upvoting?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
+                name = "Nori praleisti balsavimą?",
+                value = "[TwitchBot Premium](https://twitchbot.io/premium) leidžia tau klausytis transliacijų nebalsuojant."
             )
-            please_wait = "Please wait... " + emoji.loading
-            user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
-            np_title = "Now playing in {channel}"
-            np_desc = "{title}\n{viewer_count} currently watching"
-            np_leave = "Type '!twitch leave' to stop the stream"
-            connection_timeout = emoji.cmd_fail + "Voice connection timed out."
-            not_streaming = "I'm not streaming anything on this server right now."
-            disconnected = "Left the voice channel."
+            please_wait = "Prašau palaukti... " + emoji.loading
+            user_noexist = emoji.cmd_fail + "Šis narys neegzistuoja arba šiuo metu nieko netransliuoja. Prašau pabandyti įvesti kanalo nuorodą."
+            np_title = "Dabar klausomasi {channel}"
+            np_desc = "{title}\nDabar žiūri {viewer_count}"
+            np_leave = "Parašyk '!twitch leave', lad sustabdytum transliaciją"
+            connection_timeout = emoji.cmd_fail + "Garso transliacija pasibaigė."
+            not_streaming = "Aš šiame serveryje dabar nieko netransliuoju."
+            disconnected = "Palikau balso kanalą."
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Clips - Help"
+            command_usage.title = "Klipai - Pagalba"
             command_usage.add_field(
-                name = "Commands",
+                name = "Komandos",
                 value = textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <narys>` - Parodo tam tikro Twitch nario klipą
+                `!twitch clips trending` - Parodo populiarų klipą
+                `!twitch clips game <žaidimas>` - Parodo tam tikro žaidimo klipą
+                `!twitch clips uservoted` - Parodo vieną iš populiariausių klipų, už kurį balsavo daug Twitch narių
                 """)
             )
-            clip_desc = "Check out {user} playing {game}:\n{url}"
-            no_clips = emoji.cmd_fail + "No clips were found."
-            no_votes = emoji.cmd_fail + "Nobody has voted on any clips yet. Come back later."
-            uservote_clip_desc = "{vote_count} votes on this clip by {user}:\n{url}"
-            upvote_fail = emoji.cmd_fail + "**{user}**, your upvote couldn't be be processed."
+            clip_desc = "Pažiūrėk, kaip {user} žaidžia {game}:\n{url}"
+            no_clips = emoji.cmd_fail + "Nerasta jokių klipų."
+            no_votes = emoji.cmd_fail + "Niekas dar nebalsavo už jokį klipą, sugrįžk vėliau."
+            uservote_clip_desc = "{vote_count} balsai šiam klipui, sukurtam {user}:\n{url}"
+            upvote_fail = emoji.cmd_fail + "**{user}**, tavo balsas negali būti apdorotas."
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "TwitchBot Commands"
-            e.description = ":warning: __**Do not put `<>` or `[]` around command arguments.**__"
+            e.title = emoji.twitch_icon + "TwitchBot komandos"
+            e.description = ":warning: __**Nepridėkite `<>` ar `[]` rašant komandų argumentus.**__"
             e.add_field(
-                name="General",
+                name="Pagrindinės",
                 value=textwrap.dedent("""\
-                `!twitch help` - Shows bot help
-                `!twitch info` - Shows bot info
-                `!twitch lang` - Sets bot language
-                `!twitch invite` - Displays a link to add TwitchBot to your server
-                `!twitch status` - Shows Twitch API status
+                `!twitch help` - Parodo bot'o pagalbą
+                `!twitch info` - Parodo bot'o informaciją
+                `!twitch lang` - Nustato bot'o kalbą
+                `!twitch invite` - Nurodo TwitchBot'o pakvietimo nuorodą, kad galėtum jį pridėti į savo serverį
+                `!twitch status` - Parodo Twitch API statusą
                 `!twitch ping` - Pong!
                 """),
                 inline=False
@@ -60,287 +60,287 @@ class English:
             e.add_field(
                 name="Twitch",
                 value=textwrap.dedent("""\
-                `!twitch user <user>` - Gets info on a Twitch channel
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
-                `!twitch game <name>` - Gets info on a Twitch game
-                `!twitch top` - Gets the most popular Twitch games
+                `!twitch user <narys>` - Parodo Twitch kanalo informaciją
+                `!twitch stream user <narys>` - Parodo nario transliacijos informaciją
+                `!twitch stream watch <narys>` - Žiūrėk Twitch transliaciją per Discord
+                `!twitch stream game <pavadinimas>` - Žiūrėk kažką žaidžiantį nurodytą žaidimą
+                `!twitch stream top` - Parodo informaciją apie popuriariausią transliaciją
+                `!twitch game <pavadinimas>` - Parodo informaciją apie Twitch žaidimą
+                `!twitch top` - Parodo populiariausius Twitch žaidimus
                 """),
                 inline=False
             )
             e.add_field(
-                name="Clips",
+                name="Klipai",
                 value=textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <narys>` - Parodo nurodyto Twitch nario klipą
+                `!twitch clips trending` - Parodo populiarų klipą
+                `!twitch clips game <pavadinimas>` - Parodo nurodyto žaidimo klipą
+                `!twitch clips uservoted` - Parodo vieną iš populiariausių klipų, už kurį balsavo daug Twitch narių
                 """),
                 inline=False
             )
             e.add_field(
-                name="Streamer Notifications",
+                name="Transliacijų pranešimai",
                 value=textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_kanalas] [transliuotojo_vardas] [žinutė]` - Prideda tam tikro Twitch nario transliacijos pradžios pranešimą tam tikrame kanale
+                `!twitch notif remove <#discord_kanalas> <transliuotojo_vardas>` - Pašalina tam tikro Twitch nario transliacijos pradžios pranešimą tam tikrame kanale
+                `!twitch notif list [#discord_kanalas]` - Nurodo visus transliacijų pradžių pranešimus tam tikrame kanale
+                `!twitch notif formatting` - Nurodo visas reikšmes, kurias gali įterpti į transliacijų pradžių pranešimus
                 """),
                 inline=False
             )
             e.add_field(
-                name="Live Role",
+                name="Transliacijos rolė",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - Nustato transliacijos rolę dabartiniame serveryje
+                `!twitch live_role filter` - Leidžia prieigą prie Transliacijos rolės tik nariams, turintiems tam tikrą rolę
+                `!twitch live_role delete` - Pašalina Transliacijos rolės nustatymus
+                `!twitch live_role view` - Parodo, kuri rolė yra nustatyta kaip Transliacijos rolė
                 """),
                 inline=False
             )
             e.add_field(
-                name="Audio",
+                name="Garsas",
                 value=textwrap.dedent("""\
-                `!twitch listen <user>` - Listen to a Twitch stream in the current voice channel
-                `!twitch nowplaying` - Shows the stream currently playing, if any
-                `!twitch leave` - Leaves a voice channel
+                `!twitch listen <narys>` - Klausykis Twitch transliacijos dabartiniame balso kanale
+                `!twitch nowplaying` - Parodo dabar klausomą transliaciją, jeigu tokia yra
+                `!twitch leave` - Palieka balso kanalą
                 """),
                 inline=False
             )
             e.add_field(
-                name="Game Stats",
+                name="Žaidimų statistikos",
                 value=textwrap.dedent("""\
-                `!twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats
-                `!twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats
+                `!twitch overwatch <pc/psn/xbl> <žaidėjas>` - Parodo Overwatch žaidėjo statistikas
+                `!twitch fortnite <pc/psn/xbl> <žaidėjas>` - Parodo Fortnite žaidėjo statistikas
                 """),
                 inline=False
             )
             e.add_field(
-                name="Message Filter",
+                name="Žinučių filtras",
                 value=textwrap.dedent("""\
-                `!twitch filter set <sensitivity>` - Sets the server-wide toxicity filter
-                `!twitch filter remove` - Removes the server-wide toxicity filter
+                `!twitch filter set <intensyvumas>` - Nustato serveriui toksiškumo filtrą
+                `!twitch filter remove` - Pašalina serveriui toksiškumo filtrą
                 """),
                 inline=False
             )
         class Errors:
-            err_report = "Please report this error to the developers at <https://link.twitchbot.io/support>."
-            forbidden = emoji.cmd_fail + "I don't have the correct permissions to do that."
-            not_found = emoji.cmd_fail + "That Discord channel was not found. Make sure you're not putting <> around it and that you're `#mention`ing it."
-            not_started = "TwitchBot is still starting up! Please wait a few minutes before trying again."
-            check_fail = emoji.cmd_fail + "You don't have permission to run this command."
-            cooldown = emoji.cmd_fail + "You can run this command in {time} seconds."
-            conn_closed = emoji.cmd_fail + "The voice connection was closed. Reason: `{reason}`"
-            missing_arg = emoji.cmd_fail + "You're missing the `{param}` parameter."
-            too_many_requests = emoji.cmd_fail + "Third-party servers are having trouble keeping up with our requests. Please try again later."
+            err_report = "Prašome pranešti apie šią klaidą bot'o kūrėjams per <https://link.twitchbot.io/support>."
+            forbidden = emoji.cmd_fail + "Aš neturiu reikiamų leidimų šiam veiksmui atlikti."
+            not_found = emoji.cmd_fail + "Šis Discord kanalas nebuvo rastas. Įsitikink, kad nepridėjai <> aplink kanalo pavadinimą ir kad tu `#pamini` jį."
+            not_started = "TwitchBot dar tik užsikrauna! Prašome palaukti kelias minutes ir pabandyti dar kartą."
+            check_fail = emoji.cmd_fail + "Tu neturi leidimo naudoti šios komandos."
+            cooldown = emoji.cmd_fail + "Tu galėsi naudoti šią komandą po {time} sekundžių."
+            conn_closed = emoji.cmd_fail + "Garso transliacija buvo pabaigta. Priežastis: `{reason}`"
+            missing_arg = emoji.cmd_fail + "Tau trūksta `{param}` parametro."
+            too_many_requests = emoji.cmd_fail + "Trečiųjų šalių serveriai turi problemų apdorojant mūsų prašymus. Prašome pabandyti vėliau."
         class Filter:
-            cmd_usage = "Type `!twitch help filter` to view command usage."
-            need_donate = "Only TwitchBot Premium members can use this command. Learn more: <https://twitchbot.io/premium>"
-            invalid_sensitivity = "Sensitivity must be between 85 and 60."
-            add_success = emoji.cmd_success + "Successfully set this server's toxicity filter."
-            no_filter = emoji.cmd_fail + "No toxicity filter exists for this server."
-            del_success = emoji.cmd_success + "Successfully removed this server's toxicity filter."
+            cmd_usage = "Parašyk `!twitch help filter`, kad pamatytum komandos naudojimą."
+            need_donate = "Tiktai TwitchBot Premium nariai gali naudoti šią komandą. Sužinok daugiau: <https://twitchbot.io/premium>"
+            invalid_sensitivity = "Intensyvumas turi būti tarp 85 ir 60."
+            add_success = emoji.cmd_success + "Sėkmingai nustatytas serverio toksiškumo filtras."
+            no_filter = emoji.cmd_fail + "Joks toksiškumo filtras neegzistuoja šiame serveryje."
+            del_success = emoji.cmd_success + "Sėkmingai pašalintas serverio toksiškumo filtras."
         class Games:
-            no_results = emoji.cmd_fail + "No results found."
-            no_stats_overwatch = emoji.cmd_fail + "No stats could be found for this player. If your profile is private, you can't see stats for it unless you make it public. Please follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make your profile public."
-            no_stats_fortnite = emoji.cmd_fail + "Player not found. Check the spelling of the username or try a different platform."
-            view_streams = "View Streams"
-            top_games = emoji.twitch_icon + "Top Games"
-            top_games_desc = "{view_count} viewers • {channel_count} channels streaming"
-            invalid_battletag = "Please enter your Battletag in a format of `name#id`."
-            invalid_platform = "Platform must be one of `pc`, `psn`, or `xbl`."
-            incomplete_data = "Your profile data is incomplete. If your profile is private, follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make it public so you can view your stats."
-            incomplete_data_short = "Some data may be missing or incomplete"
-            generic_error = emoji.cmd_fail + "An error occurred:"
-            powered_by_overwatch = "Powered by owapi.net"
-            powered_by_fortnite = "Powered by fortnitetracker.com"
+            no_results = emoji.cmd_fail + "Nerasta jokių rezultatų."
+            no_stats_overwatch = emoji.cmd_fail + "Negaliu surasti jokių šio žaidėjo statistikų. Jeigu tavo profilis yra privatus, tu negalėsi matyti savo statistikų iki tol, kol padarysi savo profilį viešą. Prašome atlikti šiuos žingsnius <https://dotesports.com/overwatch/news/ow-public-private-profile-25347>, kad padarytum savo profilį viešą."
+            no_stats_fortnite = emoji.cmd_fail + "Žaidėjas nerastas. Patikrink, ar žaidėjo vardas teisingai užrašytas arba pabandyk ieškoti statistikų kitoje platformoje."
+            view_streams = "Rodyti transliacijas"
+            top_games = emoji.twitch_icon + "Populiariausi žaidimai"
+            top_games_desc = "{view_count} žiūri • {channel_count} kanalai transliuoja"
+            invalid_battletag = "Prašome įvesti savo Battletag'ą naudojant `vardas#id` formatą."
+            invalid_platform = "Platforma turi būti viena iš `pc`, `psn`, arba `xbl`."
+            incomplete_data = "Mes neturime visų tavo profilio duomenų. Jeigu tavo profilis yra privatus, atlik šiuos žingsnius <https://dotesports.com/overwatch/news/ow-public-private-profile-25347>, kad padarytum savo profilį viešą ir kad tu galėtum matyti savo statistikas."
+            incomplete_data_short = "Dalis duomenų gali būti prarasta arba neužbaigta"
+            generic_error = emoji.cmd_fail + "Įvyko klaida:"
+            powered_by_overwatch = "Naudojant owapi.net"
+            powered_by_fortnite = "Naudojant fortnitetracker.com"
         class HelpCommand:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "**TwitchBot Help**"
+            e.title = emoji.twitch_icon + "**TwitchBot pagalba**"
             e.add_field(
-                name="Commands",
-                value="TwitchBot responds to commands starting with `twitch` or `!twitch`. Type `!twitch commands` to view all runnable commands.",
+                name="Komandos",
+                value="TwitchBot reaguoja į visas komandas, prasidedančiąs `twitch` arba `!twitch`. Parašyk `!twitch commands`, kad pamatytum visas galimas komandas.",
                 inline=False
             )
             e.add_field(
-                name="Support",
-                value="If you need help with TwitchBot, you can visit the [support center](https://support.twitchbot.io) or join the [support server](https://discord.gg/UNYzJqV).",
+                name="Pagalba",
+                value="Jeigu tau reikia pagalbos naudojantis TwitchBot, tu gali užeiti į  [pagalbos centrą](https://support.twitchbot.io) arba prisijungti prie [pagalbos serverio](https://discord.gg/UNYzJqV).",
                 inline=False
             )
             e.add_field(
-                name="Website",
-                value="You can view information about TwitchBot at https://twitchbot.io",
+                name="Svetainė",
+                value="Tu gali matyti informaciją apie TwitchBot per https://twitchbot.io",
                 inline=False
             )
             e.add_field(
                 name="TwitchBot Premium",
-                value="Support TwitchBot's development and get a handful of cool features and benefits for just $5.00 USD a month. https://twitchbot.io/premium",
+                value="Paremk TwitchBot'o kūrimą ir gauk naudingų funkcijų ir kitų privilegijų tik už $5.00 USD per mėnesį. https://twitchbot.io/premium",
                 inline=False
             )
             e.add_field(
-                name="Upvote Competition",
-                value="We're giving away TwitchBot Premium for FREE to the top three voters at the end of every month! [Upvote here](https://discordbots.org/bot/twitch/vote) and [view the leaderboard](https://dash.twitchbot.io/leaderboard)",
+                name="Balsavimo rungtynės",
+                value="Mes kiekvieno mėnesio pabaigoje NEMOKAMAI atiduodame TwitchBot Premium trims daugiausiai už TwitchBot'ą prabalsavusiems žmonėms! [Balsuok čia](https://discordbots.org/bot/twitch/vote) ir [pamatyk geriausiųjų lentelę](https://dash.twitchbot.io/leaderboard)",
                 inline=False
             )
             e.add_field(
-                name="About",
-                value="TwitchBot was made by [Akira#4587](https://disgd.pw) using discord.py. To view other contributors, type `twitch info`.",
+                name="Apie",
+                value="TwitchBot'ą sukūrė [Akira#4587](https://disgd.pw) naudojant discord.py kalbą. Kad pamatytum kitus pagalbininkus, parašyk `twitch info`.",
                 inline=False
             )
             e.add_field(
-                name="Other links",
-                value="[FAQ](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Upvote](https://discordbots.org/bot/twitch/vote) · [Invite](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
+                name="Kitos nuorodos",
+                value="[DUK](https://twitchbot.io/faq) · [Valdymo skydas](http://dash.twitchbot.io) · [Balsuok](https://discordbots.org/bot/twitch/vote) · [Pakviesk](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blogas](https://medium.com/twitchbot)",
                 inline=False
             )
         class General:
-            avail_lang_title = "Available Translations"
-            avail_lang_setmsg = "To set TwitchBot's language, type !twitch lang <language>."
-            stats_embed_title = emoji.twitch_icon + "TwitchBot Stats"
-            stats_uptime = "Uptime"
-            stats_usage = "Usage"
-            stats_version = "Version"
-            stats_shardinfo = "Shard Info"
-            stats_system = "System"
-            stats_developer = "Developer"
-            stats_patrons = "Patrons"
-            stats_links = "Links"
+            avail_lang_title = "Galimos kalbos"
+            avail_lang_setmsg = "Kad nustatytum TwitchBot'o kalbą, naudok !twitch lang <kalba>."
+            stats_embed_title = emoji.twitch_icon + "TwitchBot statistikos"
+            stats_uptime = "Veikimo laikas"
+            stats_usage = "Naidojimas"
+            stats_version = "Versija"
+            stats_shardinfo = "Shard'o informacija"
+            stats_system = "Sistema"
+            stats_developer = "Kūrėjas"
+            stats_patrons = "Patron'ai"
+            stats_links = "Nuorodos"
             stats_links_desc = textwrap.dedent("""\
-            **·** Website: https://twitchbot.io
+            **·** Svetainė: https://twitchbot.io
             **·** Discord: https://discord.gg/UNYzJqV
-            **·** Upvote: https://discordbots.org/bot/twitch/vote
-            **·** Donate: https://patreon.com/devakira
+            **·** Balsuok: https://discordbots.org/bot/twitch/vote
+            **·** Paremk: https://patreon.com/devakira
             """)
-            invite_msg1 = "**{user}**, you can invite me to a server with this link: <https://link.twitchbot.io/invite>"
-            invite_msg2 = "Need help? Join the support server: <https://link.twitchbot.io/support>"
-            status_title = emoji.twitch_icon + "Twitch Status"
-            status_cs = "Current status: `{status}`"
-            lang_current = "Your current language for TwitchBot is **{lang}**. To change it, type `!twitch lang <lang>` or `!twitch lang help`."
-            lang_unavail = emoji.cmd_fail + "That translation isn't available. Type `!twitch lang help` to view available languages."
-            lang_set = emoji.cmd_success + "Successfully set your TwitchBot language to **{lang}**."
+            invite_msg1 = "**{user}**, tu gali pakviesti mane į savo serverį naudojant šią nuorodą: <https://link.twitchbot.io/invite>"
+            invite_msg2 = "Reikia pagalbos? Prisijunk prie pagalbos serverio: <https://link.twitchbot.io/support>"
+            status_title = emoji.twitch_icon + "Twitch statusas"
+            status_cs = "Dabartinis statusas: `{status}`"
+            lang_current = "Dabartinė TwitchBot'o kalba yra **{lang}**. Kad pakeistum ją, rašyk `!twitch lang <kalba>` arba `!twitch lang help`."
+            lang_unavail = emoji.cmd_fail + "Ši kalba dar negalima. Rašyk `!twitch lang help`, kad pamatytum visas galimas kalbas."
+            lang_set = emoji.cmd_success + "Sėkmingai nustačiau tavo TwitchBot'o kalbą į **{lang}**."
         class Guild:
-            submode_command_usage = "Type `!twitch help sub_only` to view command usage."
-            submode_success = emoji.cmd_success + "Subscribers-only mode has been enabled for this server. New users will have to be a subscriber to {channel} to join. TwitchBot will attempt to DM non-subscribers that join and kick them. Note: existing members won't be kicked."
-            submode_kick = "This server is in subscribers-only mode. To join, you need to be a subscriber of {}.\nTo link your Twitch account to TwitchBot, go to <https://dash.twitchbot.io> and press 'Link Account' under Twitch."
-            submode_kick_audit_log = "Subscribers-only mode is enabled for this server. To turn it off, type '!twitch sub_only off'."
-            submode_del_success = emoji.cmd_success + "Subscribers-only mode has been disabled for this server."
-            user_not_in_guild = emoji.cmd_fail + "That user isn't in this server."
-            no_login_dash = emoji.cmd_fail + "{user} hasn't logged in to the TwitchBot dashboard yet. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            no_link_dash = emoji.cmd_fail + "{user} hasn't linked their Twitch channel on the TwitchBot dashboard. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            http_err_dash = emoji.cmd_fail + "An error occurred while trying to get information from the TwitchBot dashboard: {error}"
+            submode_command_usage = "Rašyk `!twitch help sub_only`, kad pamatytum komandos naudojimą."
+            submode_success = emoji.cmd_success + "Tik prenumeratorių režimas buvo įjungtas šiam serveriui. Nauji nariai turės būti {channel} kanalo prenumeratoriai, kad prisijungtų prie serverio. TwitchBot bandys asmeniškai susisiekti su ne prenumeratoriais ir juos išmesti. Pastaba: Dabartiniai nariai nebus išmesti."
+            submode_kick = "Šis serveris leidžia prisijungti tik prenumeratorius. Kad prisijungtum, tau reikia būti {} kanalo prenumeratorius.\nKad susietum savo Twitch profilį su TwitchBot, nukeliauk į <https://dash.twitchbot.io> ir nuspausk 'Link Account' žemiau Twitch."
+            submode_kick_audit_log = "Tik prenumeratorių režimas yra įjungtas šiame serveryje. Kas jį išjungtum, naudok '!twitch sub_only off'."
+            submode_del_success = emoji.cmd_success + "Tik prenumeratorių režimas buvo išjungtas šiam serveriui."
+            user_not_in_guild = emoji.cmd_fail + "Tas narys nėra šiame serveryje."
+            no_login_dash = emoji.cmd_fail + "{user} dar neprisijungė prie TwitchBot valdymo skydo. Kad gautum kito nario kanalą, naudok `!twitch sub_only on --user-id=(Čia įrašyk nario ID)`."
+            no_link_dash = emoji.cmd_fail + "{user} dar nesusiejo savo Twitch profilio per TwitchBot valdymo skydą. Kad gautum kito nario kanalą, naudok `!twitch sub_only on --user-id=(Čia įrašyk nario ID)`."
+            http_err_dash = emoji.cmd_fail + "Įvyko klaida bandant gauti duomenis iš TwitchBot valdymo skydo: {error}"
         class LiveRole:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Live Role - Help"
-            command_usage.description = "With Live Role, you can set up a role to add to users when they go live. TwitchBot will automatically remove the role when the user stops streaming."
+            command_usage.title = "Transliacijos rolė - Pagalba"
+            command_usage.description = "Su transliacijos role, tu gali nustatyti rolę, kuri bus suteikiama nariams, kurie pradeda transliaciją. TwitchBot automatiškai pašalins nariui transliacijos rolę, kada jie baigs transliuoti."
             command_usage.add_field(
-                name = "Commands",
+                name = "Komandos",
                 value = textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - Nustato transliacijos rolę dabartiniame serveryje
+                `!twitch live_role filter` - Leidžia prieigą prie Transliacijos rolės tik nariams, turintiems tam tikrą rolę
+                `!twitch live_role delete` - Pašalina Transliacijos rolės nustatymus
+                `!twitch live_role view` - Parodo, kuri rolė yra nustatyta kaip Transliacijos rolė
                 """)
             )
-            no_role_mentioned = emoji.cmd_fail + "No role was specified. Please re-run the command and @mention a role."
-            not_set_up = emoji.cmd_fail + "No Live Role has been set up for this server. Type `!twitch live_role set` to set one."
-            role_not_found = emoji.cmd_fail + "No role name matched that query. Do not put any extra characters in your query, such as `<`, `>`, or `@`."
-            add_success = emoji.cmd_success + "Users in this server who go live on Twitch will receive the **{role}** role. If you want to set a filter for Live Role, type `!twitch live_role filter`."
-            del_success = emoji.cmd_success + "Successfully removed the Live Role configuration from this server."
-            filter_success = emoji.cmd_success + "Successfully set this server's Live Role filter. It may take a while to update all members' roles."
-            missing_perms_ext = emoji.cmd_fail + "I need the **`Manage Roles`** permission to do this. If I have the permission, then make sure to drag the role named `TwitchBot` above the role you want to set up."
-            view_response = "Live Role is currently set up to give members the **{role}** role when they stream."
+            no_role_mentioned = emoji.cmd_fail + "Nenurodyta jokia rolė. Prašome darkart panaudoti šią komandą ir @paminėti rolę."
+            not_set_up = emoji.cmd_fail + "Jokia Transliacijos rolė nebuvo nustatyta šiam serveriui. Naudok `!twitch live_role set`, kad nustatytum."
+            role_not_found = emoji.cmd_fail + "Jokia rolė neatitiko tavo kriterijų. Nenaudok jokių ppapildomų simbolių paieškoje, tokių kaip `<`, `>`, ar `@`."
+            add_success = emoji.cmd_success + "Nariai šiame serveryje, kurie pradės transliuoti per Twitch, gaus **{role}** rolę. Jeigu nori nustatyti filtrą šiai rolei, naudok `!twitch live_role filter`."
+            del_success = emoji.cmd_success + "Sėkmingai pašalinti Transliacijos rolės nustatymai šiam serveriui."
+            filter_success = emoji.cmd_success + "Sėkmingai nustatytas serverio Transliacijos rolės filtras. Tai gali užtrukti, kol atnaujinsime visiems nariams roles."
+            missing_perms_ext = emoji.cmd_fail + "Man reikia **`Tvarkyti roles`** leidimo, kad galėčiau padaryti tai. Jeigu leidimas man yra suteiktas, tada nepamiršk perkelti rolės, kuri pavadinta `TwitchBot`, aukšciau rolės, kurią nustatinėji"
+            view_response = "Transliacijos rolė dabar yra nustatyta suteikti nariams **{role}** rolę tuo metu, kada jie transliuoja."
         class Notifs:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Streamer Notifications - Help"
-            command_usage.description = "Streamer notifications allow you to set up a customizable message that sends when a Twitch user goes live."
+            command_usage.title = "Transliacijų pranešimai - Pagalba"
+            command_usage.description = "Transliacijų pranešimai leidžia tau nustatyti bet kokią žinutę, kuri bus išsiunčiama tada, kada Twitch narys pradės transliuoti."
             command_usage.add_field(
-                name = "Commands",
+                name = "Komandos",
                 value = textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_kanalas] [transliuotojo_vardas] [žinutė]` - Prideda tam tikro Twitch nario transliacijos pradžios pranešimą tam tikrame kanale
+                `!twitch notif remove <#discord_kanalas> <transliuotojo_vardas>` - Pašalina tam tikro Twitch nario transliacijos pradžios pranešimą tam tikrame kanale
+                `!twitch notif list [#discord_kanalas]` - Nurodo visus transliacijų pradžių pranešimus tam tikrame kanale
+                `!twitch notif formatting` - Nurodo visas reikšmes, kurias gali įterpti į transliacijų pradžių pranešimus
                 """)
             )
-            limit_reached = emoji.twitch_icon + "Hey there! Unfortunately you've reached the maximum amount of notifications that you can add to this server. To add more, you need to donate at <https://twitchbot.io/premium>."
-            prompt1 = "Which channel do you want to receive the notification in? Mention or type the name of one below. *(respond in 60 seconds)*"
-            prompt2 = "Type the name of the Twitch channel that you want to set up the notification for. *(respond in 60 seconds)*"
-            prompt3 = "Enter a custom message that you want to be shown when the user goes live, or type `default` for the default message. *(respond in 180 seconds)*"
-            text_channel_not_found = emoji.cmd_fail + "Couldn't find that text channel. Exiting command..."
-            twitch_user_not_found = emoji.cmd_fail + "That Twitch user could not be found. Exiting command..."
-            twitch_user_not_found_alt = emoji.cmd_fail + "That Twitch user doesn't exist. Make sure that you're not putting anything extra around the name (such as `<>`), and that you're not @mentioning a Discord user."
-            response_timeout = "*Response timed out.*"
-            invalid_data = emoji.cmd_fail + "Invalid data was sent from Twitch:"
-            malformed_user = emoji.cmd_fail + "That doesn't look like a valid Twitch user. You can only include underscores, letters, and numbers."
-            default_msg = "<https://twitch.tv/{channel}> is now live on Twitch!"
-            del_fail = emoji.cmd_fail + "No notification has been set up for this user."
-            del_success = emoji.cmd_success + "You won't get any notifications in {channel} when {user} goes live."
-            add_success = emoji.cmd_success + "Added a notification for {user} in {channel}"
-            list_title = "Streamer notifications for **#{channel}**"
-            list_embed_limit = "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live."
-            no_notifs = "No streamer notifications are set up for this channel."
-            notifications = "Notifications"
-            bulk_delete_confirm = "**You are about to delete {count} notifications in {channel}.** Are you sure that you want to do this? Reply with `yes` if you want to continue."
-            bulk_delete_success = emoji.cmd_success + "Successfully deleted {count} notifications from {channel}."
-            command_cancelled = "Command cancelled."
+            limit_reached = emoji.twitch_icon + "Labas! Deja, bet tu pasiekei transliacijų žinučių limitą šiam serveriui. Kad pridėtum daugiau, tau reikia paremti mus per <https://twitchbot.io/premium>."
+            prompt1 = "Kuriame kanale tu nori gauti pranešimą apie transliaciją? Paminėk arba parašyk kanalo pavadinimą žemiau. *(atsakyk per 60 sekundžių)*"
+            prompt2 = "Įrašyk Twitch kanalo pavadinimą, kuriam nustatinėji pranešimą. *(atsakyk per 60 sekundžių)*"
+            prompt3 = "Įrašyk savo žinutę, kuri bus išsiunčiama tada, kada narys pradės transliuoti, arba parašyk `default`, kad naudotum numatytąją žinutę. *(atsakyk per 180 sekundžių)*"
+            text_channel_not_found = emoji.cmd_fail + "Negaliu rasti šio teksto kanalo. Atšaukiu kūrimą..."
+            twitch_user_not_found = emoji.cmd_fail + "Šis Twitch narys neegzistuoja. Atšaukiu kūrimą..."
+            twitch_user_not_found_alt = emoji.cmd_fail + "Šis Twitch narys neegzistuoja. Įsitikink, kad nieko neprirašai papildomo aplink vardą (kaip `<>`), ir kad tu @nemini Discord nario."
+            response_timeout = "*Atsakymo laikas pasibaigė.*"
+            invalid_data = emoji.cmd_fail + "Gauti neteisingi duomenys iš Twitch:"
+            malformed_user = emoji.cmd_fail + "Tai neatrodo kaip egzistuojantis Twitch narys. Tu gali naudoti tik apatinius brūkšnius, raides ir skaičius."
+            default_msg = "<https://twitch.tv/{channel}> dabar transliuoja per Twitch!"
+            del_fail = emoji.cmd_fail + "Joks pranešimas nebuvo nustatytas šiam nariui."
+            del_success = emoji.cmd_success + "Tu nebegausi pranešimų {channel} kanale, kada {user} pradės transliuoti."
+            add_success = emoji.cmd_success + "Pridėtas {user} transliavimo pranešimas {channel} kanalui"
+            list_title = "Transliacijų pranešimai **#{channel}** kanalui"
+            list_embed_limit = "Pasirinktinės žinutės nebuvo pridėtos dėl Discord'o nustatyto 1024 simbolių limito sekcijoje. Jos vistiek bus parodytos, kada Twitch narys pradės transliuoti."
+            no_notifs = "Jokių transliacijos pranešimų nėra nustatyta šiam kanalui."
+            notifications = "Pranešimai"
+            bulk_delete_confirm = "**Tu tuoj ištrinsi {count} transliacijų pranešimus {channel} kanalui.** Ar tu tikrai nori tai padaryti? Atsakyk `yes` jeigu nori tęsti."
+            bulk_delete_success = emoji.cmd_success + "Sėkmingai ištrinti {count} transliacijų pranešimai iš {channel}."
+            command_cancelled = "Komanda atšaukta."
             notif_variables = discord.Embed(color=discord.Color(0x6441A4))
-            notif_variables.title = "Notification message variables"
-            notif_variables.description = "Use one of the variables below to insert data into a stream notification message."
+            notif_variables.title = "Pranešimų žinučių reikšmės"
+            notif_variables.description = "Naudok reikšmes žemiau, kurias gali pridėti į transliacijų pramešimus."
             notif_variables.add_field(
-                name = "Available formatting",
+                name = "Galimas formatavimas",
                 value = textwrap.dedent("""\
-                *`$title$`* - The stream's title
-                *`$viewers$`* - The number of people currently watching the stream
-                *`$game$`* - The game that the streamer is currently playing
-                *`$url$`* - The channel's URL
-                *`$name$`* - The channel's name
-                *`$everyone$`* - Inserts an @everyone mention
-                *`$here$`* - Inserts an @here mention
+                *`$title$`* - Transliacijos pavadinimas
+                *`$viewers$`* - Skaičius, kiek dabar žmonių stebi transliaciją
+                *`$game$`* - Žaidimas, kurį dabar žaidžia transliuotojas
+                *`$url$`* - Kanalo nuoroda
+                *`$name$`* - Kanalo pavadinimas
+                *`$everyone$`* - Prideda @everyone paminėjimą
+                *`$here$`* - Prideda @here paminėjimą
                 """)
             )
         class Permissions:
-            user_need_perm = emoji.cmd_fail + "You need the **{permission}** permission to do this."
-            bot_need_perm = emoji.cmd_fail + "I need the **{permission}** permission to do this."
-            no_pm = emoji.cmd_fail + "You can only use this command in a server."
+            user_need_perm = emoji.cmd_fail + "Tau reikia **{permission}** leidimo, kad atliktum tai."
+            bot_need_perm = emoji.cmd_fail + "Man reikia **{permission}** leidimo, kad atlikčiau tai."
+            no_pm = emoji.cmd_fail + "Šią komandą gali naudoti tik serveryje"
         class Streams:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Stream Commands - Help"
+            command_usage.title = "Transliacijų komandos - Pagalba"
             command_usage.add_field(
-                name = "Commands",
+                name = "Komandos",
                 value = textwrap.dedent("""\
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
+                `!twitch stream user <narys>` - Parodo informaciją apie nario transliaciją
+                `!twitch stream watch <user>` - Žiūrėk Twitch transliaciją per Discord
+                `!twitch stream game <name>` - Žiūrėk kažka, žaidžiantį nurodytą žaidimą
+                `!twitch stream top` - Parodo informaciją apie populiariausią transliaciją
                 """)
             )
-            game_desc = "Check out {user} playing {game} for {view_count} viewers:\nhttps://twitch.tv/{user}"
-            game_not_found = emoji.cmd_fail + "That game could not be found."
-            game_no_streams = emoji.cmd_fail + "Nobody is streaming that game."
-            live = "Live on Twitch"
-            stream_not_found = emoji.cmd_fail + "That user doesn't exist or is not online. Make sure you're only entering the user's name and not anything extra, like `()` or `<>`."
+            game_desc = "Pažiūrėk {user}, žaidžiantį(-čią) {game} {view_count} žiūrovams:\nhttps://twitch.tv/{user}"
+            game_not_found = emoji.cmd_fail + "Šis žaidimas nerastas."
+            game_no_streams = emoji.cmd_fail + "Niekas netransliuoja šio žaidimo."
+            live = "Tiesiogiai per Twitch"
+            stream_not_found = emoji.cmd_fail + "Šis narys netransliuoja arba nėra prisijungęs. Įsitikink, kad tu įvedi tik nario vardą ir nepridedi nieko papildomai, kaip `()` ar `<>`."
             stream_desc = textwrap.dedent("""\
-            Playing {game} for {view_count} viewers
-            **[Watch on Twitch](https://twitch.tv/{channel})** or type `twitch stream watch {channel}`
+            Žaidžia {game} {view_count} žiūrovams
+            **[Žiūrėk per Twitch](https://twitch.tv/{channel})** arba parašyk `twitch stream watch {channel}`
 
-            Stream Preview:
+            Transliacijos akimirka:
             """)
         class Users:
-            connections = "Connections for {user}"
-            connected = "Connected to {account}"
-            followers = "Followers"
-            following = "Following"
-            live = "Currently Live"
-            playing = "Playing {game} for {view_count} viewers"
-            not_connected = "Not Connected"
-            not_live = "Currently Offline"
-            no_login_dash = "This user hasn't visited the [TwitchBot dashboard](http://dash.twitchbot.io)."
-            streamer_id = "Streamer ID:"
-            views = "Views"
-            view_profile = "View Twitch Profile"
-            unknown = "Unknown"
-            watch_on_twitch = "Watch on Twitch"
+            connections = "{user} ryšiai"
+            connected = "Prisijungta prie {account}"
+            followers = "Sekėjai"
+            following = "Seka"
+            live = "Dabar transliuoja"
+            playing = "Žaidžia {game} {view_count} žiūrovams"
+            not_connected = "Neprisijungęs(-usi)
+            not_live = "Dabar netransliuoja"
+            no_login_dash = "Šis narys nebuvo prisijungęs prie [TwitchBot valdymo skydo](http://dash.twitchbot.io)."
+            streamer_id = "Transliuotojo ID:"
+            views = "Peržiūros"
+            view_profile = "Rodyti Twitch profilį"
+            unknown = "Nežinoma"
+            watch_on_twitch = "Žiūrek per Twitch"
         self.Audio = Audio
         self.Clips = Clips
         self.CommandsList = CommandsList
