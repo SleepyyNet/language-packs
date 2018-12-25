@@ -264,84 +264,83 @@ class Persian:
                 """)
             )
             limit_reached = emoji.twitch_icon + "درود! متاسفانه به سقف تعداد اعلاناتی که می توانید اضافه کنید رسیده اید. برای اضافه کردن بی نهایت اعلان میتوانید نسخه پیشرفته تویچ بات را خریداری کنید."
-            ###_________________________________________ Translate Flag
-            prompt1 = "Which channel do you want to receive the notification in? Mention or type the name of one below. *(respond in 60 seconds)*"
-            prompt2 = "Type the name of the Twitch channel that you want to set up the notification for. *(respond in 60 seconds)*"
-            prompt3 = "Enter a custom message that you want to be shown when the user goes live, or type `default` for the default message. *(respond in 180 seconds)*"
-            text_channel_not_found = emoji.cmd_fail + "Couldn't find that text channel. Exiting command..."
-            twitch_user_not_found = emoji.cmd_fail + "That Twitch user could not be found. Exiting command..."
-            twitch_user_not_found_alt = emoji.cmd_fail + "That Twitch user doesn't exist. Make sure that you're not putting anything extra around the name (such as `<>`), and that you're not @mentioning a Discord user."
-            response_timeout = "*Response timed out.*"
-            invalid_data = emoji.cmd_fail + "Invalid data was sent from Twitch:"
-            malformed_user = emoji.cmd_fail + "That doesn't look like a valid Twitch user. You can only include underscores, letters, and numbers."
-            default_msg = "<https://twitch.tv/{channel}> is now live on Twitch!"
-            del_fail = emoji.cmd_fail + "No notification has been set up for this user."
-            del_success = emoji.cmd_success + "You won't get any notifications in {channel} when {user} goes live."
-            add_success = emoji.cmd_success + "Added a notification for {user} in {channel}"
-            list_title = "Streamer notifications for **#{channel}**"
-            list_embed_limit = "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live."
-            no_notifs = "No streamer notifications are set up for this channel."
-            notifications = "Notifications"
-            bulk_delete_confirm = "**You are about to delete {count} notifications in {channel}.** Are you sure that you want to do this? Reply with `yes` if you want to continue."
-            bulk_delete_success = emoji.cmd_success + "Successfully deleted {count} notifications from {channel}."
-            command_cancelled = "Command cancelled."
+            prompt1 = "می خواهید در کدام کانال متنی اعلان نمایش داده شود؟ در پایین نام آن را بنویسید یا مورد خطاب قرار دهید.*(تا 60 ثانیه دیگر پاسخ دهید)*"
+            prompt2 = "کانال تویچی که می خواهید اعلان در مورد آن باشد را نام ببرید. *(تا 60 ثانیه دیگر پاسخ دهید)*"
+            prompt3 = "پیغام دلخواهی که می خواهید هنگام لایو شدن استریمر نمایش داده شود را بنویسید. یا بنویسید `default` تا پیغام پیش فرض نمایش داده شود. *(respond in 180 seconds)*"
+            text_channel_not_found = emoji.cmd_fail + "کانال متنی مورد نظر یافت نشد. خروج از دستور..."
+            twitch_user_not_found = emoji.cmd_fail + "کاربر مورد نظر (کانال) تویچ یافت نشد. خروج از دستور..."
+            twitch_user_not_found_alt = emoji.cmd_fail + "کاربر مورد نظر تویچ یافت نشد. مطمئن شوید از کاراکتر اضافه ای همچون `<>` استفاده نمی کنید، و کاربر دیسکوردی را مورد خطاب )@mention) قرار نمی دهید."
+            response_timeout = "*زمان پاسخ گویی به پایان رسید.*"
+            invalid_data = emoji.cmd_fail + "داده ارسال شده توسط تویچ نامعتبر است:"
+            malformed_user = emoji.cmd_fail + "بنظر می رسد این نامی معتبر برای کاربران تویچ نیست. تنها میتوانید از underscore، حروف، و اعداد استفاده کنید."
+            default_msg = "<https://twitch.tv/{channel}> هم اکنون استریم می کند!"
+            del_fail = emoji.cmd_fail + "اعلانی برای این کاربر تنظیم نشده است."
+            del_success = emoji.cmd_success + "از این پس اعلانی در کانال {channel} برای کاربر {user} پخش نخواهد شد."
+            add_success = emoji.cmd_success + "اعلانی برای کاربر {user} در کانال {channel} اضافه شد."
+            list_title = "اعلان های استریمرها برای کانال **#{channel}**"
+            list_embed_limit = "بدلیل محدودیت تعداد کاراکترها (1024( پیغام دلخواه شمااعمال نشد. همچنان اعلان نمایش داده خواهد شد."
+            no_notifs = "هیچ اعلانی در این کانال تنظیم نشده است."
+            notifications = "اعلان ها"
+            bulk_delete_confirm = "**شما در حال حذف تعداد {count} اعلان در کانال {channel} هستید.** آیا مطمئن به انجام این کار می باشید؟ بنویسید `yes` اگر می خواهید ادامه دهید."
+            bulk_delete_success = emoji.cmd_success + "تعداد {count} اعلان از کانال {channel} حذف شد."
+            command_cancelled = "دستور متوقف شد."
             notif_variables = discord.Embed(color=discord.Color(0x6441A4))
-            notif_variables.title = "Notification message variables"
-            notif_variables.description = "Use one of the variables below to insert data into a stream notification message."
+            notif_variables.title = "متغیرهای پیام اعلان"
+            notif_variables.description = "برای استفاده از برخی داده استریم، از متغیرهای زیر استفاده کنید."
             notif_variables.add_field(
-                name = "Available formatting",
+                name = "قالب های موجود",
                 value = textwrap.dedent("""\
-                *`$title$`* - The stream's title
-                *`$viewers$`* - The number of people currently watching the stream
-                *`$game$`* - The game that the streamer is currently playing
-                *`$url$`* - The channel's URL
-                *`$name$`* - The channel's name
-                *`$everyone$`* - Inserts an @everyone mention
-                *`$here$`* - Inserts an @here mention
+                *`$title$`* - عنوان استریم
+                *`$viewers$`* - تعداد بیننده های استریم در آن لحظه
+                *`$game$`* - بازی که استریمر می کند
+                *`$url$`* - آدرس اینترنتی کانال استریم
+                *`$name$`* - نام کانال استریم
+                *`$everyone$`* - @everyone را مخاطب قرار می دهد.
+                *`$here$`* -  @here را مخاطب قرار می دهد.
                 """)
             )
         class Permissions:
-            user_need_perm = emoji.cmd_fail + "You need the **{permission}** permission to do this."
-            bot_need_perm = emoji.cmd_fail + "I need the **{permission}** permission to do this."
-            no_pm = emoji.cmd_fail + "You can only use this command in a server."
+            user_need_perm = emoji.cmd_fail + "شما به مجوز **{permission}** برای انجام این کار نیاز دارید."
+            bot_need_perm = emoji.cmd_fail + "من به مجوز **{permission}** برای انجام این کار نیاز دارم."
+            no_pm = emoji.cmd_fail + "شما می توانید این دستور را تنها در سرور اجرا کنید."
         class Streams:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Stream Commands - Help"
+            command_usage.title = "دستورات استریم - راهنما"
             command_usage.add_field(
-                name = "Commands",
+                name = "دستورات",
                 value = textwrap.dedent("""\
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
+                `!twitch stream user <user>` - اطلاعات استریم یک کاربر تویچ را دریافت می کند
+                `!twitch stream watch <user>` - استریم تویچ را از دیسکورد تماشا کنید
+                `!twitch stream game <name>` - استریمی از بازی ذکر شده را تماشا کنید
+                `!twitch stream top` - اطلاعاتی از یک استریم برتر را دریافت می کند
                 """)
             )
-            game_desc = "Check out {user} playing {game} for {view_count} viewers:\nhttps://twitch.tv/{user}"
-            game_not_found = emoji.cmd_fail + "That game could not be found."
-            game_no_streams = emoji.cmd_fail + "Nobody is streaming that game."
-            live = "Live on Twitch"
-            stream_not_found = emoji.cmd_fail + "That user doesn't exist or is not online. Make sure you're only entering the user's name and not anything extra, like `()` or `<>`."
+            game_desc = "{user} را ببینید که {game} بازی می کند و {view_count} بیننده دارد:\nhttps://twitch.tv/{user}"
+            game_not_found = emoji.cmd_fail + "بازی پیدا نشد."
+            game_no_streams = emoji.cmd_fail + "کسی این بازی را استریم نمی کند."
+            live = "زنده بر روی تویچ"
+            stream_not_found = emoji.cmd_fail + "چنین کاربری وجود ندارد یا آنلاین نیست. مطمئن شوید از کاراکتر های اضافی همچون `()` یا `<>` در نام کاربر استفاده نکنید."
             stream_desc = textwrap.dedent("""\
-            Playing {game} for {view_count} viewers
-            **[Watch on Twitch](https://twitch.tv/{channel})** or type `twitch stream watch {channel}`
+            {game} بازی می کند برای {view_count} بیننده
+            **[از تویچ ببینید](https://twitch.tv/{channel})** یا بنویسید `twitch stream watch {channel}`
 
-            Stream Preview:
+            پیش نمایش استریم:
             """)
         class Users:
-            connections = "Connections for {user}"
-            connected = "Connected to {account}"
-            followers = "Followers"
-            following = "Following"
-            live = "Currently Live"
-            playing = "Playing {game} for {view_count} viewers"
-            not_connected = "Not Connected"
-            not_live = "Currently Offline"
-            no_login_dash = "This user hasn't visited the [TwitchBot dashboard](http://dash.twitchbot.io)."
-            streamer_id = "Streamer ID:"
-            views = "Views"
-            view_profile = "View Twitch Profile"
-            unknown = "Unknown"
-            watch_on_twitch = "Watch on Twitch"
+            connections = "اتصالات برای کاربر {user}"
+            connected = "متصل شد به {account}"
+            followers = "دنبال کننده ها"
+            following = "دنبال می کنند"
+            live = "پخش زنده"
+            playing = "در حال بازی {game} برای {view_count} بیننده"
+            not_connected = "متصل نشد"
+            not_live = "آفلاین"
+            no_login_dash = "این کاربر از [داشبورد تویچ](http://dash.twitchbot.io) بازدید نکرده."
+            streamer_id = "ID استریمر:"
+            views = "تعداد نمایش ها"
+            view_profile = "نمایش پروفایل تویچ"
+            unknown = "ناشناس"
+            watch_on_twitch = "از تویچ ببینید"
         self.Audio = Audio
         self.Clips = Clips
         self.CommandsList = CommandsList
