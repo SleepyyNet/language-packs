@@ -249,7 +249,7 @@ class Persian:
             del_success = emoji.cmd_success + "تنظیمات رُل لایو با موفقیت از این سرور حذف شد."
             filter_success = emoji.cmd_success + "فیلتر رُل لایو با موفقیت تنظیم شد. ممکن است چند لحظه تا بروز شدن رُل همه افراد طول بکشد."
             missing_perms_ext = emoji.cmd_fail + "من به مجوز **`Manage Roles`** برای انجام این کار نیاز دارم. اگر مطمئن هستید که این اجازه را دارم، مطمئن شوید رُلی که به من اختصاص داده اید (TwitchBot( بالا تر از رُل لایو است."
-            view_response = "Live Role is currently set up to give members the **{role}** role when they stream."
+            view_response = "در حال حاضر رُل لایو تنظیم شده است تا زمانی که استریمرها لایو شوند رُل **{role}** به آنها داده شود."
         class Notifs:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "اعلانات استریمرها - راهنما"
@@ -258,7 +258,7 @@ class Persian:
                 name = "دستورات",
                 value = textwrap.dedent("""\
                 `!twitch notif add [#discord_channel] [streamer_name] [message]` - اعلانی را برای استریمر مورد نظر در کانال متنی دیسکورد ذکر شده اضافه می کند
-                `!twitch notif remove <#discord_channel> <streamer_name>` - اعلانی را برای استریمر مورد نظر در کانال متنی دیسکورد ذکر شده حذف می کند
+                `!twitch notif remove <#discord_channel> <streamer_name>` - اعلانی را برای استریمر مورد نظر از کانال متنی دیسکورد ذکر شده حذف می کند
                 `!twitch notif list [#discord_channel]` - تمامی اعلانات را لیست می کند
                 `!twitch notif formatting` - متغیرهایی که می توانید در پیغام اعلان استریمر وارد کنید را نمایش می دهد
                 """)
@@ -266,13 +266,13 @@ class Persian:
             limit_reached = emoji.twitch_icon + "درود! متاسفانه به سقف تعداد اعلاناتی که می توانید اضافه کنید رسیده اید. برای اضافه کردن بی نهایت اعلان میتوانید نسخه پیشرفته تویچ بات را خریداری کنید."
             prompt1 = "می خواهید در کدام کانال متنی اعلان نمایش داده شود؟ در پایین نام آن را بنویسید یا مورد خطاب قرار دهید.*(تا 60 ثانیه دیگر پاسخ دهید)*"
             prompt2 = "کانال تویچی که می خواهید اعلان در مورد آن باشد را نام ببرید. *(تا 60 ثانیه دیگر پاسخ دهید)*"
-            prompt3 = "پیغام دلخواهی که می خواهید هنگام لایو شدن استریمر نمایش داده شود را بنویسید. یا بنویسید `default` تا پیغام پیش فرض نمایش داده شود. *(respond in 180 seconds)*"
+            prompt3 = "پیغام دلخواهی که می خواهید هنگام لایو شدن استریمر نمایش داده شود را بنویسید. یا بنویسید `default` تا پیغام پیش فرض نمایش داده شود. *(تا 60 ثانیه دیگر پاسخ دهید)*"
             text_channel_not_found = emoji.cmd_fail + "کانال متنی مورد نظر یافت نشد. خروج از دستور..."
-            twitch_user_not_found = emoji.cmd_fail + "کاربر مورد نظر (کانال) تویچ یافت نشد. خروج از دستور..."
+            twitch_user_not_found = emoji.cmd_fail + "کاربر(کانال) مورد نظر تویچ یافت نشد. خروج از دستور..."
             twitch_user_not_found_alt = emoji.cmd_fail + "کاربر مورد نظر تویچ یافت نشد. مطمئن شوید از کاراکتر اضافه ای همچون `<>` استفاده نمی کنید، و کاربر دیسکوردی را مورد خطاب )@mention) قرار نمی دهید."
             response_timeout = "*زمان پاسخ گویی به پایان رسید.*"
             invalid_data = emoji.cmd_fail + "داده ارسال شده توسط تویچ نامعتبر است:"
-            malformed_user = emoji.cmd_fail + "بنظر می رسد این نامی معتبر برای کاربران تویچ نیست. تنها میتوانید از underscore، حروف، و اعداد استفاده کنید."
+            malformed_user = emoji.cmd_fail + "بنظر می رسد این نامی معتبر برای کاربران تویچ نیست. تنها میتوانید از _، حروف، و اعداد استفاده کنید."
             default_msg = "<https://twitch.tv/{channel}> هم اکنون استریم می کند!"
             del_fail = emoji.cmd_fail + "اعلانی برای این کاربر تنظیم نشده است."
             del_success = emoji.cmd_success + "از این پس اعلانی در کانال {channel} برای کاربر {user} پخش نخواهد شد."
