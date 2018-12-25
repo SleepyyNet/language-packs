@@ -8,51 +8,51 @@ class Chinese:
         self._lang_emoji = ":flag_cn:"
         self._translator = "Dexmio#8239"
         class Audio:
-            no_channel = emoji.cmd_fail + "You need to be in a voice channel."
+            no_channel = emoji.cmd_fail + "您必須加入語音頻道。"
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Please upvote to continue"
-            need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.title = "請投票來繼續"
+            need_upvote.description = "您需要投TwitchBot一票，才能繼續收聽直播 **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "Want to skip upvoting?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
+                name = "想要跳過投票？",
+                value = "[TwitchBot Premium](https://twitchbot.io/premium) 讓你在聽直播時不需要再一直投票。"
             )
-            please_wait = "Please wait... " + emoji.loading
-            user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
-            np_title = "Now playing in {channel}"
-            np_desc = "{title}\n{viewer_count} currently watching"
-            np_leave = "Type '!twitch leave' to stop the stream"
-            connection_timeout = emoji.cmd_fail + "Voice connection timed out."
-            not_streaming = "I'm not streaming anything on this server right now."
-            disconnected = "Left the voice channel."
+            please_wait = "請稍後... " + emoji.loading
+            user_noexist = emoji.cmd_fail + "這位使用者不存在或目前沒在直播。請在頻道入鏈結。"
+            np_title = "正在播放 {channel}"
+            np_desc = "{title}\n{viewer_count} 正在觀看"
+            np_leave = "輸入 '!twitch leave' 來結束直播"
+            connection_timeout = emoji.cmd_fail + "語音連線逾時"
+            not_streaming = "我現在沒在此伺服器直播任何東西。"
+            disconnected = "已離開語音頻道。"
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Clips - Help"
             command_usage.add_field(
-                name = "Commands",
+                name = "指令",
                 value = textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <user>` - 從Twitch使用者取得特定的影片
+                `!twitch clips trending` - 取得熱門影片
+                `!twitch clips game <game>` - 取得特定遊戲的影片
+                `!twitch clips uservoted` - 尋找TwitchBot使用者們投票出最熱門的影片
                 """)
             )
-            clip_desc = "Check out {user} playing {game}:\n{url}"
-            no_clips = emoji.cmd_fail + "No clips were found."
-            no_votes = emoji.cmd_fail + "Nobody has voted on any clips yet. Come back later."
-            uservote_clip_desc = "{vote_count} votes on this clip by {user}:\n{url}"
-            upvote_fail = emoji.cmd_fail + "**{user}**, your upvote couldn't be be processed."
+            clip_desc = "查看 {user} 遊玩 {game}:\n{url}"
+            no_clips = emoji.cmd_fail + "找不到任何相關影片。"
+            no_votes = emoji.cmd_fail + "還沒有人對任何影片投票。請等等再回來。"
+            uservote_clip_desc = "{vote_count} 此部影片的票數由 {user}:\n{url}"
+            upvote_fail = emoji.cmd_fail + "**{user}**, 你的票無法送達。"
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "TwitchBot Commands"
-            e.description = ":warning: __**Do not put `<>` or `[]` around command arguments.**__"
+            e.title = emoji.twitch_icon + "TwitchBot 指令"
+            e.description = ":warning: __**請勿在指令中輸入 `<>` 或 `[]`。**__"
             e.add_field(
-                name="General",
+                name="一般",
                 value=textwrap.dedent("""\
-                `!twitch help` - Shows bot help
-                `!twitch info` - Shows bot info
-                `!twitch lang` - Sets bot language
-                `!twitch invite` - Displays a link to add TwitchBot to your server
-                `!twitch status` - Shows Twitch API status
+                `!twitch help` - 顯示機器人幫助
+                `!twitch info` - 顯示機器人資訊
+                `!twitch lang` - 設定使用語言
+                `!twitch invite` - 顯示TwitchBot伺服器邀請鏈結
+                `!twitch status` - 顯示Twitch API 狀態
                 `!twitch ping` - Pong!
                 """),
                 inline=False
@@ -60,31 +60,31 @@ class Chinese:
             e.add_field(
                 name="Twitch",
                 value=textwrap.dedent("""\
-                `!twitch user <user>` - Gets info on a Twitch channel
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
-                `!twitch game <name>` - Gets info on a Twitch game
-                `!twitch top` - Gets the most popular Twitch games
+                `!twitch user <user>` - 取得Twitch 頻道資訊
+                `!twitch stream user <user>` - 取得使用者直播資訊
+                `!twitch stream watch <user>` - 在Discord上觀看Twitch直播
+                `!twitch stream game <name>` - 觀看某人遊玩特定的遊戲直播
+                `!twitch stream top` - 取得最多人觀看的直播資訊
+                `!twitch game <name>` - 取得Twitch遊戲資訊
+                `!twitch top` - 取得最熱門的Twitch遊戲
                 """),
                 inline=False
             )
             e.add_field(
-                name="Clips",
+                name="影片",
                 value=textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <user>` - 從Twitch使用者取得特定的影片
+                `!twitch clips trending` - 取得熱門影片
+                `!twitch clips game <game>` - 取得特定遊戲的影片
+                `!twitch clips uservoted` - 尋找TwitchBot使用者們投票出最熱門的影片
                 """),
                 inline=False
             )
             e.add_field(
-                name="Streamer Notifications",
+                name="直播者通知",
                 value=textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - 在特定的頻道新增一個直播者通知給直播者。
+                `!twitch notif remove <#discord_channel> <streamer_name>` - 在特定的頻道移除一個直播者通知給直播者。
                 `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
                 `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
                 """),
