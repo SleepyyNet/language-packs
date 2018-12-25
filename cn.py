@@ -85,49 +85,49 @@ class Chinese:
                 value=textwrap.dedent("""\
                 `!twitch notif add [#discord_channel] [streamer_name] [message]` - 在特定的頻道新增一個直播者通知給直播者。
                 `!twitch notif remove <#discord_channel> <streamer_name>` - 在特定的頻道移除一個直播者通知給直播者。
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif list [#discord_channel]` - 在特定的頻道列出直播者通知
+                `!twitch notif formatting` - 顯示可新增至直播者通知的變數
                 """),
                 inline=False
             )
             e.add_field(
-                name="Live Role",
+                name="直播身分",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - 在所這伺服器上設置一個直播身分
+                `!twitch live_role filter` - 限制有直播身分的使用者特定的身分
+                `!twitch live_role delete` - 刪除直播身分的設置
+                `!twitch live_role view` - 告訴你現在有那些身分已設置
                 """),
                 inline=False
             )
             e.add_field(
-                name="Audio",
+                name="音訊",
                 value=textwrap.dedent("""\
-                `!twitch listen <user>` - Listen to a Twitch stream in the current voice channel
-                `!twitch nowplaying` - Shows the stream currently playing, if any
-                `!twitch leave` - Leaves a voice channel
+                `!twitch listen <user>` - 在現在的語音頻道收聽直播
+                `!twitch nowplaying` - 顯示現在正在播放的直播，如果有的
+                `!twitch leave` - 離開語音頻道
                 """),
                 inline=False
             )
             e.add_field(
-                name="Game Stats",
+                name="遊戲狀態",
                 value=textwrap.dedent("""\
-                `!twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats
-                `!twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats
+                `!twitch overwatch <pc/psn/xbl> <player>` - 顯示鬥陣特工玩家狀態
+                `!twitch fortnite <pc/psn/xbl> <player>` - 顯示Fortnite玩家狀態
                 """),
                 inline=False
             )
             e.add_field(
-                name="Message Filter",
+                name="訊息過濾器",
                 value=textwrap.dedent("""\
-                `!twitch filter set <sensitivity>` - Sets the server-wide toxicity filter
-                `!twitch filter remove` - Removes the server-wide toxicity filter
+                `!twitch filter set <sensitivity>` - 設定伺服器端病毒過濾器
+                `!twitch filter remove` - 移除伺服器端病毒過濾器
                 """),
                 inline=False
             )
         class Errors:
-            err_report = "Please report this error to the developers at <https://link.twitchbot.io/support>."
-            forbidden = emoji.cmd_fail + "I don't have the correct permissions to do that."
+            err_report = "請至<https://link.twitchbot.io/support> 回報此錯誤給開發者。"
+            forbidden = emoji.cmd_fail + "我沒有正確的權限這麼做。"
             not_found = emoji.cmd_fail + "That Discord channel was not found. Make sure you're not putting <> around it and that you're `#mention`ing it."
             not_started = "TwitchBot is still starting up! Please wait a few minutes before trying again."
             check_fail = emoji.cmd_fail + "You don't have permission to run this command."
