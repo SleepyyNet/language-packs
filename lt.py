@@ -333,7 +333,7 @@ class Lithuanian:
             following = "Seka"
             live = "Dabar transliuoja"
             playing = "Žaidžia {game} {view_count} žiūrovams"
-            not_connected = "Neprisijungęs(-usi)
+            not_connected = "Neprisijungęs(-usi)"
             not_live = "Dabar netransliuoja"
             no_login_dash = "Šis narys nebuvo prisijungęs prie [TwitchBot valdymo skydo](http://dash.twitchbot.io)."
             streamer_id = "Transliuotojo ID:"
