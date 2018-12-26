@@ -86,7 +86,7 @@ class English:
                 `!twitch notif add [#discord_channel] [streamer_name] [message]` - Agrega una notificación de transmisión de un streamer al canal especificado
                 `!twitch notif remove <#discord_channel> <streamer_name>` - Elimina una notificación de transmisión de un streamer al canal especificado
                 `!twitch notif list [#discord_channel]` - Manda una lista de las notificaciones de streamer del canal especificado
-                `!twitch notif formatting` - Muestra las variables que puedes insertar en los mensajes de notificación de transmisión.
+                `!twitch notif formatting` - Muestra las variables que puedes insertar en los mensajes de notificación de transmisión
                 """),
                 inline=False
             )
@@ -244,41 +244,41 @@ class English:
             )
             no_role_mentioned = emoji.cmd_fail + "No se especificó ningún rol. Por favor, vuelve a ejecutar el comando y @menciona a un rol."
             not_set_up = emoji.cmd_fail + "No se ha configurado ningún rol en vivo para este servidor. Escribe `!twitch live_role set` para establecer uno."
-            role_not_found = emoji.cmd_fail + "No role name matched that query. Do not put any extra characters in your query, such as `<`, `>`, or `@`."
-            add_success = emoji.cmd_success + "Users in this server who go live on Twitch will receive the **{role}** role. If you want to set a filter for Live Role, type `!twitch live_role filter`."
-            del_success = emoji.cmd_success + "Successfully removed the Live Role configuration from this server."
-            filter_success = emoji.cmd_success + "Successfully set this server's Live Role filter. It may take a while to update all members' roles."
-            missing_perms_ext = emoji.cmd_fail + "I need the **`Manage Roles`** permission to do this. If I have the permission, then make sure to drag the role named `TwitchBot` above the role you want to set up."
-            view_response = "Live Role is currently set up to give members the **{role}** role when they stream."
+            role_not_found = emoji.cmd_fail + "Ningún rol coincide con ese nombre. No pongas caracteres extra, como `<`, `>`, o `@`."
+            add_success = emoji.cmd_success + "Los usuarios del servidor que estén en directo en Twitch recibirán el rol **{role}**. Si quieres establecer un filtro para Rol En Vivo, escribe `!twitch live_role filter`."
+            del_success = emoji.cmd_success + "Se eliminó con éxito la configuración de Rol En Vivo de este servidor."
+            filter_success = emoji.cmd_success + "Establecido correctamente el filtro de Rol En Vivo de este servidor. Puede tomar un tiempo actualizar todos los roles de los miembros."
+            missing_perms_ext = emoji.cmd_fail + "Necesito el permiso **`Manage Roles`** para hacer esto. Si tengo el permiso, entonces asegúrate de arrastrar el rol llamado `TwitchBot` por encima del rol que quieras configurar."
+            view_response = "El rol en vivo está configurado actualmente para dar a los miembros el rol **{role}** cuando estén en directo."
         class Notifs:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Streamer Notifications - Help"
-            command_usage.description = "Streamer notifications allow you to set up a customizable message that sends when a Twitch user goes live."
+            command_usage.title = "Notificaciones de Transmisión - Ayuda"
+            command_usage.description = "Las notificaciones de transmisión te permiten configurar un mensaje personalizable que se envia cuando un usuario de Twitch empiece directo."
             command_usage.add_field(
-                name = "Commands",
+                name = "Comandos",
                 value = textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Agrega una notificación de transmisión de un streamer al canal especificado
+                `!twitch notif remove <#discord_channel> <streamer_name>` - Elimina una notificación de transmisión de un streamer al canal especificado
+                `!twitch notif list [#discord_channel]` - Manda una lista de las notificaciones de streamer del canal especificado
+                `!twitch notif formatting` - Muestra las variables que puedes insertar en los mensajes de notificación de transmisión
                 """)
             )
-            limit_reached = emoji.twitch_icon + "Hey there! Unfortunately you've reached the maximum amount of notifications that you can add to this server. To add more, you need to donate at <https://twitchbot.io/premium>."
-            prompt1 = "Which channel do you want to receive the notification in? Mention or type the name of one below. *(respond in 60 seconds)*"
-            prompt2 = "Type the name of the Twitch channel that you want to set up the notification for. *(respond in 60 seconds)*"
-            prompt3 = "Enter a custom message that you want to be shown when the user goes live, or type `default` for the default message. *(respond in 180 seconds)*"
-            text_channel_not_found = emoji.cmd_fail + "Couldn't find that text channel. Exiting command..."
-            twitch_user_not_found = emoji.cmd_fail + "That Twitch user could not be found. Exiting command..."
-            twitch_user_not_found_alt = emoji.cmd_fail + "That Twitch user doesn't exist. Make sure that you're not putting anything extra around the name (such as `<>`), and that you're not @mentioning a Discord user."
-            response_timeout = "*Response timed out.*"
-            invalid_data = emoji.cmd_fail + "Invalid data was sent from Twitch:"
-            malformed_user = emoji.cmd_fail + "That doesn't look like a valid Twitch user. You can only include underscores, letters, and numbers."
-            default_msg = "<https://twitch.tv/{channel}> is now live on Twitch!"
-            del_fail = emoji.cmd_fail + "No notification has been set up for this user."
-            del_success = emoji.cmd_success + "You won't get any notifications in {channel} when {user} goes live."
-            add_success = emoji.cmd_success + "Added a notification for {user} in {channel}"
-            list_title = "Streamer notifications for **#{channel}**"
-            list_embed_limit = "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live."
+            limit_reached = emoji.twitch_icon + "Hola! Desafortunadamente, has alcanzado la cantidad máxima de notificaciones que puedes agregar a este servidor. Para añadir más, tienes que donar en <https://twitchbot.io/premium>."
+            prompt1 = "¿En qué canal quieres recibir la notificación? Menciona o escribe el nombre de uno debajo. *(responde en 60 segundos)*"
+            prompt2 = "Escribe el nombre del canal de Twitch para el que quieras configurar la notificación. *(responde en 60 segundos)*"
+            prompt3 = "Ingresa un mensaje personalizado que quieres que se muestre cuando el usuario empiece directo, o escribe `default` para el mensaje predeterminado. *(responde en 180 segundos)*"
+            text_channel_not_found = emoji.cmd_fail + "No se pudo encontrar ese canal de texto. Cerrando comando..."
+            twitch_user_not_found = emoji.cmd_fail + "Ese usuario de Twitch no pudo ser encontrado. Cerrando comando..."
+            twitch_user_not_found_alt = emoji.cmd_fail + "Ese usuario de Twitch no existe. Asegúrate de que no estés poniendo nada extra alrededor del nombre (como `<>`), y de que no estás @mencionando a un usuario de Discord."
+            response_timeout = "*Respuesta expirada.*"
+            invalid_data = emoji.cmd_fail + "Datos inválidos fueron enviados desde Twitch:"
+            malformed_user = emoji.cmd_fail + "Eso no parece un usuario válido de Twitch. Solo puedes incluir guiones bajos, letras, y números."
+            default_msg = "<https://twitch.tv/{channel}> está ahora en directo en Twitch!"
+            del_fail = emoji.cmd_fail + "No se ha configurado ninguna notificación para este usuario.."
+            del_success = emoji.cmd_success + "No recibirás ninguna notificación en {channel} cuando {user} empiece directo."
+            add_success = emoji.cmd_success + "Notificación agregada para {user} en {channel}"
+            list_title = "Notificaciones de Transmisión para **#{channel}**"
+            list_embed_limit = "Los mensajes personalizados weren't included en el embed porque hay un límite establecido de Discord de 1024 caracteres en una sección. Todavía se mostrarán cuando el usuario empiece directo."
             no_notifs = "Notificaciones"
             notifications = "No se han configurado notificaciones de transmisión para este canal."
             bulk_delete_confirm = "**Estás a punto de borrar {count} notificaciones en {channel}.** ¿Estás seguro de que quieres hacer esto? Responde con `yes` si quieres continuar."
