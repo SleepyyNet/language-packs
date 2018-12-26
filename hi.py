@@ -8,120 +8,120 @@ class Hindi:
         self._lang_emoji = ":flag_in:"
         self._translator = "SamBro2901#2901"
         class Audio:
-            no_channel = emoji.cmd_fail + "You need to be in a voice channel."
+            no_channel = emoji.cmd_fail + "आपको एक वॉइस चैनल में होना चाहिए।"
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Please upvote to continue"
-            need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.title = "जारी रखने के लिए वोट करें।"
+            need_upvote.description = "धाराओं को सुनने के लिए आपको TwitchBot को वोट देना होगा! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "Want to skip upvoting?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
+                name = "मतदान छोड़ना चाहते हैं?",
+                value = "[TwitchBot Premium](https://twitchbot.io/premium) आप मतदान के बिना धाराओं को सुनने के लिए अनुमति देता है।"
             )
-            please_wait = "Please wait... " + emoji.loading
-            user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
-            np_title = "Now playing in {channel}"
-            np_desc = "{title}\n{viewer_count} currently watching"
-            np_leave = "Type '!twitch leave' to stop the stream"
-            connection_timeout = emoji.cmd_fail + "Voice connection timed out."
-            not_streaming = "I'm not streaming anything on this server right now."
-            disconnected = "Left the voice channel."
+            please_wait = "कृपया प्रतीक्षा करें... " + emoji.loading
+            user_noexist = emoji.cmd_fail + "यह उपयोगकर्ता मौजूद नहीं है या वर्तमान में स्ट्रीमिंग नहीं है। चैनल का लिंक दर्ज करने का प्रयास करें।"
+            np_title = "अब {channel} में बोल रहा हूँ"
+            np_desc = "{title}\n{viewer_count} वर्तमान में देख रहे हैं"
+            np_leave = "कृप्या टाइप करे '!twitch leave' धारा रोकना"
+            connection_timeout = emoji.cmd_fail + "आवाज कनेक्शन समय समाप्त हो गया।"
+            not_streaming = "मैं अभी इस सर्वर पर कुछ भी स्ट्रीमिंग नहीं कर रहा हूं।"
+            disconnected = "आवाज चैनल छोड़ दिया।"
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Clips - Help"
+            command_usage.title = "क्लिप्स - मदद"
             command_usage.add_field(
-                name = "Commands",
+                name = "आदेश",
                 value = textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <user>` - निर्दिष्ट चिकोटी उपयोगकर्ता से एक क्लिप देता है
+                `!twitch clips trending` - एक ट्रेंडिंग क्लिप देता है
+                `!twitch clips game <game>` - निर्दिष्ट गेम से एक क्लिप देता है
+                `!twitch clips uservoted` - TwitchBot उपयोगकर्ताओं द्वारा मतदान सबसे प्रिय क्लिप में से एक देता है
                 """)
             )
-            clip_desc = "Check out {user} playing {game}:\n{url}"
-            no_clips = emoji.cmd_fail + "No clips were found."
-            no_votes = emoji.cmd_fail + "Nobody has voted on any clips yet. Come back later."
-            uservote_clip_desc = "{vote_count} votes on this clip by {user}:\n{url}"
-            upvote_fail = emoji.cmd_fail + "**{user}**, your upvote couldn't be be processed."
+            clip_desc = "{game} खेलने वाले {user} को देखो:\n{url}"
+            no_clips = emoji.cmd_fail + "कोई क्लिप नहीं मिली।"
+            no_votes = emoji.cmd_fail + "किसी ने भी अभी तक किसी भी क्लिप पर मतदान नहीं किया है। कृपया बाद में आइये।"
+            uservote_clip_desc = "{user} द्वारा इस क्लिप पर {vote_count} वोट:\n{url}"
+            upvote_fail = emoji.cmd_fail + "**{user}**, आपके वोट को संसाधित नहीं किया जा सका।"
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
             e.title = emoji.twitch_icon + "TwitchBot Commands"
-            e.description = ":warning: __**Do not put `<>` or `[]` around command arguments.**__"
+            e.description = ":warning: __**आदेश चारों ओर `<>` या `[]` मत डालो**__"
             e.add_field(
-                name="General",
+                name="सामान्य",
                 value=textwrap.dedent("""\
-                `!twitch help` - Shows bot help
-                `!twitch info` - Shows bot info
-                `!twitch lang` - Sets bot language
-                `!twitch invite` - Displays a link to add TwitchBot to your server
-                `!twitch status` - Shows Twitch API status
-                `!twitch ping` - Pong!
+                `!twitch help` - बॉट मदद दिखाता है
+                `!twitch info` - बॉट जानकारी दिखाता है
+                `!twitch lang` - बॉट भाषा चुनें करता है
+                `!twitch invite` - अपने सर्वर में TwitchBot जोड़ने के लिए एक लिंक प्रदर्शित करता है
+                `!twitch status` - Twitch API स्थिति दिखाता है
+                `!twitch ping` - पांग!
                 """),
                 inline=False
             )
             e.add_field(
                 name="Twitch",
                 value=textwrap.dedent("""\
-                `!twitch user <user>` - Gets info on a Twitch channel
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
-                `!twitch game <name>` - Gets info on a Twitch game
-                `!twitch top` - Gets the most popular Twitch games
+                `!twitch user <user>` - Twitch चैनल पर जानकारी मिलती है
+                `!twitch stream user <user>` - उपयोगकर्ता की स्ट्रीम पर जानकारी प्राप्त करता है
+                `!twitch stream watch <user>` - Discord से एक Twitch स्ट्रीम देखें
+                `!twitch stream game <name>` - किसी को निर्दिष्ट गेम स्ट्रीम करते हुए देखें
+                `!twitch stream top` - शीर्ष स्ट्रीम पर जानकारी प्राप्त करता है
+                `!twitch game <name>` - एक TwitchBot खेल पर जानकारी देता है
+                `!twitch top` - सबसे लोकप्रिय TwitchBot खेल देता है
                 """),
                 inline=False
             )
             e.add_field(
-                name="Clips",
+                name="क्लिप",
                 value=textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <user>` - निर्दिष्ट Twitch उपयोगकर्ता से एक क्लिप देता है
+                `!twitch clips trending` - एक ट्रेंडिंग क्लिप देता है
+                `!twitch clips game <game>` - निर्दिष्ट गेम से एक क्लिप देता है
+                `!twitch clips uservoted` - TwitchBot उपयोगकर्ताओं द्वारा मतदान सबसे लोकप्रिय क्लिप में से एक देता है
                 """),
                 inline=False
             )
             e.add_field(
-                name="Streamer Notifications",
+                name="स्ट्रीमर सूचनाएँ",
                 value=textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - निर्दिष्ट चैनल के लिए स्ट्रीमर के लिए एक स्ट्रीमर अधिसूचना जोड़ता है
+                `!twitch notif remove <#discord_channel> <streamer_name>` - निर्दिष्ट चैनल के लिए स्ट्रीमर के लिए एक स्ट्रीमर अधिसूचना को हटा देगा
+                `!twitch notif list [#discord_channel]` - निर्दिष्ट चैनल के लिए स्ट्रीमर सूचनाओं को सूचीबद्ध करता है
+                `!twitch notif formatting` - वे चर दिखाता है जिन्हें आप स्ट्रीमर अधिसूचना संदेशों में सम्मिलित कर सकते हैं
                 """),
                 inline=False
             )
             e.add_field(
-                name="Live Role",
+                name="लाइव रोल",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - वर्तमान सर्वर के लिए लाइव रोल सेट करता है
+                `!twitch live_role filter` - विशिष्ट रोल वाले उपयोगकर्ताओं के लिए लाइव रोल को प्रतिबंधित करता है
+                `!twitch live_role delete` - लाइव रोल को हटा देता है
+                `!twitch live_role view` - आपको बताता है कि वर्तमान में कौन सी रोल निर्धारित की गई है
                 """),
                 inline=False
             )
             e.add_field(
-                name="Audio",
+                name="ऑडियो",
                 value=textwrap.dedent("""\
-                `!twitch listen <user>` - Listen to a Twitch stream in the current voice channel
-                `!twitch nowplaying` - Shows the stream currently playing, if any
-                `!twitch leave` - Leaves a voice channel
+                `!twitch listen <user>` - वर्तमान आवाज चैनल में एक Twitch स्ट्रीम सुनो
+                `!twitch nowplaying` - वर्तमान में चल रही धारा को दिखाता है, यदि बजा रहा हो
+                `!twitch leave` - एक आवाज चैनल छोड़ देता है
                 """),
                 inline=False
             )
             e.add_field(
-                name="Game Stats",
+                name="खेल आँकड़े",
                 value=textwrap.dedent("""\
-                `!twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats
-                `!twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats
+                `!twitch overwatch <pc/psn/xbl> <player>` - Overwatch खिलाड़ी आँकड़े दिखाता है
+                `!twitch fortnite <pc/psn/xbl> <player>` - Fortnite खिलाड़ी आँकड़े दिखाता है
                 """),
                 inline=False
             )
             e.add_field(
-                name="Message Filter",
+                name="अपवित्र वचनों का फिल्टर",
                 value=textwrap.dedent("""\
-                `!twitch filter set <sensitivity>` - Sets the server-wide toxicity filter
-                `!twitch filter remove` - Removes the server-wide toxicity filter
+                `!twitch filter set <sensitivity>` - सर्वर-वाइड विषाक्तता फ़िल्टर सेट करता है
+                `!twitch filter remove` - सर्वर-वाइड विषाक्तता फ़िल्टर को निकालता है
                 """),
                 inline=False
             )
