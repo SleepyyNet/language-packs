@@ -4,8 +4,8 @@ import discord
 
 class Chinese:
     def __init__(self):
-        self._lang_name = "中文"
-        self._lang_emoji = ":flag_cn:"
+        self._lang_name = "中文(繁體)"
+        self._lang_emoji = ":flag_tw: :flag_hk"
         self._translator = "Dexmio#8239"
         class Audio:
             no_channel = emoji.cmd_fail + "您必須加入語音頻道。"
@@ -212,78 +212,78 @@ class Chinese:
             **·** Upvote: https://discordbots.org/bot/twitch/vote
             **·** Donate: https://patreon.com/devakira
             """)
-            invite_msg1 = "**{user}**, you can invite me to a server with this link: <https://link.twitchbot.io/invite>"
-            invite_msg2 = "Need help? Join the support server: <https://link.twitchbot.io/support>"
-            status_title = emoji.twitch_icon + "Twitch Status"
-            status_cs = "Current status: `{status}`"
-            lang_current = "Your current language for TwitchBot is **{lang}**. To change it, type `!twitch lang <lang>` or `!twitch lang help`."
-            lang_unavail = emoji.cmd_fail + "That translation isn't available. Type `!twitch lang help` to view available languages."
-            lang_set = emoji.cmd_success + "Successfully set your TwitchBot language to **{lang}**."
+            invite_msg1 = "**{user}**，您可以使用此鏈結邀請我至您的伺服器：<https://link.twitchbot.io/invite>"
+            invite_msg2 = "需要幫忙嗎？加入支援伺服器：<https://link.twitchbot.io/support>"
+            status_title = emoji.twitch_icon + "Twitch狀態"
+            status_cs = "目前狀態： `{status}`"
+            lang_current = "您現在所使用的TwitchBot語言是 **{lang}**。請輸入 `!twitch lang <lang>`或`!twitch lang help`來更改您的語言。"
+            lang_unavail = emoji.cmd_fail + "我們尚未翻譯此語言，輸入 `!twitch lang help`來查看可使用的語言。"
+            lang_set = emoji.cmd_success + "成功設置您的TwitchBot語言至**{lang}**。"
         class Guild:
-            submode_command_usage = "Type `!twitch help sub_only` to view command usage."
-            submode_success = emoji.cmd_success + "Subscribers-only mode has been enabled for this server. New users will have to be a subscriber to {channel} to join. TwitchBot will attempt to DM non-subscribers that join and kick them. Note: existing members won't be kicked."
-            submode_kick = "This server is in subscribers-only mode. To join, you need to be a subscriber of {}.\nTo link your Twitch account to TwitchBot, go to <https://dash.twitchbot.io> and press 'Link Account' under Twitch."
-            submode_kick_audit_log = "Subscribers-only mode is enabled for this server. To turn it off, type '!twitch sub_only off'."
-            submode_del_success = emoji.cmd_success + "Subscribers-only mode has been disabled for this server."
-            user_not_in_guild = emoji.cmd_fail + "That user isn't in this server."
-            no_login_dash = emoji.cmd_fail + "{user} hasn't logged in to the TwitchBot dashboard yet. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            no_link_dash = emoji.cmd_fail + "{user} hasn't linked their Twitch channel on the TwitchBot dashboard. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            http_err_dash = emoji.cmd_fail + "An error occurred while trying to get information from the TwitchBot dashboard: {error}"
+            submode_command_usage = "輸入`!twitch help sub_only`來查看如何使用指令。"
+            submode_success = emoji.cmd_success + "已在此伺服器上啟動訂閱者模式。新的使用者必須訂閱才能加入{channel}。TwitchBot會嘗試私訊想加入的非訂閱者並踢除他們。注意：現存的會員不會被剔除。"
+            submode_kick = "此伺服器只開放給訂閱者。您必須訂閱，才能夠加入。{}.\nTo 將您的Twitch帳號與TwitchBot連結，請至<https://dash.twitchbot.io> 點擊Twitch下方的'Link Account'。"
+            submode_kick_audit_log = "此伺服器已啟動訂閱者模式。請輸入'!twitch sub_only off'來關閉此功能。"
+            submode_del_success = emoji.cmd_success + "已關閉此伺服器訂閱者模式。"
+            user_not_in_guild = emoji.cmd_fail + "此玩家不在這伺服器上。"
+            no_login_dash = emoji.cmd_fail + "{user} 尚未登入TwitchBot儀表板。獲取其他用戶的頻道，請輸入 `!twitch sub_only on --user-id=(user id here)`。"
+            no_link_dash = emoji.cmd_fail + "{user} 尚未將他的Twitch帳號與TwitchBot儀表板做鏈結。獲取其他用戶的頻道，請輸入 `!twitch sub_only on --user-id=(user id here)`。"
+            http_err_dash = emoji.cmd_fail + "嘗試從TwitchBot儀表板取得資訊時發生了錯誤： {error}"
         class LiveRole:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Live Role - Help"
-            command_usage.description = "With Live Role, you can set up a role to add to users when they go live. TwitchBot will automatically remove the role when the user stops streaming."
+            command_usage.title = "直播身分 - 支援"
+            command_usage.description = "直播身分，當用戶在直播時會給他們的個身分。當他們停止直播時Twitchbot會自動從他們身上移除此身分。"
             command_usage.add_field(
-                name = "Commands",
+                name = "指令",
                 value = textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - 在所這伺服器上設置一個直播身分
+                `!twitch live_role filter` - 限制有直播身分的使用者特定的身分
+                `!twitch live_role delete` - 刪除直播身分的設置
+                `!twitch live_role view` - 告訴你現在有那些身分已設置
                 """)
             )
-            no_role_mentioned = emoji.cmd_fail + "No role was specified. Please re-run the command and @mention a role."
-            not_set_up = emoji.cmd_fail + "No Live Role has been set up for this server. Type `!twitch live_role set` to set one."
-            role_not_found = emoji.cmd_fail + "No role name matched that query. Do not put any extra characters in your query, such as `<`, `>`, or `@`."
-            add_success = emoji.cmd_success + "Users in this server who go live on Twitch will receive the **{role}** role. If you want to set a filter for Live Role, type `!twitch live_role filter`."
-            del_success = emoji.cmd_success + "Successfully removed the Live Role configuration from this server."
-            filter_success = emoji.cmd_success + "Successfully set this server's Live Role filter. It may take a while to update all members' roles."
-            missing_perms_ext = emoji.cmd_fail + "I need the **`Manage Roles`** permission to do this. If I have the permission, then make sure to drag the role named `TwitchBot` above the role you want to set up."
-            view_response = "Live Role is currently set up to give members the **{role}** role when they stream."
+            no_role_mentioned = emoji.cmd_fail + "沒有舉出明確身分。請重新輸入指令並提及 @mention 一個身分。"
+            not_set_up = emoji.cmd_fail + "此伺服器沒有設置任何直播身分。請輸入`!twitch live_role set`來設定一個。"
+            role_not_found = emoji.cmd_fail + "找不到此身分。請勿輸入不必要的字符，像是 `<`, `>` 或 `@`。"
+            add_success = emoji.cmd_success + "在此伺服器上直播的使用者會得到 **{role}** 身分。如果您想要設置一個過濾器給此身分，請輸入 `!twitch live_role filter`。"
+            del_success = emoji.cmd_success + "已成功的從此伺服器上移出直播者身分。"
+            filter_success = emoji.cmd_success + "已成功的在此伺服器上設置直播者過濾器。可能會需要花一點時間更新所有用戶的身分。"
+            missing_perms_ext = emoji.cmd_fail + "我需要**`管理身分組`**權限才能這麼做。如果我已擁有該權限，請確保身分名稱`TwitchBot`是在你想要設置的身分上方。"
+            view_response = "直播身分**{role}**已設置完成，會給予正在直播的用戶們。"
         class Notifs:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Streamer Notifications - Help"
-            command_usage.description = "Streamer notifications allow you to set up a customizable message that sends when a Twitch user goes live."
+            command_usage.title = "直播者通知 - 支援"
+            command_usage.description = "當有Twitch用戶開始直播時，直播者通知能讓你客製化您的通知訊息。"
             command_usage.add_field(
-                name = "Commands",
+                name = "指令",
                 value = textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - 在特定的頻道新增一個直播者通知給直播者。
+                `!twitch notif remove <#discord_channel> <streamer_name>` - 在特定的頻道移除一個直播者通知給直播者。
+                `!twitch notif list [#discord_channel]` - 在特定的頻道列出直播者通知
+                `!twitch notif formatting` - 顯示可新增至直播者通知的變數
                 """)
             )
-            limit_reached = emoji.twitch_icon + "Hey there! Unfortunately you've reached the maximum amount of notifications that you can add to this server. To add more, you need to donate at <https://twitchbot.io/premium>."
-            prompt1 = "Which channel do you want to receive the notification in? Mention or type the name of one below. *(respond in 60 seconds)*"
-            prompt2 = "Type the name of the Twitch channel that you want to set up the notification for. *(respond in 60 seconds)*"
-            prompt3 = "Enter a custom message that you want to be shown when the user goes live, or type `default` for the default message. *(respond in 180 seconds)*"
-            text_channel_not_found = emoji.cmd_fail + "Couldn't find that text channel. Exiting command..."
-            twitch_user_not_found = emoji.cmd_fail + "That Twitch user could not be found. Exiting command..."
-            twitch_user_not_found_alt = emoji.cmd_fail + "That Twitch user doesn't exist. Make sure that you're not putting anything extra around the name (such as `<>`), and that you're not @mentioning a Discord user."
-            response_timeout = "*Response timed out.*"
-            invalid_data = emoji.cmd_fail + "Invalid data was sent from Twitch:"
-            malformed_user = emoji.cmd_fail + "That doesn't look like a valid Twitch user. You can only include underscores, letters, and numbers."
-            default_msg = "<https://twitch.tv/{channel}> is now live on Twitch!"
-            del_fail = emoji.cmd_fail + "No notification has been set up for this user."
-            del_success = emoji.cmd_success + "You won't get any notifications in {channel} when {user} goes live."
-            add_success = emoji.cmd_success + "Added a notification for {user} in {channel}"
-            list_title = "Streamer notifications for **#{channel}**"
-            list_embed_limit = "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live."
-            no_notifs = "No streamer notifications are set up for this channel."
-            notifications = "Notifications"
-            bulk_delete_confirm = "**You are about to delete {count} notifications in {channel}.** Are you sure that you want to do this? Reply with `yes` if you want to continue."
-            bulk_delete_success = emoji.cmd_success + "Successfully deleted {count} notifications from {channel}."
-            command_cancelled = "Command cancelled."
+            limit_reached = emoji.twitch_icon + "嗨，您好！不幸的是您已經達到設置通知訊息的上限。如果想要設置更多，您需要至以下網址<https://twitchbot.io/premium>來贊助我們。"
+            prompt1 = "您想要在那個頻道顯示您的通知訊息？在下方提及或輸入頻道名。 *(請在60秒內回應)*"
+            prompt2 = "請輸入您想要獲得通知的Twitch頻道名稱。 *(請在60秒內回應)*"
+            prompt3 = "輸入您想要顯示在通知的訊息，或輸入`default`使用預設訊息。 *(請在180秒內回應)*"
+            text_channel_not_found = emoji.cmd_fail + "找不到文字頻道。結束設定..."
+            twitch_user_not_found = emoji.cmd_fail + "找不到該Twitch用戶。結束設定..."
+            twitch_user_not_found_alt = emoji.cmd_fail + "該Twitch用戶不存在。請確認您沒有輸入任何額外的字符，像是(such as `<>`)，且沒有提及 @mentioning 任何Discord用戶。"
+            response_timeout = "*回覆時間逾時*"
+            invalid_data = emoji.cmd_fail + "Twitch發送了無效的數據："
+            malformed_user = emoji.cmd_fail + "這看起來不像是有效的Twitch用戶。您只能包含下劃線，字母和數字。"
+            default_msg = "<https://twitch.tv/{channel}>現在正在Twitch上直播！"
+            del_fail = emoji.cmd_fail + "沒有設置有關這位用戶的通知。"
+            del_success = emoji.cmd_success + "您不會在{channel}收到任有關{user}的通知。"
+            add_success = emoji.cmd_success + "幫{user}在{channel}設置通知訊息。"
+            list_title = "**#{channel}**的直播者通知"
+            list_embed_limit = "客製化訊息不能包含嵌入訊息，因為Discord有1024個字符限制。使用者開直播時他們還是會顯示。"
+            no_notifs = "此頻道並沒有設置任何的直播者通知。"
+            notifications = "通知"
+            bulk_delete_confirm = "**您將要刪除在{channel}的{count}則通知。**您確定您要這麼做？回覆`yes`如果您確定要這麼做。"
+            bulk_delete_success = emoji.cmd_success + "成功刪除在{channel}的{count}則通知。"
+            command_cancelled = "已取消的指令"
             notif_variables = discord.Embed(color=discord.Color(0x6441A4))
             notif_variables.title = "Notification message variables"
             notif_variables.description = "Use one of the variables below to insert data into a stream notification message."
