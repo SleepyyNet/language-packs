@@ -10,7 +10,7 @@ class Chinese:
         class Audio:
             no_channel = emoji.cmd_fail + "您必須加入語音頻道。"
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "請投票來繼續"
+            need_upvote.title = "請投票以繼續"
             need_upvote.description = "您需要投TwitchBot一票，才能繼續收聽直播 **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
                 name = "想要跳過投票？",
@@ -39,7 +39,7 @@ class Chinese:
             clip_desc = "查看 {user} 遊玩 {game}:\n{url}"
             no_clips = emoji.cmd_fail + "找不到任何相關影片。"
             no_votes = emoji.cmd_fail + "還沒有人對任何影片投票。請等等再回來。"
-            uservote_clip_desc = "{vote_count} 此部影片的票數由 {user}:\n{url}"
+            uservote_clip_desc = "此部影片有{vote_count}票由{user}:\n{url}"
             upvote_fail = emoji.cmd_fail + "**{user}**, 你的票無法送達。"
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
@@ -315,7 +315,7 @@ class Chinese:
                 `!twitch stream top` - 取得最多人觀看的直播資訊
                 """)
             )
-            game_desc = "看看{user}正在玩{game}，有{view_count}人正在觀看 viewers:\nhttps://twitch.tv/{user}"
+            game_desc = "看看{user}正在玩{game}，有{view_count}人正在觀看。 觀看數:\nhttps://twitch.tv/{user}"
             game_not_found = emoji.cmd_fail + "找不到該遊戲"
             game_no_streams = emoji.cmd_fail + "沒有人正在直播此遊戲。"
             live = "Twitch上的直播"
