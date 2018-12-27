@@ -39,7 +39,7 @@ class Chinese:
             clip_desc = "查看 {user} 遊玩 {game}:\n{url}"
             no_clips = emoji.cmd_fail + "找不到任何相關影片。"
             no_votes = emoji.cmd_fail + "還沒有人對任何影片投票。請等等再回來。"
-            uservote_clip_desc = "此部影片有{vote_count}票由{user}:\n{url}"
+            uservote_clip_desc = "此部影片有{vote_count}票，由{user}:\n{url}"
             upvote_fail = emoji.cmd_fail + "**{user}**, 你的票無法送達。"
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
@@ -83,8 +83,8 @@ class Chinese:
             e.add_field(
                 name="直播者通知",
                 value=textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - 在特定的頻道新增一個直播者通知給直播者。
-                `!twitch notif remove <#discord_channel> <streamer_name>` - 在特定的頻道移除一個直播者通知給直播者。
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - 在特定的頻道新增一個直播者通知給直
+                `!twitch notif remove <#discord_channel> <streamer_name>` - 在特定的頻道移除一個給直播者的直播者通知。
                 `!twitch notif list [#discord_channel]` - 在特定的頻道列出直播者通知
                 `!twitch notif formatting` - 顯示可新增至直播者通知的變數
                 """),
@@ -93,7 +93,7 @@ class Chinese:
             e.add_field(
                 name="直播身分",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - 在所這伺服器上設置一個直播身分
+                `!twitch live_role set` - 在此伺服器上設置一個直播身分
                 `!twitch live_role filter` - 限制有直播身分的使用者特定的身分
                 `!twitch live_role delete` - 刪除直播身分的設置
                 `!twitch live_role view` - 告訴你現在有那些身分已設置
@@ -128,7 +128,7 @@ class Chinese:
         class Errors:
             err_report = "請至<https://link.twitchbot.io/support>回報此錯誤給開發者。"
             forbidden = emoji.cmd_fail + "我沒有正確的權限這麼做。"
-            not_found = emoji.cmd_fail + "找不到那個Discord頻道。請確認當你輸入`#mention`時你沒有包含<>。"
+            not_found = emoji.cmd_fail + "找不到此Discord頻道。請確認當你輸入`#mention`時沒有包含<>。"
             not_started = "TwitchBot還正在啟動！請等個幾分鐘後再試。"
             check_fail = emoji.cmd_fail + "你沒有權限使用此指令。"
             cooldown = emoji.cmd_fail + "你可以在{time}秒後再次使用此指令。"
@@ -204,7 +204,7 @@ class Chinese:
             stats_shardinfo = "破碎資訊"
             stats_system = "系統"
             stats_developer = "開發者"
-            stats_patrons = "贊助人"
+            stats_patrons = "贊助者"
             stats_links = "鏈結"
             stats_links_desc = textwrap.dedent("""\
             **·** Website: https://twitchbot.io
