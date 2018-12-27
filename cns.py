@@ -2,57 +2,57 @@ from . import _emoji as emoji
 import textwrap
 import discord
 
-class Chinese Simple:
+class Chinese:
     def __init__(self):
-        self._lang_name = "English"
-        self._lang_emoji = ":flag_us: :flag_gb:"
-        self._translator = "Akira#0007"
+        self._lang_name = "中文(简体)"
+        self._lang_emoji = ":flag_cn"
+        self._translator = "Dexmio#8239"
         class Audio:
-            no_channel = emoji.cmd_fail + "You need to be in a voice channel."
+            no_channel = emoji.cmd_fail + "您必须加入语音频道。"
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Please upvote to continue"
-            need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.title = "请投票以继续"
+            need_upvote.description = "您需要投TwitchBot一票，才能继续收听直播 **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "Want to skip upvoting?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
+                name = "想要跳过投票？",
+                value = "[TwitchBot Premium](https://twitchbot.io/premium)让你在听直播时不需要再一直投票。"
             )
-            please_wait = "Please wait... " + emoji.loading
-            user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
-            np_title = "Now playing in {channel}"
-            np_desc = "{title}\n{viewer_count} currently watching"
-            np_leave = "Type '!twitch leave' to stop the stream"
-            connection_timeout = emoji.cmd_fail + "Voice connection timed out."
-            not_streaming = "I'm not streaming anything on this server right now."
-            disconnected = "Left the voice channel."
+            please_wait = "请稍后... " + emoji.loading
+            user_noexist = emoji.cmd_fail + "这位用户不存在或目前没在直播。请在频道入链结。"
+            np_title = "正在播放 {channel}"
+            np_desc = "{title}\n{viewer_count} 正在观看"
+            np_leave = "输入 '!twitch leave' 来结束直播"
+            connection_timeout = emoji.cmd_fail + "语音连线逾时"
+            not_streaming = "我现在没在此服务器直播任何东西。"
+            disconnected = "已离开语音频道。"
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Clips - Help"
             command_usage.add_field(
-                name = "Commands",
+                name = "指令",
                 value = textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <user>` - 从Twitch用户取得特定的视频
+                `!twitch clips trending` - 取得热门视频
+                `!twitch clips game <game>` - 取得特定游戏的视频
+                `!twitch clips uservoted` - 寻找TwitchBot用户们投票出最热门的视频
                 """)
             )
-            clip_desc = "Check out {user} playing {game}:\n{url}"
-            no_clips = emoji.cmd_fail + "No clips were found."
-            no_votes = emoji.cmd_fail + "Nobody has voted on any clips yet. Come back later."
-            uservote_clip_desc = "{vote_count} votes on this clip by {user}:\n{url}"
-            upvote_fail = emoji.cmd_fail + "**{user}**, your upvote couldn't be be processed."
+            clip_desc = "查看 {user} 游玩 {game}:\n{url}"
+            no_clips = emoji.cmd_fail + "找不到任何相关视频。"
+            no_votes = emoji.cmd_fail + "还没有人对任何视频投票。请等等再回来。"
+            uservote_clip_desc = "此部视频有{vote_count}票，由{user}:\n{url}"
+            upvote_fail = emoji.cmd_fail + "**{user}**, 你的票无法送达。"
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "TwitchBot Commands"
-            e.description = ":warning: __**Do not put `<>` or `[]` around command arguments.**__"
+            e.title = emoji.twitch_icon + "TwitchBot 指令"
+            e.description = ":warning: __**请勿在指令中输入 `<>` 或 `[]`。**__"
             e.add_field(
-                name="General",
+                name="一般",
                 value=textwrap.dedent("""\
-                `!twitch help` - Shows bot help
-                `!twitch info` - Shows bot info
-                `!twitch lang` - Sets bot language
-                `!twitch invite` - Displays a link to add TwitchBot to your server
-                `!twitch status` - Shows Twitch API status
+                `!twitch help` - 显示机器人帮助
+                `!twitch info` - 显示机器人资讯
+                `!twitch lang` - 设定使用语言
+                `!twitch invite` - 显示TwitchBot服务器邀请链结
+                `!twitch status` - 显示Twitch API 状态
                 `!twitch ping` - Pong!
                 """),
                 inline=False
@@ -60,287 +60,285 @@ class Chinese Simple:
             e.add_field(
                 name="Twitch",
                 value=textwrap.dedent("""\
-                `!twitch user <user>` - Gets info on a Twitch channel
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
-                `!twitch game <name>` - Gets info on a Twitch game
-                `!twitch top` - Gets the most popular Twitch games
+                `!twitch user <user>` - 取得Twitch 频道资讯
+                `!twitch stream user <user>` - 取得用户直播资讯
+                `!twitch stream watch <user>` - 在Discord上观看Twitch直播
+                `!twitch stream game <name>` - 观看某人游玩特定的游戏直播
+                `!twitch stream top` - 取得最多人观看的直播资讯
+                `!twitch game <name>` - 取得Twitch游戏资讯
+                `!twitch top` - 取得最热门的Twitch游戏
                 """),
                 inline=False
             )
             e.add_field(
-                name="Clips",
+                name="视频",
                 value=textwrap.dedent("""\
-                `!twitch clips from <user>` - Gets a clip from the specified Twitch user
-                `!twitch clips trending` - Gets a trending clip
-                `!twitch clips game <game>` - Gets a clip from the specified game
-                `!twitch clips uservoted` - Gets one of the most popular clips voted by TwitchBot users
+                `!twitch clips from <user>` - 从Twitch用户取得特定的视频
+                `!twitch clips trending` - 取得热门视频
+                `!twitch clips game <game>` - 取得特定游戏的影片
+                `!twitch clips uservoted` - 寻找TwitchBot用户们投票出最热门的视频
                 """),
                 inline=False
             )
             e.add_field(
-                name="Streamer Notifications",
+                name="直播主通知",
                 value=textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - 在特定的频道新增一个直播主通知给直播主。
+                `!twitch notif remove <#discord_channel> <streamer_name>` - 在特定的频道移除一个给直播主的直播主通知。
+                `!twitch notif list [#discord_channel]` - 在特定的频道列出直播主通知
+                `!twitch notif formatting` - 显示可新增至直播主通知的变数
                 """),
                 inline=False
             )
             e.add_field(
-                name="Live Role",
+                name="直播身分",
                 value=textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - 在此服务器上设置一个直播身分
+                `!twitch live_role filter` - 限制有直播身分的用户特定的身分
+                `!twitch live_role delete` - 删除直播身分的设置
+                `!twitch live_role view` - 告诉你现在有那些身分已设置
                 """),
                 inline=False
             )
             e.add_field(
-                name="Audio",
+                name="音讯",
                 value=textwrap.dedent("""\
-                `!twitch listen <user>` - Listen to a Twitch stream in the current voice channel
-                `!twitch nowplaying` - Shows the stream currently playing, if any
-                `!twitch leave` - Leaves a voice channel
+                `!twitch listen <user>` - 在现在的语音频道收听直播
+                `!twitch nowplaying` - 显示现在正在播放的直播，如果有的
+                `!twitch leave` - 离开语音频道
                 """),
                 inline=False
             )
             e.add_field(
-                name="Game Stats",
+                name="游戏状态",
                 value=textwrap.dedent("""\
-                `!twitch overwatch <pc/psn/xbl> <player>` - Shows Overwatch player stats
-                `!twitch fortnite <pc/psn/xbl> <player>` - Shows Fortnite player stats
+                `!twitch overwatch <pc/psn/xbl> <player>` - 显示守望先锋玩家状态
+                `!twitch fortnite <pc/psn/xbl> <player>` - 显示Fortnite玩家状态
                 """),
                 inline=False
             )
             e.add_field(
-                name="Message Filter",
+                name="讯息过滤器",
                 value=textwrap.dedent("""\
-                `!twitch filter set <sensitivity>` - Sets the server-wide toxicity filter
-                `!twitch filter remove` - Removes the server-wide toxicity filter
+                `!twitch filter set <sensitivity>` - 设定服务器端病毒过滤器
+                `!twitch filter remove` - 移除服务器端病毒过滤器
                 """),
                 inline=False
             )
         class Errors:
-            err_report = "Please report this error to the developers at <https://link.twitchbot.io/support>."
-            forbidden = emoji.cmd_fail + "I don't have the correct permissions to do that."
-            not_found = emoji.cmd_fail + "That Discord channel was not found. Make sure you're not putting <> around it and that you're `#mention`ing it."
-            not_started = "TwitchBot is still starting up! Please wait a few minutes before trying again."
-            check_fail = emoji.cmd_fail + "You don't have permission to run this command."
-            cooldown = emoji.cmd_fail + "You can run this command in {time} seconds."
-            conn_closed = emoji.cmd_fail + "The voice connection was closed. Reason: `{reason}`"
-            missing_arg = emoji.cmd_fail + "You're missing the `{param}` parameter."
-            too_many_requests = emoji.cmd_fail + "Third-party servers are having trouble keeping up with our requests. Please try again later."
+            err_report = "请至<https://link.twitchbot.io/support>回报此错误给开发者。"
+            forbidden = emoji.cmd_fail + "我没有正确的权限这么做。"
+            not_found = emoji.cmd_fail + "找不到此Discord频道。请确认当你输入`#mention`时没有包含<>。"
+            not_started = "TwitchBot还正在启动！请等个几分钟后再试。"
+            check_fail = emoji.cmd_fail + "你没有权限使用此指令。"
+            cooldown = emoji.cmd_fail + "你可以在{time}秒后再次使用此指令。"
+            conn_closed = emoji.cmd_fail + "语音连线已结束。原因： `{reason}`"
+            missing_arg = emoji.cmd_fail + "你失去了 `{param}`参数。"
+            too_many_requests = emoji.cmd_fail + "第三方服务器在处理我们的要求时出了问题。请稍后在试。"
         class Filter:
-            cmd_usage = "Type `!twitch help filter` to view command usage."
-            need_donate = "Only TwitchBot Premium members can use this command. Learn more: <https://twitchbot.io/premium>"
-            invalid_sensitivity = "Sensitivity must be between 85 and 60."
-            add_success = emoji.cmd_success + "Successfully set this server's toxicity filter."
-            no_filter = emoji.cmd_fail + "No toxicity filter exists for this server."
-            del_success = emoji.cmd_success + "Successfully removed this server's toxicity filter."
+            cmd_usage = "输入`!twitch help filter`来查看如可使用指令。"
+            need_donate = "只有TwitchBot Premium成员能使用此指令。了解更多： <https://twitchbot.io/premium>"
+            invalid_sensitivity = "灵敏度必须在85至60之间。"
+            add_success = emoji.cmd_success + "成功在此服务器设置病毒过滤器。"
+            no_filter = emoji.cmd_fail + "此服务器没有任何病毒过滤器。"
+            del_success = emoji.cmd_success + "成功移除此服务器的病毒过滤器。"
         class Games:
-            no_results = emoji.cmd_fail + "No results found."
-            no_stats_overwatch = emoji.cmd_fail + "No stats could be found for this player. If your profile is private, you can't see stats for it unless you make it public. Please follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make your profile public."
-            no_stats_fortnite = emoji.cmd_fail + "Player not found. Check the spelling of the username or try a different platform."
-            view_streams = "View Streams"
-            top_games = emoji.twitch_icon + "Top Games"
-            top_games_desc = "{view_count} viewers • {channel_count} channels streaming"
-            invalid_battletag = "Please enter your Battletag in a format of `name#id`."
-            invalid_platform = "Platform must be one of `pc`, `psn`, or `xbl`."
-            incomplete_data = "Your profile data is incomplete. If your profile is private, follow the steps at <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make it public so you can view your stats."
-            incomplete_data_short = "Some data may be missing or incomplete"
-            generic_error = emoji.cmd_fail + "An error occurred:"
-            powered_by_overwatch = "Powered by owapi.net"
-            powered_by_fortnite = "Powered by fortnitetracker.com"
+            no_results = emoji.cmd_fail + "没有找到任何结果。"
+            no_stats_overwatch = emoji.cmd_fail + "找不到任何此玩家的状态。如果您的个人档案为私人，您将无法看到玩家状态除非您设为公开。请至<https://dotesports.com/overwatch/news/ow-public-private-profile-25347>按照步骤设定您的个人档案至公开。"
+            no_stats_fortnite = emoji.cmd_fail + "找不到此玩家。请检察您的拼字或尝试不同平台。"
+            view_streams = "观看直播"
+            top_games = emoji.twitch_icon + "游戏列表"
+            top_games_desc = "{view_count}人观看 • {channel_count}个频道正在直播"
+            invalid_battletag = "请依`name#id`格式输入您的 Battletag。"
+            invalid_platform = "平台必须是`pc`、`psn`或`xbl`。"
+            incomplete_data = "您的个人档案资讯并不完整。您的个人档案仅限私人，请至<https://dotesports.com/overwatch/news/ow-public-private-profile-25347>按照步骤设定您的个人档案至公开。"
+            incomplete_data_short = "某些资讯可能遗失或不完整"
+            generic_error = emoji.cmd_fail + "错误发生："
+            powered_by_overwatch = "由owapi.net所有"
+            powered_by_fortnite = "由fortnitetracker.com所有"
         class HelpCommand:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "**TwitchBot Help**"
+            e.title = emoji.twitch_icon + "**TwitchBot支援**"
             e.add_field(
-                name="Commands",
-                value="TwitchBot responds to commands starting with `twitch` or `!twitch`. Type `!twitch commands` to view all runnable commands.",
+                name="指令",
+                value="TwitchBot支援的指令前缀为`twitch`或`!twitch`。输入`!twitch commands`来查所有能使用指令。",
                 inline=False
             )
             e.add_field(
-                name="Support",
-                value="If you need help with TwitchBot, you can visit the [support center](https://support.twitchbot.io) or join the [support server](https://discord.gg/UNYzJqV).",
+                name="支援",
+                value="如果您需要TwitchBot的帮忙，您可以拜访[支援中心](https://support.twitchbot.io)或加入[支援服务器](https://discord.gg/UNYzJqV)。",
                 inline=False
             )
             e.add_field(
-                name="Website",
-                value="You can view information about TwitchBot at https://twitchbot.io",
+                name="网站",
+                value="您可至https://twitchbot.io查看TwitchBot资讯。",
                 inline=False
             )
             e.add_field(
                 name="TwitchBot Premium",
-                value="Support TwitchBot's development and get a handful of cool features and benefits for just $5.00 USD a month. https://twitchbot.io/premium",
+                value="用每月$5.00 USD支持TwitchBot开发者并取得好用又有趣的功能。https://twitchbot.io/premium",
                 inline=False
             )
             e.add_field(
-                name="Upvote Competition",
-                value="We're giving away TwitchBot Premium for FREE to the top three voters at the end of every month! [Upvote here](https://discordbots.org/bot/twitch/vote) and [view the leaderboard](https://dash.twitchbot.io/leaderboard)",
+                name="投票竞赛",
+                name="我们正在免费送TwitchBot Premium给每月投最多票前三位用户。[这里投票](https://discordbots.org/bot/twitch/vote)以及[查看排行榜](https://dash.twitchbot.io/leaderboard)",
                 inline=False
             )
             e.add_field(
-                name="About",
-                value="TwitchBot was made by [Akira#4587](https://disgd.pw) using discord.py. To view other contributors, type `twitch info`.",
+                name="关于",
+                value="TwitchBot是由[Akira#4587](https://disgd.pw)使用discord.py制作。查看其他贡献者，输入`twitch info`。",
                 inline=False
             )
             e.add_field(
-                name="Other links",
-                value="[FAQ](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Upvote](https://discordbots.org/bot/twitch/vote) · [Invite](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
+                name="其他连结",
+                value="[问与答](https://twitchbot.io/faq) · [仪表版](http://dash.twitchbot.io) · [投票](https://discordbots.org/bot/twitch/vote) · [邀请](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [部落格](https://medium.com/twitchbot)",
                 inline=False
             )
         class General:
-            avail_lang_title = "Available Translations"
-            avail_lang_setmsg = "To set TwitchBot's language, type !twitch lang <language>."
-            stats_embed_title = emoji.twitch_icon + "TwitchBot Stats"
-            stats_uptime = "Uptime"
-            stats_usage = "Usage"
-            stats_version = "Version"
-            stats_shardinfo = "Shard Info"
-            stats_system = "System"
-            stats_developer = "Developer"
-            stats_patrons = "Patrons"
-            stats_links = "Links"
+            avail_lang_title = "可使用语言"
+            avail_lang_setmsg = "设置TwitchBot使用语言，请输入!twitch lang <language>。"
+            stats_embed_title = emoji.twitch_icon + "TwitchBot状态"
+            stats_uptime = "运行时间"
+            stats_usage = "使用量"
+            stats_version = "版本"
+            stats_shardinfo = "破碎资讯"
+            stats_system = "系统"
+            stats_developer = "开发者"
+            stats_patrons = "赞助人"
+            stats_links = "链结"
             stats_links_desc = textwrap.dedent("""\
             **·** Website: https://twitchbot.io
             **·** Discord: https://discord.gg/UNYzJqV
             **·** Upvote: https://discordbots.org/bot/twitch/vote
             **·** Donate: https://patreon.com/devakira
             """)
-            invite_msg1 = "**{user}**, you can invite me to a server with this link: <https://link.twitchbot.io/invite>"
-            invite_msg2 = "Need help? Join the support server: <https://link.twitchbot.io/support>"
-            status_title = emoji.twitch_icon + "Twitch Status"
-            status_cs = "Current status: `{status}`"
-            lang_current = "Your current language for TwitchBot is **{lang}**. To change it, type `!twitch lang <lang>` or `!twitch lang help`."
-            lang_unavail = emoji.cmd_fail + "That translation isn't available. Type `!twitch lang help` to view available languages."
-            lang_set = emoji.cmd_success + "Successfully set your TwitchBot language to **{lang}**."
+            invite_msg1 = "**{user}**，您可以使用此链结邀请我至您的服务器：<https://link.twitchbot.io/invite>"
+            invite_msg2 = "需要帮忙吗？加入支援服务器：<https://link.twitchbot.io/support>"
+            status_title = emoji.twitch_icon + "Twitch状态"
+            status_cs = "目前状态： `{status}`"
+            lang_current = "您现在所使用的TwitchBot语言是 **{lang}**。请输入 `!twitch lang <lang>`或`!twitch lang help`来更改您的语言。"
+            lang_unavail = emoji.cmd_fail + "我们尚未翻译此语言，输入 `!twitch lang help`来查看可使用的语言。"
+            lang_set = emoji.cmd_success + "成功设置您的TwitchBot语言至**{lang}**。"
         class Guild:
-            submode_command_usage = "Type `!twitch help sub_only` to view command usage."
-            submode_success = emoji.cmd_success + "Subscribers-only mode has been enabled for this server. New users will have to be a subscriber to {channel} to join. TwitchBot will attempt to DM non-subscribers that join and kick them. Note: existing members won't be kicked."
-            submode_kick = "This server is in subscribers-only mode. To join, you need to be a subscriber of {}.\nTo link your Twitch account to TwitchBot, go to <https://dash.twitchbot.io> and press 'Link Account' under Twitch."
-            submode_kick_audit_log = "Subscribers-only mode is enabled for this server. To turn it off, type '!twitch sub_only off'."
-            submode_del_success = emoji.cmd_success + "Subscribers-only mode has been disabled for this server."
-            user_not_in_guild = emoji.cmd_fail + "That user isn't in this server."
-            no_login_dash = emoji.cmd_fail + "{user} hasn't logged in to the TwitchBot dashboard yet. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            no_link_dash = emoji.cmd_fail + "{user} hasn't linked their Twitch channel on the TwitchBot dashboard. To get a channel from a different user, type `!twitch sub_only on --user-id=(user id here)`."
-            http_err_dash = emoji.cmd_fail + "An error occurred while trying to get information from the TwitchBot dashboard: {error}"
+            submode_command_usage = "输入`!twitch help sub_only`来查看如何使用指令。"
+            submode_success = emoji.cmd_success + "已在此服务器上启动订阅者模式。新的用户必须订阅才能加入{channel}。TwitchBot会尝试私讯想加入的非订阅者并踢除他们。注意：现存的会员不会被剔除。"
+            submode_kick = "此服务器只开放给订阅者。您必须订阅，才能够加入。{}.\nTo 将您的Twitch帐号与TwitchBot连结，请至<https://dash.twitchbot.io> 点击Twitch下方的'Link Account'。"
+            submode_kick_audit_log = "此服务器已启动订阅者模式。请输入'!twitch sub_only off'来关闭此功能。"
+            submode_del_success = emoji.cmd_success + "已关闭此服务器订阅者模式。"
+            user_not_in_guild = emoji.cmd_fail + "此玩家不在这服务器上。"
+            no_login_dash = emoji.cmd_fail + "{user} 尚未登入TwitchBot仪表板。获取其他用户的频道，请输入 `!twitch sub_only on --user-id=(user id here)`。"
+            no_link_dash = emoji.cmd_fail + "{user} 尚未将他的Twitch帐号与TwitchBot仪表板做链结。获取其他用户的频道，请输入 `!twitch sub_only on --user-id=(user id here)`。"
+            http_err_dash = emoji.cmd_fail + "尝试从TwitchBot仪表板取得资讯时发生了错误： {error}"
         class LiveRole:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Live Role - Help"
-            command_usage.description = "With Live Role, you can set up a role to add to users when they go live. TwitchBot will automatically remove the role when the user stops streaming."
+            command_usage.title = "直播身分 - 支援"
+            command_usage.description = "直播身分，当用户在直播时会给他们的个身分。当他们停止直播时Twitchbot会自动从他们身上移除此身分。"
             command_usage.add_field(
-                name = "Commands",
+                name = "指令",
                 value = textwrap.dedent("""\
-                `!twitch live_role set` - Sets the Live Role for the current server
-                `!twitch live_role filter` - Restricts Live Role to users with a specific role
-                `!twitch live_role delete` - Removes the Live Role configuration
-                `!twitch live_role view` - Tells you which role is currently set up
+                `!twitch live_role set` - 在所这服务器上设置一个直播身分
+                `!twitch live_role filter` - 限制有直播身分的使用者特定的身分
+                `!twitch live_role delete` - 删除直播身分的设置
+                `!twitch live_role view` - 告诉你现在有那些身分已设置
                 """)
             )
-            no_role_mentioned = emoji.cmd_fail + "No role was specified. Please re-run the command and @mention a role."
-            not_set_up = emoji.cmd_fail + "No Live Role has been set up for this server. Type `!twitch live_role set` to set one."
-            role_not_found = emoji.cmd_fail + "No role name matched that query. Do not put any extra characters in your query, such as `<`, `>`, or `@`."
-            add_success = emoji.cmd_success + "Users in this server who go live on Twitch will receive the **{role}** role. If you want to set a filter for Live Role, type `!twitch live_role filter`."
-            del_success = emoji.cmd_success + "Successfully removed the Live Role configuration from this server."
-            filter_success = emoji.cmd_success + "Successfully set this server's Live Role filter. It may take a while to update all members' roles."
-            missing_perms_ext = emoji.cmd_fail + "I need the **`Manage Roles`** permission to do this. If I have the permission, then make sure to drag the role named `TwitchBot` above the role you want to set up."
-            view_response = "Live Role is currently set up to give members the **{role}** role when they stream."
+            no_role_mentioned = emoji.cmd_fail + "没有举出明确身分。请重新输入指令并提及 @mention 一个身分。"
+            not_set_up = emoji.cmd_fail + "此服务器没有设置任何直播身分。请输入`!twitch live_role set`来设定一个。"
+            role_not_found = emoji.cmd_fail + "找不到此身分。请勿输入不必要的字符，像是 `<`, `>` 或 `@`。"
+            add_success = emoji.cmd_success + "在此服务器上直播的用户会得到 **{role}** 身分。如果您想要设置一个过滤器给此身分，请输入 `!twitch live_role filter`。"
+            del_success = emoji.cmd_success + "已成功的从此服务器上移出直播者身分。"
+            filter_success = emoji.cmd_success + "已成功的在此服务器上设置直播主过滤器。可能会需要花一点时间更新所有用户的身分。"
+            missing_perms_ext = emoji.cmd_fail + "我需要**`管理身分组`**权限才能这么做。如果我已拥有该权限，请确保身分名称`TwitchBot`是在你想要设置的身分上方。"
+            view_response = "直播身分**{role}**已设置完成，会给予正在直播的用户们。"
         class Notifs:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Streamer Notifications - Help"
-            command_usage.description = "Streamer notifications allow you to set up a customizable message that sends when a Twitch user goes live."
+            command_usage.title = "直播者通知 - 支援"
+            command_usage.description = "当有Twitch用户开始直播时，直播主通知能让你客制化您的通知讯息。"
             command_usage.add_field(
-                name = "Commands",
+                name = "指令",
                 value = textwrap.dedent("""\
-                `!twitch notif add [#discord_channel] [streamer_name] [message]` - Adds a streamer notification for a streamer to the specified channel
-                `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
-                `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
-                `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif add [#discord_channel] [streamer_name] [message]` - 在特定的频道新增一个直播者通知给直播主。
+                `!twitch notif remove <#discord_channel> <streamer_name>` - 在特定的频道移除一个直播主通知给直播主。
+                `!twitch notif list [#discord_channel]` - 在特定的频道列出直播主通知
+                `!twitch notif formatting` - 显示可新增至直播主通知的变数
                 """)
             )
-            limit_reached = emoji.twitch_icon + "Hey there! Unfortunately you've reached the maximum amount of notifications that you can add to this server. To add more, you need to donate at <https://twitchbot.io/premium>."
-            prompt1 = "Which channel do you want to receive the notification in? Mention or type the name of one below. *(respond in 60 seconds)*"
-            prompt2 = "Type the name of the Twitch channel that you want to set up the notification for. *(respond in 60 seconds)*"
-            prompt3 = "Enter a custom message that you want to be shown when the user goes live, or type `default` for the default message. *(respond in 180 seconds)*"
-            text_channel_not_found = emoji.cmd_fail + "Couldn't find that text channel. Exiting command..."
-            twitch_user_not_found = emoji.cmd_fail + "That Twitch user could not be found. Exiting command..."
-            twitch_user_not_found_alt = emoji.cmd_fail + "That Twitch user doesn't exist. Make sure that you're not putting anything extra around the name (such as `<>`), and that you're not @mentioning a Discord user."
-            response_timeout = "*Response timed out.*"
-            invalid_data = emoji.cmd_fail + "Invalid data was sent from Twitch:"
-            malformed_user = emoji.cmd_fail + "That doesn't look like a valid Twitch user. You can only include underscores, letters, and numbers."
-            default_msg = "<https://twitch.tv/{channel}> is now live on Twitch!"
-            del_fail = emoji.cmd_fail + "No notification has been set up for this user."
-            del_success = emoji.cmd_success + "You won't get any notifications in {channel} when {user} goes live."
-            add_success = emoji.cmd_success + "Added a notification for {user} in {channel}"
-            list_title = "Streamer notifications for **#{channel}**"
-            list_embed_limit = "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live."
-            no_notifs = "No streamer notifications are set up for this channel."
-            notifications = "Notifications"
-            bulk_delete_confirm = "**You are about to delete {count} notifications in {channel}.** Are you sure that you want to do this? Reply with `yes` if you want to continue."
-            bulk_delete_success = emoji.cmd_success + "Successfully deleted {count} notifications from {channel}."
-            command_cancelled = "Command cancelled."
+            limit_reached = emoji.twitch_icon + "嗨，您好！不幸的是您已经达到设置通知讯息的上限。如果想要设置更多，您需要至以下网址<https://twitchbot.io/premium>来赞助我们。"
+            prompt1 = "您想要在那个频道显示您的通知讯息？在下方提及或输入频道名。 *(请在60秒内回应)*"
+            prompt2 = "请输入您想要获得通知的Twitch频道名称。 *(请在60秒内回应)*"
+            prompt3 = "输入您想要显示在通知的讯息，或输入`default`使用预设讯息。 *(请在180秒内回应)*"
+            text_channel_not_found = emoji.cmd_fail + "找不到文字频道。结束设定..."
+            twitch_user_not_found = emoji.cmd_fail + "找不到该Twitch用户。结束设定..."
+            twitch_user_not_found_alt = emoji.cmd_fail + "该Twitch用户不存在。请确认您没有输入任何额外的字符，像是(such as `<>`)，且没有提及 @mentioning 任何Discord用户。"
+            response_timeout = "*回复时间逾时*"
+            invalid_data = emoji.cmd_fail + "Twitch发送了无效的数据："
+            malformed_user = emoji.cmd_fail + "这看起来不像是有效的Twitch用户。您只能包含下划线，字母和数字。"
+            default_msg = "<https://twitch.tv/{channel}>现在正在Twitch上直播！"
+            del_fail = emoji.cmd_fail + "没有设置有关这位用户的通知。"
+            del_success = emoji.cmd_success + "您不会在{channel}收到任有关{user}的通知。"
+            add_success = emoji.cmd_success + "帮{user}在{channel}设置通知讯息。"
+            list_title = "**#{channel}**的直播者通知"
+            list_embed_limit = "客制化讯息不能包含嵌入讯息，因为Discord有1024个字符限制。使用者开直播时他们还是会显示。"
+            no_notifs = "此频道并没有设置任何的直播者通知。"
+            notifications = "通知"
+            bulk_delete_confirm = "**您将要删除在{channel}的{count}则通知。**您确定您要这么做？回复`yes`如果您确定要这么做。"
+            bulk_delete_success = emoji.cmd_success + "成功删除在{channel}的{count}则通知。"
+            command_cancelled = "已取消的指令"
             notif_variables = discord.Embed(color=discord.Color(0x6441A4))
-            notif_variables.title = "Notification message variables"
-            notif_variables.description = "Use one of the variables below to insert data into a stream notification message."
+            notif_variables.title = "通知讯息变数"
+            notif_variables.description = "插入以下变数讯息到您的直播通知讯息。"
             notif_variables.add_field(
-                name = "Available formatting",
+                name = "可用的格式",
                 value = textwrap.dedent("""\
-                *`$title$`* - The stream's title
-                *`$viewers$`* - The number of people currently watching the stream
-                *`$game$`* - The game that the streamer is currently playing
-                *`$url$`* - The channel's URL
-                *`$name$`* - The channel's name
-                *`$everyone$`* - Inserts an @everyone mention
-                *`$here$`* - Inserts an @here mention
+                *`$title$`* - 直播标题
+                *`$viewers$`* - 直播观看人数
+                *`$game$`* - 直播者目前正在玩的游戏
+                *`$url$`* - 频道的URL
+                *`$name$`* - 频道名称
+                *`$everyone$`* - 插入提及所有人 @everyone 
+                *`$here$`* - 插入提及这里 @here 
                 """)
             )
         class Permissions:
-            user_need_perm = emoji.cmd_fail + "You need the **{permission}** permission to do this."
-            bot_need_perm = emoji.cmd_fail + "I need the **{permission}** permission to do this."
-            no_pm = emoji.cmd_fail + "You can only use this command in a server."
+            user_need_perm = emoji.cmd_fail + "您需要**{permission}**权限才能这么做。"
+            bot_need_perm = emoji.cmd_fail + "我需要*{permission}**权限才能这么做。"
+            no_pm = emoji.cmd_fail + "您只能在这服务器上使用此指令。"
         class Streams:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Stream Commands - Help"
+            command_usage.title = "直播指令 - 支援"
             command_usage.add_field(
-                name = "Commands",
+                name = "指令",
                 value = textwrap.dedent("""\
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
+                `!twitch stream user <user>` - 取得用户直播资讯
+                `!twitch stream watch <user>` - 在Discord上观看Twitch直播
+                `!twitch stream game <name>` - 观看某人游玩特定的游戏直播
+                `!twitch stream top` - 取得最多人观看的直播资讯
                 """)
             )
-            game_desc = "Check out {user} playing {game} for {view_count} viewers:\nhttps://twitch.tv/{user}"
-            game_not_found = emoji.cmd_fail + "That game could not be found."
-            game_no_streams = emoji.cmd_fail + "Nobody is streaming that game."
-            live = "Live on Twitch"
-            stream_not_found = emoji.cmd_fail + "That user doesn't exist or is not online. Make sure you're only entering the user's name and not anything extra, like `()` or `<>`."
+            game_desc = "看看{user}正在玩{game}，有{view_count}人正在观看。 观看数:\nhttps://twitch.tv/{user}"
+            game_not_found = emoji.cmd_fail + "找不到该游戏"
+            game_no_streams = emoji.cmd_fail + "没有人正在直播此游戏。"
+            live = "Twitch上的直播"
+            stream_not_found = emoji.cmd_fail + "用户不存在或不再线上。请确认您只有输入用户名称，没有其他像是 `()`或`<>`。"
             stream_desc = textwrap.dedent("""\
-            Playing {game} for {view_count} viewers
-            **[Watch on Twitch](https://twitch.tv/{channel})** or type `twitch stream watch {channel}`
-
-            Stream Preview:
+            正在玩{game}，有{view_count}人正在观看
+            **[在Twitch上观看](https://twitch.tv/{channel})**或输入`twitch stream watch {channel}`
+            直播预览：
             """)
         class Users:
-            connections = "Connections for {user}"
-            connected = "Connected to {account}"
-            followers = "Followers"
-            following = "Following"
-            live = "Currently Live"
-            playing = "Playing {game} for {view_count} viewers"
-            not_connected = "Not Connected"
-            not_live = "Currently Offline"
-            no_login_dash = "This user hasn't visited the [TwitchBot dashboard](http://dash.twitchbot.io)."
-            streamer_id = "Streamer ID:"
-            views = "Views"
-            view_profile = "View Twitch Profile"
-            unknown = "Unknown"
-            watch_on_twitch = "Watch on Twitch"
+            connections = "有关{user}"
+            connected = "已连接至{account}"
+            followers = "追随者"
+            following = "正在追随"
+            live = "正在直播"
+            playing = "正在玩{game}，有{view_count}人正在观看"
+            not_connected = "无法连接"
+            not_live = "现在没有在直播"
+            no_login_dash = "这位用户尚未拜访[TwitchBot仪表板](http://dash.twitchbot.io)."
+            streamer_id = "直播者ID："
+            views = "观看数"
+            unknown = "未知"
+            watch_on_twitch = "在Twitch上观看"
         self.Audio = Audio
         self.Clips = Clips
         self.CommandsList = CommandsList
@@ -353,4 +351,4 @@ class Chinese Simple:
         self.Notifs = Notifs
         self.Permissions = Permissions
         self.Streams = Streams
-        self.Users = Users
+self.Users = Users
