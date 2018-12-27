@@ -181,7 +181,7 @@ class Chinese:
             )
             e.add_field(
                 name="投票竞赛",
-                name="我们正在免费送TwitchBot Premium给每月投最多票前三位用户。[这里投票](https://discordbots.org/bot/twitch/vote)以及[查看排行榜](https://dash.twitchbot.io/leaderboard)",
+                value="我们正在免费送TwitchBot Premium给每月投最多票前三位用户。[这里投票](https://discordbots.org/bot/twitch/vote)以及[查看排行榜](https://dash.twitchbot.io/leaderboard)",
                 inline=False
             )
             e.add_field(
@@ -295,8 +295,8 @@ class Chinese:
                 *`$game$`* - 直播者目前正在玩的游戏
                 *`$url$`* - 频道的URL
                 *`$name$`* - 频道名称
-                *`$everyone$`* - 插入提及所有人 @everyone 
-                *`$here$`* - 插入提及这里 @here 
+                *`$everyone$`* - 插入提及所有人 @everyone
+                *`$here$`* - 插入提及这里 @here
                 """)
             )
         class Permissions:
@@ -351,4 +351,4 @@ class Chinese:
         self.Notifs = Notifs
         self.Permissions = Permissions
         self.Streams = Streams
-self.Users = Users
+        self.Users = Users

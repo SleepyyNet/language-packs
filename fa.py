@@ -5,12 +5,12 @@ import discord
 class Persian:
     def __init__(self):
         self._lang_name = "Persian"
-        self._lang_emoji = ":flag_ir:
+        self._lang_emoji = ":flag_ir:"
         self._translator = "MATIN#4861"
         class Audio:
             no_channel = emoji.cmd_fail + "شما باید به یک کانال صوتی متصل باشید."
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "برای ادامه دادن لطفا رأی موافق دهید." 
+            need_upvote.title = "برای ادامه دادن لطفا رأی موافق دهید."
             need_upvote.description = "برای گوش دادن به استریم ها باید به تویچ بات رأی موافق دهید! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
                 name = "می خواهید از رأی موافق گذر کنید؟",

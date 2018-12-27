@@ -145,7 +145,7 @@ class Dutch:
         class Games:
             no_results = emoji.cmd_fail + "Geen resultaten gevonden."
             no_stats_overwatch = emoji.cmd_fail + "Er konden geen statistieken voor deze speler gevonden worden. Als je profiel op privé staat kan je het niet zien tenzij je het terug veranderd naar public. Alsjeblieft volg de stappen om het te veranderen op: <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> to make your profile public."
-            no_stats_fortnite = emoji.cmd_fail + "Speler kon niet gevonden worden. Bekijk of de spelling en/of de gebruikersnaam correct is of probeer het nog eens op een ander platform.
+            no_stats_fortnite = emoji.cmd_fail + "Speler kon niet gevonden worden. Bekijk of de spelling en/of de gebruikersnaam correct is of probeer het nog eens op een ander platform."
             view_streams = "View Streams"
             top_games = emoji.twitch_icon + "Top spellen"
             top_games_desc = "{view_count} kijkers • {channel_count} kanalen aan het streamen"
@@ -233,8 +233,7 @@ class Dutch:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Live Rol - Help"
             command_usage.description = "Met de Live Rol, kan je instellen dat spelers de live rol krijgen als ze beginnen met streamen. TwitchBot verwijderd de Live rol automatisch als ze gestopt zijn met streamen."
-            command_usage.add_field( 
-                command_usage.add_field(
+            command_usage.add_field(
                 name = "Commando's",
                 value = textwrap.dedent("""\
                 `!twitch live_role set` - Stelt de Live Rol in voor de huidige server.
@@ -264,7 +263,7 @@ class Dutch:
                 `!twitch notif formatting` - Toont variabelen die u kunt invoegen in streamer-notificatieberichten
                 """)
             )
-            limit_reached = emoji.twitch_icon + "Hé daar! Helaas heb je het maximale aantal meldingen bereikt dat je aan deze server kunt toevoegen. Om meer toe te voegen, moet je doneren aan" <https://twitchbot.io/premium>."
+            limit_reached = emoji.twitch_icon + "Hé daar! Helaas heb je het maximale aantal meldingen bereikt dat je aan deze server kunt toevoegen. Om meer toe te voegen, moet je doneren aan <https://twitchbot.io/premium>."
             prompt1 = "Which channel do you want to receive the notification in? Mention or type the name of one below. *(respond in 60 seconds)*"
             prompt2 = "Type the name of the Twitch channel that you want to set up the notification for. *(respond in 60 seconds)*"
             prompt3 = "Enter a custom message that you want to be shown when the user goes live, or type `default` for the default message. *(respond in 180 seconds)*"

@@ -181,7 +181,7 @@ class Chinese:
             )
             e.add_field(
                 name="投票競賽",
-                name="我們正在免費送TwitchBot Premium給每月投最多票前三位使用者。[這裡投票](https://discordbots.org/bot/twitch/vote)以及[查看排行榜](https://dash.twitchbot.io/leaderboard)",
+                value="我們正在免費送TwitchBot Premium給每月投最多票前三位使用者。[這裡投票](https://discordbots.org/bot/twitch/vote)以及[查看排行榜](https://dash.twitchbot.io/leaderboard)",
                 inline=False
             )
             e.add_field(
