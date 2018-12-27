@@ -285,62 +285,61 @@ class Chinese:
             bulk_delete_success = emoji.cmd_success + "成功刪除在{channel}的{count}則通知。"
             command_cancelled = "已取消的指令"
             notif_variables = discord.Embed(color=discord.Color(0x6441A4))
-            notif_variables.title = "Notification message variables"
-            notif_variables.description = "Use one of the variables below to insert data into a stream notification message."
+            notif_variables.title = "通知訊息變數"
+            notif_variables.description = "插入以下變數訊息到您的直播通知訊息。"
             notif_variables.add_field(
-                name = "Available formatting",
+                name = "可用的格式",
                 value = textwrap.dedent("""\
-                *`$title$`* - The stream's title
-                *`$viewers$`* - The number of people currently watching the stream
-                *`$game$`* - The game that the streamer is currently playing
-                *`$url$`* - The channel's URL
-                *`$name$`* - The channel's name
-                *`$everyone$`* - Inserts an @everyone mention
-                *`$here$`* - Inserts an @here mention
+                *`$title$`* - 直播標題
+                *`$viewers$`* - 直播觀看人數
+                *`$game$`* - 直播者目前正在玩的遊戲
+                *`$url$`* - 頻道的URL
+                *`$name$`* - 頻道名稱
+                *`$everyone$`* - 插入提及所有人 @everyone 
+                *`$here$`* - 插入提及這裡 @here 
                 """)
             )
         class Permissions:
-            user_need_perm = emoji.cmd_fail + "You need the **{permission}** permission to do this."
-            bot_need_perm = emoji.cmd_fail + "I need the **{permission}** permission to do this."
-            no_pm = emoji.cmd_fail + "You can only use this command in a server."
+            user_need_perm = emoji.cmd_fail + "您需要**{permission}**權限才能這麼做。"
+            bot_need_perm = emoji.cmd_fail + "我需要*{permission}**權限才能這麼做。"
+            no_pm = emoji.cmd_fail + "您只能在這伺服器上使用此指令。"
         class Streams:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Stream Commands - Help"
+            command_usage.title = "直播指令 - 支援"
             command_usage.add_field(
-                name = "Commands",
+                name = "指令",
                 value = textwrap.dedent("""\
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
+                `!twitch stream user <user>` - 取得使用者直播資訊
+                `!twitch stream watch <user>` - 在Discord上觀看Twitch直播
+                `!twitch stream game <name>` - 觀看某人遊玩特定的遊戲直播
+                `!twitch stream top` - 取得最多人觀看的直播資訊
                 """)
             )
-            game_desc = "Check out {user} playing {game} for {view_count} viewers:\nhttps://twitch.tv/{user}"
-            game_not_found = emoji.cmd_fail + "That game could not be found."
-            game_no_streams = emoji.cmd_fail + "Nobody is streaming that game."
-            live = "Live on Twitch"
-            stream_not_found = emoji.cmd_fail + "That user doesn't exist or is not online. Make sure you're only entering the user's name and not anything extra, like `()` or `<>`."
+            game_desc = "看看{user}正在玩{game}，有{view_count}人正在觀看 viewers:\nhttps://twitch.tv/{user}"
+            game_not_found = emoji.cmd_fail + "找不到該遊戲"
+            game_no_streams = emoji.cmd_fail + "沒有人正在直播此遊戲。"
+            live = "Twitch上的直播"
+            stream_not_found = emoji.cmd_fail + "使用者不存在或不再線上。請確認您只有輸入用戶名稱，沒有其他像是 `()`或`<>`。"
             stream_desc = textwrap.dedent("""\
-            Playing {game} for {view_count} viewers
-            **[Watch on Twitch](https://twitch.tv/{channel})** or type `twitch stream watch {channel}`
+            正在玩{game}，有{view_count}人正在觀看
+            **[在Twitch上觀看](https://twitch.tv/{channel})**或輸入`twitch stream watch {channel}`
 
-            Stream Preview:
+            直播預覽：
             """)
         class Users:
-            connections = "Connections for {user}"
-            connected = "Connected to {account}"
-            followers = "Followers"
-            following = "Following"
-            live = "Currently Live"
-            playing = "Playing {game} for {view_count} viewers"
-            not_connected = "Not Connected"
-            not_live = "Currently Offline"
-            no_login_dash = "This user hasn't visited the [TwitchBot dashboard](http://dash.twitchbot.io)."
-            streamer_id = "Streamer ID:"
-            views = "Views"
-            view_profile = "View Twitch Profile"
-            unknown = "Unknown"
-            watch_on_twitch = "Watch on Twitch"
+            connections = "有關{user}"
+            connected = "已連接至{account}"
+            followers = "追隨者"
+            following = "正在追隨"
+            live = "正在直播"
+            playing = "正在玩{game}，有{view_count}人正在觀看"
+            not_connected = "無法連接"
+            not_live = "現在沒有在直播"
+            no_login_dash = "這位使用者尚未拜訪[TwitchBot儀表板](http://dash.twitchbot.io)."
+            streamer_id = "直播者ID："
+            views = "觀看數"
+            unknown = "未知"
+            watch_on_twitch = "在Twitch上觀看"
         self.Audio = Audio
         self.Clips = Clips
         self.CommandsList = CommandsList
