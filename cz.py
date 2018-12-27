@@ -8,22 +8,22 @@ class Czech:
         self._lang_emoji = ":flag_cz:"
         self._translator = "Jhprague#7318, Kiznoh#3896"
         class Audio:
-            no_channel = emoji.cmd_fail + "You need to be in a voice channel."
+            no_channel = emoji.cmd_fail + "Musíš být v hlasovém kanále."
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Please upvote to continue"
-            need_upvote.description = "You need to upvote TwitchBot to listen to streams! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.title = "Prosíme hlasujte pro pokračování"
+            need_upvote.description = "Musíte hlasovat pro TwitchBot abyste mohli poslouchat steam! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "Want to skip upvoting?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lets you listen to streams without upvoting."
+                name = "Nechcete pokaždé hlasovat?",
+                value = "S [TwitchBot Premium](https://twitchbot.io/premium) můžete poslouchat streamy bez nutnosti hlasovat."
             )
-            please_wait = "Please wait... " + emoji.loading
-            user_noexist = emoji.cmd_fail + "This user doesn't exist or is not currently streaming. Try entering a link to the channel."
-            np_title = "Now playing in {channel}"
-            np_desc = "{title}\n{viewer_count} currently watching"
-            np_leave = "Type '!twitch leave' to stop the stream"
-            connection_timeout = emoji.cmd_fail + "Voice connection timed out."
-            not_streaming = "I'm not streaming anything on this server right now."
-            disconnected = "Left the voice channel."
+            please_wait = "Prosím čekejte... " + emoji.loading
+            user_noexist = emoji.cmd_fail + "Tento uživatel neexituje nebo zrovna nestreamuje. Zkuste zadat odkaz na kanál."
+            np_title = "Nyní hraje v {channel}"
+            np_desc = "{title}\n{viewer_count} právě sledují"
+            np_leave = "Napište '!twitch leave' pro zastavení stramu"
+            connection_timeout = emoji.cmd_fail + "Hlasové připojení vypršelo."
+            not_streaming = "Na tomto serveru zrovna nic nestreamuji"
+            disconnected = "Opustil jsem hlasový kanál."
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Clips - Help"
