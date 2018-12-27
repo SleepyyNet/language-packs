@@ -5,7 +5,7 @@ import discord
 class Chinese:
     def __init__(self):
         self._lang_name = "中文(繁體)"
-        self._lang_emoji = ":flag_tw: :flag_hk"
+        self._lang_emoji = ":flag_tw: :flag_hk:"
         self._translator = "Dexmio#8239"
         class Audio:
             no_channel = emoji.cmd_fail + "您必須加入語音頻道。"
@@ -295,8 +295,8 @@ class Chinese:
                 *`$game$`* - 直播者目前正在玩的遊戲
                 *`$url$`* - 頻道的URL
                 *`$name$`* - 頻道名稱
-                *`$everyone$`* - 插入提及所有人 @everyone 
-                *`$here$`* - 插入提及這裡 @here 
+                *`$everyone$`* - 插入提及所有人 @everyone
+                *`$here$`* - 插入提及這裡 @here
                 """)
             )
         class Permissions:
