@@ -264,12 +264,12 @@ class Dutch:
                 """)
             )
             limit_reached = emoji.twitch_icon + "Hé daar! Helaas heb je het maximale aantal meldingen bereikt dat je aan deze server kunt toevoegen. Om meer toe te voegen, moet je doneren aan <https://twitchbot.io/premium>."
-            prompt1 = "Which channel do you want to receive the notification in? Mention or type the name of one below. *(respond in 60 seconds)*"
-            prompt2 = "Type the name of the Twitch channel that you want to set up the notification for. *(respond in 60 seconds)*"
-            prompt3 = "Enter a custom message that you want to be shown when the user goes live, or type `default` for the default message. *(respond in 180 seconds)*"
-            text_channel_not_found = emoji.cmd_fail + "Couldn't find that text channel. Exiting command..."
-            twitch_user_not_found = emoji.cmd_fail + "That Twitch user could not be found. Exiting command..."
-            twitch_user_not_found_alt = emoji.cmd_fail + "That Twitch user doesn't exist. Make sure that you're not putting anything extra around the name (such as `<>`), and that you're not @mentioning a Discord user."
+            prompt1 = "Welke kanaal wil je de notificatie in zien? Vermeldt of typ de naam van een kanaal. *(antwoord binnen 60 seconden)*"
+            prompt2 = "Typ de naam van het Twitch-kanaal waarvoor u de melding wilt instellen. *(antwoord binnen 60 seconds)*"
+            prompt3 = "Voer een bericht in dat je wilt zien wanneer de user live gaat, of typ `default` voor het standaardbericht. *(respond in 180 seconds)*"
+            text_channel_not_found = emoji.cmd_fail + "Ik kon niet die tekst kanaal vinden. Commando verlaten..."
+            twitch_user_not_found = emoji.cmd_fail + "Die Twitch gebruiker kon ik niet vinden. Commando verlaten..."
+            twitch_user_not_found_alt = emoji.cmd_fail + "Die Twitch gebruiker bestaat niet. Make sure that you're not putting anything extra around the name (such as `<>`), and that you're not @mentioning a Discord user."
             response_timeout = "*Response timed out.*"
             invalid_data = emoji.cmd_fail + "Invalid data was sent from Twitch:"
             malformed_user = emoji.cmd_fail + "That doesn't look like a valid Twitch user. You can only include underscores, letters, and numbers."
