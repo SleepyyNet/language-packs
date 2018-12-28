@@ -5,7 +5,7 @@ import discord
 class Chinese:
     def __init__(self):
         self._lang_name = "中文(简体)"
-        self._lang_emoji = ":flag_cn"
+        self._lang_emoji = ":flag_cn:"
         self._translator = "Dexmio#8239"
         class Audio:
             no_channel = emoji.cmd_fail + "您必须加入语音频道。"
