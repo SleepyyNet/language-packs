@@ -194,6 +194,11 @@ class English:
                 value="[FAQ](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Upvote](https://discordbots.org/bot/twitch/vote) · [Invite](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
                 inline=False
             )
+            e.add_field(
+                name="Translations are here! :flag_mx: :flag_fr: :flag_tr: :flag_it:",
+                value="Type `!twitch lang help` to view a list of languages that TwitchBot is available in.",
+                inline=False
+            )
         class General:
             avail_lang_title = "Available Translations"
             avail_lang_setmsg = "To set TwitchBot's language, type !twitch lang <language>."

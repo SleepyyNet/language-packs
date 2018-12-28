@@ -1,4 +1,4 @@
-from . import _emoji as emoji
+﻿from . import _emoji as emoji
 import textwrap
 import discord
 
@@ -351,4 +351,4 @@ class French:
         self.Notifs = Notifs
         self.Permissions = Permissions
         self.Streams = Streams
-self.Users = Users
+        self.Users = Users
