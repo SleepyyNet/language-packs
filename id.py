@@ -262,7 +262,7 @@ class Indonesian:
             command_usage.add_field(
                 name = "Perintah",
                 value = textwrap.dedent("""\
-				`!twitch notif add [#discord_channel] [streamer_name] [message]` - Menambahkan notifikasi penyiar untuk penyiar di channel yang ditentukan
+		`!twitch notif add [#discord_channel] [streamer_name] [message]` - Menambahkan notifikasi penyiar untuk penyiar di channel yang ditentukan
                 `!twitch notif remove <#discord_channel> <streamer_name>` - Menghapus notifikasi penyiar untuk penyiar di channel yang ditentukan
                 `!twitch notif list [#discord_channel]` - Daftar notifikasi penyiar pada channel yang ditentukan
                 `!twitch notif formatting` - Menampilkan variabel yang bisa kamu masukan ke pesan notifikasi penyiar
@@ -312,7 +312,7 @@ class Indonesian:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "Perintah Siaran - Bantuan"
             command_usage.add_field(
-                name = "Commands",
+                name = "Perintah",
                 value = textwrap.dedent("""\
                 `!twitch stream user <user>` - Mendapatkan info dari penyiar
                 `!twitch stream watch <user>` - Menonton siaran Twitch di Discord
