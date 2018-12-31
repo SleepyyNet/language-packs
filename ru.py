@@ -197,7 +197,7 @@ class Russian:
             )
             e.add_field(
                 name="Переводы на другие языки теперь доступны! :flag_mx: :flag_es: :flag_fr: :flag_tr:",
-                value="Введите `!twitch lang help` чтобы просмотреть список языков, для готорых готов перевод TwitchBot. Хотите помочь с переводомо? Загляните тут [Переводчики TwitchBot](https://twitchbot.io/translators) для всей информации.",
+                value="Введите `!twitch lang help` чтобы просмотреть список языков, для готорых готов перевод TwitchBot. Хотите помочь с переводом? Загляните сюда: [Переводчики TwitchBot](https://twitchbot.io/translators) для всей информации.",
                 inline=False
             )
         class General:
