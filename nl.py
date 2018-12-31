@@ -194,6 +194,11 @@ class Dutch:
                 value="[Veelgestelde vragen:](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Upvote](https://discordbots.org/bot/twitch/vote) · [Uitnodigen](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
                 inline=False
             )
+            e.add_field(
+                name="Vertalingen zijn er! :flag_mx: :flag_es: :flag_fr: :flag_tr:",
+                value="Typ `!twitch lang help` om een lijst van talen te zien dat TwitchBot beschikbaar in is. Wil u ons helpen vertalen? Bekijk [TwitchBot Translators](https://twitchbot.io/translators) voor meer informatie.",
+                inline=False
+            )
         class General:
             avail_lang_title = "Mogelijke vertalingen"
             avail_lang_setmsg = "Om TwitchBot's taal te veranderen typ !twitch lang <language>."
@@ -252,7 +257,7 @@ class Dutch:
             view_response = "Live-rol is momenteel ingesteld om leden de ** {role} ** -rol te geven tijdens het streamen."
         class Notifs:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Streamer Notificaties - Help"
+            command_usage.title = "Streamer Meldingen - Help"
             command_usage.description = "Streamer-meldingen stellen u in staat een aanpasbaar bericht in te stellen dat verzendt wanneer een Twitch-gebruiker live gaat."
             command_usage.add_field(
                 name = "Commando's",
@@ -261,6 +266,7 @@ class Dutch:
                 `!twitch notif remove <#discord_channel> <streamer_name>` - Verwijder een streamermelding voor een streamer naar het opgegeven kanaal
                 `!twitch notif list [#discord_channel]` - Geeft de streamer-meldingen voor het opgegeven kanaal weer
                 `!twitch notif formatting` - Toont variabelen die u kunt invoegen in streamer-notificatieberichten
+                `!twitch notif preview <#discord_channel> <streamer_name>` - Stuur een voorvertoning voor een melding
                 """)
             )
             limit_reached = emoji.twitch_icon + "Hé daar! Helaas heb je het maximale aantal meldingen bereikt dat je aan deze server kunt toevoegen. Om meer toe te voegen, moet je doneren aan <https://twitchbot.io/premium>."
@@ -269,78 +275,78 @@ class Dutch:
             prompt3 = "Voer een bericht in dat je wilt zien wanneer de user live gaat, of typ `default` voor het standaardbericht. *(respond in 180 seconds)*"
             text_channel_not_found = emoji.cmd_fail + "Ik kon niet die tekst kanaal vinden. Commando verlaten..."
             twitch_user_not_found = emoji.cmd_fail + "Die Twitch gebruiker kon ik niet vinden. Commando verlaten..."
-            twitch_user_not_found_alt = emoji.cmd_fail + "Die Twitch gebruiker bestaat niet. Make sure that you're not putting anything extra around the name (such as `<>`), and that you're not @mentioning a Discord user."
-            response_timeout = "*Response timed out.*"
-            invalid_data = emoji.cmd_fail + "Invalid data was sent from Twitch:"
-            malformed_user = emoji.cmd_fail + "That doesn't look like a valid Twitch user. You can only include underscores, letters, and numbers."
-            default_msg = "<https://twitch.tv/{channel}> is now live on Twitch!"
-            del_fail = emoji.cmd_fail + "No notification has been set up for this user."
-            del_success = emoji.cmd_success + "You won't get any notifications in {channel} when {user} goes live."
-            add_success = emoji.cmd_success + "Added a notification for {user} in {channel}"
-            list_title = "Streamer notifications for **#{channel}**"
-            list_embed_limit = "Custom messages weren't included in the embed because there is a Discord-set limit of 1024 characters in a section. They'll still show when the user goes live."
-            no_notifs = "No streamer notifications are set up for this channel."
-            notifications = "Notifications"
-            bulk_delete_confirm = "**You are about to delete {count} notifications in {channel}.** Are you sure that you want to do this? Reply with `yes` if you want to continue."
-            bulk_delete_success = emoji.cmd_success + "Successfully deleted {count} notifications from {channel}."
-            command_cancelled = "Command cancelled."
+            twitch_user_not_found_alt = emoji.cmd_fail + "Die Twitch gebruiker bestaat niet. Zorg ervoor dat je niets extra rond de naam zet (zoals `<>`), en dat je niet een Discord gebruiker vermeld."
+            response_timeout = "*Antwoord duurde te lang.*"
+            invalid_data = emoji.cmd_fail + "Ongeldige reactie verzonden door Twitch:"
+            malformed_user = emoji.cmd_fail + "Dat lijkt niet op een geldige Twitch gebruiker. Je kan alleen onderstrepingstekens, letters, en cijfers omvatten."
+            default_msg = "<https://twitch.tv/{channel}> is nu live op Twitch!"
+            del_fail = emoji.cmd_fail + "Er is geen melding ingesteld voor deze gebruiker."
+            del_success = emoji.cmd_success + "Je zal geen meldingen in {channel} zien wanneer {user} live gaat."
+            add_success = emoji.cmd_success + "Een melding voor {user} in {channel} toegevoegd."
+            list_title = "Streamer meldingen voor **#{channel}**"
+            list_embed_limit = "Aangepaste berichten zijn niet opgenomen in de insluiting omdat er een limiet van Discord is ingesteld van 1024 letters in een sectie. Het zal nog altijd laten zien wanneer de gebruiker live gaat."
+            no_notifs = "Geen streamer meldingen zijn voor dit kanaal ingesteld."
+            notifications = "Meldingen"
+            bulk_delete_confirm = "**U staat op het punt om {count} meldingen in {channel} te verwijderen.** Weet u zeker dat u dit wilt doen? Antwoord met `yes` als je verder wilt gaan."
+            bulk_delete_success = emoji.cmd_success + "Succesvol {count} meldingen verwijderd van {channel}."
+            command_cancelled = "Commando geanuleerd."
             notif_variables = discord.Embed(color=discord.Color(0x6441A4))
-            notif_variables.title = "Notification message variables"
-            notif_variables.description = "Use one of the variables below to insert data into a stream notification message."
+            notif_variables.title = "Melding bericht variabelen"
+            notif_variables.description = "Gebruik een van de variabelen hieronder om gegevens in een stream melding bericht te plaatsen."
             notif_variables.add_field(
                 name = "Available formatting",
                 value = textwrap.dedent("""\
-                *`$title$`* - The stream's title
+                *`$title$`* - De stream's titel
                 *`$viewers$`* - The number of people currently watching the stream
-                *`$game$`* - The game that the streamer is currently playing
-                *`$url$`* - The channel's URL
-                *`$name$`* - The channel's name
-                *`$everyone$`* - Inserts an @everyone mention
-                *`$here$`* - Inserts an @here mention
+                *`$game$`* - Het spel dat de streamer momenteel speelt
+                *`$url$`* - De kanaal's URL
+                *`$name$`* - De kanaal's naam
+                *`$everyone$`* - Plaats een @everyone melding 
+                *`$here$`* - Plaats een @here melding
                 """)
             )
         class Permissions:
-            user_need_perm = emoji.cmd_fail + "You need the **{permission}** permission to do this."
-            bot_need_perm = emoji.cmd_fail + "I need the **{permission}** permission to do this."
-            no_pm = emoji.cmd_fail + "You can only use this command in a server."
+            user_need_perm = emoji.cmd_fail + "Je moet de **{permission}** recht hebben om dit te doen."
+            bot_need_perm = emoji.cmd_fail + "Ik moet de **{permission}** recht hebben om dit te doen."
+            no_pm = emoji.cmd_fail + "Je kan die commando allen in servers gebruiken."
         class Streams:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Stream Commands - Help"
+            command_usage.title = "Stream Commandos - Hulp"
             command_usage.add_field(
                 name = "Commands",
                 value = textwrap.dedent("""\
-                `!twitch stream user <user>` - Gets info on a user's stream
-                `!twitch stream watch <user>` - Watch a Twitch stream from Discord
-                `!twitch stream game <name>` - Watch someone stream the specified game
-                `!twitch stream top` - Fetches info on a top stream
+                `!twitch stream user <user>` - Krijgt informatie over de stream van een gebruiker
+                `!twitch stream watch <user>` - Kijk naar een Twitch stream vanuit Discord
+                `!twitch stream game <name>` - Kijk naar iemand de gespecifieerde stream spelen
+                `!twitch stream top` - Krijgt informatie van een top stream
                 """)
             )
-            game_desc = "Check out {user} playing {game} for {view_count} viewers:\nhttps://twitch.tv/{user}"
-            game_not_found = emoji.cmd_fail + "That game could not be found."
-            game_no_streams = emoji.cmd_fail + "Nobody is streaming that game."
-            live = "Live on Twitch"
-            stream_not_found = emoji.cmd_fail + "That user doesn't exist or is not online. Make sure you're only entering the user's name and not anything extra, like `()` or `<>`."
+            game_desc = "Bekijk {user} {game} aan het spelen voor {view_count} kijkers:\nhttps://twitch.tv/{user}"
+            game_not_found = emoji.cmd_fail + "Die spel kon niet gevonden worden."
+            game_no_streams = emoji.cmd_fail + "Niemand is die game aan het streamen."
+            live = "Live op Twitch"
+            stream_not_found = emoji.cmd_fail + "Die gebruiker bestaat niet of is niet online. Zorg ervoor dat je alleen de naam van de gebruiker invoer en niets extra, net zoals `()` of `<>`."
             stream_desc = textwrap.dedent("""\
-            Playing {game} for {view_count} viewers
-            **[Watch on Twitch](https://twitch.tv/{channel})** or type `twitch stream watch {channel}`
+            {game} spelen voor {view_count} kijkers
+            **[Zien op Twitch](https://twitch.tv/{channel})** of typ `twitch stream watch {channel}`
 
             Stream Preview:
             """)
         class Users:
-            connections = "Connections for {user}"
-            connected = "Connected to {account}"
-            followers = "Followers"
-            following = "Following"
-            live = "Currently Live"
-            playing = "Playing {game} for {view_count} viewers"
-            not_connected = "Not Connected"
-            not_live = "Currently Offline"
+            connections = "Verbindingen voor {user}"
+            connected = "Verbonden met {account}"
+            followers = "Volgers"
+            following = "Volgen"
+            live = "Nu Live"
+            playing = "{game} aan het spelen voor {view_count} kijkers"
+            not_connected = "Niet Verbonden"
+            not_live = "Momenteel Offline"
             no_login_dash = "This user hasn't visited the [TwitchBot dashboard](http://dash.twitchbot.io)."
             streamer_id = "Streamer ID:"
-            views = "Views"
-            view_profile = "View Twitch Profile"
-            unknown = "Unknown"
-            watch_on_twitch = "Watch on Twitch"
+            views = "Weergaven"
+            view_profile = "Bekijk Twitch Profiel"
+            unknown = "Onbekend"
+            watch_on_twitch = "Bekijk op Twitch"
         self.Audio = Audio
         self.Clips = Clips
         self.CommandsList = CommandsList
