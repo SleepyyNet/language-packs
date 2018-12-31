@@ -87,6 +87,7 @@ class Russian:
                 `!twitch notif remove <#discord_channel> <streamer_name>` - Убрать уведомление о стриме для стримера в указанный канал
                 `!twitch notif list [#discord_channel]` - Перечислить список уведомлений о стримах для указанного канала
                 `!twitch notif formatting` - Показать переменные, которые вы можете вставить в сообщении уведомления о стриме
+                `!twitch notif preview <#discord_channel> <streamer_name>` - Показать пример уведомления для стримера в указанный канал
                 """),
                 inline=False
             )
@@ -194,6 +195,11 @@ class Russian:
                 value="[Часто задаваемые вопросы](https://twitchbot.io/faq) · [Панель управления](http://dash.twitchbot.io) · [Голосование](https://discordbots.org/bot/twitch/vote) · [Приглашение](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Блог](https://medium.com/twitchbot)",
                 inline=False
             )
+            e.add_field(
+                name="Переводы на другие языки теперь доступны! :flag_mx: :flag_es: :flag_fr: :flag_tr:",
+                value="Введите `!twitch lang help` чтобы просмотреть список языков, для готорых готов перевод TwitchBot. Хотите помочь с переводомо? Загляните тут [Переводчики TwitchBot](https://twitchbot.io/translators) для всей информации.",
+                inline=False
+            )
         class General:
             avail_lang_title = "Доступные переводы"
             avail_lang_setmsg = "Чтобы установить язык TwitchBot, введите !twitch lang <language>."
@@ -261,6 +267,7 @@ class Russian:
                 `!twitch notif remove <#discord_channel> <streamer_name>` - Удалить уведомление о стриме для стримера в указанном канале
                 `!twitch notif list [#discord_channel]` - Показать список уведомлений о стримах для указанного канала
                 `!twitch notif formatting` - Показать переменные, которые вы можете вставить в сообщении уведомления о стриме
+                `!twitch notif preview <#discord_channel> <streamer_name>` - Показать пример уведомления для стримера в указанный канал
                 """)
             )
             limit_reached = emoji.twitch_icon + "Привет! К сожалению, вы достигли максимального количества уведомлений, которые вы можете добавить на этот сервер. Чтобы добавить больше, вы должны пожертвовать на <https://twitchbot.io/premium>."
