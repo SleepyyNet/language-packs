@@ -87,6 +87,7 @@ class Hungarian:
                 `!twitch notif remove <#discord_channel> <streamer_name>` - Kiértesítés eltávolítása egy felhasználó közvetítéseiről adott csatornából
                 `!twitch notif list [#discord_channel]` - Adott csatornában működő kiértesítők listázása
                 `!twitch notif formatting` - Változók megjelenítése, amelyeket beilleszthetsz a kiértesítések szövegébe
+				`!twitch notif preview <#discord_channel> <streamer_name>` - Kiértesítő előnézetének megjelenítése
                 """),
                 inline=False
             )
@@ -194,6 +195,11 @@ class Hungarian:
                 value="[GYIK](https://twitchbot.io/faq) · [Dashboard](http://dash.twitchbot.io) · [Szavazás](https://discordbots.org/bot/twitch/vote) · [Meghívó](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [Blog](https://medium.com/twitchbot)",
                 inline=False
             )
+			e.add_field(
+                name="Megérkeztek a lokalizációk! :flag_mx: :flag_es: :flag_fr: :flag_tr:",
+                value="A `!twitch lang help` parancs használatával megtekintheted az elérhető nyelvek listáját. Szeretnél segíteni a fordításban? Látogass el a [TwitchBot fordítók](https://twitchbot.io/translators) linkre további információért.",
+                inline=False
+            )
         class General:
             avail_lang_title = "Elérhető lokalizációk"
             avail_lang_setmsg = "Használd a !twitch lang <language> parancsot a TwitchBot nyelvének beállításához."
@@ -261,6 +267,7 @@ class Hungarian:
                 `!twitch notif remove <#discord_channel> <streamer_name>` - Kiértesítés eltávolítása egy felhasználó közvetítéseiről adott csatornából
                 `!twitch notif list [#discord_channel]` - Adott csatornában működő kiértesítők listázása
                 `!twitch notif formatting` - Változók megjelenítése, amelyeket beilleszthetsz a kiértesítések szövegébe
+				`!twitch notif preview <#discord_channel> <streamer_name>` - Kiértesítő előnézetének megjelenítése
                 """)
             )
             limit_reached = emoji.twitch_icon + "Halihó! Sajnos elérted a maximum mennyiségű kiértesítőt ezen a szerveren. Továbbiak hozzáadásához fizess elő TwitchBot Prémiumra itt: <https://twitchbot.io/premium>."
