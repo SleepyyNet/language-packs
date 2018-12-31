@@ -87,6 +87,7 @@ class English:
                 `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
                 `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
                 `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif preview <#discord_channel> <streamer_name>` - Sends a preview message for a notificaion
                 """),
                 inline=False
             )
@@ -195,8 +196,8 @@ class English:
                 inline=False
             )
             e.add_field(
-                name="Translations are here! :flag_mx: :flag_fr: :flag_tr: :flag_it:",
-                value="Type `!twitch lang help` to view a list of languages that TwitchBot is available in.",
+                name="Translations are here! :flag_mx: :flag_es: :flag_fr: :flag_tr:",
+                value="Type `!twitch lang help` to view a list of languages that TwitchBot is available in. Want to help us translate? Check out [TwitchBot Translators](https://twitchbot.io/translators) for more info.",
                 inline=False
             )
         class General:
@@ -266,6 +267,7 @@ class English:
                 `!twitch notif remove <#discord_channel> <streamer_name>` - Remove a streamer notification for a streamer to the specified channel
                 `!twitch notif list [#discord_channel]` - Lists the streamer notifications for the specified channel
                 `!twitch notif formatting` - Shows variables that you can insert into streamer notification messages
+                `!twitch notif preview <#discord_channel> <streamer_name>` - Sends a preview message for a notificaion
                 """)
             )
             limit_reached = emoji.twitch_icon + "Hey there! Unfortunately you've reached the maximum amount of notifications that you can add to this server. To add more, you need to donate at <https://twitchbot.io/premium>."
