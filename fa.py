@@ -4,7 +4,7 @@ import discord
 
 class Persian:
     def __init__(self):
-        self._lang_name = "Persian"
+        self._lang_name = "فارسی"
         self._lang_emoji = ":flag_ir:"
         self._translator = "MATIN#4861"
         class Audio:
@@ -150,7 +150,7 @@ class Persian:
             view_streams = "نمایش استریم ها"
             top_games = emoji.twitch_icon + "بازی های برتر"
             top_games_desc = "{view_count} بیننده • {channel_count} کانال در حال استریم"
-            invalid_battletag = "لطفا بتل تگ خود را به این فرم وارد کنید: `name#id`."
+            invalid_battletag = "لطفا بتل تگ خود را به فرم `name#id` وارد کنید."
             invalid_platform = "پلتفرم را از بین `pc`، `psn` یا `xbl` انتخاب کنید."
             incomplete_data = "اطلاعات پروفیل شما ناقص است. اگر پروفابل شما خصوصی است، این مراحل را دنبال کنید <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> تا آن را عمومی کنید و اطلاعات پروفیلتان را ببینید."
             incomplete_data_short = "برخی اطلاعات ناقص است."
