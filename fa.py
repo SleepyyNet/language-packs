@@ -87,6 +87,7 @@ class Persian:
                 `!twitch notif remove <#discord_channel> <streamer_name>` - اعلانی را برای استریمر مورد نظر در کانال متنی دیسکورد ذکر شده حذف می کند
                 `!twitch notif list [#discord_channel]` - تمامی اعلانات را لیست می کند
                 `!twitch notif formatting` - متغیرهایی که می توانید در پیغام اعلان استریمر وارد کنید را نمایش می دهد
+                `!twitch notif preview <#discord_channel> <streamer_name>` - پیش نمایشی از پیغام اعلان مورد نظر ارسال می کند
                 """),
                 inline=False
             )
@@ -194,6 +195,11 @@ class Persian:
                 value="[پرسش های متداول](https://twitchbot.io/faq) · [داشبورد](http://dash.twitchbot.io) · [رأی موافق](https://discordbots.org/bot/twitch/vote) · [دعوت بات به سرور](https://discordapp.com/oauth2/authorize?client_id=375805687529209857&permissions=8&scope=bot&response_type=code&redirect_uri=https://twitchbot.io/?invited) · [وبلاگ](https://medium.com/twitchbot)",
                 inline=False
             )
+            e.add_field(
+                name="ترجمه های جدید رسید! :flag_mx: :flag_es: :flag_fr: :flag_tr:",
+                value="بنویسید `!twitch lang help` تا لیستی از زبان هایی که برای تویچ بات موجود است را ببینید. می خواهید در ترجمه کمکمان کنید? برای اطلاعات بیشتر به اینجا مراجعه کنید [مترجمان تویچ بات](https://twitchbot.io/translators).",
+                inline=False
+            )
         class General:
             avail_lang_title = "ترجمه های موجود"
             avail_lang_setmsg = "برای تنظیم زبان تویچ، دستور !twitch lang <language> را وارد کنید."
@@ -261,6 +267,7 @@ class Persian:
                 `!twitch notif remove <#discord_channel> <streamer_name>` - اعلانی را برای استریمر مورد نظر از کانال متنی دیسکورد ذکر شده حذف می کند
                 `!twitch notif list [#discord_channel]` - تمامی اعلانات را لیست می کند
                 `!twitch notif formatting` - متغیرهایی که می توانید در پیغام اعلان استریمر وارد کنید را نمایش می دهد
+                `!twitch notif preview <#discord_channel> <streamer_name>` - پیش نمایشی از پیغام اعلان مورد نظر ارسال می کند
                 """)
             )
             limit_reached = emoji.twitch_icon + "درود! متاسفانه به سقف تعداد اعلاناتی که می توانید اضافه کنید رسیده اید. برای اضافه کردن بی نهایت اعلان میتوانید نسخه پیشرفته تویچ بات را خریداری کنید."
@@ -323,7 +330,7 @@ class Persian:
             stream_desc = textwrap.dedent("""\
             {game} بازی می کند برای {view_count} بیننده
             **[از تویچ ببینید](https://twitch.tv/{channel})** یا بنویسید `twitch stream watch {channel}`
-
+            
             پیش نمایش استریم:
             """)
         class Users:
