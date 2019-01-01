@@ -150,8 +150,8 @@ class Persian:
             view_streams = "نمایش استریم ها"
             top_games = emoji.twitch_icon + "بازی های برتر"
             top_games_desc = "{view_count} بیننده • {channel_count} کانال در حال استریم"
-            invalid_battletag = "لطفا بتل تگ خودر را به این فرم وارد کنید: `name#id`."
-            invalid_platform = "پلتفرم را از بین `pc`، `psn`، یا `xbl` انتخاب کنید."
+            invalid_battletag = "لطفا بتل تگ خود را به این فرم وارد کنید: `name#id`."
+            invalid_platform = "پلتفرم را از بین `pc`، `psn` یا `xbl` انتخاب کنید."
             incomplete_data = "اطلاعات پروفیل شما ناقص است. اگر پروفابل شما خصوصی است، این مراحل را دنبال کنید <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> تا آن را عمومی کنید و اطلاعات پروفیلتان را ببینید."
             incomplete_data_short = "برخی اطلاعات ناقص است."
             generic_error = emoji.cmd_fail + "خطا رخ داد:"
@@ -285,11 +285,11 @@ class Persian:
             del_success = emoji.cmd_success + "از این پس اعلانی در کانال {channel} برای کاربر {user} پخش نخواهد شد."
             add_success = emoji.cmd_success + "اعلانی برای کاربر {user} در کانال {channel} اضافه شد."
             list_title = "اعلان های استریمرها برای کانال **#{channel}**"
-            list_embed_limit = "بدلیل محدودیت تعداد کاراکترها (1024( پیغام دلخواه شمااعمال نشد. همچنان اعلان نمایش داده خواهد شد."
+            list_embed_limit = "بدلیل محدودیت تعداد کاراکترها (1024( پیغام دلخواه شما اعمال نشد. همچنان اعلان نمایش داده خواهد شد."
             no_notifs = "هیچ اعلانی در این کانال تنظیم نشده است."
             notifications = "اعلان ها"
             bulk_delete_confirm = "**شما در حال حذف تعداد {count} اعلان در کانال {channel} هستید.** آیا مطمئن به انجام این کار می باشید؟ بنویسید `yes` اگر می خواهید ادامه دهید."
-            bulk_delete_success = emoji.cmd_success + "تعداد {count} اعلان از کانال {channel} حذف شد."
+            bulk_delete_success = emoji.cmd_success + "تعداد {count} اعلان از کانال {channel} با موفقیت حذف شد."
             command_cancelled = "دستور متوقف شد."
             notif_variables = discord.Embed(color=discord.Color(0x6441A4))
             notif_variables.title = "متغیرهای پیام اعلان"
@@ -302,14 +302,14 @@ class Persian:
                 *`$game$`* - بازی که استریمر می کند
                 *`$url$`* - آدرس اینترنتی کانال استریم
                 *`$name$`* - نام کانال استریم
-                *`$everyone$`* - @everyone را مخاطب قرار می دهد.
-                *`$here$`* - @here را مخاطب قرار می دهد.
+                *`$everyone$`* - @everyone را مخاطب قرار می دهد
+                *`$here$`* - @here را مخاطب قرار می دهد
                 """)
             )
         class Permissions:
             user_need_perm = emoji.cmd_fail + "شما به مجوز **{permission}** برای انجام این کار نیاز دارید."
             bot_need_perm = emoji.cmd_fail + "من به مجوز **{permission}** برای انجام این کار نیاز دارم."
-            no_pm = emoji.cmd_fail + "شما می توانید این دستور را تنها در سرور اجرا کنید."
+            no_pm = emoji.cmd_fail + "شما می توانید این دستور را تنها در یک سرور اجرا کنید."
         class Streams:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
             command_usage.title = "دستورات استریم - راهنما"
@@ -334,15 +334,15 @@ class Persian:
             پیش نمایش استریم:
             """)
         class Users:
-            connections = "اتصالات برای کاربر {user}"
+            connections = "اتصالات کاربر {user}"
             connected = "متصل شد به {account}"
             followers = "دنبال کننده ها"
             following = "دنبال می کنند"
             live = "پخش زنده"
             playing = "در حال بازی {game} برای {view_count} بیننده"
-            not_connected = "متصل نشد"
+            not_connected = "متصل نیست"
             not_live = "آفلاین"
-            no_login_dash = "این کاربر از [داشبورد تویچ](http://dash.twitchbot.io) بازدید نکرده."
+            no_login_dash = "این کاربر از [داشبورد تویچ](http://dash.twitchbot.io) بازدید نکرده است."
             streamer_id = "ID استریمر:"
             views = "تعداد نمایش ها"
             view_profile = "نمایش پروفایل تویچ"
