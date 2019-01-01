@@ -113,8 +113,8 @@ class Persian:
             e.add_field(
                 name="وضعیت بازیکن ها",
                 value=textwrap.dedent("""\
-                `!twitch overwatch <pc/psn/xbl> <player>` - وضعیت بازیکن مورد نظر را در بازی Overwatch نشان می دهد.
-                `!twitch fortnite <pc/psn/xbl> <player>` - وضعیت بازیکن مورد نظر را در بازی Fortnite نشان می دهد.
+                `!twitch overwatch <pc/psn/xbl> <player>` - وضعیت بازیکن مورد نظر را در بازی Overwatch نشان می دهد
+                `!twitch fortnite <pc/psn/xbl> <player>` - وضعیت بازیکن مورد نظر را در بازی Fortnite نشان می دهد
                 """),
                 inline=False
             )
