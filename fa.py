@@ -146,7 +146,7 @@ class Persian:
         class Games:
             no_results = emoji.cmd_fail + "نتیجه ای یافت نشد."
             no_stats_overwatch = emoji.cmd_fail + "اطلاعاتی مربوط به این بازیکن یافت نشد. اگر پروفایل شما خصوصی است، نمیتوانید اطلاعاتی را مشاهده کنید تا زمانی که پروفایلتان عمومی ی شود. لطفا این مراحل را دنبال کنید <https://dotesports.com/overwatch/news/ow-public-private-profile-25347> تا پروفیلتان عمومی شود."
-            no_stats_fortnite = emoji.cmd_fail + "بازیکن پیدا نشد. املا نام کاربری را چک کنید."
+            no_stats_fortnite = emoji.cmd_fail + "بازیکن پیدا نشد. املا نام کاربری را چک کنید یا پلتفرم دیگری را امتحان کنید."
             view_streams = "نمایش استریم ها"
             top_games = emoji.twitch_icon + "بازی های برتر"
             top_games_desc = "{view_count} بیننده • {channel_count} کانال در حال استریم"
