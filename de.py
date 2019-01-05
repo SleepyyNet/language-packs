@@ -8,29 +8,29 @@ class German:
         self._lang_emoji = ":flag_de:"
         self._translator = "x5c0d3#1085, Xay_DE#2459"
         class Audio:
-            no_channel = emoji.cmd_fail + "Hierfür musst du in einem Sprach-Kanal sein.."
+            no_channel = emoji.cmd_fail + "Du mußt in einem Voice Channel sein."
             need_upvote = discord.Embed(color=0x6441A4)
-            need_upvote.title = "Bitte stimme dafür um fortzufahren"
-            need_upvote.description = "Du musst für TwitchBot stimmen um Streams anzuhören! **<https://link.twitchbot.io/upvote>**"
+            need_upvote.title = "Zum Fortfahren bitte upvoten"
+            need_upvote.description = "Du mußt TwitchBot upvoten um Streams zuzuhören! **<https://link.twitchbot.io/upvote>**"
             need_upvote.add_field(
-                name = "Abstimmung überspringen?",
-                value = "[TwitchBot Premium](https://twitchbot.io/premium) lässt dich ohne abstimmung hören."
+                name = "Upvote überspringen?",
+                value = "[TwitchBot Premium](https://twitchbot.io/premium) läßt sich Streams zuhören, ohne Upvoting."
             )
             please_wait = "Bitte warten... " + emoji.loading
-            user_noexist = emoji.cmd_fail + "Dieser Nutzer existiert nicht oder ist gerade nicht am streamen. Versuch einen Link zum Kanal einzugeben."
-            np_title = "Zurzeit in {channel} am spielen"
-            np_desc = "{title}\n{viewer_count} am zuschauen"
-            np_leave = "Nutze '!twitch leave' um den Stream zu stoppen"
-            connection_timeout = emoji.cmd_fail + "Sprach verbindung time-out."
+            user_noexist = emoji.cmd_fail + "Dieser User existiert oder streamt aktuell nicht. Versuche einen Link zum Channel einzugeben."
+            np_title = "Spiele nun in {channel}"
+            np_desc = "{title}\n{viewer_count} schauen zu"
+            np_leave = "Gebe '!twitch leave' ein, um den Stream zu stoppen"
+            connection_timeout = emoji.cmd_fail + "Timeout der Sprachverbindung."
             not_streaming = "Ich streame momentan nichts auf diesem Server."
-            disconnected = "hatt den Sprach-Kanal verlassen."
+            disconnected = "Sprachkanal verlassen."
         class Clips:
             command_usage = discord.Embed(color=discord.Color(0x6441A4))
-            command_usage.title = "Clips - Help"
+            command_usage.title = "Clips - Hilfe"
             command_usage.add_field(
                 name = "Befehle",
                 value = textwrap.dedent("""\
-                `!twitch clips from <Nutzer>` - Erhalte einen Clip des angegebenen Nutzers
+                `!twitch clips from <user>` - Lädt einen Clip vom angegebenen Twitch Benutzer
                 `!twitch clips trending` - Erhalte einen angesagten Clip
                 `!twitch clips game <Spiel>` - Erhalte einen Clip des angegebenen Spiels
                 `!twitch clips uservoted` - Erhalte einen der beliebtesten Clips gewählt von TwitchBot Nutzern
