@@ -38,20 +38,20 @@ class German:
             )
             clip_desc = "Sieh dir {user} spielt {game}:\n{url}"
             no_clips = emoji.cmd_fail + "Keine Clips gefunden."
-            no_votes = emoji.cmd_fail + "Keine hatt bisher für Clips abgestimmt, komm später wieder."
+            no_votes = emoji.cmd_fail + "Niemand hat bisher für Clips abgestimmt. Komme später wieder."
             uservote_clip_desc = "{vote_count} Stimme über den Clip von {user} ab:\n{url}"
-            upvote_fail = emoji.cmd_fail + "**{user}**, deine abstimmung konnte nicht bearbeitet werden."
+            upvote_fail = emoji.cmd_fail + "**{user}**, deine Abstimmung konnte nicht bearbeitet werden."
         class CommandsList:
             e = discord.Embed(color=discord.Color(0x6441A4))
-            e.title = emoji.twitch_icon + "TwitchBot befehle"
-            e.description = ":warning: __**Schreibe kein `<>` oder `[]` um Befehlseingaben.**__"
+            e.title = emoji.twitch_icon + "TwitchBot Befehle"
+            e.description = ":warning: __**Setze keine `<>` oder `[]` um die Befehlseingaben.**__"
             e.add_field(
                 name="General",
                 value=textwrap.dedent("""\
                 `!twitch help` - Zeigt Bot Hilfe
                 `!twitch info` - Zeigt Bot Infos
                 `!twitch lang` - Ändert die Sprache des Bots
-                `!twitch invite` - Zeigt einen link um TwitchBot zu einem Server hinzuzufügen
+                `!twitch invite` - Zeigt einen Link um TwitchBot zu einem Server hinzuzufügen
                 `!twitch status` - Zeigt den Status der Twitch API an
                 `!twitch ping` - Pong!
                 """),
@@ -60,12 +60,12 @@ class German:
             e.add_field(
                 name="Twitch",
                 value=textwrap.dedent("""\
-                `!twitch user <Nutzer>` - Erhalte infos über einen Twitch Nutzer
-                `!twitch stream user <Nutzer>` - Erhalte infos über den Stream eines Nutzers
-                `!twitch stream watch <Nutzer>` - Schaue einen stream über Discord
-                `!twitch stream game <Name>` - Schau jemandem beim spielen eines bestimmten Spiels zu
-                `!twitch stream top` - Erhalte infos über einen Top-Stream
-                `!twitch game <name>` - Erhalte infos über ein Twitch Spiel
+                `!twitch user <Nutzer>` - Erhalte Infos über einen Twitch Nutzer
+                `!twitch stream user <Nutzer>` - Erhalte Infos über den Stream eines Nutzers
+                `!twitch stream watch <Nutzer>` - Schaue einen Stream über Discord
+                `!twitch stream game <Name>` - Schau jemandem beim Spielen eines bestimmten Spiels zu
+                `!twitch stream top` - Erhalte Infos über einen Top-Stream
+                `!twitch game <name>` - Erhalte Infos über ein Twitch Spiel
                 `!twitch top` - Erhalte die beliebtesten Twitch Spiele
                 """),
                 inline=False
@@ -76,7 +76,7 @@ class German:
                 `!twitch clips from <Nutzer>` - Erhalte einen Clip des angegebenen bestimmten Twitch Nutzers
                 `!twitch clips trending` - Erhalte einen angesagten Clip
                 `!twitch clips game <Spiel>` - Erhalte einen Clip des angegebenen Spiels
-                `!twitch clips uservoted` - Erhalte einen der beliebtesten Clips gewählt von TwitchBot Nutzern
+                `!twitch clips uservoted` - Erhalte einen der beliebtesten Clips, gewählt von TwitchBot Nutzern
                 """),
                 inline=False
             )
@@ -86,7 +86,7 @@ class German:
                 `!twitch notif add [#Text_Kanal] [Streamer_Name] [Nachricht]` - Fügt Benachrichtigungen des genannten Streamers zum genannten Kanal hinzu
                 `!twitch notif remove <#Text_Kanal> <Streamer_Name>` - Entfernt Benachrichtigungen des genannten Streamers vom genannten Kanal
                 `!twitch notif list [#Text_Kanal]` - Listet alle Streamer Benachrichtigungen für den genannten Kanal auf
-                `!twitch notif formatting` - Zeigt Variablen an welche in Benachrichtigungen genutzt werden können
+                `!twitch notif formatting` - Zeigt Variablen an, welche in Benachrichtigungen genutzt werden können
                 """),
                 inline=False
             )
@@ -94,18 +94,18 @@ class German:
                 name="Live Rolle",
                 value=textwrap.dedent("""\
                 `!twitch live_role set` - Schaltet die Live Rolle des Nutzers um
-                `!twitch live_role filter` - Schränkt die nutzung der Live Rolle für die genannte Rolle ein
+                `!twitch live_role filter` - Schränkt die Nutzung der Live Rolle für die genannte Rolle ein
                 `!twitch live_role delete` - Entfernt die Konfiguration der Live Rolle
-                `!twitch live_role view` - Zeigt an welche Rolle momentan Konfiguriert ist
+                `!twitch live_role view` - Zeigt an welche Rolle momentan eingestellt ist
                 """),
                 inline=False
             )
             e.add_field(
                 name="Audio",
                 value=textwrap.dedent("""\
-                `!twitch listen <Nutzer>` - Hör dir einen Twitch Stream im aktuellen Sprach-Kanal an
+                `!twitch listen <Nutzer>` - Hör dir einen Twitch Stream im aktuellen Sprachkanal an
                 `!twitch nowplaying` - Zeigt den aktuell spielenden Kanal an
-                `!twitch leave` - Verlässt den Sprach-Kanal
+                `!twitch leave` - Verlässt den Sprachkanal
                 """),
                 inline=False
             )
@@ -120,8 +120,8 @@ class German:
             e.add_field(
                 name="Nachrichten Filter",
                 value=textwrap.dedent("""\
-                `!twitch filter set <Empfindlichkeit>` - Ändert den Server weiten Nettigkeits-Filter
-                `!twitch filter remove` - Entfernt den Server weiten Nettigkeits-Filter
+                `!twitch filter set <Empfindlichkeit>` - Ändert den serverweiten Nettigkeits-Filter
+                `!twitch filter remove` - Entfernt den serverweiten Nettigkeits-Filter
                 """),
                 inline=False
             )
